@@ -112,6 +112,10 @@ game_html = f'''
             background: linear-gradient(180deg, #001122 0%, #003366 50%, #87CEEB 100%);
             font-family: 'Arial', sans-serif;
             overflow: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }}
         
         #gameContainer {{
@@ -1098,4 +1102,4 @@ for status in audio_status:
     st.write(status)
 
 # Renderizar o jogo
-components.html(game_html, height=650, scrolling=False)
+components.html(game_html, height=min(650, int(0.85 * 800)), scrolling=False)
