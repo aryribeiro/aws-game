@@ -1,4 +1,5 @@
 Obs.: caso o app esteja no modo "sleeping" (dormindo) ao entrar, basta clicar no botão que estará disponível e aguardar, para ativar o mesmo.
+<img width="725" height="1159" alt="S3 mascote" src="https://github.com/user-attachments/assets/e1bd0c89-8940-4c84-ba79-e94c0f037cf7" />
 # ☁️ AWS Game - S3 Climbing Adventure 🎮
 
 Um jogo de plataforma interativo onde você escala através de 234 serviços AWS diferentes! Teste seus conhecimentos sobre os serviços da Amazon Web Services enquanto se diverte em uma aventura de escalada.
@@ -193,4 +194,5 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 ---
 
 Se encontrar problemas ou tiver sugestões:
+
 ** Ary Ribeiro - aryribeiro@gmail.com
