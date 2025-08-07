@@ -1,2 +1,2 @@
-streamlit>=1.28.0
-streamlit-components-base>=0.0.1
+streamlit
+streamlit-components-base
