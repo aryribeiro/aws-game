@@ -108,14 +108,11 @@ game_html = f'''
     <style>
         body {{
             margin: 0;
-            padding: 0;
+            padding: 5px;
             background: linear-gradient(180deg, #001122 0%, #003366 50%, #87CEEB 100%);
             font-family: 'Arial', sans-serif;
             overflow: hidden;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            min-height: 100vh;
         }}
         
         #gameContainer {{
@@ -135,13 +132,14 @@ game_html = f'''
         
         #ui {{
             position: absolute;
-            top: 12px;
-            left: 10px;
+            top: 8px;
+            left: 8px;
             color: white;
             font-weight: bold;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
             z-index: 100;
-            font-size: 18px;
+            font-size: min(16px, 4vw);
+            line-height: 1.2;
         }}
         
         #gameOver, #gameWin {{
@@ -177,7 +175,7 @@ game_html = f'''
 </head>
 <body>
     <div id="gameContainer">
-        <canvas id="gameCanvas" width="700" height="650" style="width: 100%; height: 100%;"></canvas>
+        <canvas id="gameCanvas" width="700" height="650"></canvas>
         
         <!-- UI Elements -->
         <div id="ui">
@@ -1102,4 +1100,4 @@ for status in audio_status:
     st.write(status)
 
 # Renderizar o jogo
-components.html(game_html, height=min(650, int(0.85 * 800)), scrolling=False)
+components.html(game_html, height=500, scrolling=False)
