@@ -173,7 +173,7 @@ game_html = f'''
 </head>
 <body>
     <div id="gameContainer">
-        <canvas id="gameCanvas" width="700" height="650"></canvas>
+        <canvas id="gameCanvas" width="700" height="650" style="width: 100%; height: 100%;"></canvas>
         
         <!-- UI Elements -->
         <div id="ui">
