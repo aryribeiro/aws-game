@@ -8,7 +8,7 @@ import base64
 st.set_page_config(
     page_title="AWS Game 🎮",
     page_icon="☁️",
-    layout="centered"
+    layout="wide"
 )
 
 # Título e descrição
@@ -112,21 +112,27 @@ game_html = f'''
             background: linear-gradient(180deg, #001122 0%, #003366 50%, #87CEEB 100%);
             font-family: 'Arial', sans-serif;
             overflow: hidden;
+            width: 100vw;
+            height: 100vh;
         }}
         
         #gameContainer {{
             position: relative;
-            width: 700px;
-            height: 650px;
-            margin: 0 auto;
+            width: min(700px, 95vw);
+            height: min(650px, 90vh);
+            margin: 10px auto;
             border: 3px solid #2E8B57;
             border-radius: 10px;
             overflow: hidden;
+            box-sizing: border-box;
         }}
         
         canvas {{
             display: block;
             background: transparent;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
         }}
         
         #ui {{
@@ -168,6 +174,24 @@ game_html = f'''
         
         button:hover {{
             background: #32CD32;
+        }}
+        
+        @media (max-width: 768px) {{
+            #gameContainer {{
+                width: 95vw;
+                height: 70vh;
+                margin: 5px auto;
+            }}
+            
+            #ui {{
+                font-size: 14px;
+            }}
+        }}
+        
+        @media (max-height: 700px) {{
+            #gameContainer {{
+                height: 85vh;
+            }}
         }}
     </style>
 </head>
@@ -239,6 +263,19 @@ game_html = f'''
         // Game Canvas Setup
         const canvas = document.getElementById('gameCanvas');
         const ctx = canvas.getContext('2d');
+        
+        // Adjust canvas size dynamically
+        function resizeCanvas() {{
+            const container = document.getElementById('gameContainer');
+            const containerRect = container.getBoundingClientRect();
+            canvas.width = Math.floor(containerRect.width - 6); // Account for borders
+            canvas.height = Math.floor(containerRect.height - 6);
+        }}
+        
+        // Call resize on load and window resize
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('load', resizeCanvas);
+        resizeCanvas();
         
         // Game State
         let gameState = {{
@@ -1098,4 +1135,4 @@ for status in audio_status:
     st.write(status)
 
 # Renderizar o jogo
-components.html(game_html, height=650, scrolling=False)
+components.html(game_html, height=700, scrolling=False)
