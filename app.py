@@ -11,8 +11,13 @@ st.set_page_config(
     layout="centered"
 )
 
-# Título e descrição
-st.title("☁️ AWS Game 🎮")
+# Título e descrição centralizados
+st.markdown("""
+<div style="text-align: center;">
+    <h1>☁️ AWS Game 🎮</h1>
+    <h4>S3 Climbing Adventure</h4>
+</div>
+""", unsafe_allow_html=True)
 
 # Função para carregar imagem como base64
 @st.cache_data
@@ -1067,35 +1072,53 @@ game_html = f'''
 </html>
 '''
 
-# Exibir informações sobre o jogo
-st.markdown("#### ... S3 Climbing Adventure")
-
-# Verificar arquivo
-if not os.path.exists('servicos.json'):
-    st.error("⚠️ Arquivo 'servicos.json' não encontrado na raiz do projeto!")
-    st.info("📁 Certifique-se de que o arquivo está no mesmo diretório que app.py")
-else:
-    st.success("✅ Arquivo 'servicos.json' carregado com sucesso!")
-    st.info(f"📊 Total de serviços: {len(aws_services)}")
-
-# Verificar mascote
-if mascot_base64:
-    st.success("✅ Mascote carregado como personagem principal!")
-else:
-    st.warning("⚠️ Arquivo 'static/mascote.png' não encontrado - usando sprite fallback")
-
-# Verificar áudios
-audio_status = []
-audio_files = ['aplausos.mp3', 'pulo.mp3', 'gameover.mp3', 'sonora.mp3']
-for audio_file in audio_files:
-    if eval(f"{audio_file.split('.')[0]}_base64"):
-        audio_status.append(f"✅ {audio_file}")
-    else:
-        audio_status.append(f"⚠️ {audio_file} não encontrado")
-
-st.info("🔊 Status dos áudios:")
-for status in audio_status:
-    st.write(status)
-
 # Renderizar o jogo
 components.html(game_html, height=650, scrolling=False)
+
+# Rodapé centralizado com total de serviços
+st.markdown("""
+<div style="text-align: center; margin-top: 20px; color: #666;">
+    📊 Total de serviços: 234
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+---
+<style>
+    .main {
+        background-color: #ffffff;
+        color: #333333;
+    }
+    .block-container {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
+    /* Esconde completamente todos os elementos da barra padrão do Streamlit */
+    header {display: none !important;}
+    footer {display: none !important;}
+    #MainMenu {display: none !important;}
+    /* Remove qualquer espaço em branco adicional */
+    div[data-testid="stAppViewBlockContainer"] {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    div[data-testid="stVerticalBlock"] {
+        gap: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    /* Remove quaisquer margens extras */
+    .element-container {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div style="text-align: center;">
+    <h4>AWS Game: memorize os serviços AWS escalando com o S3!</h4>
+    💬 Por <strong>Ary Ribeiro</strong>. Contato, através do email: <a href="mailto:aryribeiro@gmail.com">aryribeiro@gmail.com</a><br>
+    <em>Obs.: o web game foi testado apenas em computador.</em>
+</div>
+""", unsafe_allow_html=True)
