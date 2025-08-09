@@ -15,7 +15,7 @@ st.set_page_config(
 st.markdown("""
 <div style="text-align: center;">
     <h1>☁️ AWS Game 🎮</h1>
-    <h4>... S3 Climbing Adventure</h4>
+    <h4>S3 Climbing Adventure</h4>
 </div>
 """, unsafe_allow_html=True)
 
@@ -1105,8 +1105,8 @@ game_html = f'''
 with st.sidebar:
     st.markdown("""
     <div style="text-align: center; margin-bottom: 20px;">
-        <h3 style="color: #333; font-size: 18px;">🎨 Legenda AWS</h3>
-        <p style="font-size: 12px; color: #666; margin-bottom: 15px;">📊 Total: 234 serviços</p>
+        <h3 style="color: #333; font-size: 18px;">🎨Categorias & Cores</h3>
+        <p style="font-size: 12px; color: #666; margin-bottom: 15px;">📊 Total: 234 serviços AWS</p>
     </div>
     """, unsafe_allow_html=True)
     
@@ -1123,11 +1123,42 @@ with st.sidebar:
 # Renderizar o jogo
 components.html(game_html, height=650, scrolling=False)
 
-# Seção de total de serviços
 st.markdown("""
-<div style="text-align: center; margin-top: 20px; color: #666;">
-    <div style="font-size: 14px; color: #888; font-style: italic;">
-        🎮 Cada plataforma terá a cor correspondente à sua categoria AWS
-    </div>
+<style>
+    .main {
+        background-color: #ffffff;
+        color: #333333;
+    }
+    .block-container {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
+    /* Esconde completamente todos os elementos da barra padrão do Streamlit */
+    header {display: none !important;}
+    footer {display: none !important;}
+    #MainMenu {display: none !important;}
+    /* Remove qualquer espaço em branco adicional */
+    div[data-testid="stAppViewBlockContainer"] {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    div[data-testid="stVerticalBlock"] {
+        gap: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    /* Remove quaisquer margens extras */
+    .element-container {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div style="text-align: center;">
+    <h4>AWS Game: S3 Climbing Adventure</h4>
+    🧠Memorize os serviços AWS enquanto escala com o S3! Por <strong>Ary Ribeiro</strong>: <a href="mailto:aryribeiro@gmail.com">aryribeiro@gmail.com</a><br>
+    <em>Obs.: o web app foi testado apenas em computador.</em>
 </div>
 """, unsafe_allow_html=True)
