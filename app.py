@@ -15,7 +15,7 @@ st.set_page_config(
 st.markdown("""
 <div style="text-align: center;">
     <h1>☁️ AWS Game 🎮</h1>
-    <h4>S3 Climbing Adventure</h4>
+    <h4>... S3 Climbing Adventure</h4>
 </div>
 """, unsafe_allow_html=True)
 
@@ -58,10 +58,14 @@ def load_aws_services():
         
         # Adicionar serviços reais primeiro
         for service in services:
+            # Verificar diferentes possíveis nomes do campo categoria (maiúsculo e minúsculo)
+            category = (service.get('Category') or service.get('category') or 
+                       service.get('Categoria') or service.get('group') or 
+                       service.get('type') or 'AWS')
             all_services.append({
                 'name': service['name'],
-                'description': service.get('description', ''),
-                'category': service.get('category', 'AWS')
+                'description': service.get('Description', service.get('description', '')),
+                'category': category
             })
         
         # Adicionar serviços S3 adicionais para completar 234
@@ -91,8 +95,30 @@ def load_aws_services():
         st.error("Erro ao decodificar o arquivo servicos.json!")
         return []
 
+# Carregar categorias AWS
+@st.cache_data
+def load_aws_categories():
+    try:
+        with open('categorias aws.txt', 'r', encoding='utf-8') as f:
+            categories = [line.strip() for line in f.readlines() if line.strip()]
+        return categories
+    except FileNotFoundError:
+        # Fallback categories from document
+        return [
+            "Analytics", "Armazenamento", "Banco de Dados", "Blockchain", "Busca",
+            "Centro de Atendimento", "Computação", "Computação Quântica", "Comunicação",
+            "Conformidade", "Desenvolvimento de Jogos", "Ferramentas de Desenvolvedor",
+            "Geoespacial", "Gerenciamento de Custos", "Gerenciamento e Governança",
+            "Híbrido", "Integração de Aplicações", "Internet das Coisas", "Machine Learning",
+            "Marketing", "Migração e Transferência", "Monitoramento", "Mídia", "Otimização",
+            "Produtividade", "Realidade Virtual/Aumentada", "Rede e Entrega de Conteúdo",
+            "Robótica", "Satélite", "Saúde", "Segurança e Identidade", "Suporte",
+            "Suporte ao Desenvolvedor", "Terceiros", "Usuário Final"
+        ]
+
 # Carregar recursos
 aws_services = load_aws_services()
+aws_categories = load_aws_categories()
 mascot_base64 = load_image_as_base64('static/mascote.png')
 aplausos_base64 = load_audio_as_base64('static/aplausos.mp3')
 pulo_base64 = load_audio_as_base64('static/pulo.mp3')
@@ -101,6 +127,45 @@ sonora_base64 = load_audio_as_base64('static/sonora.mp3')
 
 if not aws_services:
     st.stop()
+
+# Definir cores para cada categoria
+category_colors = {
+    "Analytics": "#FFA502",
+    "Armazenamento": "#5F27CD", 
+    "Banco de Dados": "#FF4757",
+    "Blockchain": "#3742FA",
+    "Busca": "#2ED573",
+    "Centro de Atendimento": "#FF6348",
+    "Computação": "#4ECDC4",
+    "Computação Quântica": "#A4B0BE",
+    "Comunicação": "#00D2D3",
+    "Conformidade": "#747D8C",
+    "Desenvolvimento de Jogos": "#5F27CD",
+    "Ferramentas de Desenvolvedor": "#FF9FF3",
+    "Geoespacial": "#54A0FF",
+    "Gerenciamento de Custos": "#5F27CD",
+    "Gerenciamento e Governança": "#FF6B35",
+    "Híbrido": "#26DE81",
+    "Integração de Aplicações": "#FD79A8",
+    "Internet das Coisas": "#FDCB6E",
+    "Machine Learning": "#6C5CE7",
+    "Marketing": "#A29BFE",
+    "Migração e Transferência": "#FC7753",
+    "Monitoramento": "#F8B500",
+    "Mídia": "#E17055",
+    "Otimização": "#00B894",
+    "Produtividade": "#00CEC9",
+    "Realidade Virtual/Aumentada": "#E84393",
+    "Rede e Entrega de Conteúdo": "#0984E3",
+    "Robótica": "#6C5CE7",
+    "Satélite": "#2D3436",
+    "Saúde": "#00B894",
+    "Segurança e Identidade": "#54A0FF",
+    "Suporte": "#FDCB6E",
+    "Suporte ao Desenvolvedor": "#FD79A8",
+    "Terceiros": "#636E72",
+    "Usuário Final": "#74B9FF"
+}
 
 # HTML do jogo modificado
 game_html = f'''
@@ -452,47 +517,64 @@ game_html = f'''
                     color = '#FFD700';
                     borderColor = '#CC9A00';
                 }} else {{
-                    // Category-based colors
-                    switch(this.serviceCategory) {{
-                        case 'AWS':
-                            color = '#32CD32';
-                            borderColor = '#228B22';
-                            break;
-                        case 'S3 Services':
-                            color = '#FF6B35';
-                            borderColor = '#CC4A1F';
-                            break;
-                        case 'Compute':
-                            color = '#4ECDC4';
-                            borderColor = '#3BA39C';
-                            break;
-                        case 'Database':
-                            color = '#FF4757';
-                            borderColor = '#E63946';
-                            break;
-                        case 'Storage':
-                            color = '#5F27CD';
-                            borderColor = '#4C1FA3';
-                            break;
-                        case 'Network':
-                            color = '#00D2D3';
-                            borderColor = '#00A8A9';
-                            break;
-                        case 'Security':
-                            color = '#54A0FF';
-                            borderColor = '#2F80CC';
-                            break;
-                        case 'Analytics':
-                            color = '#FFA502';
-                            borderColor = '#CC7A00';
-                            break;
-                        case 'Machine Learning':
-                            color = '#A4B0BE';
-                            borderColor = '#747D8C';
-                            break;
-                        default:
-                            color = '#228B22';
-                            borderColor = '#1F5F1F';
+                    // Mapeamento de cores baseado nas categorias AWS
+                    const categoryColors = {{
+                        'Analytics': '#FFA502',
+                        'Armazenamento': '#5F27CD', 
+                        'Banco de Dados': '#FF4757',
+                        'Blockchain': '#3742FA',
+                        'Busca': '#2ED573',
+                        'Centro de Atendimento': '#FF6348',
+                        'Computação': '#4ECDC4',
+                        'Computação Quântica': '#A4B0BE',
+                        'Comunicação': '#00D2D3',
+                        'Conformidade': '#747D8C',
+                        'Desenvolvimento de Jogos': '#5F27CD',
+                        'Ferramentas de Desenvolvedor': '#FF9FF3',
+                        'Geoespacial': '#54A0FF',
+                        'Gerenciamento de Custos': '#5F27CD',
+                        'Gerenciamento e Governança': '#FF6B35',
+                        'Híbrido': '#26DE81',
+                        'Integração de Aplicações': '#FD79A8',
+                        'Internet das Coisas': '#FDCB6E',
+                        'Machine Learning': '#6C5CE7',
+                        'Marketing': '#A29BFE',
+                        'Migração e Transferência': '#FC7753',
+                        'Monitoramento': '#F8B500',
+                        'Mídia': '#E17055',
+                        'Otimização': '#00B894',
+                        'Produtividade': '#00CEC9',
+                        'Realidade Virtual/Aumentada': '#E84393',
+                        'Rede e Entrega de Conteúdo': '#0984E3',
+                        'Robótica': '#6C5CE7',
+                        'Satélite': '#2D3436',
+                        'Saúde': '#00B894',
+                        'Segurança e Identidade': '#54A0FF',
+                        'Suporte': '#FDCB6E',
+                        'Suporte ao Desenvolvedor': '#FD79A8',
+                        'Terceiros': '#636E72',
+                        'Usuário Final': '#74B9FF',
+                        'S3 Services': '#FF6B35',
+                        'AWS': '#32CD32',
+                        'Start': '#FFD700'
+                    }};
+                    
+                    // Definir cor da plataforma baseada na categoria
+                    if (categoryColors[this.serviceCategory]) {{
+                        color = categoryColors[this.serviceCategory];
+                        // Calcular cor da borda (mais escura)
+                        const hexToRgb = (hex) => {{
+                            const r = parseInt(hex.slice(1, 3), 16);
+                            const g = parseInt(hex.slice(3, 5), 16);
+                            const b = parseInt(hex.slice(5, 7), 16);
+                            return [r, g, b];
+                        }};
+                        const [r, g, b] = hexToRgb(color);
+                        borderColor = `rgb(${{Math.max(0, r-50)}}, ${{Math.max(0, g-50)}}, ${{Math.max(0, b-50)}})`;
+                    }} else {{
+                        // Fallback para categorias não mapeadas
+                        color = '#666666';
+                        borderColor = '#444444';
                     }}
                 }}
                 
@@ -652,473 +734,400 @@ game_html = f'''
             update() {{
                 this.rotation += 0.2;
             }}
-            
             draw() {{
-                if (!this.collected) {{
-                    ctx.save();
-                    ctx.translate(0, -gameState.camera.y);
-                    ctx.font = '16px Arial';
-                    ctx.textAlign = 'center';
-                    let coin = Math.floor(this.rotation * 2) % 2 === 0 ? '🪙' : '💰';
-                    ctx.fillText(coin, this.x + this.width/2, this.y + this.height - 2);
-                    ctx.restore();
-                }}
-            }}
-        }}
-        
-        // Game Objects
-        let player = new Player(150, 0);
-        let platforms = [];
-        let enemies = [];
-        let powerUps = [];
-        let collectibles = [];
-        
-        // Initialize Level with 234 platforms
-        function initLevel() {{
-            platforms = [];
-            enemies = [];
-            powerUps = [];
-            collectibles = [];
-            
-            // Ground platform (platform 0)
-            platforms.push(new Platform(0, gameState.worldHeight - 60, canvas.width, 60, 0));
-            
-            // Generate 234 platforms going upward
-            for (let i = 1; i <= 234; i++) {{
-                let x = Math.random() * (canvas.width - 250);
-                let y = gameState.worldHeight - (i * 220); // Espaçamento aumentado
-                let width = 200 + Math.random() * 80; // Plataformas maiores (200-280px)
-                
-                // Special platforms
-                let type = 'normal';
-                if (i % 25 === 0 && i < 234) type = 'breakable';
-                if (i % 35 === 0 && i < 234) type = 'moving';
-                
-                platforms.push(new Platform(x, y, width, 30, i, type)); // Altura aumentada para 30px
-                
-                // Add enemies (less frequent to give more space)
-                if (i > 5 && Math.random() < 0.25) {{
-                    let enemyEmojis = ['🐓', '🐖', '🦨', '🐀', '🐃', '🦆', '🦑', '💩'];
-                    let emoji = enemyEmojis[Math.floor(Math.random() * enemyEmojis.length)];
-                    enemies.push(new Enemy(x + 30, y - 35, emoji));
-                }}
-                
-                // Add power-ups
-                if (Math.random() < 0.12) {{
-                    let types = ['life', 'score', 'power'];
-                    let type = types[Math.floor(Math.random() * types.length)];
-                    powerUps.push(new PowerUp(x + width/2, y - 35, type));
-                }}
-                
-                // Add collectibles
-                if (Math.random() < 0.35) {{
-                    collectibles.push(new Collectible(x + Math.random() * (width - 40) + 20, y - 30));
-                }}
-            }}
-            
-            // Set player at ground level
-            player.x = 150;
-            player.y = gameState.worldHeight - 180;
-            player.lastGroundY = gameState.worldHeight - 60;
-        }}
-        
-        // Collision Detection
-        function checkCollision(rect1, rect2) {{
-            return rect1.x < rect2.x + rect2.width &&
-                   rect1.x + rect1.width > rect2.x &&
-                   rect1.y < rect2.y + rect2.height &&
-                   rect1.y + rect1.height > rect2.y;
-        }}
-        
-        // Platform Collision
-        function checkPlatformCollisions() {{
-            for (let platform of platforms) {{
-                if (checkCollision(player, platform)) {{
-                    // Top collision (landing on platform)
-                    if (player.velocityY > 0 && player.y < platform.y) {{
-                        player.y = platform.y - player.height;
-                        player.velocityY = 0;
-                        player.setOnGround(platform.y);
-                        
-                        // Update current platform
-                        if (platform.number > gameState.currentPlatform) {{
-                            gameState.currentPlatform = platform.number;
-                            gameState.score += 75; // Increased score for reaching new service
-                            
-                            // Update UI with current service name
-                            updateCurrentServiceUI(platform.serviceName);
-                            
-                            // Check for victory
-                            if (platform.number === 234) {{
-                                gameWin();
-                                return;
-                            }}
-                        }}
-                        
-                        // Break breakable platforms
-                        if (platform.type === 'breakable' && !platform.visited) {{
-                            platform.visited = true;
-                            setTimeout(() => {{
-                                let index = platforms.indexOf(platform);
-                                if (index > -1) platforms.splice(index, 1);
-                            }}, 1500); // More time before breaking
-                            gameState.score += 150;
-                        }}
-                    }}
-                }}
-            }}
-        }}
-        
-        // Update Current Service UI
-        function updateCurrentServiceUI(serviceName) {{
-            const serviceElement = document.getElementById('currentService');
-            if (serviceElement) {{
-                // Truncate long service names for UI
-                const displayName = serviceName.length > 25 ? 
-                    serviceName.substring(0, 25) + '...' : serviceName;
-                serviceElement.textContent = displayName;
-            }}
-        }}
-        
-        // Enemy Collision
-        function checkEnemyCollisions() {{
-            for (let i = enemies.length - 1; i >= 0; i--) {{
-                let enemy = enemies[i];
-                if (checkCollision(player, enemy)) {{
-                    // Jump on enemy (defeat)
-                    if (player.velocityY > 0 && player.y < enemy.y) {{
-                        enemies.splice(i, 1);
-                        player.velocityY = -12; // Bigger bounce
-                        gameState.score += 250;
-                    }} else {{
-                        // Take damage
-                        player.takeDamage();
-                    }}
-                }}
-            }}
-        }}
-        
-        // Power-up Collision
-        function checkPowerUpCollisions() {{
-            for (let powerUp of powerUps) {{
-                if (!powerUp.collected && checkCollision(player, powerUp)) {{
-                    powerUp.collected = true;
-                    if (powerUp.type === 'life') {{
-                        gameState.lives++;
-                        gameState.score += 500;
-                    }} else if (powerUp.type === 'score') {{
-                        gameState.score += 1000;
-                    }} else if (powerUp.type === 'power') {{
-                        gameState.score += 300;
-                        // Could add temporary power-up effects here
-                    }}
-                }}
-            }}
-        }}
-        
-        // Collectible Collision
-        function checkCollectibleCollisions() {{
-            for (let collectible of collectibles) {{
-                if (!collectible.collected && checkCollision(player, collectible)) {{
-                    collectible.collected = true;
-                    gameState.score += 100;
-                }}
-            }}
-        }}
-        
-        // Update Game
-        function update() {{
-            if (!gameState.gameRunning) return;
-            
-            // Start background music on first movement
-            if (!gameState.backgroundMusicStarted && (gameState.keys['ArrowLeft'] || gameState.keys['ArrowRight'] || gameState.keys['ArrowUp'] || gameState.keys[' '])) {{
-                playAudio('sonora');
-                gameState.backgroundMusicStarted = true;
-            }}
-            
-            player.update();
-            
-            for (let enemy of enemies) {{
-                enemy.update();
-            }}
-            
-            for (let powerUp of powerUps) {{
-                powerUp.update();
-            }}
-            
-            for (let collectible of collectibles) {{
-                collectible.update();
-            }}
-            
-            checkPlatformCollisions();
-            checkEnemyCollisions();
-            checkPowerUpCollisions();
-            checkCollectibleCollisions();
-            
-            // Update UI
-            document.getElementById('score').textContent = gameState.score;
-            document.getElementById('lives').textContent = gameState.lives;
-            document.getElementById('height').textContent = Math.floor((gameState.worldHeight - player.y) / 15);
-        }}
-        
-        // Draw Game
-        function draw() {{
-            // Clear canvas with gradient background
-            let gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-            gradient.addColorStop(0, '#001122');
-            gradient.addColorStop(0.3, '#003366');
-            gradient.addColorStop(0.7, '#004488');
-            gradient.addColorStop(1, '#87CEEB');
-            ctx.fillStyle = gradient;
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-            // Draw platforms
-            for (let platform of platforms) {{
-                // Only draw platforms that are visible (with some margin)
-                if (platform.y > gameState.camera.y - 150 && platform.y < gameState.camera.y + canvas.height + 150) {{
-                    platform.draw();
-                }}
-            }}
-            
-            // Draw enemies
-            for (let enemy of enemies) {{
-                if (enemy.y > gameState.camera.y - 100 && enemy.y < gameState.camera.y + canvas.height + 100) {{
-                    enemy.draw();
-                }}
-            }}
-            
-            // Draw power-ups
-            for (let powerUp of powerUps) {{
-                if (powerUp.y > gameState.camera.y - 100 && powerUp.y < gameState.camera.y + canvas.height + 100) {{
-                    powerUp.draw();
-                }}
-            }}
-            
-            // Draw collectibles
-            for (let collectible of collectibles) {{
-                if (collectible.y > gameState.camera.y - 100 && collectible.y < gameState.camera.y + canvas.height + 100) {{
-                    collectible.draw();
-                }}
-            }}
-            
-            // Draw player
-            player.draw();
-            
-            // Draw progress indicator
-            drawProgressIndicator();
-        }}
-        
-        // Draw Progress Indicator
-        function drawProgressIndicator() {{
-            const progressWidth = 200;
-            const progressHeight = 20;
-            const progressX = canvas.width - progressWidth - 20;
-            const progressY = 20;
-            
-            // Background
-            ctx.fillStyle = 'rgba(0,0,0,0.5)';
-            ctx.fillRect(progressX - 5, progressY - 5, progressWidth + 10, progressHeight + 10);
-            
-            // Progress bar background
-            ctx.fillStyle = '#333';
-            ctx.fillRect(progressX, progressY, progressWidth, progressHeight);
-            
-            // Progress bar fill
-            const progress = gameState.currentPlatform / 234;
-            ctx.fillStyle = progress < 0.5 ? '#FF6B35' : progress < 0.8 ? '#FFA502' : '#32CD32';
-            ctx.fillRect(progressX, progressY, progressWidth * progress, progressHeight);
-            
-            // Progress text
-            ctx.fillStyle = 'white';
-            ctx.font = '10px Arial';
-            ctx.textAlign = 'center';
-            ctx.fillText(`${{gameState.currentPlatform}}/234`, progressX + progressWidth/2, progressY + 14);
-        }}
-        
-        // Game Loop
-        function gameLoop() {{
-            update();
-            draw();
-            requestAnimationFrame(gameLoop);
-        }}
-        
-        // Game Over
-        function gameOver() {{
-            gameState.gameRunning = false;
-            
-            // Stop background music
-            if (audioElements.sonora) {{
-                audioElements.sonora.pause();
-                audioElements.sonora.currentTime = 0;
-            }}
-            
-            // Play game over sound
-            playAudio('gameover');
-            
-            document.getElementById('finalScore').textContent = gameState.score;
-            document.getElementById('finalHeight').textContent = Math.floor((gameState.worldHeight - player.y) / 15);
-            
-            // Get current service name
-            let currentServiceName = 'Início da Escalada AWS';
-            if (gameState.currentPlatform > 0 && awsServices[gameState.currentPlatform - 1]) {{
-                currentServiceName = awsServices[gameState.currentPlatform - 1].name;
-            }}
-            document.getElementById('finalService').textContent = currentServiceName;
-            
-            document.getElementById('gameOver').style.display = 'block';
-        }}
-        
-        // Game Win
-        function gameWin() {{
-            gameState.gameRunning = false;
-            
-            // Stop background music
-            if (audioElements.sonora) {{
-                audioElements.sonora.pause();
-                audioElements.sonora.currentTime = 0;
-            }}
-            
-            // Play victory sound
-            playAudio('aplausos');
-            
-            document.getElementById('winScore').textContent = gameState.score;
-            document.getElementById('gameWin').style.display = 'block';
-        }}
-        
-        // Restart Game
-        function restartGame() {{
-            gameState = {{
-                score: 0,
-                lives: 5,
-                currentPlatform: 0,
-                gameRunning: true,
-                keys: {{}},
-                camera: {{ x: 0, y: 0 }},
-                worldHeight: 234 * 220,
-                backgroundMusicStarted: false
-            }};
-            player = new Player(150, gameState.worldHeight - 180);
-            initLevel();
-            updateCurrentServiceUI('Início da Escalada AWS');
-            document.getElementById('gameOver').style.display = 'none';
-            document.getElementById('gameWin').style.display = 'none';
-            
-            // Stop all audio
-            for (const audio of Object.values(audioElements)) {{
-                if (audio) {{
-                    audio.pause();
-                    audio.currentTime = 0;
-                }}
-            }}
-        }}
-        
-        // Event Listeners
-        document.addEventListener('keydown', (e) => {{
-            gameState.keys[e.key] = true;
-            if (e.key === ' ' || e.key === 'ArrowUp') e.preventDefault();
-        }});
-        
-        document.addEventListener('keyup', (e) => {{
-            gameState.keys[e.key] = false;
-        }});
-        
-        // Touch controls for mobile
-        let touchStartX = 0;
-        let touchStartY = 0;
-        
-        canvas.addEventListener('touchstart', (e) => {{
-            e.preventDefault();
-            const touch = e.touches[0];
-            touchStartX = touch.clientX;
-            touchStartY = touch.clientY;
-        }});
-        
-        canvas.addEventListener('touchend', (e) => {{
-            e.preventDefault();
-            const touch = e.changedTouches[0];
-            const deltaX = touch.clientX - touchStartX;
-            const deltaY = touch.clientY - touchStartY;
-            
-            if (Math.abs(deltaY) > Math.abs(deltaX)) {{
-                if (deltaY < -30) {{
-                    // Swipe up - jump
-                    if (player.onGround) {{
-                        player.velocityY = -player.jumpPower;
-                        player.onGround = false;
-                        playAudio('pulo');
-                    }}
-                }}
-            }} else {{
-                if (Math.abs(deltaX) > 30) {{
-                    // Horizontal movement
-                    if (deltaX > 0) {{
-                        gameState.keys['ArrowRight'] = true;
-                        setTimeout(() => gameState.keys['ArrowRight'] = false, 200);
-                    }} else {{
-                        gameState.keys['ArrowLeft'] = true;
-                        setTimeout(() => gameState.keys['ArrowLeft'] = false, 200);
-                    }}
-                }}
-            }}
-        }});
-        
-        // Initialize and Start Game
-        initAudio();
-        initLevel();
-        updateCurrentServiceUI('Início da Escalada AWS');
-        gameLoop();
-    </script>
+               if (!this.collected) {{
+                   ctx.save();
+                   ctx.translate(0, -gameState.camera.y);
+                   ctx.font = '16px Arial';
+                   ctx.textAlign = 'center';
+                   let coin = Math.floor(this.rotation * 2) % 2 === 0 ? '🪙' : '💰';
+                   ctx.fillText(coin, this.x + this.width/2, this.y + this.height - 2);
+                   ctx.restore();
+               }}
+           }}
+       }}
+       
+       // Game Objects
+       let player = new Player(150, 0);
+       let platforms = [];
+       let enemies = [];
+       let powerUps = [];
+       let collectibles = [];
+       
+       // Initialize Level with 234 platforms
+       function initLevel() {{
+           platforms = [];
+           enemies = [];
+           powerUps = [];
+           collectibles = [];
+           
+           // Ground platform (platform 0)
+           platforms.push(new Platform(0, gameState.worldHeight - 60, canvas.width, 60, 0));
+           
+           // Generate 234 platforms going upward
+           for (let i = 1; i <= 234; i++) {{
+               let x = Math.random() * (canvas.width - 250);
+               let y = gameState.worldHeight - (i * 220);
+               let width = 200 + Math.random() * 80;
+               
+               let type = 'normal';
+               if (i % 25 === 0 && i < 234) type = 'breakable';
+               if (i % 35 === 0 && i < 234) type = 'moving';
+               
+               platforms.push(new Platform(x, y, width, 30, i, type));
+               
+               if (i > 5 && Math.random() < 0.25) {{
+                   let enemyEmojis = ['🐓', '🐖', '🦨', '🐀', '🐃', '🦆', '🦑', '💩'];
+                   let emoji = enemyEmojis[Math.floor(Math.random() * enemyEmojis.length)];
+                   enemies.push(new Enemy(x + 30, y - 35, emoji));
+               }}
+               
+               if (Math.random() < 0.12) {{
+                   let types = ['life', 'score', 'power'];
+                   let type = types[Math.floor(Math.random() * types.length)];
+                   powerUps.push(new PowerUp(x + width/2, y - 35, type));
+               }}
+               
+               if (Math.random() < 0.35) {{
+                   collectibles.push(new Collectible(x + Math.random() * (width - 40) + 20, y - 30));
+               }}
+           }}
+           
+           player.x = 150;
+           player.y = gameState.worldHeight - 180;
+           player.lastGroundY = gameState.worldHeight - 60;
+       }}
+       
+       function checkCollision(rect1, rect2) {{
+           return rect1.x < rect2.x + rect2.width &&
+                  rect1.x + rect1.width > rect2.x &&
+                  rect1.y < rect2.y + rect2.height &&
+                  rect1.y + rect1.height > rect2.y;
+       }}
+       
+       function checkPlatformCollisions() {{
+           for (let platform of platforms) {{
+               if (checkCollision(player, platform)) {{
+                   if (player.velocityY > 0 && player.y < platform.y) {{
+                       player.y = platform.y - player.height;
+                       player.velocityY = 0;
+                       player.setOnGround(platform.y);
+                       
+                       if (platform.number > gameState.currentPlatform) {{
+                           gameState.currentPlatform = platform.number;
+                           gameState.score += 75;
+                           
+                           updateCurrentServiceUI(platform.serviceName);
+                           
+                           if (platform.number === 234) {{
+                               gameWin();
+                               return;
+                           }}
+                       }}
+                       
+                       if (platform.type === 'breakable' && !platform.visited) {{
+                           platform.visited = true;
+                           setTimeout(() => {{
+                               let index = platforms.indexOf(platform);
+                               if (index > -1) platforms.splice(index, 1);
+                           }}, 1500);
+                           gameState.score += 150;
+                       }}
+                   }}
+               }}
+           }}
+       }}
+       
+       function updateCurrentServiceUI(serviceName) {{
+           const serviceElement = document.getElementById('currentService');
+           if (serviceElement) {{
+               const displayName = serviceName.length > 25 ? 
+                   serviceName.substring(0, 25) + '...' : serviceName;
+               serviceElement.textContent = displayName;
+           }}
+       }}
+       
+       function checkEnemyCollisions() {{
+           for (let i = enemies.length - 1; i >= 0; i--) {{
+               let enemy = enemies[i];
+               if (checkCollision(player, enemy)) {{
+                   if (player.velocityY > 0 && player.y < enemy.y) {{
+                       enemies.splice(i, 1);
+                       player.velocityY = -12;
+                       gameState.score += 250;
+                   }} else {{
+                       player.takeDamage();
+                   }}
+               }}
+           }}
+       }}
+       
+       function checkPowerUpCollisions() {{
+           for (let powerUp of powerUps) {{
+               if (!powerUp.collected && checkCollision(player, powerUp)) {{
+                   powerUp.collected = true;
+                   if (powerUp.type === 'life') {{
+                       gameState.lives++;
+                       gameState.score += 500;
+                   }} else if (powerUp.type === 'score') {{
+                       gameState.score += 1000;
+                   }} else if (powerUp.type === 'power') {{
+                       gameState.score += 300;
+                   }}
+               }}
+           }}
+       }}
+       
+       function checkCollectibleCollisions() {{
+           for (let collectible of collectibles) {{
+               if (!collectible.collected && checkCollision(player, collectible)) {{
+                   collectible.collected = true;
+                   gameState.score += 100;
+               }}
+           }}
+       }}
+       
+       function update() {{
+           if (!gameState.gameRunning) return;
+           
+           if (!gameState.backgroundMusicStarted && (gameState.keys['ArrowLeft'] || gameState.keys['ArrowRight'] || gameState.keys['ArrowUp'] || gameState.keys[' '])) {{
+               playAudio('sonora');
+               gameState.backgroundMusicStarted = true;
+           }}
+           
+           player.update();
+           
+           for (let enemy of enemies) {{
+               enemy.update();
+           }}
+           
+           for (let powerUp of powerUps) {{
+               powerUp.update();
+           }}
+           
+           for (let collectible of collectibles) {{
+               collectible.update();
+           }}
+           
+           checkPlatformCollisions();
+           checkEnemyCollisions();
+           checkPowerUpCollisions();
+           checkCollectibleCollisions();
+           
+           document.getElementById('score').textContent = gameState.score;
+           document.getElementById('lives').textContent = gameState.lives;
+           document.getElementById('height').textContent = Math.floor((gameState.worldHeight - player.y) / 15);
+       }}
+       
+       function draw() {{
+           let gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+           gradient.addColorStop(0, '#001122');
+           gradient.addColorStop(0.3, '#003366');
+           gradient.addColorStop(0.7, '#004488');
+           gradient.addColorStop(1, '#87CEEB');
+           ctx.fillStyle = gradient;
+           ctx.fillRect(0, 0, canvas.width, canvas.height);
+           
+           for (let platform of platforms) {{
+               if (platform.y > gameState.camera.y - 150 && platform.y < gameState.camera.y + canvas.height + 150) {{
+                   platform.draw();
+               }}
+           }}
+           
+           for (let enemy of enemies) {{
+               if (enemy.y > gameState.camera.y - 100 && enemy.y < gameState.camera.y + canvas.height + 100) {{
+                   enemy.draw();
+               }}
+           }}
+           
+           for (let powerUp of powerUps) {{
+               if (powerUp.y > gameState.camera.y - 100 && powerUp.y < gameState.camera.y + canvas.height + 100) {{
+                   powerUp.draw();
+               }}
+           }}
+           
+           for (let collectible of collectibles) {{
+               if (collectible.y > gameState.camera.y - 100 && collectible.y < gameState.camera.y + canvas.height + 100) {{
+                   collectible.draw();
+               }}
+           }}
+           
+           player.draw();
+           
+           drawProgressIndicator();
+       }}
+       
+       function drawProgressIndicator() {{
+           const progressWidth = 200;
+           const progressHeight = 20;
+           const progressX = canvas.width - progressWidth - 20;
+           const progressY = 20;
+           
+           ctx.fillStyle = 'rgba(0,0,0,0.5)';
+           ctx.fillRect(progressX - 5, progressY - 5, progressWidth + 10, progressHeight + 10);
+           
+           ctx.fillStyle = '#333';
+           ctx.fillRect(progressX, progressY, progressWidth, progressHeight);
+           
+           const progress = gameState.currentPlatform / 234;
+           ctx.fillStyle = progress < 0.5 ? '#FF6B35' : progress < 0.8 ? '#FFA502' : '#32CD32';
+           ctx.fillRect(progressX, progressY, progressWidth * progress, progressHeight);
+           
+           ctx.fillStyle = 'white';
+           ctx.font = '10px Arial';
+           ctx.textAlign = 'center';
+           ctx.fillText(`${{gameState.currentPlatform}}/234`, progressX + progressWidth/2, progressY + 14);
+       }}
+       
+       function gameLoop() {{
+           update();
+           draw();
+           requestAnimationFrame(gameLoop);
+       }}
+       
+       function gameOver() {{
+           gameState.gameRunning = false;
+           
+           if (audioElements.sonora) {{
+               audioElements.sonora.pause();
+               audioElements.sonora.currentTime = 0;
+           }}
+           
+           playAudio('gameover');
+           
+           document.getElementById('finalScore').textContent = gameState.score;
+           document.getElementById('finalHeight').textContent = Math.floor((gameState.worldHeight - player.y) / 15);
+           
+           let currentServiceName = 'Início da Escalada AWS';
+           if (gameState.currentPlatform > 0 && awsServices[gameState.currentPlatform - 1]) {{
+               currentServiceName = awsServices[gameState.currentPlatform - 1].name;
+           }}
+           document.getElementById('finalService').textContent = currentServiceName;
+           
+           document.getElementById('gameOver').style.display = 'block';
+       }}
+       
+       function gameWin() {{
+           gameState.gameRunning = false;
+           
+           if (audioElements.sonora) {{
+               audioElements.sonora.pause();
+               audioElements.sonora.currentTime = 0;
+           }}
+           
+           playAudio('aplausos');
+           
+           document.getElementById('winScore').textContent = gameState.score;
+           document.getElementById('gameWin').style.display = 'block';
+       }}
+       
+       function restartGame() {{
+           gameState = {{
+               score: 0,
+               lives: 5,
+               currentPlatform: 0,
+               gameRunning: true,
+               keys: {{}},
+               camera: {{ x: 0, y: 0 }},
+               worldHeight: 234 * 220,
+               backgroundMusicStarted: false
+           }};
+           player = new Player(150, gameState.worldHeight - 180);
+           initLevel();
+           updateCurrentServiceUI('Início da Escalada AWS');
+           document.getElementById('gameOver').style.display = 'none';
+           document.getElementById('gameWin').style.display = 'none';
+           
+           for (const audio of Object.values(audioElements)) {{
+               if (audio) {{
+                   audio.pause();
+                   audio.currentTime = 0;
+               }}
+           }}
+       }}
+       
+       document.addEventListener('keydown', (e) => {{
+           gameState.keys[e.key] = true;
+           if (e.key === ' ' || e.key === 'ArrowUp') e.preventDefault();
+       }});
+       
+       document.addEventListener('keyup', (e) => {{
+           gameState.keys[e.key] = false;
+       }});
+       
+       let touchStartX = 0;
+       let touchStartY = 0;
+       
+       canvas.addEventListener('touchstart', (e) => {{
+           e.preventDefault();
+           const touch = e.touches[0];
+           touchStartX = touch.clientX;
+           touchStartY = touch.clientY;
+       }});
+       
+       canvas.addEventListener('touchend', (e) => {{
+           e.preventDefault();
+           const touch = e.changedTouches[0];
+           const deltaX = touch.clientX - touchStartX;
+           const deltaY = touch.clientY - touchStartY;
+           
+           if (Math.abs(deltaY) > Math.abs(deltaX)) {{
+               if (deltaY < -30) {{
+                   if (player.onGround) {{
+                       player.velocityY = -player.jumpPower;
+                       player.onGround = false;
+                       playAudio('pulo');
+                   }}
+               }}
+           }} else {{
+               if (Math.abs(deltaX) > 30) {{
+                   if (deltaX > 0) {{
+                       gameState.keys['ArrowRight'] = true;
+                       setTimeout(() => gameState.keys['ArrowRight'] = false, 200);
+                   }} else {{
+                       gameState.keys['ArrowLeft'] = true;
+                       setTimeout(() => gameState.keys['ArrowLeft'] = false, 200);
+                   }}
+               }}
+           }}
+       }});
+       
+       initAudio();
+       initLevel();
+       updateCurrentServiceUI('Início da Escalada AWS');
+       gameLoop();
+   </script>
 </body>
 </html>
 '''
 
+# Sidebar com legenda de categorias
+with st.sidebar:
+    st.markdown("""
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h3 style="color: #333; font-size: 18px;">🎨 Legenda AWS</h3>
+        <p style="font-size: 12px; color: #666; margin-bottom: 15px;">📊 Total: 234 serviços</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Criar lista vertical de categorias
+    for category in aws_categories:
+        color = category_colors.get(category, '#666')
+        st.markdown(f"""
+        <div style="display: flex; align-items: center; background: rgba(255,255,255,0.9); padding: 6px 10px; border-radius: 20px; border: 2px solid {color}; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 8px;">
+            <div style="width: 16px; height: 16px; background: {color}; border-radius: 50%; margin-right: 8px; border: 1px solid rgba(0,0,0,0.2); flex-shrink: 0;"></div>
+            <span style="font-size: 11px; font-weight: 600; color: #333; text-align: left;">{category}</span>
+        </div>
+        """, unsafe_allow_html=True)
+
 # Renderizar o jogo
 components.html(game_html, height=650, scrolling=False)
 
-# Rodapé centralizado com total de serviços
+# Seção de total de serviços
 st.markdown("""
 <div style="text-align: center; margin-top: 20px; color: #666;">
-    📊 Total de serviços: 234
-</div>
-""", unsafe_allow_html=True)
-
-st.markdown("""
----
-<style>
-    .main {
-        background-color: #ffffff;
-        color: #333333;
-    }
-    .block-container {
-        padding-top: 1rem;
-        padding-bottom: 0rem;
-    }
-    /* Esconde completamente todos os elementos da barra padrão do Streamlit */
-    header {display: none !important;}
-    footer {display: none !important;}
-    #MainMenu {display: none !important;}
-    /* Remove qualquer espaço em branco adicional */
-    div[data-testid="stAppViewBlockContainer"] {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-    div[data-testid="stVerticalBlock"] {
-        gap: 0 !important;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-    /* Remove quaisquer margens extras */
-    .element-container {
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-    }
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<div style="text-align: center;">
-    <h4>AWS Game: memorize os serviços AWS escalando com o S3!</h4>
-    💬 Por <strong>Ary Ribeiro</strong>. Contato, através do email: <a href="mailto:aryribeiro@gmail.com">aryribeiro@gmail.com</a><br>
-    <em>Obs.: o web game foi testado apenas em computador.</em>
+    <div style="font-size: 14px; color: #888; font-style: italic;">
+        🎮 Cada plataforma terá a cor correspondente à sua categoria AWS
+    </div>
 </div>
 """, unsafe_allow_html=True)
