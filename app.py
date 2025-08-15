@@ -47,7 +47,7 @@ def load_aws_services():
         # Extrair apenas os serviços (excluindo o nó central)
         services = [node for node in data['nodes'] if not node.get('isCentral', False)]
         
-        # Criar lista expandida com serviços S3 adicionais para chegar a 234
+        # Criar lista expandida com serviços S3 adicionais para chegar a 323
         s3_services = [
             "S3 Express One Zone", "S3 Transfer Acceleration",
             "S3 Cross-Region Replication", "S3 Same-Region Replication", "S3 Inventory", "S3 Analytics",
@@ -68,9 +68,9 @@ def load_aws_services():
                 'category': category
             })
         
-        # Adicionar serviços S3 adicionais para completar 234
+        # Adicionar serviços S3 adicionais para completar 323
         for s3_service in s3_services:
-            if len(all_services) >= 234:
+            if len(all_services) >= 323:
                 break
             all_services.append({
                 'name': s3_service,
@@ -78,15 +78,15 @@ def load_aws_services():
                 'category': 'S3 Services'
             })
         
-        # Garantir exatamente 234 serviços
-        while len(all_services) < 234:
+        # Garantir exatamente 323 serviços
+        while len(all_services) < 323:
             all_services.append({
                 'name': f'AWS Advanced Service {len(all_services) + 1}',
                 'description': 'Serviço AWS',
                 'category': 'AWS'
             })
         
-        return all_services[:234]  # Garantir exatamente 234
+        return all_services[:323]  # Garantir exatamente 323
         
     except FileNotFoundError:
         st.error("Arquivo servicos.json não encontrado na raiz do projeto!")
@@ -105,15 +105,14 @@ def load_aws_categories():
     except FileNotFoundError:
         # Fallback categories from document
         return [
-            "Analytics", "Armazenamento", "Banco de Dados", "Blockchain", "Busca",
-            "Centro de Atendimento", "Computação", "Computação Quântica", "Comunicação",
-            "Conformidade", "Desenvolvimento de Jogos", "Ferramentas de Desenvolvedor",
-            "Geoespacial", "Gerenciamento de Custos", "Gerenciamento e Governança",
-            "Híbrido", "Integração de Aplicações", "Internet das Coisas", "Machine Learning",
-            "Marketing", "Migração e Transferência", "Monitoramento", "Mídia", "Otimização",
-            "Produtividade", "Realidade Virtual/Aumentada", "Rede e Entrega de Conteúdo",
-            "Robótica", "Satélite", "Saúde", "Segurança e Identidade", "Suporte",
-            "Suporte ao Desenvolvedor", "Terceiros", "Usuário Final"
+            "Análise", "Aplicação Empresarial", "Armazenamento", "Banco De Dados", "Blockchain",
+            "Computação", "Computação De Usuário Final", "Contêineres", "Estratégia De Arquitetura",
+            "Ferramentas De Desenvolvedor", "Front-End Plataformas Móveis E Web",
+            "Gerenciamento E Governança", "Gerenciamento Financeiro Na Nuvem", "IA Generativa",
+            "Integração De Aplicações", "Internet Das Coisas", "Machine Learning",
+            "Migração", "Redes E Entrega De Conteúdo", "Robótica", "Satélite",
+            "Segurança Identidade Conformidade", "Serviços De Mídia",
+            "Sust. Cadeia de Suprimentos AWS", "Tecnologias Quânticas"
         ]
 
 # Carregar recursos
@@ -130,41 +129,34 @@ if not aws_services:
 
 # Definir cores para cada categoria
 category_colors = {
-    "Analytics": "#FFA502",
-    "Armazenamento": "#5F27CD", 
-    "Banco de Dados": "#FF4757",
-    "Blockchain": "#3742FA",
-    "Busca": "#2ED573",
-    "Centro de Atendimento": "#FF6348",
-    "Computação": "#4ECDC4",
-    "Computação Quântica": "#A4B0BE",
-    "Comunicação": "#00D2D3",
-    "Conformidade": "#747D8C",
-    "Desenvolvimento de Jogos": "#5F27CD",
-    "Ferramentas de Desenvolvedor": "#FF9FF3",
-    "Geoespacial": "#54A0FF",
-    "Gerenciamento de Custos": "#5F27CD",
-    "Gerenciamento e Governança": "#FF6B35",
-    "Híbrido": "#26DE81",
-    "Integração de Aplicações": "#FD79A8",
-    "Internet das Coisas": "#FDCB6E",
-    "Machine Learning": "#6C5CE7",
-    "Marketing": "#A29BFE",
-    "Migração e Transferência": "#FC7753",
-    "Monitoramento": "#F8B500",
-    "Mídia": "#E17055",
-    "Otimização": "#00B894",
-    "Produtividade": "#00CEC9",
-    "Realidade Virtual/Aumentada": "#E84393",
-    "Rede e Entrega de Conteúdo": "#0984E3",
-    "Robótica": "#6C5CE7",
-    "Satélite": "#2D3436",
-    "Saúde": "#00B894",
-    "Segurança e Identidade": "#54A0FF",
-    "Suporte": "#FDCB6E",
-    "Suporte ao Desenvolvedor": "#FD79A8",
-    "Terceiros": "#636E72",
-    "Usuário Final": "#74B9FF"
+    "Análise": "#FFA502",
+    "Aplicação Empresarial": "#5F27CD", 
+    "Armazenamento": "#FF4757",
+    "Banco De Dados": "#3742FA",
+    "Blockchain": "#2ED573",
+    "Computação": "#FF6348",
+    "Computação De Usuário Final": "#4ECDC4",
+    "Contêineres": "#A4B0BE",
+    "Estratégia De Arquitetura": "#00D2D3",
+    "Ferramentas De Desenvolvedor": "#747D8C",
+    "Front-End Plataformas Móveis E Web": "#5F27CD",
+    "Gerenciamento E Governança": "#FF9FF3",
+    "Gerenciamento Financeiro Na Nuvem": "#54A0FF",
+    "IA Generativa": "#5F27CD",
+    "Integração De Aplicações": "#FF6B35",
+    "Internet Das Coisas": "#26DE81",
+    "Machine Learning": "#FD79A8",
+    "Migração": "#FDCB6E",
+    "Redes E Entrega De Conteúdo": "#6C5CE7",
+    "Robótica": "#A29BFE",
+    "Satélite": "#FC7753",
+    "Segurança Identidade Conformidade": "#F8B500",
+    "Serviços De Mídia": "#E17055",
+    "Sust. Cadeia de Suprimentos AWS": "#00B894",
+    "Tecnologias Quânticas": "#00CEC9",
+    "S3 Services": "#FF6B35",
+    "AWS": "#32CD32",
+    "Start": "#FFD700"
 }
 
 # HTML do jogo modificado
@@ -265,7 +257,7 @@ game_html = f'''
         <!-- Victory Screen -->
         <div id="gameWin">
             <h2>🏆 PARABÉNS!</h2>
-            <p>Completou + de 200 serviços AWS!</p>
+            <p>Completou + de 320 serviços AWS!</p>
             <p>Pontuação Final: <span id="winScore">0</span></p>
             <button onclick="restartGame()">🔄 Jogar Novamente</button>
         </div>
@@ -318,7 +310,7 @@ game_html = f'''
             gameRunning: true,
             keys: {{}},
             camera: {{ x: 0, y: 0 }},
-            worldHeight: 234 * 220,
+            worldHeight: 323 * 220,
             backgroundMusicStarted: false
         }};
         
@@ -513,47 +505,37 @@ game_html = f'''
                 }} else if (this.type === 'moving') {{
                     color = '#4169E1';
                     borderColor = '#2E4BC7';
-                }} else if (this.number === 234) {{
+                }} else if (this.number === 323) {{
                     color = '#FFD700';
                     borderColor = '#CC9A00';
                 }} else {{
                     // Mapeamento de cores baseado nas categorias AWS
                     const categoryColors = {{
-                        'Analytics': '#FFA502',
-                        'Armazenamento': '#5F27CD', 
-                        'Banco de Dados': '#FF4757',
-                        'Blockchain': '#3742FA',
-                        'Busca': '#2ED573',
-                        'Centro de Atendimento': '#FF6348',
-                        'Computação': '#4ECDC4',
-                        'Computação Quântica': '#A4B0BE',
-                        'Comunicação': '#00D2D3',
-                        'Conformidade': '#747D8C',
-                        'Desenvolvimento de Jogos': '#5F27CD',
-                        'Ferramentas de Desenvolvedor': '#FF9FF3',
-                        'Geoespacial': '#54A0FF',
-                        'Gerenciamento de Custos': '#5F27CD',
-                        'Gerenciamento e Governança': '#FF6B35',
-                        'Híbrido': '#26DE81',
-                        'Integração de Aplicações': '#FD79A8',
-                        'Internet das Coisas': '#FDCB6E',
-                        'Machine Learning': '#6C5CE7',
-                        'Marketing': '#A29BFE',
-                        'Migração e Transferência': '#FC7753',
-                        'Monitoramento': '#F8B500',
-                        'Mídia': '#E17055',
-                        'Otimização': '#00B894',
-                        'Produtividade': '#00CEC9',
-                        'Realidade Virtual/Aumentada': '#E84393',
-                        'Rede e Entrega de Conteúdo': '#0984E3',
-                        'Robótica': '#6C5CE7',
-                        'Satélite': '#2D3436',
-                        'Saúde': '#00B894',
-                        'Segurança e Identidade': '#54A0FF',
-                        'Suporte': '#FDCB6E',
-                        'Suporte ao Desenvolvedor': '#FD79A8',
-                        'Terceiros': '#636E72',
-                        'Usuário Final': '#74B9FF',
+                        'Análise': '#FFA502',
+                        'Aplicação Empresarial': '#5F27CD',
+                        'Armazenamento': '#FF4757',
+                        'Banco De Dados': '#3742FA',
+                        'Blockchain': '#2ED573',
+                        'Computação': '#FF6348',
+                        'Computação De Usuário Final': '#4ECDC4',
+                        'Contêineres': '#A4B0BE',
+                        'Estratégia De Arquitetura': '#00D2D3',
+                        'Ferramentas De Desenvolvedor': '#747D8C',
+                        'Front-End Plataformas Móveis E Web': '#5F27CD',
+                        'Gerenciamento E Governança': '#FF9FF3',
+                        'Gerenciamento Financeiro Na Nuvem': '#54A0FF',
+                        'IA Generativa': '#5F27CD',
+                        'Integração De Aplicações': '#FF6B35',
+                        'Internet Das Coisas': '#26DE81',
+                        'Machine Learning': '#FD79A8',
+                        'Migração': '#FDCB6E',
+                        'Redes E Entrega De Conteúdo': '#6C5CE7',
+                        'Robótica': '#A29BFE',
+                        'Satélite': '#FC7753',
+                        'Segurança Identidade Conformidade': '#F8B500',
+                        'Serviços De Mídia': '#E17055',
+                        'Sust. Cadeia de Suprimentos AWS': '#00B894',
+                        'Tecnologias Quânticas': '#00CEC9',
                         'S3 Services': '#FF6B35',
                         'AWS': '#32CD32',
                         'Start': '#FFD700'
@@ -591,7 +573,7 @@ game_html = f'''
                 ctx.fillRect(this.x, this.y, this.width, this.height);
                 
                 // Platform top highlight
-                ctx.fillStyle = this.number === 234 ? '#FFFF00' : 'rgba(255,255,255,0.4)';
+                ctx.fillStyle = this.number === 323 ? '#FFFF00' : 'rgba(255,255,255,0.4)';
                 ctx.fillRect(this.x, this.y, this.width, 4);
                 
                 // Service name (wrapped text for long names)
@@ -645,7 +627,7 @@ game_html = f'''
                 ctx.fillText(this.number.toString(), this.x + 5, this.y + 15);
                 
                 // Special indicator for final platform
-                if (this.number === 234) {{
+                if (this.number === 323) {{
                     ctx.fillStyle = '#FF0000';
                     ctx.font = 'bold 14px Arial';
                     ctx.textAlign = 'center';
@@ -754,7 +736,7 @@ game_html = f'''
        let powerUps = [];
        let collectibles = [];
        
-       // Initialize Level with 234 platforms
+       // Initialize Level with 323 platforms
        function initLevel() {{
            platforms = [];
            enemies = [];
@@ -764,20 +746,20 @@ game_html = f'''
            // Ground platform (platform 0)
            platforms.push(new Platform(0, gameState.worldHeight - 60, canvas.width, 60, 0));
            
-           // Generate 234 platforms going upward
-           for (let i = 1; i <= 234; i++) {{
+           // Generate 323 platforms going upward
+           for (let i = 1; i <= 323; i++) {{
                let x = Math.random() * (canvas.width - 250);
                let y = gameState.worldHeight - (i * 220);
                let width = 200 + Math.random() * 80;
                
                let type = 'normal';
-               if (i % 25 === 0 && i < 234) type = 'breakable';
-               if (i % 35 === 0 && i < 234) type = 'moving';
+               if (i % 25 === 0 && i < 323) type = 'breakable';
+               if (i % 35 === 0 && i < 323) type = 'moving';
                
                platforms.push(new Platform(x, y, width, 30, i, type));
                
                if (i > 5 && Math.random() < 0.25) {{
-                   let enemyEmojis = ['🐓', '🐖', '🦨', '🐀', '🐃', '🦆', '🦑', '💩'];
+                   let enemyEmojis = ['🔥', '🦑', '🦨', '🐀', '🐓', '🦆', '🐖', '💩'];
                    let emoji = enemyEmojis[Math.floor(Math.random() * enemyEmojis.length)];
                    enemies.push(new Enemy(x + 30, y - 35, emoji));
                }}
@@ -819,7 +801,7 @@ game_html = f'''
                            
                            updateCurrentServiceUI(platform.serviceName);
                            
-                           if (platform.number === 234) {{
+                           if (platform.number === 323) {{
                                gameWin();
                                return;
                            }}
@@ -969,14 +951,14 @@ game_html = f'''
            ctx.fillStyle = '#333';
            ctx.fillRect(progressX, progressY, progressWidth, progressHeight);
            
-           const progress = gameState.currentPlatform / 234;
+           const progress = gameState.currentPlatform / 323;
            ctx.fillStyle = progress < 0.5 ? '#FF6B35' : progress < 0.8 ? '#FFA502' : '#32CD32';
            ctx.fillRect(progressX, progressY, progressWidth * progress, progressHeight);
            
            ctx.fillStyle = 'white';
            ctx.font = '10px Arial';
            ctx.textAlign = 'center';
-           ctx.fillText(`${{gameState.currentPlatform}}/234`, progressX + progressWidth/2, progressY + 14);
+           ctx.fillText(`${{gameState.currentPlatform}}/323`, progressX + progressWidth/2, progressY + 14);
        }}
        
        function gameLoop() {{
@@ -1029,7 +1011,7 @@ game_html = f'''
                gameRunning: true,
                keys: {{}},
                camera: {{ x: 0, y: 0 }},
-               worldHeight: 234 * 220,
+               worldHeight: 323 * 220,
                backgroundMusicStarted: false
            }};
            player = new Player(150, gameState.worldHeight - 180);
@@ -1106,7 +1088,7 @@ with st.sidebar:
     st.markdown("""
     <div style="text-align: center; margin-bottom: 20px;">
         <h3 style="color: #333; font-size: 18px;">🎨Categorias & Cores</h3>
-        <p style="font-size: 12px; color: #666; margin-bottom: 15px;">📊 Total: 234 serviços AWS</p>
+        <p style="font-size: 12px; color: #666; margin-bottom: 15px;">📊 Total: 323 serviços AWS</p>
     </div>
     """, unsafe_allow_html=True)
     
@@ -1158,7 +1140,7 @@ st.markdown("""
 st.markdown("""
 <div style="text-align: center;">
     <h4>AWS Game: S3 Climbing Adventure</h4>
-    🧠Memorize os serviços AWS enquanto escala com o S3! Por <strong>Ary Ribeiro</strong>: <a href="mailto:aryribeiro@gmail.com">aryribeiro@gmail.com</a><br>
-    <em>Obs.: o web app foi testado apenas em computador.</em>
+    🧠Memorize os serviços AWS enquanto escala com o S3! - Por <strong>Ary Ribeiro</strong>: <a href="mailto:aryribeiro@gmail.com">aryribeiro@gmail.com</a><br>
+    <em>Obs.: o web game foi testado apenas em computador.</em>
 </div>
 """, unsafe_allow_html=True)
