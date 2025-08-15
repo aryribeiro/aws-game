@@ -47,13 +47,7 @@ def load_aws_services():
         # Extrair apenas os serviços (excluindo o nó central)
         services = [node for node in data['nodes'] if not node.get('isCentral', False)]
         
-        # Criar lista expandida com serviços S3 adicionais para chegar a 323
-        s3_services = [
-            "S3 Express One Zone", "S3 Transfer Acceleration",
-            "S3 Cross-Region Replication", "S3 Same-Region Replication", "S3 Inventory", "S3 Analytics",
-        ]
-        
-        # Combinar serviços reais com S3 expandido
+        # Combinar serviços reais
         all_services = []
         
         # Adicionar serviços reais primeiro
@@ -68,25 +62,7 @@ def load_aws_services():
                 'category': category
             })
         
-        # Adicionar serviços S3 adicionais para completar 323
-        for s3_service in s3_services:
-            if len(all_services) >= 323:
-                break
-            all_services.append({
-                'name': s3_service,
-                'description': f'Recurso do S3: {s3_service}',
-                'category': 'S3 Services'
-            })
-        
-        # Garantir exatamente 323 serviços
-        while len(all_services) < 323:
-            all_services.append({
-                'name': f'AWS Advanced Service {len(all_services) + 1}',
-                'description': 'Serviço AWS',
-                'category': 'AWS'
-            })
-        
-        return all_services[:323]  # Garantir exatamente 323
+        return all_services
         
     except FileNotFoundError:
         st.error("Arquivo servicos.json não encontrado na raiz do projeto!")
@@ -257,7 +233,7 @@ game_html = f'''
         <!-- Victory Screen -->
         <div id="gameWin">
             <h2>🏆 PARABÉNS!</h2>
-            <p>Completou + de 320 serviços AWS!</p>
+            <p>Completou + de 289 serviços AWS!</p>
             <p>Pontuação Final: <span id="winScore">0</span></p>
             <button onclick="restartGame()">🔄 Jogar Novamente</button>
         </div>
@@ -310,7 +286,7 @@ game_html = f'''
             gameRunning: true,
             keys: {{}},
             camera: {{ x: 0, y: 0 }},
-            worldHeight: 323 * 220,
+            worldHeight: awsServices.length * 220,
             backgroundMusicStarted: false
         }};
         
@@ -505,7 +481,7 @@ game_html = f'''
                 }} else if (this.type === 'moving') {{
                     color = '#4169E1';
                     borderColor = '#2E4BC7';
-                }} else if (this.number === 323) {{
+                }} else if (this.number === awsServices.length) {{
                     color = '#FFD700';
                     borderColor = '#CC9A00';
                 }} else {{
@@ -573,7 +549,7 @@ game_html = f'''
                 ctx.fillRect(this.x, this.y, this.width, this.height);
                 
                 // Platform top highlight
-                ctx.fillStyle = this.number === 323 ? '#FFFF00' : 'rgba(255,255,255,0.4)';
+                ctx.fillStyle = this.number === awsServices.length ? '#FFFF00' : 'rgba(255,255,255,0.4)';
                 ctx.fillRect(this.x, this.y, this.width, 4);
                 
                 // Service name (wrapped text for long names)
@@ -627,7 +603,7 @@ game_html = f'''
                 ctx.fillText(this.number.toString(), this.x + 5, this.y + 15);
                 
                 // Special indicator for final platform
-                if (this.number === 323) {{
+                if (this.number === awsServices.length) {{
                     ctx.fillStyle = '#FF0000';
                     ctx.font = 'bold 14px Arial';
                     ctx.textAlign = 'center';
@@ -736,7 +712,7 @@ game_html = f'''
        let powerUps = [];
        let collectibles = [];
        
-       // Initialize Level with 323 platforms
+       // Initialize Level
        function initLevel() {{
            platforms = [];
            enemies = [];
@@ -746,15 +722,15 @@ game_html = f'''
            // Ground platform (platform 0)
            platforms.push(new Platform(0, gameState.worldHeight - 60, canvas.width, 60, 0));
            
-           // Generate 323 platforms going upward
-           for (let i = 1; i <= 323; i++) {{
+           // Generate platforms going upward
+           for (let i = 1; i <= awsServices.length; i++) {{
                let x = Math.random() * (canvas.width - 250);
                let y = gameState.worldHeight - (i * 220);
                let width = 200 + Math.random() * 80;
                
                let type = 'normal';
-               if (i % 25 === 0 && i < 323) type = 'breakable';
-               if (i % 35 === 0 && i < 323) type = 'moving';
+               if (i % 25 === 0 && i < awsServices.length) type = 'breakable';
+               if (i % 35 === 0 && i < awsServices.length) type = 'moving';
                
                platforms.push(new Platform(x, y, width, 30, i, type));
                
@@ -801,7 +777,7 @@ game_html = f'''
                            
                            updateCurrentServiceUI(platform.serviceName);
                            
-                           if (platform.number === 323) {{
+                           if (platform.number === awsServices.length) {{
                                gameWin();
                                return;
                            }}
@@ -951,14 +927,14 @@ game_html = f'''
            ctx.fillStyle = '#333';
            ctx.fillRect(progressX, progressY, progressWidth, progressHeight);
            
-           const progress = gameState.currentPlatform / 323;
+           const progress = gameState.currentPlatform / awsServices.length;
            ctx.fillStyle = progress < 0.5 ? '#FF6B35' : progress < 0.8 ? '#FFA502' : '#32CD32';
            ctx.fillRect(progressX, progressY, progressWidth * progress, progressHeight);
            
            ctx.fillStyle = 'white';
            ctx.font = '10px Arial';
            ctx.textAlign = 'center';
-           ctx.fillText(`${{gameState.currentPlatform}}/323`, progressX + progressWidth/2, progressY + 14);
+           ctx.fillText(`${{gameState.currentPlatform}}/${{awsServices.length}}`, progressX + progressWidth/2, progressY + 14);
        }}
        
        function gameLoop() {{
@@ -1011,7 +987,7 @@ game_html = f'''
                gameRunning: true,
                keys: {{}},
                camera: {{ x: 0, y: 0 }},
-               worldHeight: 323 * 220,
+               worldHeight: awsServices.length * 220,
                backgroundMusicStarted: false
            }};
            player = new Player(150, gameState.worldHeight - 180);
@@ -1088,7 +1064,7 @@ with st.sidebar:
     st.markdown("""
     <div style="text-align: center; margin-bottom: 20px;">
         <h3 style="color: #333; font-size: 18px;">🎨Categorias & Cores</h3>
-        <p style="font-size: 12px; color: #666; margin-bottom: 15px;">📊 Total: 323 serviços AWS</p>
+        <p style="font-size: 12px; color: #666; margin-bottom: 15px;">📊 Total: """ + str(len(aws_services)) + """ serviços AWS</p>
     </div>
     """, unsafe_allow_html=True)
     
@@ -1140,7 +1116,7 @@ st.markdown("""
 st.markdown("""
 <div style="text-align: center;">
     <h4>AWS Game: S3 Climbing Adventure</h4>
-    🧠Memorize os serviços AWS enquanto escala com o S3! - Por <strong>Ary Ribeiro</strong>: <a href="mailto:aryribeiro@gmail.com">aryribeiro@gmail.com</a><br>
+    🧠 Memorize os serviços AWS enquanto escala com o S3! - Por <strong>Ary Ribeiro</strong>: <a href="mailto:aryribeiro@gmail.com">aryribeiro@gmail.com</a><br>
     <em>Obs.: o web game foi testado apenas em computador.</em>
 </div>
 """, unsafe_allow_html=True)
