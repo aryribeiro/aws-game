@@ -1,0 +1,1449 @@
+{
+  "nodes": [
+    {
+      "name": "SageMaker Studio Lab",
+      "Category": "Machine Learning",
+      "Description": "Apenda a faça testes com ML usando notebooks Jupyter na nuvem, gratuitos e que não exigem configuração."
+    },
+    {
+      "name": "SageMaker Training Compiler",
+      "Category": "Machine Learning",
+      "Description": "Treine modelos de ML com rapidez e economia usando o   SageMaker."
+    },
+    {
+      "name": "Security Lake",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Centralize automaticamente seus dados de segurança com apenas alguns cliques."
+    },
+    {
+      "name": "Simple Email Service",
+      "Category": "Front-End Plataformas Móveis E Web",
+      "Description": "E-mail de entrada e saída em alta escala."
+    },
+    {
+      "name": "Simple Notification Service",
+      "Category": "Integração De Aplicações",
+      "Description": "Publicação assíncrona, SMS, e-mail e notificações por push para dispositivos móveis."
+    },
+    {
+      "name": "Simple Queue Service",
+      "Category": "Integração De Aplicações",
+      "Description": "Filas gerenciadas de mensagens."
+    },
+    {
+      "name": "Simple Storage Service",
+      "Category": "Armazenamento",
+      "Description": "Armazenamento de objetos criado para recuperar qualquer volume de dados de qualquer local."
+    },
+    {
+      "name": "Textract",
+      "Category": "Machine Learning",
+      "Description": "Extrai texto e dados de documentos."
+    },
+    {
+      "name": "Timestream",
+      "Category": "Banco De Dados",
+      "Description": "Banco de dados totalmente gerenciado de séries temporais."
+    },
+    {
+      "name": "Transcribe",
+      "Category": "Machine Learning",
+      "Description": "Reconhecimento automático de fala para recuperar áudio em texto."
+    },
+    {
+      "name": "Translate",
+      "Category": "Machine Learning",
+      "Description": "Tradução natural e fluente de idiomas."
+    },
+    {
+      "name": "Verified Permissions",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Permissões autorizadas detalhadas para suas aplicações."
+    },
+    {
+      "name": "VPC",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Recursos de nuvem isolados."
+    },
+    {
+      "name": "VPC Lattice",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Simplifique a conectividade, segurança e o monitoramento de serviços para um serviço."
+    },
+    {
+      "name": "Apache MXNet on AWS",
+      "Category": "Machine Learning",
+      "Description": "Framework escalável e de código aberto para aprendizado profundo."
+    },
+    {
+      "name": "Neptune Analytics",
+      "Category": "Banco De Dados",
+      "Description": "Analise dados gráficios com dezenas de bilhões de conexões em segundos."
+    },
+    {
+      "name": "Nimble Studio",
+      "Category": "Serviços De Mídia",
+      "Description": "Acelere a criação de conteúdo na nuvem."
+    },
+    {
+      "name": "One Enterprise",
+      "Category": "Aplicação Empresarial",
+      "Description": "Um serviço de identidade seguro por reconhecimento da palma da mão para controle de acesso à empresa."
+    },
+    {
+      "name": "OpenSearch Sem Servidor",
+      "Category": "Análise",
+      "Description": "Ofereça análises de pesquisa e logs sem provisionamento nem ajuste de recursos."
+    },
+    {
+      "name": "OpenSearch Service",
+      "Category": "Análise",
+      "Description": "Pesquise, visualize e analise até petabytes de texto e dados não estruturados."
+    },
+    {
+      "name": "Personalize",
+      "Category": "Machine Learning",
+      "Description": "Crie recomendações em tempo real em suas aplicações da palma da mão."
+    },
+    {
+      "name": "Pinpoint",
+      "Category": "Front-End Plataformas Móveis E Web",
+      "Description": "Comunicações de marketing multicanal."
+    },
+    {
+      "name": "Polly",
+      "Category": "Machine Learning",
+      "Description": "Transforme texto em falas realistas."
+    },
+    {
+      "name": "Amazon Q",
+      "Category": "IA Generativa",
+      "Description": "Assistente baseado em IA generativa, com segurança e privacidade para atender às mais rigorosas necessidades corporativas."
+    },
+    {
+      "name": "Q na Cadeia de Suprimentos AWS",
+      "Category": "Aplicação Empresarial",
+      "Description": "Faça perguntas e obtenha respostas inteligentes sobre o que está acontecendo em sua cadeia de suprimentos, por que e quais ações tomar."
+    },
+    {
+      "name": "Q no QuickSight",
+      "Category": "Análise",
+      "Description": "Reinvent a inteligência de negócios e melhore a produtividade dos negócios com recursos generativos de BI no QuickSight."
+    },
+    {
+      "name": "QLDB",
+      "Category": "Blockchain",
+      "Description": "Banco de dados ledger totalmente gerenciado."
+    },
+    {
+      "name": "QuickSight",
+      "Category": "Análise",
+      "Description": "Serviço rápido de análise empresarial."
+    },
+    {
+      "name": "QuickSight Paginated Reports",
+      "Category": "Análise",
+      "Description": "Crie, programe e compartilhe relatórios e exportações de dados."
+    },
+    {
+      "name": "RDS",
+      "Category": "Banco De Dados",
+      "Description": "Serviço gerenciado de banco de dados relacional para MySQL, PostgreSQL, Oracle, SQL Server e MariaDB."
+    },
+    {
+      "name": "ElasticCache sem servidor",
+      "Category": "Banco De Dados",
+      "Description": "Crie um cache de alta disponibilidade em segundos de maneira instantânea para atender a instâncias de aplicativos em minutos para atender a demanda das aplicações."
+    },
+    {
+      "name": "Lex Automated Chatbot Designer",
+      "Category": "Machine Learning",
+      "Description": "Crie chatbots usando transcrições existentes de conversas."
+    },
+    {
+      "name": "Instâncias Inf2 do EC2",
+      "Category": "Computação",
+      "Description": "Alta performance com custos baixos no   EC2 para as workloads de inferência mais exigentes."
+    },
+    {
+      "name": "Instâncias Trn1 do EC2",
+      "Category": "Computação",
+      "Description": "A melhor performance de preço para o treinamento de modelos de aprendizado profundo na nuvem."
+    },
+    {
+      "name": "Acesso Verificado pela AWS",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Fornece acesso seguro a aplicações empresariais sem uma VPN."
+    },
+    {
+      "name": "AppFlow",
+      "Category": "Integração De Aplicações",
+      "Description": "Integração sem uso de código para aplicações SaaS e produtos da AWS."
+    },
+    {
+      "name": "AppStream 2.0",
+      "Category": "Computação De Usuário Final",
+      "Description": "Transmita por streaming aplicações de desktop para um navegador com segurança."
+    },
+    {
+      "name": "Athena",
+      "Category": "Análise",
+      "Description": "Consulte dados no S3 usando SQL."
+    },
+    {
+      "name": "Augmented AI",
+      "Category": "Machine Learning",
+      "Description": "Implemente facilmente análise humana para previsões de ML."
+    },
+    {
+      "name": "Aurora",
+      "Category": "Banco De Dados",
+      "Description": "Banco de dados relacional gerenciado de alta performance."
+    },
+    {
+      "name": "Aurora Limitless Database",
+      "Category": "Banco De Dados",
+      "Description": "Alimenta aplicações em escala de petabytes com milhões de gravações por segundo."
+    },
+    {
+      "name": "Braket",
+      "Category": "Tecnologias Quânticas",
+      "Description": "Acelere a pesquisa de computação quântica."
+    },
+    {
+      "name": "CloudFront",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Rede global de entrega de conteúdo."
+    },
+    {
+      "name": "CloudSearch",
+      "Category": "Análise",
+      "Description": "Serviço gerenciado de pesquisa."
+    },
+    {
+      "name": "ElasticCache",
+      "Category": "Banco De Dados",
+      "Description": "Serviço de caching in-memory para Redis e Memcached."
+    },
+    {
+      "name": "Lex",
+      "Category": "Machine Learning",
+      "Description": "Crie chatbots de voz e texto."
+    },
+    {
+      "name": "Lightsail",
+      "Category": "Computação",
+      "Description": "Inicie e gerencie servidores privados virtuais."
+    },
+    {
+      "name": "Application Migration Service (MGN)",
+      "Category": "Migração",
+      "Description": "Modernização e migração automatizadas de aplicações."
+    },
+    {
+      "name": "Amplify",
+      "Category": "Front-End Plataformas Móveis E Web",
+      "Description": "Construa, implemente, hospede e gerencie aplicações móveis e da Web."
+    },
+    {
+      "name": "App Studio",
+      "Category": "Machine Learning",
+      "Description": "A maneira mais rápida e fácil de criar aplicações de alto nível."
+    },
+    {
+      "name": "App2Container",
+      "Category": "Contêineres",
+      "Description": "Crie contêineres e migre aplicações existentes."
+    },
+    {
+      "name": "Application Discovery Service",
+      "Category": "Migração",
+      "Description": "Descubra aplicações on-premises para otimizar a migração."
+    },
+    {
+      "name": "AppSync",
+      "Category": "Front-End Plataformas Móveis E Web",
+      "Description": "Acelere o desenvolvimento de aplicações com APIs GraphQL escaláveis e totalmente gerenciadas."
+    },
+    {
+      "name": "Artifact",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Acesso sob demanda a relatórios de conformidade da AWS."
+    },
+    {
+      "name": "Auto Scaling",
+      "Category": "Computação",
+      "Description": "Escale vários recursos para atender à demanda."
+    },
+    {
+      "name": "Backup",
+      "Category": "Armazenamento",
+      "Description": "Backup centralizado entre os produtos da AWS."
+    },
+    {
+      "name": "Batch",
+      "Category": "Computação",
+      "Description": "Execute trabalhos em lote em qualquer escala."
+    },
+    {
+      "name": "Budgets",
+      "Category": "Gerenciamento Financeiro Na Nuvem",
+      "Description": "Defina orçamentos personalizados de custo e uso."
+    },
+    {
+      "name": "Location Service",
+      "Category": "Front-End Plataformas Móveis E Web",
+      "Description": "Adicione dados de localização a aplicações com segurança e facilidade."
+    },
+    {
+      "name": "Lookout for Equipment",
+      "Category": "Machine Learning",
+      "Description": "Detecte comportamentos anormais dos equipamentos analisando dados dos sensores."
+    },
+    {
+      "name": "Lookout for Metrics",
+      "Category": "Machine Learning",
+      "Description": "Detecte automaticamente anomalias em métricas e identifique as perspectivas respectivas em causas básicas."
+    },
+    {
+      "name": "Lookout for Vision",
+      "Category": "Machine Learning",
+      "Description": "Identifique defeitos em produtos usando visão computacional para automatizar inspeção de qualidade."
+    },
+    {
+      "name": "Macie",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Descubra e proteja seus dados sensíveis em escala."
+    },
+    {
+      "name": "Managed Grafana",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Visualização de dados escalável, segura e altamente disponível para métricas, logs e rastreamen to operacional."
+    },
+    {
+      "name": "Managed Service Prometheus",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Monitoramento gerenciado, seguro e altamente disponível para seus contêineres."
+    },
+    {
+      "name": "Managed Streaming Kafka (MSK)",
+      "Category": "Análise",
+      "Description": "Serviço de Kafka totalmente gerenciado."
+    },
+    {
+      "name": "Airflow (MWAA)",
+      "Category": "Integração De Aplicações",
+      "Description": "Orquestração de fluxo de trabalho gerenciada, segura e altamente disponível para Apache Airflow."
+    },
+    {
+      "name": "MemoryDB for Redis",
+      "Category": "Banco De Dados",
+      "Description": "Serviço de banco de dados na memória, durável e compatível com Redis para uma performance ultrarrápida."
+    },
+    {
+      "name": "Neptune",
+      "Category": "Banco De Dados",
+      "Description": "Serviço de banco de dados de gráficos totalmente gerenciado."
+    },
+    {
+      "name": "CloudWatch",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Monitore recursos e aplicações."
+    },
+    {
+      "name": "CodeCatalyst",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Serviço de desenvolvimento de software unificado para desenvolvimento e entrega mais rápidos na AWS."
+    },
+    {
+      "name": "CodeGuru",
+      "Category": "Machine Learning",
+      "Description": "Localize suas linhas de código mais caras."
+    },
+    {
+      "name": "Cognito",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Gerenciamento de identidades para aplicações."
+    },
+    {
+      "name": "Comprehend",
+      "Category": "Machine Learning",
+      "Description": "Descubra insights e relações em textos."
+    },
+    {
+      "name": "Connect",
+      "Category": "Aplicação Empresarial",
+      "Description": "Desbloqueie dados entre limites organizacionais com governança integrada."
+    },
+    {
+      "name": "DataZone",
+      "Category": "Análise",
+      "Description": "Desbloqueie dados entre limites organizacionais com governança integrada."
+    },
+    {
+      "name": "Detective",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Investigue possíveis problemas de segurança."
+    },
+    {
+      "name": "DevOps Guru for RDS",
+      "Category": "Machine Learning",
+      "Description": "Detecte, faça diagnósticos e corrija problemas de performance no   RDS."
+    },
+    {
+      "name": "DocumentDB",
+      "Category": "Banco De Dados",
+      "Description": "Banco de dados de documentos totalmente gerenciado."
+    },
+    {
+      "name": "DynamoDB",
+      "Category": "Banco De Dados",
+      "Description": "Banco de dados NoSQL gerenciado."
+    },
+    {
+      "name": "EBS Snapshots Archive",
+      "Category": "Armazenamento",
+      "Description": "Faça a arquivamento de snapshots do EBS e economize até 75% nos custos de armazenamento de snapshots."
+    },
+    {
+      "name": "EC2",
+      "Category": "Computação",
+      "Description": "Servidores virtuais na nuvem."
+    },
+    {
+      "name": "EC2 Auto Scaling",
+      "Category": "Computação",
+      "Description": "Escale a capacidade computacional para atender à demanda."
+    },
+    {
+      "name": "Certificate Manager",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Provisiona, gerencie e implante certificados SSL/TLS."
+    },
+    {
+      "name": "Chatbot",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Operações de conversa para a AWS."
+    },
+    {
+      "name": "Clean Rooms",
+      "Category": "Análise",
+      "Description": "Faça a correspondência, analise e colabore em conjuntos de dados, sem compartilhar nem revelar dados subjacentes."
+    },
+    {
+      "name": "Clean Rooms ML",
+      "Category": "Análise",
+      "Description": "Aplique machine learning com seus parceiros, sem compartilhar dados subjacentes."
+    },
+    {
+      "name": "Cloud Control API",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Gerencie infraestrutura na nuvem da AWS e de terceiros com APIs consistentes."
+    },
+    {
+      "name": "Cloud Map",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Descoberta de serviços para recursos da nuvem."
+    },
+    {
+      "name": "Cloud WAN",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Crie, gerencie e monitore facilmente redes globais de longa distância."
+    },
+    {
+      "name": "Cloud9",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Crie, execute e depure código em um IDE na nuvem."
+    },
+    {
+      "name": "CloudFormation",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Crie e gerencie recursos com modelos."
+    },
+    {
+      "name": "CloudHSM",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Armazenamento de chaves baseado em hardware para conformidade regulatória."
+    },
+    {
+      "name": "CloudShell",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Acesso a linha de comando a recursos da AWS diretamente de um navegador."
+    },
+    {
+      "name": "CloudTrail",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Rastreie o uso de APIs e as atividades de usuários."
+    },
+    {
+      "name": "CodeArtifact",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Gerenciamento seguro, escalável e econômico de artefatos para o desenvolvimento de software."
+    },
+    {
+      "name": "CodeBuild",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Crie e teste código."
+    },
+    {
+      "name": "EFS Archive",
+      "Category": "Armazenamento",
+      "Description": "Uma nova classe de armazenamento em que os clientes podem economizar até 50% nos custos de armazenamento em comparação com   EFS Frequent Access."
+    },
+    {
+      "name": "Elastic Block Store",
+      "Category": "Armazenamento",
+      "Description": "Volumes de armazenamento em bloco do EC2."
+    },
+    {
+      "name": "Elastic File System",
+      "Category": "Armazenamento",
+      "Description": "Sistema de arquivos totalmente gerenciado para o EC2."
+    },
+    {
+      "name": "Elastic Container Service",
+      "Category": "Contêineres",
+      "Description": "Uma maneira altamente segura, confiável e escalável para executar contêineres."
+    },
+    {
+      "name": "Elastic Kubernetes Service",
+      "Category": "Contêineres",
+      "Description": "A forma mais confiável de executar o Kubernetes."
+    },
+    {
+      "name": "Elastic Transcoder",
+      "Category": "Serviços De Mídia",
+      "Description": "Transcodificação de mídia escalável e fácil de usar."
+    },
+    {
+      "name": "ElastiCache",
+      "Category": "Banco De Dados",
+      "Description": "Serviço de caching in-memory para Redis e Memcached."
+    },
+    {
+      "name": "EMR",
+      "Category": "Análise",
+      "Description": "Framework do Hadoop hospedado."
+    },
+    {
+      "name": "FinSpace",
+      "Category": "Análise",
+      "Description": "Armazene, catalogue, prepare e analise dados do setor financeiro em poucos minutos."
+    },
+    {
+      "name": "Forecast",
+      "Category": "Machine Learning",
+      "Description": "Aumente a precisão das previsões usando machine learning."
+    },
+    {
+      "name": "Fraud Detector",
+      "Category": "Machine Learning",
+      "Description": "Detecte mais fraudes online em menos tempo."
+    },
+	{
+      "name": "Amazon HealthLake",
+      "Category": "Saúde",
+      "Description": "Serviço de e análise de dados de . Compatível com FHIR e integrado com ML."
+    },
+    {
+      "name": "Amazon Kendra",
+      "Category": "Machine Learning",
+      "Description": "empresarial inteligente com NLP. Compreende documentos e responde perguntas contextuais."
+    },
+    {
+      "name": "Amazon Keyspaces",
+      "Category": "Banco de Dados",
+      "Description": "Apache Cassandra gerenciado com alta disponibilidade. Ideal para aplicações NoSQL escaláveis."
+    },
+    {
+      "name": "Kinesis Data Analytics",
+      "Category": "Análise",
+      "Description": "Análise de streams em tempo real com SQL. Integra Apache Flink para baixa latência."
+    },
+    {
+      "name": "Amazon Data Firehose",
+      "Category": "Análise",
+      "Description": "Entrega de streaming data para destinos AWS. Transforma e comprime dados automaticamente."
+    },
+    {
+      "name": "Amazon Kinesis Data Streams",
+      "Category": "Análise",
+      "Description": "Captura de dados em tempo real para processamento. Oferece ingestão escalável para streaming."
+    },
+    {
+      "name": "Amazon Kinesis Video Streams",
+      "Category": "Serviços de Mídia",
+      "Description": "Streaming seguro de vídeo para e playback. Ingestão de câmeras e dispositivos IoT."
+    },
+    {
+      "name": "RDS Custom for SQL",
+      "Category": "Banco De Dados",
+      "Description": "Serviço de banco de dados gerenciado para aplicações que exijem sistema operacional e banco de dados personalizado."
+    },
+    {
+      "name": "RDS para Db2",
+      "Category": "Banco De Dados",
+      "Description": "Facilita configurar, operar e escalar um banco de dados Db2 gerenciado na nuvem."
+    },
+    {
+      "name": "Redshift",
+      "Category": "Banco De Dados",
+      "Description": "Data warehousing rápido, simples e econômico."
+    },
+    {
+      "name": "Redshift sem servidor",
+      "Category": "Análise",
+      "Description": "Ajusta sua escala de preco/performance inteligentemente para workloads dinâmicas."
+    },
+    {
+      "name": "Route 53",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Sistema de Nomes de Domínio (DNS) escalável do 53."
+    },
+    {
+      "name": "S3 Express One Zone",
+      "Category": "Armazenamento",
+      "Description": "Armazenamento mais rápido de objetos na nuvem para aplicações que exijem latência sistemática de um dígito em milissegundos."
+    },
+    {
+      "name": "S3 Glacier",
+      "Category": "Armazenamento",
+      "Description": "Armazenamento de baixo custo para arquivos na nuvem."
+    },
+    {
+      "name": "S3 Glacier Instant Retrieval",
+      "Category": "Armazenamento",
+      "Description": "Armazenamento com custo mais baixo para dados raramente acessados com recuperação em milissegundos para a maioria dos casos."
+    },
+    {
+      "name": "IA do   SageMaker",
+      "Category": "Machine Learning",
+      "Description": "Crie, treine e implante modelos de Machine Learning em grande escala."
+    },
+    {
+      "name": "SageMaker Canvas",
+      "Category": "Machine Learning",
+      "Description": "Gere previsões precisas de machine learning sem codificar."
+    },
+    {
+      "name": "SageMaker Ground Truth",
+      "Category": "Machine Learning",
+      "Description": "Crie conjuntos de dados precisos para treinamento de ML."
+    },
+    {
+      "name": "SageMaker Ground Truth Plus",
+      "Category": "Machine Learning",
+      "Description": "Crie conjuntos de dados de alta qualidade para treinar modelos de machine learning."
+    },
+    {
+      "name": "SageMaker HyperPod",
+      "Category": "Machine Learning",
+      "Description": "Reduza o tempo de treinamento de FMs em até 40%, com uma infraestrutura desenvoldida especificamente para treinamento distribuído."
+    },
+    {
+      "name": "SageMaker Studio",
+      "Category": "Machine Learning",
+      "Description": "Acelere o desenvolvimento de ML com ferramentas preferidas de ML e assistência de codificação baseada em IA."
+    },
+    {
+      "name": "DataSync",
+      "Category": "Migração",
+      "Description": "Transferência de dados simples, rápida e online."
+    },
+    {
+      "name": "Deadline Cloud",
+      "Category": "Serviços De Mídia",
+      "Description": "Gerenciamento de renderização na nuvem."
+    },
+    {
+      "name": "Deep Learning AMIs",
+      "Category": "Machine Learning",
+      "Description": "Aprendizado profundo no   EC2."
+    },
+    {
+      "name": "Deep Learning Containers",
+      "Category": "Machine Learning",
+      "Description": "Imagens do Docker para aprendizado profundo."
+    },
+    {
+      "name": "DeepComposer",
+      "Category": "Machine Learning",
+      "Description": "Teclado musical habilitado para ML."
+    },
+    {
+      "name": "DeepLens",
+      "Category": "Machine Learning",
+      "Description": "Câmera de vídeo com aprendizado profundo."
+    },
+    {
+      "name": "DeepRacer",
+      "Category": "Machine Learning",
+      "Description": "Carro de corrida autônomo em escala 1:18 guiado por ML."
+    },
+    {
+      "name": "Device Farm",
+      "Category": "Front-End Plataformas Móveis E Web",
+      "Description": "Teste aplicações Web e para Android e iOS em dispositivos reais na Nuvem AWS."
+    },
+    {
+      "name": "Direct Connect",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Conexão de rede dedicada para a AWS."
+    },
+    {
+      "name": "Distro for OpenTelemetry",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Distribuição de código aberto seguro e pronto para produção com performance previsível."
+    },
+    {
+      "name": "Elastic Beanstalk",
+      "Category": "Computação",
+      "Description": "Execute e gerencie aplicações Web."
+    },
+    {
+      "name": "Elemental MediaConnect",
+      "Category": "Serviços De Mídia",
+      "Description": "Transporte de vídeo ao vivo confiável e seguro."
+    },
+    {
+      "name": "Elemental MediaConvert",
+      "Category": "Serviços De Mídia",
+      "Description": "Converta conteúdo de vídeo baseado em arquivos."
+    },
+    {
+      "name": "Elemental MediaLive",
+      "Category": "Serviços De Mídia",
+      "Description": "Converta conteúdo de vídeo ao vivo."
+    },
+    {
+      "name": "CodeCommit",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Armazene código em repositórios Git privados."
+    },
+    {
+      "name": "CodeDeploy",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Automatize implantações de código."
+    },
+    {
+      "name": "CodePipeline",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Faça o lançamento de software usando entrega contínua."
+    },
+    {
+      "name": "CodeStar",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Desenvolva e implante aplicações na AWS."
+    },
+    {
+      "name": "Command Line Interface (CLI)",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Ferramenta unificada de interface de linha de comando para gerenciar serviços da AWS."
+    },
+    {
+      "name": "Config",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Rastreie o inventário e as alterações de recursos."
+    },
+    {
+      "name": "Control Tower",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Configure e controle um ambiente multicontas seguro e compatível."
+    },
+    {
+      "name": "Control Tower Data Residency Guardrails",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Mantenha os dados dos seus clientes em regiões específicas da AWS."
+    },
+    {
+      "name": "Copilot",
+      "Category": "Contêineres",
+      "Description": "O AWS Copilot é a maneira mais fácil de inicializar e gerenciar suas aplicações containerizadas na AWS."
+    },
+    {
+      "name": "Cost and Usage Report",
+      "Category": "Gerenciamento Financeiro Na Nuvem",
+      "Description": "Acesse informações abrangentes de custos e uso."
+    },
+    {
+      "name": "Cost Explorer",
+      "Category": "Gerenciamento Financeiro Na Nuvem",
+      "Description": "Analise seus custos e uso da AWS."
+    },
+    {
+      "name": "Data Exchange",
+      "Category": "Análise",
+      "Description": "Encontre, assine e use dados de terceiros na nuvem."
+    },
+    {
+      "name": "Data Pipeline",
+      "Category": "Análise",
+      "Description": "Serviço de orquestração para fluxos de trabalho periódicos e orientados por dados."
+    },
+    {
+      "name": "Database Migration Service (DMS)",
+      "Category": "Migração",
+      "Description": "Migre Banco De Dados com tempo mínimo de inatividade."
+    },
+    {
+      "name": "Elemental MediaPackage",
+      "Category": "Serviços De Mídia",
+      "Description": "Concepção e empacotamento de vídeo."
+    },
+    {
+      "name": "Elemental MediaStore",
+      "Category": "Serviços De Mídia",
+      "Description": "Armazenamento de mídia e origem de HTTP simples."
+    },
+    {
+      "name": "Elemental MediaTailor",
+      "Category": "Serviços De Mídia",
+      "Description": "Personalização e monetização de vídeos."
+    },
+    {
+      "name": "End User Messaging",
+      "Category": "Aplicação Empresarial",
+      "Description": "Sistema de mensagens confiável e econômico que não compromete a segurança, a proteção ou os resultados."
+    },
+    {
+      "name": "Fargate",
+      "Category": "Contêineres",
+      "Description": "Computação com tecnologia sem servidor para contêineres."
+    },
+    {
+      "name": "Fault Injection Simulator",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Melhore a resiliência e a performance com experimentos controlados."
+    },
+    {
+      "name": "Firewall Manager",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Gerenciamento central de regras de firewall."
+    },
+    {
+      "name": "Global Accelerator",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Melhore a disponibilidade e a performance de aplicações globais."
+    },
+    {
+      "name": "Glue",
+      "Category": "Análise",
+      "Description": "Integração de dados simples, escalável e sem servidor."
+    },
+    {
+      "name": "Glue Data Quality",
+      "Category": "Análise",
+      "Description": "Forneça dados de alta qualidade em seus data lakes e pipelines."
+    },
+    {
+      "name": "Glue for Ray",
+      "Category": "Análise",
+      "Description": "Escaley simplefique com código Python para ETL, com tecnologia sem servidor."
+    },
+    {
+      "name": "Ground Station",
+      "Category": "Satélite",
+      "Description": "Estação terrestre totalmente gerenciada como serviço."
+    },
+    {
+      "name": "Health",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Fornece dados para eventos e mudanças que afetam seus recursos da Nuvem AWS."
+    },
+    {
+      "name": "HealthOmics",
+      "Category": "Machine Learning",
+      "Description": "Transforme dados ómicos em insights de dados."
+    },
+    {
+      "name": "HealthScribe",
+      "Category": "Machine Learning",
+      "Description": "Transforme anotações clínicas em insights usando IA generativa."
+    },
+    {
+      "name": "Identity and Access Management",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Gerencie com segurança o acesso a serviços e recursos."
+    },
+    {
+      "name": "Inferentia",
+      "Category": "Machine Learning",
+      "Description": "Chip de inferência de machine learning."
+    },
+    {
+      "name": "IoT 1-Click",
+      "Category": "Internet Das Coisas",
+      "Description": "Criação de um disparador do AWS Lambda com um clique."
+    },
+    {
+      "name": "IoT Analytics",
+      "Category": "Internet Das Coisas",
+      "Description": "Análise para dispositivos IoT."
+    },
+    {
+      "name": "IoT Button",
+      "Category": "Internet Das Coisas",
+      "Description": "Dash Button programável na nuvem."
+    },
+    {
+      "name": "IoT Core",
+      "Category": "Internet Das Coisas",
+      "Description": "Conecte dispositivos à nuvem."
+    },
+    {
+      "name": "IoT Device Defender",
+      "Category": "Internet Das Coisas",
+      "Description": "Gerenciamento de segurança para dispositivos IoT."
+    },
+    {
+      "name": "IoT Device Management",
+      "Category": "Internet Das Coisas",
+      "Description": "Integre, organize e gerencie remotamente dispositivos IoT."
+    },
+    {
+      "name": "IoT EduKit",
+      "Category": "Internet Das Coisas",
+      "Description": "Aprenda a criar aplicações simples para a IoT com hardware de referência e tutoriais detalhados."
+    },
+    {
+      "name": "IoT Events",
+      "Category": "Internet Das Coisas",
+      "Description": "Detecção e resposta a eventos de IoT."
+    },
+    {
+      "name": "IoT ExpressLink",
+      "Category": "Internet Das Coisas",
+      "Description": "Desenvolva dispositivos de IoT seguros com rapidez e facilidade."
+    },
+    {
+      "name": "IoT FleetWise",
+      "Category": "Internet Das Coisas",
+      "Description": "Colete, transforme e transfira dados de veículos para a nuvem com facilidade e praticamente em tempo real."
+    },
+    {
+      "name": "IoT Greengrass",
+      "Category": "Internet Das Coisas",
+      "Description": "Computação, sistema de mensagens e sincronização local para dispositivos."
+    },
+    {
+      "name": "IoT RoboRunner",
+      "Category": "Internet Das Coisas",
+      "Description": "Construa aplicações que ajudam frotas de robôs a trabalhar juntas com perfeição."
+    },
+    {
+      "name": "IoT SiteWise",
+      "Category": "Internet Das Coisas",
+      "Description": "Colete e interprete de dados de IoT."
+    },
+    {
+      "name": "IoT TwinMaker",
+      "Category": "Internet Das Coisas",
+      "Description": "Otimize operações ao criar com facilidade gêmeos digitais de sistemas reais."
+    },
+    {
+      "name": "KMS Key Management Service (KMS)",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Criação e controle gerenciados de chaves de criptografia."
+    },
+    {
+      "name": "Lambda",
+      "Category": "Computação",
+      "Description": "Execute código sem preocupações com servidores."
+    },
+    {
+      "name": "Lambda SnapStart",
+      "Category": "Computação",
+      "Description": "Obtenha tempos de inicialização de funções Java até dez vezes mais rápidos."
+    },
+    {
+      "name": "License Manager",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Rastreie, gerencie e controle licenças."
+    },
+    {
+      "name": "Mainframe Modernization",
+      "Category": "Migração",
+      "Description": "Migre, modernize, opere e execute workloads de mainframe."
+    },
+    {
+      "name": "Managed Services",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Gerenciamento de operações de infraestrutura da AWS."
+    },
+    {
+      "name": "Management Console Mobile Application",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Acesse recursos em atividade."
+    },
+    {
+      "name": "Marketplace for Containers Anywhere",
+      "Category": "Contêineres",
+      "Description": "Encontre, assine e implante aplicações de terceiros que podem ser executadas em qualquer ambiente Kubernetes."
+    },
+    {
+      "name": "Migration Hub",
+      "Category": "Migração",
+      "Description": "Acompanhe as migrações em um único lugar."
+    },
+    {
+      "name": "Network Firewall",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Proteja sua rede em suas   VPCs com apenas alguns cliques."
+    },
+    {
+      "name": "OpsWorks",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Automatize operações com Chef e o Puppet."
+    },
+    {
+      "name": "Organizations",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Governança e gerenciamento centralizados para contas da AWS."
+    },
+    {
+      "name": "Outposts",
+      "Category": "Computação",
+      "Description": "Execute a infraestrutura da AWS on-premises."
+    },
+    {
+      "name": "Outposts 1U e 2U",
+      "Category": "Computação",
+      "Description": "Execute o AWS Outposts em locais menores."
+    },
+    {
+      "name": "Panorama",
+      "Category": "Machine Learning",
+      "Description": "Aprimore as suas operações com visão computacional na borda."
+    },
+    {
+      "name": "Partner Device Catalog",
+      "Category": "Internet Das Coisas",
+      "Description": "Catálogo selecionado de hardware de IoT compatível com a AWS."
+    },
+    {
+      "name": "Personal Health Dashboard",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Visualização personalizada da integridade de serviços da AWS."
+    },
+    {
+      "name": "Private 5G",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Implante, gerencie e escale facilmente uma rede celular privada."
+    },
+    {
+      "name": "PrivateLink",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Acesse com segurança serviços hospedados na AWS."
+    },
+    {
+      "name": "Proton",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Automatize o gerenciamento de implantações de contêineres e de tecnologia sem servidor."
+    },
+    {
+      "name": "Resilience Hub",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Prepare e proteja suas aplicações contra interrupções."
+    },
+    {
+      "name": "Resource Access Manager",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Serviço simples e seguro para compartilhar recursos da AWS."
+    },
+    {
+      "name": "RoboMaker",
+      "Category": "Robótica",
+      "Description": "Desenvolva, teste e implante aplicações de robótica."
+    },
+    {
+      "name": "Secrets Manager",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Altere, gerencie e recupere segredos."
+    },
+    {
+      "name": "Security Hub",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Central unificada de conformidade e segurança."
+    },
+    {
+      "name": "Serverless Application Repository",
+      "Category": "Computação",
+      "Description": "Descubra, implante e publique aplicações sem servidor."
+    },
+    {
+      "name": "Service Catalog",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Crie e use produtos padronizados."
+    },
+    {
+      "name": "Service Management Connector",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Provisionar, gerenciar e operar recursos da AWS nas ferramentas de gerenciamento de serviços."
+    },
+    {
+      "name": "Shield",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Proteção contra DDoS."
+    },
+    {
+      "name": "SimSpace Weaver",
+      "Category": "Computação",
+      "Description": "Crie simulações espaciais dinâmicas em grande escala na infraestrutura gerenciada da AWS."
+    },
+    {
+      "name": "Step Functions",
+      "Category": "Integração De Aplicações",
+      "Description": "Coordenação para aplicações distribuídas."
+    },
+    {
+      "name": "Storage Gateway",
+      "Category": "Armazenamento",
+      "Description": "Integração de armazenamento híbrido."
+    },
+    {
+      "name": "Systems Manager",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Obtenha insights operacionais e tome medidas na infraestrutura da AWS."
+    },
+    {
+      "name": "Transfer Family",
+      "Category": "Migração",
+      "Description": "Serviços SFTP, FTPS e FTP totalmente gerenciados."
+    },
+    {
+      "name": "Transit Gateway",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Escala facilmente VPCs e conexões de contas."
+    },
+    {
+      "name": "Trusted Advisor",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Otimize a performance e a segurança."
+    },
+    {
+      "name": "VPN",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Acesse recursos de rede com segurança."
+    },
+    {
+      "name": "WAF",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Filtre o tráfego da Web mal-intencionado."
+    },
+    {
+      "name": "Wavelength",
+      "Category": "Computação",
+      "Description": "Disponibilize aplicações com latência ultrabaixa para dispositivos 5G."
+    },
+    {
+      "name": "Well-Architected Tool",
+      "Category": "Estratégia De Arquitetura",
+      "Description": "Analise e aprimore suas workloads."
+    },
+    {
+      "name": "Wickr",
+      "Category": "Aplicação Empresarial",
+      "Description": "Proteja as comunicações empresariais com criptografia de ponta a ponta."
+    },
+    {
+      "name": "X-Ray",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Analise e depure suas aplicações."
+    },
+    {
+      "name": "Instâncias C7g/Graviton3 do EC2",
+      "Category": "Computação",
+      "Description": "A melhor performance de preço para workloads com uso intensivo de computação no   EC2."
+    },
+    {
+      "name": "Instâncias C7gn do EC2",
+      "Category": "Computação",
+      "Description": "Instâncias Graviton otimizadas para computação com até 200 Gbps de largura de banda de rede."
+    },
+    {
+      "name": "Instâncias G5g do EC2",
+      "Category": "Computação",
+      "Description": "A melhor performance de preço para workloads de jogos Android transmitidos da plataforma."
+    },
+    {
+      "name": "Instâncias Hpc6id do EC2",
+      "Category": "Computação",
+      "Description": "As instâncias Hpc6id do   EC2 oferecem desempenho econômico para workloads de HPC que fazem uso intenso de dados."
+    },
+    {
+      "name": "Instâncias Hpc7g do EC2",
+      "Category": "Computação",
+      "Description": "Ofereça performance até 60% melhor em relação à instância anterior para gerações de computação intensiva."
+    },
+    {
+      "name": "Instâncias Im4gn/Is4gen do EC2",
+      "Category": "Computação",
+      "Description": "A melhor performance de preço e o menor custo para armazenamento baseado em SSD no   EC2."
+    },
+    {
+      "name": "Instâncias M6a do EC2",
+      "Category": "Computação",
+      "Description": "Instâncias de uso geral habilitadas pela 3ª geração de processadores AMD EPYC."
+    },
+    {
+      "name": "Instâncias Mac M1 do EC2",
+      "Category": "Computação",
+      "Description": "Melhor performance de compilação de aplicações e testes mais rápidos para macOS."
+    },
+    {
+      "name": "Instâncias R8g do EC2",
+      "Category": "Computação",
+      "Description": "O melhor preço, desempenho e eficiência energética no EC2 para workloads que consomem muita memória."
+    },
+    {
+      "name": "Instâncias spot do EC2",
+      "Category": "Computação",
+      "Description": "Execute workloads com até 90% de desconto."
+    },
+    {
+      "name": "Instâncias X2idn/X2iedn do EC2",
+      "Category": "Computação",
+      "Description": "Performance de preço de computação até 50% melhor em relação às instâncias da geração anterior."
+    },
+    {
+      "name": "Instâncias X2iezn do EC2",
+      "Category": "Computação",
+      "Description": "Rapido processador Intel Xeon escalável na nuvem."
+    },
+    {
+      "name": "ETL zero Aurora e Redshift",
+      "Category": "Banco De Dados",
+      "Description": "Agora o Aurora permite integrações sem ETL com o Redshift."
+    },
+    {
+      "name": "Redshift para Apache Spark",
+      "Category": "Análise",
+      "Description": "Crie aplicações Apache Spark para leitura e gravação de dados usando o Redshift."
+    },
+    {
+      "name": "Lake Formation",
+      "Category": "Análise",
+      "Description": "Crie um data lake seguro em poucos dias."
+    },
+    {
+      "name": "Launch Wizard",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Dimensione, configure e implante facilmente aplicações de terceiros na AWS."
+    },
+    {
+      "name": "Outposts rack",
+      "Category": "Computação",
+      "Description": "Execute infraestrutura da AWS on-premises para uma experiência híbrida verdadeiramente consistente."
+    },
+    {
+      "name": "Outposts servers",
+      "Category": "Computação",
+      "Description": "Execute a AWS em locais com espaço e energia limitados."
+    },
+    {
+      "name": "ParallelCluster",
+      "Category": "Computação",
+      "Description": "Cluster de computação de alta performance na AWS."
+    },
+    {
+      "name": "Private CA",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Crie autoridades de certificados privadas."
+    },
+    {
+      "name": "Proton",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Plataforma gerenciada para implantações de contêineres e sem servidor."
+    },
+    {
+      "name": "Resilience Hub",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Avalie, melhore e gerencie a resiliência das aplicações."
+    },
+    {
+      "name": "Resource Explorer",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Pesquise recursos na AWS de forma rápida."
+    },
+    {
+      "name": "Resource Groups",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Organize recursos da AWS."
+    },
+    {
+      "name": "Signer",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Assine código para integridade e autenticidade."
+    },
+    {
+      "name": "Single Sign-On",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Gerencie SSO para aplicações na nuvem."
+    },
+    {
+      "name": "Snow Family",
+      "Category": "Computação",
+      "Description": "Dispositivos físicos para agregar e processar dados em locais da borda com transferência subsequente para a AWS."
+    },
+    {
+      "name": "Snowball",
+      "Category": "Migração",
+      "Description": "Dispositivos físicos para migração de dados em petabytes para a AWS."
+    },
+    {
+      "name": "Snowcone",
+      "Category": "Armazenamento",
+      "Description": "Dispositivos fisicos para migração de dados com origem ou destino na AWS."
+    },
+    {
+      "name": "SDKs para a AWS",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Ferramentas e SDKs para a AWS."
+    },
+    {
+      "name": "Governance ML com SageMaker",
+      "Category": "Machine Learning",
+      "Description": "Simplifique o controle de acesso e aumente a transparência."
+    },
+    {
+      "name": "Guias atendentes do Connect",
+      "Category": "Aplicação Empresarial",
+      "Description": "Resolva problemas de clientes em centrais de atendimento com mais rapidez e precisão."
+    },
+    {
+      "name": "Cadeia de Suprimentos AWS",
+      "Category": "Aplicação Empresarial",
+      "Description": "Minimize os riscos e o custo de fornecimento com tecnologia de ML."
+    },
+    {
+      "name": "Carrinho do Dash",
+      "Category": "Aplicação Empresarial",
+      "Description": "Permita que consumidores comprem com eficiência e facilidade."
+    },
+    {
+      "name": "Console de Gerenciamento",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Interface de usuário baseada na Web."
+    },
+    {
+      "name": "Dispositivos/software do Elemental",
+      "Category": "Serviços De Mídia",
+      "Description": "Soluções de mídia on-premises."
+    },
+    {
+      "name": "Elastic Disaster Recovery (DRS)",
+      "Category": "Armazenamento",
+      "Description": "Recuperação de aplicações escalável e econômica para a AWS."
+    },
+    {
+      "name": "ETL zero do OpenSearch",
+      "Category": "Banco De Dados",
+      "Description": "Capacite pesquisas poderosas quase em tempo real, como pesquisas de texto completo, pesquisas vetoriais e muito mais, sem precisar criar ou gerenciar pipelines de ETL."
+    },
+    {
+      "name": "Família WorkSpaces",
+      "Category": "Computação De Usuário Final",
+      "Description": "Serviço de área de trabalho virtual para cada caso de uso."
+    },
+    {
+      "name": "Família AWS Snow",
+      "Category": "Computação",
+      "Description": "Dispositivos físicos para agregar e processar dados em locais da borda com transferência subsequente para a AWS."
+    },
+    {
+      "name": "Snow migração origem/destino",
+      "Category": "Migração",
+      "Description": "Dispositivos físicos para migração de dados com origem ou destino na AWS."
+    },
+    {
+      "name": "Snow computação de borda",
+      "Category": "Armazenamento",
+      "Description": "Dispositivos físicos para computação de borda e ambientes robustos ou desconectados."
+    },
+    {
+      "name": "Ferramentas de Desenvolvedor",
+      "Category": "Ferramentas De Desenvolvedor",
+      "Description": "Ferramentas SDKs para a AWS."
+    },
+    {
+      "name": "CodeWhisperer",
+      "Category": "Machine Learning",
+      "Description": "Construa aplicações mais rápido com um guia de programação baseado em ML."
+    },
+    {
+      "name": "Relatórios de instâncias reservadas (IRs)",
+      "Category": "Gerenciamento Financeiro Na Nuvem",
+      "Description": "Obtenha detalhes das suas instâncias reservadas (IRs)."
+    },
+    {
+      "name": "Savings Plans",
+      "Category": "Gerenciamento Financeiro Na Nuvem",
+      "Description": "Economize até 72% no uso de computação com preços flexíveis."
+    },
+    {
+      "name": "Chime SDK",
+      "Category": "Aplicação Empresarial",
+      "Description": "Mensagens, áudio, vídeo e compartilhamento de tela em tempo real."
+    },
+    {
+      "name": "Sistemas de arquivos escaláveis",
+      "Category": "Armazenamento",
+      "Description": "FSx para NetApp ONTAP oferece performance de armazenamento até nove vezes maior do que opções existentes para workloads intensivos de computação."
+    },
+    {
+      "name": "Backup para o S3",
+      "Category": "Armazenamento",
+      "Description": "Gerencie backup de forma centralizada e restaure dados de aplicações armazenados no S3."
+    },
+    {
+      "name": "Suporte Backup VMware",
+      "Category": "Armazenamento",
+      "Description": "Proteja centralmente ambientes híbridos de VMware."
+    },
+    {
+      "name": "Suporte Spark no Athena",
+      "Category": "Análise",
+      "Description": "Execute análises interativas no Apache Spark em menos de um segundo."
+    },
+    {
+      "name": "Sust. Cadeia Suprimentos AWS",
+      "Category": "Sust. Cadeia de Suprimentos AWS",
+      "Description": "Obtenha os documentos de conformidade de sustentabilidade de sua rede de fornecedores de forma mais segura e eficiente."
+    },
+    {
+      "name": "TensorFlow na AWS",
+      "Category": "Machine Learning",
+      "Description": "Biblioteca de inteligência de máquina de código aberto."
+    },
+    {
+      "name": "WorkSpaces Thin Client",
+      "Category": "Computação De Usuário Final",
+      "Description": "O   WorkSpaces Thin Client reduz custos, simplifica a logística, acelera a implantação e fornece uma área de trabalho virtual da AWS."
+    },
+    {
+      "name": "Transformação de código do Q",
+      "Category": "IA Generativa",
+      "Description": "Acelere a manutenção, os upgrades ou a migração de aplicações em minutos."
+    },
+    {
+      "name": "Nível N Cadeia de Suprimentos",
+      "Category": "Aplicação Empresarial",
+      "Description": "Amplie a visibilidade e os insights para incluir seus parceiros comerciais."
+    },
+    {
+      "name": "VMware Cloud on AWS",
+      "Category": "Computação",
+      "Description": "Execute uma nuvem híbrida sem hardware personalizado."
+    },
+    {
+      "name": "Local Zones",
+      "Category": "Computação",
+      "Description": "Execute aplicações sensíveis à latência mais perto de usuários finais."
+    },
+    {
+      "name": "EC2 Image Builder",
+      "Category": "Computação",
+      "Description": "Crie e mantenha imagens seguras do Linux ou Windows Server."
+    }
+  ]
+}
