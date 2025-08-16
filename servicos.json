@@ -281,9 +281,24 @@
       "Description": "Filas gerenciadas de mensagens."
     },
     {
-      "name": "Simple Storage Service",
+      "name": "S3 Standard",
       "Category": "Armazenamento",
-      "Description": "Armazenamento de objetos criado para recuperar qualquer volume de dados de qualquer local."
+      "Description": "oferece armazenamento de objetos com altos níveis de resiliência, disponibilidade e performance para dados acessados com frequência."
+    },
+	{
+      "name": "S3 Standard-IA",
+      "Category": "Armazenamento",
+      "Description": "indicado para dados acessados com menos frequência, mas que exigem acesso rápido quando necessários."
+    },
+	{
+      "name": "S3 One Zone-IA",
+      "Category": "Armazenamento",
+      "Description": "indicado para dados acessados com menos frequência, mas que exigem acesso rápido quando necessários."
+    },
+	{
+      "name": "S3 Intelligent-Tiering",
+      "Category": "Armazenamento",
+      "Description": "armazenamento em nuvem que reduz automaticamente os custos de armazenamento em um nível de objeto granular, movendo automaticamente os dados para o nível de acesso mais econômico com base na frequência de acesso."
     },
     {
       "name": "Textract",
@@ -853,7 +868,7 @@
     {
       "name": "S3 Express One Zone",
       "Category": "Armazenamento",
-      "Description": "Armazenamento mais rápido de objetos na nuvem para aplicações que exijem latência sistemática de um dígito em milissegundos."
+      "Description": "alta performance com zona de disponibilidade única criada especificamente para oferecer acesso consistente a dados na velocidade de um dígito em milissegundos."
     },
     {
       "name": "S3 Glacier",
@@ -864,6 +879,11 @@
       "name": "S3 Glacier Instant Retrieval",
       "Category": "Armazenamento",
       "Description": "Armazenamento com custo mais baixo para dados raramente acessados com recuperação em milissegundos para a maioria dos casos."
+    },
+	{
+      "name": "S3 Glacier Deep Archive",
+      "Category": "Armazenamento",
+      "Description": "oferece suporte à retenção e preservação digital de longo prazo para dados que podem ser acessados uma ou duas vezes por ano."
     },
     {
       "name": "IA do   SageMaker",
@@ -1489,6 +1509,11 @@
       "name": "Outposts rack",
       "Category": "Computação",
       "Description": "Execute infraestrutura da AWS on-premises para uma experiência híbrida verdadeiramente consistente."
+    },
+	{
+      "name": "S3 on Outposts",
+      "Category": "Armazenamento",
+      "Description": "armazenamento de objetos para seu ambiente de AWS Outposts on-premises. Usando as APIs S3 e os recursos disponíveis nas regiões."
     },
     {
       "name": "Outposts servers",
