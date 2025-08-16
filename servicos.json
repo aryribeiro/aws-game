@@ -105,6 +105,11 @@
         "Category": "Contêineres",
         "Description": "Easily store, manage, and deploy container images"
     },
+	{
+        "name": "Service Quotas",
+        "Category": "Gerenciamento E Governança",
+        "Description": "Você pode visualizar e gerenciar suas cotas para Serviços da AWS de uma localização central. Cotas, também conhecidas como limites nos Serviços da AWS"
+    },
     {
         "name": "Red Hat OpenShift Service",
         "Category": "Contêineres",
@@ -664,6 +669,11 @@
       "name": "DynamoDB",
       "Category": "Banco De Dados",
       "Description": "Banco de dados NoSQL gerenciado."
+    },
+	{
+      "name": "DynamoDB Accelerator (DAX)",
+      "Category": "Banco De Dados",
+      "Description": "Serviço de armazenamento em cache com propósito específico para compatibilidade com o DynamoDB"
     },
     {
       "name": "EBS Snapshots Archive",
