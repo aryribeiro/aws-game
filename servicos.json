@@ -491,11 +491,6 @@
       "Description": "Serviço gerenciado de pesquisa."
     },
     {
-      "name": "ElasticCache",
-      "Category": "Banco De Dados",
-      "Description": "Serviço de caching in-memory para Redis e Memcached."
-    },
-    {
       "name": "Lex",
       "Category": "Machine Learning",
       "Description": "Crie chatbots de voz e texto."
