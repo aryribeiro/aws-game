@@ -1130,6 +1130,31 @@
       "Category": "Gerenciamento E Governança",
       "Description": "Fornece dados para eventos e mudanças que afetam seus recursos da Nuvem AWS."
     },
+	{
+      "name": "Basic Support",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Suporte básico disponível a todos os clientes da AWS"
+    },
+	{
+      "name": "Developer Support",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Recomendado se você estiver experimentando ou testando a AWS."
+    },
+	{
+      "name": "Business Support",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Nível mínimo recomendado para quem tem workloads de produção na AWS."
+    },
+	{
+      "name": "Enterprise On-Ramp Support",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Recomendado para quem tem workloads essenciais à produção ou aos negócios na AWS"
+    },
+	{
+      "name": "Enterprise Support",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Recomendado para quem tem negócios e/ou workloads essenciais na AWS"
+    },
     {
       "name": "HealthOmics",
       "Category": "Machine Learning",
