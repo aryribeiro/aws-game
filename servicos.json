@@ -1,6 +1,256 @@
 {
   "nodes": [
     {
+        "name": "Cloud Development Kit",
+        "Category": "Ferramentas De Desenvolvedor",
+        "Description": "Model cloud infrastructure using code"
+    },
+    {
+        "name": "Amazon Corretto",
+        "Category": "Ferramentas De Desenvolvedor",
+        "Description": "Production-ready distribution of OpenJDK"
+    },
+    {
+        "name": "Amazon CloudWatch Internet Monitor",
+        "Category": "Gerenciamento E Governança",
+        "Description": "Visualize your application's global internet health and diagnose issues in minutes, not days"
+    },
+    {
+        "name": "AWS User Notifications",
+        "Category": "Gerenciamento E Governança",
+        "Description": "Configure and view notifications from AWS services"
+    },
+    {
+        "name": "AWS Distro for OpenTelemetry",
+        "Category": "Gerenciamento E Governança",
+        "Description": "Secure, production-ready open source distribution with predictable performance"
+    },
+    {
+        "name": "AWS Audit Manager",
+        "Category": "Segurança Identidade Conformidade",
+        "Description": "Continuously audit your AWS usage to simplify how you assess risk and compliance"
+    },
+    {
+        "name": "Amazon Inspector",
+        "Category": "Segurança Identidade Conformidade",
+        "Description": "Automated and continual vulnerability management for Amazon EC2 and Amazon ECR"
+    },
+    {
+        "name": "AWS IAM Identity Center",
+        "Category": "Segurança Identidade Conformidade",
+        "Description": "Manage single sign-on access to AWS accounts and apps"
+    },
+    {
+        "name": "AWS Directory Service",
+        "Category": "Segurança Identidade Conformidade",
+        "Description": "Host and manage active directory"
+    },
+    {
+        "name": "GuardDuty ECS Runtime Monitoring",
+        "Category": "Segurança Identidade Conformidade",
+        "Description": "Centralized, fully-managed Amazon ECS container threat detection—including serverless workloads on AWS Fargate"
+    },
+    {
+        "name": "Amazon GuardDuty",
+        "Category": "Segurança Identidade Conformidade",
+        "Description": "Managed threat detection service"
+    },
+    {
+        "name": "AWS Direct Connect",
+        "Category": "Redes E Entrega De Conteúdo",
+        "Description": "Dedicated network connection to AWS"
+    },
+    {
+        "name": "Elastic Load Balancing (ELB)",
+        "Category": "Redes E Entrega De Conteúdo",
+        "Description": "Distribute incoming traffic across multiple targets"
+    },
+    {
+        "name": "AWS App Mesh",
+        "Category": "Redes E Entrega De Conteúdo",
+        "Description": "Monitor and control microservices"
+    },
+    {
+        "name": "Amazon API Gateway",
+        "Category": "Redes E Entrega De Conteúdo",
+        "Description": "Build, deploy, and manage APIs"
+    },
+    {
+        "name": "Migration Evaluator",
+        "Category": "Migração",
+        "Description": "Create a business case for cloud migration"
+    },
+    {
+        "name": "RDS MySQL zero-ETL Redshift",
+        "Category": "Banco De Dados",
+        "Description": "With zero-ETL integrations eliminate the need to build and manage complex data pipelines that perform ETL operations"
+    },
+    {
+        "name": "DynamoDB zero-ETL OpenSearch",
+        "Category": "Banco De Dados",
+        "Description": "Enable powerful near real-time search - such as full text search, vector search, and more - without having to build or manage ETL pipelines"
+    },
+    {
+        "name": "DynamoDB zero-ETL Redshift",
+        "Category": "Banco De Dados",
+        "Description": "Enable analytics on your operational data without having to build or manage ETL pipelines"
+    },
+    {
+        "name": "Aurora PostgreSQL zero-ETL Redshift",
+        "Category": "Banco De Dados",
+        "Description": "Enable near real-time analytics on petabytes of transactional data"
+    },
+    {
+        "name": "Elastic Container Registry",
+        "Category": "Contêineres",
+        "Description": "Easily store, manage, and deploy container images"
+    },
+    {
+        "name": "Red Hat OpenShift Service",
+        "Category": "Contêineres",
+        "Description": "Managed OpenShift in the cloud"
+    },
+    {
+        "name": "Amazon EMR Serverless",
+        "Category": "Análise",
+        "Description": "Run big data applications using open-source frameworks without managing clusters and servers"
+    },
+    {
+        "name": "Automated data-prep QuickSight Q",
+        "Category": "Análise",
+        "Description": "Answer your business questions by quickly and easily enabling your data for natural language search"
+    },
+    {
+        "name": "New exp. API cap. QuickSight",
+        "Category": "Análise",
+        "Description": "Programmatically create and manage dashboards in Amazon QuickSight and accelerate migration to the cloud"
+    },
+    {
+        "name": "Managed Str. Apache Kafka Serverless",
+        "Category": "Análise",
+        "Description": "Easily stream data with Amazon MSK without managing cluster capacity"
+    },
+    {
+        "name": "Amazon Elastic Inference",
+        "Category": "Machine Learning",
+        "Description": "Deep learning inference acceleration"
+    },
+    {
+        "name": "AWS DeepRacer",
+        "Category": "Machine Learning",
+        "Description": "Autonomous 1/18th scale race car, driven by ML"
+    },
+    {
+        "name": "AWS DeepLens",
+        "Category": "Machine Learning",
+        "Description": "Deep learning enabled video camera"
+    },
+    {
+        "name": "AWS Deep Learning AMIs",
+        "Category": "Machine Learning",
+        "Description": "Deep learning on Amazon EC2"
+    },
+    {
+        "name": "AWS Deep Learning Containers",
+        "Category": "Machine Learning",
+        "Description": "Docker images for deep learning"
+    },
+    {
+        "name": "Amazon DevOps Guru",
+        "Category": "Machine Learning",
+        "Description": "ML-powered cloud operations service to improve application availability"
+    },
+    {
+        "name": "Amazon Monitron",
+        "Category": "Machine Learning",
+        "Description": "Reduce unplanned equipment downtime with predictive maintenance and machine learning"
+    },
+    {
+        "name": "Amazon Rekognition",
+        "Category": "Machine Learning",
+        "Description": "Analyze image and video"
+    },
+    {
+        "name": "Amazon Bedrock",
+        "Category": "IA Generativa",
+        "Description": "Build with foundation models"
+    },
+    {
+        "name": "PyTorch on AWS",
+        "Category": "Machine Learning",
+        "Description": "Flexible open-source machine learning framework"
+    },
+    {
+        "name": "SageMaker supports geospatial ML",
+        "Category": "Machine Learning",
+        "Description": "Build, train, and deploy ML models using geospatial data"
+    },
+    {
+        "name": "AWS IoT FleetHub",
+        "Category": "Internet Das Coisas",
+        "Description": "Gerenciamento centralizado de frotas de dispositivos IoT."
+    },
+    {
+        "name": "AWS App Runner",
+        "Category": "Computação",
+        "Description": "Plataforma gerenciada para implantação de aplicações conteinerizadas."
+    },
+    {
+        "name": "AWS GameLift",
+        "Category": "Jogos",
+        "Description": "Serviço gerenciado para hospedagem de jogos multiplayer escaláveis."
+    },
+    {
+        "name": "AWS Snowmobile",
+        "Category": "Migração",
+        "Description": "Serviço de migração de dados em exabytes usando caminhões físicos."
+    },
+    {
+      "name": "Amazon FSx for Lustre",
+      "Category": "Armazenamento",
+      "Description": "High-performance file system integrated with S3"
+    },
+    {
+      "name": "Amazon FSx for OpenZFS",
+      "Category": "Armazenamento",
+      "Description": "Fully managed storage built on the popular OpenZFS file system"
+    },
+    {
+      "name": "Amazon FSx for Windows File Server",
+      "Category": "Armazenamento",
+      "Description": "Fully managed Windows native file system"
+    },
+    {
+      "name": "Amazon FSx",
+      "Category": "Armazenamento",
+      "Description": "Launch, run, and scale feature-rich and highly-performant file systems with just a few clicks"
+    },
+    {
+      "name": "Amazon SageMaker Lakehouse",
+      "Category": "Análise",
+      "Description": "Plataforma para gerenciar data lakes e realizar análises avançadas com integração de machine learning."
+    },
+    {
+      "name": "Amazon Nova",
+      "Category": "IA Generativa",
+      "Description": "Serviço de IA generativa para criação de conteúdo e automação de tarefas."
+    },
+    {
+      "name": "QLDB Enhancements",
+      "Category": "Blockchain",
+      "Description": "Melhorias no QLDB para suporte avançado a transações imutáveis."
+    },
+    {
+      "name": "Managed Grafana Enhancements",
+      "Category": "Gerenciamento E Governança",
+      "Description": "Atualizações no Managed Grafana para visualização de dados em tempo real."
+    },
+    {
+      "name": "Outposts Rack Enhancements",
+      "Category": "Computação",
+      "Description": "Novas configurações ou capacidades para o AWS Outposts em formato rack."
+    },
+    {
       "name": "SageMaker Studio Lab",
       "Category": "Machine Learning",
       "Description": "Apenda a faça testes com ML usando notebooks Jupyter na nuvem, gratuitos e que não exigem configuração."
