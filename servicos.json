@@ -1335,6 +1335,11 @@
       "Category": "Segurança Identidade Conformidade",
       "Description": "Proteção contra DDoS."
     },
+        {
+      "name": "Shield Advanced",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Proteção avançada contra ataques DDoS com garantia AWS."
+    },
     {
       "name": "SimSpace Weaver",
       "Category": "Computação",

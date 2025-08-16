@@ -233,7 +233,7 @@ game_html = f'''
         <!-- Victory Screen -->
         <div id="gameWin">
             <h2>🏆 PARABÉNS!</h2>
-            <p>Completou + de 289 serviços AWS!</p>
+            <p>Completou + de 340 serviços AWS!</p>
             <p>Pontuação Final: <span id="winScore">0</span></p>
             <button onclick="restartGame()">🔄 Jogar Novamente</button>
         </div>
