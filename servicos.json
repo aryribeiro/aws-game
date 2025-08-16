@@ -335,6 +335,56 @@
       "Category": "Redes E Entrega De Conteúdo",
       "Description": "Recursos de nuvem isolados."
     },
+	{
+      "name": "Subnets",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Recursos de nuvem isolados."
+    },
+	{
+      "name": "Route Table",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Recursos de nuvem isolados."
+    },
+	{
+      "name": "NACL",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Recursos de nuvem isolados."
+    },
+	{
+      "name": "Secutity Groups (SG)",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Recursos de nuvem isolados."
+    },
+	{
+      "name": "Elastic IP",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Recursos de nuvem isolados."
+    },
+	{
+      "name": "Internet Gateway",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Recursos de nuvem isolados."
+    },
+	{
+      "name": "Virtual Private Gateway",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Recursos de nuvem isolados."
+    },
+	{
+      "name": "Nat Gateway",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Recursos de nuvem isolados."
+    },
+	{
+      "name": "VPC Flow logs",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Recursos de nuvem isolados."
+    },
+	{
+      "name": "VPC Endpoints",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Recursos de nuvem isolados."
+    },
     {
       "name": "VPC Lattice",
       "Category": "Redes E Entrega De Conteúdo",
