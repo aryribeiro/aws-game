@@ -1100,7 +1100,8 @@
       "Category": "Análise",
       "Description": "Integração de dados simples, escalável e sem servidor."
     },
-	      "name": "Glue Data Catalog",
+	{
+	  "name": "Glue Data Catalog",
       "Category": "Análise",
       "Description": "Armazenamento persistente de metadados técnicos. É um serviço gerenciado que você pode usar para armazenar, anotar e compartilhar metadados na Nuvem."
     },
