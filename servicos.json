@@ -940,6 +940,11 @@
       "Category": "Armazenamento",
       "Description": "oferece suporte à retenção e preservação digital de longo prazo para dados que podem ser acessados uma ou duas vezes por ano."
     },
+	{
+      "name": "S3 Inventory",
+      "Category": "Armazenamento",
+      "Description": "Ajuda a gerenciar seu armazenamento. Audita e relata o status de replicação e criptografia de seus objetos para negócios, conformidade, e necessidades regulatórias."
+    },
     {
       "name": "IA do   SageMaker",
       "Category": "Machine Learning",
@@ -1491,7 +1496,12 @@
       "Description": "Otimize a performance e a segurança."
     },
     {
-      "name": "VPN",
+      "name": "Site-to-Site VPN",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Acesse recursos de rede com segurança."
+    },
+	{
+      "name": "Client VPN",
       "Category": "Redes E Entrega De Conteúdo",
       "Description": "Acesse recursos de rede com segurança."
     },
