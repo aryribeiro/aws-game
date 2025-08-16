@@ -1100,6 +1100,15 @@
       "Category": "Análise",
       "Description": "Integração de dados simples, escalável e sem servidor."
     },
+	      "name": "Glue Data Catalog",
+      "Category": "Análise",
+      "Description": "Armazenamento persistente de metadados técnicos. É um serviço gerenciado que você pode usar para armazenar, anotar e compartilhar metadados na Nuvem."
+    },
+	{
+      "name": "Glue Studio",
+      "Category": "Análise",
+      "Description": "Você pode usar a interface visual simples no AWS Glue Studio para criar seus trabalhos de ETL. ."
+    },
     {
       "name": "Glue Data Quality",
       "Category": "Análise",
@@ -1219,6 +1228,11 @@
       "name": "Lambda",
       "Category": "Computação",
       "Description": "Execute código sem preocupações com servidores."
+    },
+	{
+      "name": "Lambda@Edge",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "recurso do Amazon CloudFront que permite executar o código mais próximo dos usuários do seu aplicativo, o que melhora o desempenho e reduz a latência."
     },
     {
       "name": "Lambda SnapStart",
