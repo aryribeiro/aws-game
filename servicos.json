@@ -386,6 +386,11 @@
       "Description": "Horizontalmente dimensionado, redundante e altamente disponível, é um componente VPC que permite a comunicação somente de saída, de instâncias para a Internet"
 	},
 	{
+      "name": "VPC Peering",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Conexão de rede entre duas VPCs que permite direcionar o tráfego entre elas usando endereços IPv4 ou IPv6 privados."
+    },
+	{
       "name": "VPC Flow logs",
       "Category": "Redes E Entrega De Conteúdo",
       "Description": "Recursos de nuvem isolados."
