@@ -371,10 +371,19 @@
       "Description": "Recursos de nuvem isolados."
     },
 	{
-      "name": "Nat Gateway",
+      "name": "NAT Gateway",
       "Category": "Redes E Entrega De Conteúdo",
       "Description": "Recursos de nuvem isolados."
     },
+	{
+      "name": "NAT instances",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Fornece tradução de endereço de rede. Você pode usar uma instância NAT para permitir recursos em uma sub-rede privada para se comunicar com destinos fora da VPC."
+    },
+	{
+      "name": "Egress-only internet gateway",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Horizontalmente dimensionado, redundante e altamente disponível, é um componente VPC que permite a comunicação somente de saída, de instâncias para a Internet"
 	{
       "name": "VPC Flow logs",
       "Category": "Redes E Entrega De Conteúdo",
