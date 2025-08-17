@@ -405,6 +405,11 @@
       "Category": "Redes E Entrega De Conteúdo",
       "Description": "Simplifique a conectividade, segurança e o monitoramento de serviços para um serviço."
     },
+	{
+      "name": "Traffic Mirroring",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "Recurso da Amazon VPC que você pode usar para copiar o tráfego de rede de uma rede elástica"
+    },
     {
       "name": "Apache MXNet on AWS",
       "Category": "Machine Learning",
@@ -601,7 +606,7 @@
       "Description": "Acesso sob demanda a relatórios de conformidade da AWS."
     },
     {
-      "name": "Auto Scaling",
+      "name": "Auto Scaling Group",
       "Category": "Computação",
       "Description": "Escale vários recursos para atender à demanda."
     },
@@ -959,6 +964,16 @@
       "name": "S3 Inventory",
       "Category": "Armazenamento",
       "Description": "Ajuda a gerenciar seu armazenamento. Audita e relata o status de replicação e criptografia de seus objetos para negócios, conformidade, e necessidades regulatórias."
+    },
+	{
+      "name": "S3 Tranfer Acceleration",
+      "Category": "Armazenamento",
+      "Description": "Uploads e downloads de longa distância do S3 mais rápidos"
+    },
+	{
+      "name": "S3 multipart upload",
+      "Category": "Armazenamento",
+      "Description": "Upload programático de um único objeto para o Amazon S3 e cada objeto é carregado como um conjunto de partes."
     },
     {
       "name": "IA do   SageMaker",
