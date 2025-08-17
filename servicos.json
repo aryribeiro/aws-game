@@ -384,6 +384,7 @@
       "name": "Egress-only internet gateway",
       "Category": "Redes E Entrega De Conteúdo",
       "Description": "Horizontalmente dimensionado, redundante e altamente disponível, é um componente VPC que permite a comunicação somente de saída, de instâncias para a Internet"
+	},
 	{
       "name": "VPC Flow logs",
       "Category": "Redes E Entrega De Conteúdo",
