@@ -40,6 +40,11 @@
         "Category": "Segurança Identidade Conformidade",
         "Description": "Manage single sign-on access to AWS accounts and apps"
     },
+	{
+        "name": "Security Token Service",
+        "Category": "Segurança Identidade Conformidade",
+        "Description": "Serviço web que permite a criação e o fornecimento de credenciais de segurança temporárias e com privilégios limitados para recursos da AWS."
+    },
     {
         "name": "AWS Directory Service",
         "Category": "Segurança Identidade Conformidade",
@@ -1259,6 +1264,11 @@
       "name": "Identity and Access Management",
       "Category": "Segurança Identidade Conformidade",
       "Description": "Gerencie com segurança o acesso a serviços e recursos."
+    },
+	{
+      "name": "IAM Access Analyzer",
+      "Category": "Segurança Identidade Conformidade",
+      "Description": "Ajuda definir, verificar e refinar políticas do IAM, fornecendo um conjunto de capacidades."
     },
     {
       "name": "Inferentia",
