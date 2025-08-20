@@ -901,7 +901,7 @@
       "Description": "Apache Cassandra gerenciado com alta disponibilidade. Ideal para aplicações NoSQL escaláveis."
     },
     {
-      "name": "Kinesis Data Analytics",
+      "name": "Managed Service Apache Flink",
       "Category": "Análise",
       "Description": "Análise de streams em tempo real com SQL. Integra Apache Flink para baixa latência."
     },
