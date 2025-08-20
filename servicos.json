@@ -485,6 +485,11 @@
       "Category": "Análise",
       "Description": "Serviço rápido de análise empresarial."
     },
+	{
+      "name": "Kibana",
+      "Category": "Análise",
+      "Description": "Usado para visualizar e explorar dados armazenados no Elasticsearch , especialmente para análise de logs , monitoramento de segurança e insights de negócios em tempo real."
+    },
     {
       "name": "QuickSight Paginated Reports",
       "Category": "Análise",
