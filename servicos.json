@@ -985,6 +985,11 @@
       "Category": "Armazenamento",
       "Description": "Upload programático de um único objeto para o Amazon S3 e cada objeto é carregado como um conjunto de partes."
     },
+	{
+      "name": "Amazon S3 Vectors",
+      "Category": "Armazenamento",
+      "Description": "Novo tipo de bucket com um conjunto dedicado de APIs para armazenar, acessar e consultar dados vetoriais sem necessidade de provisionar infraestrutura."
+    },
     {
       "name": "IA do   SageMaker",
       "Category": "Machine Learning",
