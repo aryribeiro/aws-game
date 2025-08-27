@@ -9,7 +9,7 @@ Um jogo de plataforma interativo onde você escala através de 234 serviços AWS
 
 ## 🎯 Sobre o Web Game
 
-**AWS Game - S3 Climbing Adventure** é um jogo de plataforma 2D desenvolvido em Python com Streamlit por Ary Ribeiro, onde o jogador controla o mascote S3, que deve escalar plataformas representando diferentes serviços AWS. O objetivo é alcançar o topo, passando por todos os 234 serviços disponíveis até o momento.
+**AWS Game - S3 Climbing Adventure** é um jogo de plataforma 2D desenvolvido em Python com Streamlit por Ary Ribeiro, onde o jogador controla o mascote S3, que deve escalar plataformas representando diferentes serviços AWS. O objetivo é alcançar o topo, passando por + de 370 produtos, serviços e recursos AWS, disponíveis até o momento.
 
 ### 🌟 Características
 
@@ -199,6 +199,7 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 Se encontrar problemas ou tiver sugestões:
 
 ** Ary Ribeiro - aryribeiro@gmail.com
+
 
 
 
