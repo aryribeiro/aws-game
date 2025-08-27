@@ -1,6 +1,11 @@
 {
   "nodes": [
     {
+        "name": "Amazon MQ",
+        "Category": "Integração De Aplicações",
+        "Description": "serviço de agente de mensagens de código aberto e gerenciado para Apache ActiveMQ e RabbitMQ que simplifica a configuração, a operação e o gerenciamento de agentes de mensagens"
+    },
+    {
         "name": "Cloud Development Kit",
         "Category": "Ferramentas De Desenvolvedor",
         "Description": "Model cloud infrastructure using code"
