@@ -9,7 +9,7 @@ Obs.: caso o app esteja no modo "sleeping" (dormindo) ao entrar, basta clicar no
 
 ### 🌟 Características
 
-- **234 Plataformas Únicas**: Cada plataforma representa um serviço AWS real
+- **377 Plataformas Únicas**: Cada plataforma representa um serviço AWS real
 - **Mascote Personalizável**: Use sua própria imagem como personagem principal
 - **Sistema de Pontuação**: Ganhe pontos explorando novos serviços AWS
 - **Efeitos Sonoros**: Áudios imersivos para pulos, vitória e game over
@@ -195,6 +195,7 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 Se encontrar problemas ou tiver sugestões:
 
 ** Ary Ribeiro - aryribeiro@gmail.com
+
 
 
 
