@@ -35,6 +35,11 @@
         "Category": "Segurança Identidade Conformidade",
         "Description": "Continuously audit your AWS usage to simplify how you assess risk and compliance"
     },
+	{
+        "name": "License Manager"
+        "Category": "Segurança Identidade Conformidade",
+        "Description": "Você pode gerenciar suas licenças de software de vários fornecedores de software (como Microsoft, SAP, Oracle ou IBM) centralmente na AWS e no local ambientes."
+    },
     {
         "name": "Amazon Inspector",
         "Category": "Segurança Identidade Conformidade",
@@ -1559,6 +1564,11 @@
       "name": "Client VPN",
       "Category": "Redes E Entrega De Conteúdo",
       "Description": "Acesse recursos de rede com segurança."
+    },
+	{
+      "name": "VPN CloudHub",
+      "Category": "Redes E Entrega De Conteúdo",
+      "Description": "opera em um hub-and-spoke modelo simples que você pode usar com ou sem uma VPC."
     },
     {
       "name": "WAF",
