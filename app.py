@@ -296,7 +296,11 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
             height: {CARD_HEIGHT}px;
             margin: {CARD_GAP}px auto 0;
             padding: 14px 22px;
-            background: #FFFFFF;
+            /* Mesmas cores do degradê do canvas (#001122 -> #003366 -> #004488),
+               para o card ler como continuação do jogo. Não vai até o #87CEEB do
+               fundo da tela — sobre aquele azul claro o texto branco cairia para
+               2,5:1 de contraste. Nesta faixa fica em ~10:1. */
+            background: linear-gradient(180deg, #001122 0%, #003366 45%, #004488 100%);
             border: 3px solid #2E8B57;
             border-radius: 14px;
             overflow: hidden;
@@ -308,7 +312,7 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
             justify-content: center;
         }}
         #cardTitle {{
-            color: #0A1F44;
+            color: #FFD700;
             font-size: 18px;
             font-weight: 700;
             text-align: center;
@@ -316,9 +320,10 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
         }}
         #cardDescription {{
-            color: #12305C;
+            color: #FFFFFF;
             font-size: 15px;
             line-height: 1.5;
             text-align: justify;
