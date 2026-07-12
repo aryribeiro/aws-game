@@ -1136,7 +1136,6 @@ components.html(
 
 st.markdown("""
 <div style="text-align: center;">
-    <h4>AWS Game: S3 Climbing Adventure</h4>
     🧠 Memorize os serviços AWS enquanto escala com o S3!<br>
     Por <strong>Ary Ribeiro</strong> — <a href="https://linkedin.com/in/aryribeiro" target="_blank">linkedin.com/in/aryribeiro</a>
 </div>
