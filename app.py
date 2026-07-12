@@ -132,6 +132,13 @@ CATEGORY_LABELS = {
 
 FALLBACK_COLOR = "#666666"
 
+# Altura do card de descrição. É fixa de propósito: se acompanhasse o tamanho do
+# texto, o layout pularia a cada plataforma. O valor foi medido para caber a mais
+# longa das 374 descrições (VPC, 560 caracteres) — ver o teste em curadoria/.
+GAME_HEIGHT = 650
+CARD_HEIGHT = 228
+CARD_GAP = 12
+
 
 def _darken(hex_color, amount=50):
     r, g, b = (int(hex_color[i:i + 2], 16) for i in (1, 3, 5))
@@ -280,6 +287,43 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
             margin-top: 10px;
         }}
         button:hover {{ background: #32CD32; }}
+
+        /* Card da descrição do serviço da plataforma atual. Altura FIXA: se ele
+           crescesse conforme o texto, o layout pularia a cada plataforma. */
+        #serviceCard {{
+            width: 700px;
+            max-width: 100%;
+            height: {CARD_HEIGHT}px;
+            margin: {CARD_GAP}px auto 0;
+            padding: 14px 22px;
+            background: #FFFFFF;
+            border: 3px solid #2E8B57;
+            border-radius: 14px;
+            overflow: hidden;
+            /* Centraliza na vertical: a altura é fixa para caber a maior descrição
+               (VPC, 560 chars), então as curtas sobrariam espaço embaixo e a caixa
+               pareceria cortada. Centralizada, a sobra fica simétrica. */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }}
+        #cardTitle {{
+            color: #0A1F44;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }}
+        #cardDescription {{
+            color: #12305C;
+            font-size: 15px;
+            line-height: 1.5;
+            text-align: justify;
+            margin: 0;
+        }}
     </style>
 </head>
 <body>
@@ -313,6 +357,11 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
             <p>Pontuação Final: <span id="winScore">0</span></p>
             <button onclick="restartGame()">🔄 Jogar Novamente</button>
         </div>
+    </div>
+
+    <div id="serviceCard">
+        <div id="cardTitle">Início da Escalada AWS</div>
+        <p id="cardDescription">Comece sua aventura pelos serviços AWS! A cada plataforma que você alcançar, a descrição do serviço correspondente aparece aqui.</p>
     </div>
 
     <script>
@@ -541,13 +590,9 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
                 this.breakTimer = 0;
 
                 const service = number === 0 ? null : awsServices[number - 1];
-                this.serviceName = number === 0 ? 'Início da Escalada AWS' : service.name;
+                this.serviceName = number === 0 ? START_NAME : service.name;
                 this.serviceCategory = number === 0 ? 'Start' : service.category;
-                // Ainda não é desenhada, mas é o gancho para exibir a descrição
-                // do serviço na UI — próximo passo do projeto.
-                this.serviceDescription = number === 0
-                    ? 'Comece sua aventura pelos serviços AWS!'
-                    : service.description;
+                this.serviceDescription = number === 0 ? START_DESC : service.description;
 
                 this.isFinal = number === TOTAL_SERVICES;
 
@@ -838,10 +883,14 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
                 player.velocityY = 0;
                 player.setOnGround(platform);
 
+                // O card segue a plataforma em que o jogador está PISANDO — não a
+                // mais alta já alcançada. Descer para uma plataforma anterior traz
+                // a descrição dela de volta.
+                showService(platform);
+
                 if (platform.number > gameState.currentPlatform) {{
                     gameState.currentPlatform = platform.number;
                     gameState.score += 75;
-                    updateCurrentServiceUI(platform.serviceName);
 
                     if (platform.isFinal) {{
                         gameWin();
@@ -857,11 +906,26 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
             }}
         }}
 
-        function updateCurrentServiceUI(serviceName) {{
-            const el = document.getElementById('currentService');
-            el.textContent = serviceName.length > 25
-                ? serviceName.substring(0, 25) + '...'
-                : serviceName;
+        const START_NAME = 'Início da Escalada AWS';
+        const START_DESC = 'Comece sua aventura pelos serviços AWS! A cada plataforma que você ' +
+                           'pisar, a descrição do serviço correspondente aparece aqui.';
+
+        // Qual plataforma o card está exibindo. Sem isto, a colisão reescreveria
+        // o DOM a cada quadro enquanto o jogador estivesse parado em cima dela.
+        let displayedPlatform = -1;
+
+        function showService(platform) {{
+            if (!platform || platform.number === displayedPlatform) return;
+            displayedPlatform = platform.number;
+
+            const name = platform.serviceName;
+            const hud = document.getElementById('currentService');
+            hud.textContent = name.length > 25 ? name.substring(0, 25) + '...' : name;
+
+            // textContent, nunca innerHTML: nome e descrição vêm do JSON e não
+            // devem ser interpretados como marcação.
+            document.getElementById('cardTitle').textContent = name;
+            document.getElementById('cardDescription').textContent = platform.serviceDescription;
         }}
 
         function checkEnemyCollisions() {{
@@ -1033,8 +1097,9 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
             lastFrameTime = null;
 
             player = new Player(150, GROUND_TOP - 50);
+            displayedPlatform = -1;   // força o card a reescrever
             initLevel();
-            updateCurrentServiceUI('Início da Escalada AWS');
+            showService(platforms[0]);
 
             document.getElementById('gameOver').style.display = 'none';
             document.getElementById('gameWin').style.display = 'none';
@@ -1099,7 +1164,7 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
         }}, {{ passive: false }});
 
         initLevel();
-        updateCurrentServiceUI('Início da Escalada AWS');
+        showService(platforms[0]);
         requestAnimationFrame(gameLoop);
     </script>
 </body>
@@ -1130,7 +1195,7 @@ with st.sidebar:
 
 components.html(
     build_game_html(aws_services, CATEGORY_STYLES, mascot_b64, audio_b64, FALLBACK_COLOR),
-    height=670,
+    height=GAME_HEIGHT + CARD_GAP + CARD_HEIGHT + 10,
     scrolling=False,
 )
 
