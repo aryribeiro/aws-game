@@ -100,7 +100,9 @@ CATEGORY_COLORS = {
     "Satellite": "#1A3C6E",
     "Security-Identity-Compliance": "#DD344C",
     "Storage": "#277116",
-    "Start": "#FFD700",
+    # A plataforma-chão. Não confundir com a plataforma FINAL, que também era
+    # dourada, mas é pintada por outro caminho (Platform.style, isFinal).
+    "Start": "#000000",
 }
 
 CATEGORY_LABELS = {
@@ -354,7 +356,6 @@ def build_game_html():
             <div>Pontos: <span id="score">0</span></div>
             <div>Vidas: <span id="lives">5</span></div>
             <div>Altura: <span id="height">0</span>m</div>
-            <div style="font-size: 12px; margin-top: 5px;">Atual: <span id="currentService">Início</span></div>
         </div>
 
         <div id="startOverlay">
@@ -941,10 +942,6 @@ def build_game_html():
         function showService(platform) {{
             if (!platform || platform.number === displayedPlatform) return;
             displayedPlatform = platform.number;
-
-            const name = platform.serviceName;
-            const hud = document.getElementById('currentService');
-            hud.textContent = name.length > 25 ? name.substring(0, 25) + '...' : name;
 
             // textContent, nunca innerHTML: a descrição vem do JSON e não deve
             // ser interpretada como marcação.
