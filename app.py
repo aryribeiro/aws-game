@@ -136,7 +136,7 @@ FALLBACK_COLOR = "#666666"
 # texto, o layout pularia a cada plataforma. O valor foi medido para caber a mais
 # longa das 374 descrições (VPC, 560 caracteres) — ver o teste em curadoria/.
 GAME_HEIGHT = 650
-CARD_HEIGHT = 228
+CARD_HEIGHT = 246
 CARD_GAP = 12
 
 
@@ -216,8 +216,8 @@ audio_b64 = {
 # --------------------------------------------------------------------------
 
 @st.cache_data(show_spinner=False)
-def build_game_html(services, styles, mascot, audio, fallback_color):
-    """Monta o HTML uma vez só. São ~2,7 MB de base64: remontar a cada rerun é caro."""
+def build_game_html(services, styles, labels, mascot, audio, fallback_color):
+    """Monta o HTML uma vez só. São ~2,9 MB de base64: remontar a cada rerun é caro."""
     return f'''
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -303,6 +303,7 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
             background: linear-gradient(180deg, #001122 0%, #003366 45%, #004488 100%);
             border: 3px solid #2E8B57;
             border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
             overflow: hidden;
             /* Centraliza na vertical: a altura é fixa para caber a maior descrição
                (VPC, 560 chars), então as curtas sobrariam espaço embaixo e a caixa
@@ -311,21 +312,52 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
             flex-direction: column;
             justify-content: center;
         }}
+        #cardHeader {{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.18);
+        }}
         #cardTitle {{
             color: #FFD700;
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 700;
-            text-align: center;
-            margin-bottom: 8px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        }}
+        /* A categoria com o mesmo círculo colorido da legenda: é o que liga a cor
+           da plataforma ao nome da categoria e ao serviço, tudo num lugar só. */
+        #cardCategory {{
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            flex-shrink: 0;
+            padding: 3px 12px 3px 9px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.10);
+            border: 1px solid rgba(255,255,255,0.22);
+            font-size: 12px;
+            font-weight: 600;
+            color: #E8F0FA;
+            white-space: nowrap;
+        }}
+        #cardDot {{
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #FFD700;
+            border: 1px solid rgba(0,0,0,0.35);
+            flex-shrink: 0;
         }}
         #cardDescription {{
             color: #FFFFFF;
             font-size: 15px;
-            line-height: 1.5;
+            line-height: 1.55;
             text-align: justify;
             margin: 0;
         }}
@@ -365,13 +397,17 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
     </div>
 
     <div id="serviceCard">
-        <div id="cardTitle">Início da Escalada AWS</div>
-        <p id="cardDescription">Comece sua aventura pelos serviços AWS! A cada plataforma que você alcançar, a descrição do serviço correspondente aparece aqui.</p>
+        <div id="cardHeader">
+            <span id="cardTitle">Início da Escalada AWS</span>
+            <span id="cardCategory"><i id="cardDot"></i><span id="cardCategoryText"></span></span>
+        </div>
+        <p id="cardDescription">Comece sua aventura pelos serviços AWS! A cada plataforma que você pisar, a descrição do serviço correspondente aparece aqui.</p>
     </div>
 
     <script>
         const awsServices = {to_js(services)};
         const CATEGORY_STYLES = {to_js(styles)};
+        const CATEGORY_LABELS = {to_js(labels)};
         const FALLBACK_STYLE = {{ color: {to_js(fallback_color)}, border: '#444444' }};
         const audioSources = {to_js(audio)};
         const mascotB64 = {to_js(mascot)};
@@ -931,6 +967,17 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
             // devem ser interpretados como marcação.
             document.getElementById('cardTitle').textContent = name;
             document.getElementById('cardDescription').textContent = platform.serviceDescription;
+
+            const cat = platform.serviceCategory;
+            const chip = document.getElementById('cardCategory');
+            if (platform.number === 0) {{
+                chip.style.display = 'none';   // a plataforma-chão não é um serviço
+            }} else {{
+                chip.style.display = 'inline-flex';
+                document.getElementById('cardCategoryText').textContent = CATEGORY_LABELS[cat] || cat;
+                document.getElementById('cardDot').style.background =
+                    (CATEGORY_STYLES[cat] || FALLBACK_STYLE).color;
+            }}
         }}
 
         function checkEnemyCollisions() {{
@@ -1034,12 +1081,12 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
             ctx.fillRect(x, y, width * progress, height);
 
             ctx.fillStyle = 'white';
-            ctx.font = '10px Arial';
+            ctx.font = 'bold 12px Arial';
             ctx.textAlign = 'center';
             ctx.fillText(
                 gameState.currentPlatform + '/' + TOTAL_SERVICES,
                 x + width / 2,
-                y + 14
+                y + 15
             );
         }}
 
@@ -1199,8 +1246,11 @@ with st.sidebar:
         """, unsafe_allow_html=True)
 
 components.html(
-    build_game_html(aws_services, CATEGORY_STYLES, mascot_b64, audio_b64, FALLBACK_COLOR),
-    height=GAME_HEIGHT + CARD_GAP + CARD_HEIGHT + 10,
+    build_game_html(
+        aws_services, CATEGORY_STYLES, CATEGORY_LABELS,
+        mascot_b64, audio_b64, FALLBACK_COLOR,
+    ),
+    height=GAME_HEIGHT + CARD_GAP + CARD_HEIGHT + 14,
     scrolling=False,
 )
 
