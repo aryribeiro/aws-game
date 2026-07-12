@@ -31,8 +31,18 @@ st.markdown("""
     #MainMenu,
     footer { display: none !important; }
 
-    div[data-testid="stAppViewBlockContainer"] {
-        padding-top: 2.5rem !important;
+    /* O padding-top padrão do bloco principal é 96px e comia a área útil acima
+       do jogo. O Streamlit renomeou esse contêiner (era stAppViewBlockContainer),
+       então miramos nos dois nomes + na classe .block-container, estável entre
+       versões. Mesma abordagem do app-live.
+
+       NÃO zerar padding/margin do h1/h4: o Streamlit reserva o espaço do bloco
+       via flex-basis fixado no mount, e encolher os headings faz o conteúdo
+       transbordar o container — o jogo sobe por cima do subtítulo. */
+    [data-testid="stMainBlockContainer"],
+    [data-testid="stAppViewBlockContainer"],
+    .block-container {
+        padding-top: 1rem !important;
         padding-bottom: 0 !important;
     }
     div[data-testid="stVerticalBlock"] { gap: 0 !important; }
@@ -427,10 +437,7 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
                     this.invulnerable = false;
                 }}
 
-                gameState.cameraY = Math.max(
-                    0,
-                    Math.min(this.y - canvas.height / 2, WORLD_HEIGHT - canvas.height)
-                );
+                centerCameraOnPlayer();
             }}
 
             draw() {{
@@ -789,6 +796,18 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
             player.onGround = true;
             player.standingOn = null;
             player.lastGroundY = GROUND_TOP;
+
+            // A câmera só é ajustada dentro de player.update(), que não roda
+            // enquanto o jogo não começou. Sem isto, a tela de início mostrava
+            // o topo do mundo (a última plataforma) em vez do mascote no chão.
+            centerCameraOnPlayer();
+        }}
+
+        function centerCameraOnPlayer() {{
+            gameState.cameraY = Math.max(
+                0,
+                Math.min(player.y - canvas.height / 2, WORLD_HEIGHT - canvas.height)
+            );
         }}
 
         function checkCollision(a, b) {{
