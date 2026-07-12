@@ -685,13 +685,18 @@ def build_game_html(services, styles, mascot, audio, fallback_color):
                     ctx.fillText(lines[i], this.x + this.width / 2, yPos);
                 }}
 
-                ctx.font = 'bold 10px Arial';
-                ctx.fillStyle = 'yellow';
+                // O número fica no canto superior, discreto. Antes era desenhado na
+                // MESMA linha de base do nome e no meio da margem esquerda: o nome
+                // ficava centralizado de fato (52px x 53px de folga), mas o olho lia
+                // o vão entre o número e o texto como margem, e a composição parecia
+                // deslocada. Recuando o número, o nome lê como o que é — centralizado.
+                ctx.save();
+                ctx.globalAlpha = 0.7;
+                ctx.font = 'bold 9px Arial';
+                ctx.fillStyle = '#FFE680';
                 ctx.textAlign = 'left';
-                ctx.strokeStyle = 'black';
-                ctx.lineWidth = 1;
-                ctx.strokeText(this.number.toString(), this.x + 5, this.y + 15);
-                ctx.fillText(this.number.toString(), this.x + 5, this.y + 15);
+                ctx.fillText(this.number.toString(), this.x + 4, this.y + 10);
+                ctx.restore();
 
                 if (this.isFinal) {{
                     ctx.fillStyle = '#FF0000';
