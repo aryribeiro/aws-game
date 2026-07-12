@@ -139,6 +139,10 @@ GAME_HEIGHT = 650
 CARD_HEIGHT = 246
 CARD_GAP = 12
 
+# TTL do cache em memória. O dataset e os assets são estáticos, então 8 horas de
+# retenção evitam reler o disco e remontar os ~2,9 MB de HTML a cada sessão nova.
+CACHE_TTL = 8 * 60 * 60  # 8 horas
+
 
 def _darken(hex_color, amount=50):
     r, g, b = (int(hex_color[i:i + 2], 16) for i in (1, 3, 5))
@@ -156,7 +160,7 @@ CATEGORY_STYLES = {
 # Carregamento
 # --------------------------------------------------------------------------
 
-@st.cache_data(show_spinner=False)
+@st.cache_data(ttl=CACHE_TTL, show_spinner=False)
 def load_asset_b64(relative_path):
     try:
         return base64.b64encode((BASE_DIR / relative_path).read_bytes()).decode()
@@ -164,7 +168,7 @@ def load_asset_b64(relative_path):
         return None
 
 
-@st.cache_data(show_spinner=False)
+@st.cache_data(ttl=CACHE_TTL, show_spinner=False)
 def load_aws_services():
     try:
         data = json.loads((BASE_DIR / "servicos.json").read_text(encoding="utf-8"))
@@ -215,7 +219,7 @@ audio_b64 = {
 # Jogo
 # --------------------------------------------------------------------------
 
-@st.cache_data(show_spinner=False)
+@st.cache_data(ttl=CACHE_TTL, show_spinner=False)
 def build_game_html(services, styles, labels, mascot, audio, fallback_color):
     """Monta o HTML uma vez só. São ~2,9 MB de base64: remontar a cada rerun é caro."""
     return f'''
