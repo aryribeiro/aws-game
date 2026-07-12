@@ -5,7 +5,7 @@ Obs.: caso o app esteja no modo "sleeping" (dormindo) ao entrar, basta clicar no
 
 # ☁️ AWS Game - S3 Climbing Adventure 🎮
 
-Um jogo de plataforma interativo onde você escala através de **376 serviços AWS**! Teste seus conhecimentos sobre os serviços da Amazon Web Services enquanto se diverte em uma aventura de escalada.
+Um jogo de plataforma interativo onde você escala através de **374 serviços AWS**! Teste seus conhecimentos sobre os serviços da Amazon Web Services enquanto se diverte em uma aventura de escalada.
 
 ## 🎯 Sobre o Jogo
 
@@ -109,7 +109,7 @@ Substitua `static/mascote.png`. Recomendado: PNG com fundo transparente, propor�
 ### Áudios
 Substitua os MP3 em `static/`, mantendo os mesmos nomes.
 
-> Os assets são embutidos no HTML como base64 (~2,7 MB no total, dos quais `sonora.mp3` sozinho responde por ~2 MB). Trocar a música de fundo por um arquivo menor é a forma mais direta de reduzir o peso da página.
+> Os assets são embutidos no HTML como base64 (~2,9 MB no total, dos quais `sonora.mp3` sozinho responde por ~2 MB). Trocar a música de fundo por um arquivo menor é a forma mais direta de reduzir o peso da página.
 
 ### Serviços AWS
 Edite `servicos.json`. Schema real (atenção à caixa das chaves):
@@ -119,7 +119,7 @@ Edite `servicos.json`. Schema real (atenção à caixa das chaves):
   "nodes": [
     {
       "name": "Amazon MQ",
-      "Category": "Integração De Aplicações",
+      "Category": "App-Integration",
       "Description": "serviço de agente de mensagens gerenciado..."
     }
   ]
@@ -127,8 +127,14 @@ Edite `servicos.json`. Schema real (atenção à caixa das chaves):
 ```
 
 - `name` é obrigatório; entradas sem nome ou com nome repetido são descartadas.
-- `Category` alimenta a cor da plataforma e a legenda da sidebar. Categorias que não estiverem em `CATEGORY_COLORS` (em `app.py`) caem num cinza de fallback.
+- `Category` usa o **slug oficial da AWS 2026** (`App-Integration`, `Networking-Content-Delivery`, `Artificial-Intelligence`…). São 24 categorias, definidas em `CATEGORY_COLORS` no `app.py`; o rótulo em português da legenda vem de `CATEGORY_LABELS`. Categoria fora dessa lista cai num cinza de fallback.
+- A **ordem das entradas define a ordem da escalada**. O dataset atual está embaralhado de propósito, para que plataformas vizinhas não tenham a mesma cor.
 - A legenda da sidebar é gerada a partir dos dados, então basta editar o JSON.
+
+> O `@st.cache_data` guarda o dataset em memória. Ao trocar o `servicos.json` **localmente**, reinicie o Streamlit — um simples reload do navegador continua servindo o dataset antigo. No Streamlit Cloud isso não é problema: o push reinicia o app.
+
+### Como o dataset foi construído
+A pasta [`curadoria/`](curadoria/) guarda o rastro completo: o catálogo oficial da AWS baixado, o texto-fonte de cada descrição e as listas de decisão. As descrições vêm do console de gerenciamento da AWS e da documentação oficial (`docs.aws.amazon.com`) — nenhuma foi inventada.
 
 ## 🎮 Mecânicas do Jogo
 
@@ -168,10 +174,11 @@ streamlit run app.py --server.port 8502
 
 ## 🎯 Roadmap
 
-- [ ] Curadoria do dataset: unificar com a lista oficial 2026 e remover serviços descontinuados
-- [ ] Exibir a descrição do serviço da plataforma atual na UI
+- [x] Curadoria do dataset: unificado com a lista oficial 2026, categorias oficiais da AWS, descontinuados removidos e 100% das descrições buscadas na fonte oficial
+- [ ] Exibir a descrição do serviço da plataforma atual na UI (o campo `serviceDescription` já existe no JS, aguardando a interface)
 - [ ] Sistema de high scores local
 - [ ] Mais tipos de power-ups e inimigos
+- [ ] Reduzir o peso da página reencodando `sonora.mp3` (~2 MB dos 2,9 MB de assets)
 
 ---
 
