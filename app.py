@@ -47,6 +47,12 @@ st.markdown("""
     }
     div[data-testid="stVerticalBlock"] { gap: 0 !important; }
     .element-container { margin-top: 0 !important; margin-bottom: 0 !important; }
+
+    /* Aproxima o subtítulo do título: são 24px de vão (padding-bottom do h1 +
+       padding-top do h4). O padding-BOTTOM do h4 fica intacto de propósito —
+       ele é o colchão que impede o jogo de encostar no texto. */
+    .stMarkdown h1 { padding-bottom: 0 !important; }
+    .stMarkdown h4 { padding-top: 0 !important; }
 </style>
 """, unsafe_allow_html=True)
 
