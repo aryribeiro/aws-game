@@ -160,8 +160,11 @@ CATEGORY_STYLES = {
 # Carregamento
 # --------------------------------------------------------------------------
 
-@st.cache_data(ttl=CACHE_TTL, show_spinner=False)
 def load_asset_b64(relative_path):
+    """Sem @st.cache_data de propósito: só o build_game_html() chama isto, e ele
+    já é cacheado — então esta função roda uma vez a cada 8 horas. Cacheá-la
+    duplicaria ~1 MB de base64 na memória (os mesmos bytes já vivem dentro do
+    HTML cacheado) para poupar 6 ms a cada 8 horas."""
     try:
         return base64.b64encode((BASE_DIR / relative_path).read_bytes()).decode()
     except FileNotFoundError:
@@ -206,13 +209,10 @@ if not aws_services:
 # A legenda sai dos dados, não de uma lista paralela que envelhece sozinha.
 category_counts = Counter(s["category"] for s in aws_services)
 
-mascot_b64 = load_asset_b64("static/mascote.png")
-audio_b64 = {
-    "aplausos": load_asset_b64("static/aplausos.mp3"),
-    "pulo": load_asset_b64("static/pulo.mp3"),
-    "gameover": load_asset_b64("static/gameover.mp3"),
-    "sonora": load_asset_b64("static/sonora.mp3"),
-}
+# Os assets NÃO são carregados aqui: só o build_game_html() precisa deles, e ele
+# é cacheado. Carregá-los no módulo faria os ~1 MB de base64 serem despicklados
+# do cache a cada rerun sem necessidade — e duplicados na memória, já que os
+# mesmos bytes já estão dentro do HTML cacheado.
 
 
 # --------------------------------------------------------------------------
@@ -220,8 +220,28 @@ audio_b64 = {
 # --------------------------------------------------------------------------
 
 @st.cache_data(ttl=CACHE_TTL, show_spinner=False)
-def build_game_html(services, styles, mascot, audio, fallback_color):
-    """Monta o HTML uma vez só. São ~2,9 MB de base64: remontar a cada rerun é caro."""
+def build_game_html():
+    """Monta o HTML do jogo (1,3 MB) e guarda em memória.
+
+    SEM ARGUMENTOS de propósito. O @st.cache_data hasheia todos os argumentos
+    para montar a chave do cache — e passar aqui o ~1 MB de base64 dos assets
+    custava 23 ms por chamada, contra 7 ms para simplesmente remontar o HTML do
+    zero. O cache ficava 3,5x mais lento que não ter cache. Sem argumentos, a
+    chave é trivial e o acerto sai por ~2 ms (só o unpickle do resultado).
+
+    Os dados vêm dos carregadores, chamados aqui dentro — então na maior parte
+    das vezes nem são executados: este cache acerta antes.
+    """
+    services = load_aws_services()
+    styles = CATEGORY_STYLES
+    fallback_color = FALLBACK_COLOR
+    mascot = load_asset_b64("static/mascote.png")
+    audio = {
+        "aplausos": load_asset_b64("static/aplausos.mp3"),
+        "pulo": load_asset_b64("static/pulo.mp3"),
+        "gameover": load_asset_b64("static/gameover.mp3"),
+        "sonora": load_asset_b64("static/sonora.mp3"),
+    }
     return f'''
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -1197,9 +1217,7 @@ with st.sidebar:
         """, unsafe_allow_html=True)
 
 components.html(
-    build_game_html(
-        aws_services, CATEGORY_STYLES, mascot_b64, audio_b64, FALLBACK_COLOR,
-    ),
+    build_game_html(),
     height=GAME_HEIGHT + CARD_GAP + CARD_HEIGHT + 14,
     scrolling=False,
 )
