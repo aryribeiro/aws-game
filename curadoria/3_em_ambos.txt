@@ -1,0 +1,599 @@
+EM AMBOS — trocar descricao curta pela rica do tetris (149)
+===========================================================
+
+Amplify  ->  AWS Amplify
+    game  : Construa, implemente, hospede e gerencie aplicações móveis e da Web.
+    tetris: Plataforma de desenvolvimento fullstack para construir e hospedar aplicações web e mobile ...
+
+Amazon API Gateway  ->  API Gateway
+    game  : Build, deploy, and manage APIs
+    tetris: Serviço gerenciado para criar, publicar, manter e proteger APIs REST, HTTP e WebSocket em ...
+
+AWS App Mesh  ->  AWS App Mesh
+    game  : Monitor and control microservices
+    tetris: Service mesh gerenciado que facilita o monitoramento e controle de comunicação entre micro...
+
+AWS App Runner  ->  AWS App Runner
+    game  : Plataforma gerenciada para implantação de aplicações conteinerizadas.
+    tetris: Serviço totalmente gerenciado para deploy rápido de aplicações web e APIs containerizadas ...
+
+App Studio  ->  AWS App Studio
+    game  : A maneira mais rápida e fácil de criar aplicações de alto nível.
+    tetris: Plataforma low-code para construção de aplicações empresariais internas alimentada por IA ...
+
+AppFlow  ->  Amazon AppFlow
+    game  : Integração sem uso de código para aplicações SaaS e produtos da AWS.
+    tetris: Serviço de integração totalmente gerenciado para transferir dados entre aplicações SaaS e ...
+
+Application Discovery Service  ->  Application Discovery Service
+    game  : Descubra aplicações on-premises para otimizar a migração.
+    tetris: Serviço que automatiza a descoberta e o mapeamento de servidores e dependências on-premise...
+
+Application Migration Service (MGN)  ->  AWS Application Migration Service
+    game  : Modernização e migração automatizadas de aplicações.
+    tetris: Serviço para migração lift-and-shift de servidores físicos, virtuais e em nuvem para a AWS...
+
+AppSync  ->  AWS AppSync
+    game  : Acelere o desenvolvimento de aplicações com APIs GraphQL escaláveis e totalmente gerenciad
+    tetris: Serviço para criar APIs GraphQL e Pub/Sub gerenciadas que conectam aplicações a fontes de ...
+
+Artifact  ->  AWS Artifact
+    game  : Acesso sob demanda a relatórios de conformidade da AWS.
+    tetris: Portal de acesso self-service a relatórios de conformidade e acordos da AWS. Fornece docum...
+
+Athena  ->  Athena
+    game  : Consulte dados no S3 usando SQL.
+    tetris: Serviço de consulta interativa serverless que permite analisar dados no S3 usando SQL padr...
+
+AWS Audit Manager  ->  AWS Audit Manager
+    game  : Continuously audit your AWS usage to simplify how you assess risk and compliance
+    tetris: Serviço que automatiza a coleta de evidências de conformidade para auditorias regulatórias...
+
+Augmented AI  ->  Amazon Augmented AI
+    game  : Implemente facilmente análise humana para previsões de ML.
+    tetris: Serviço para adicionar revisão humana a predições de ML quando a confiança do modelo está ...
+
+Backup  ->  AWS Backup
+    game  : Backup centralizado entre os produtos da AWS.
+    tetris: Serviço centralizado para automatizar e gerenciar backups de múltiplos serviços AWS a part...
+
+Batch  ->  Batch
+    game  : Execute trabalhos em lote em qualquer escala.
+    tetris: Serviço gerenciado para execução de jobs de processamento em lote em grande escala na AWS....
+
+Amazon Bedrock  ->  Amazon Bedrock
+    game  : Build with foundation models
+    tetris: Serviço totalmente gerenciado que oferece acesso a modelos de fundação (FMs) de líderes co...
+
+Braket  ->  Amazon Braket
+    game  : Acelere a pesquisa de computação quântica.
+    tetris: Serviço de computação quântica gerenciado que permite explorar e experimentar com hardware...
+
+Certificate Manager  ->  Certificate Manager
+    game  : Provisiona, gerencie e implante certificados SSL/TLS.
+    tetris: Serviço para provisionar, gerenciar e renovar automaticamente certificados SSL/TLS para us...
+
+Chime SDK  ->  Amazon Chime SDK
+    game  : Mensagens, áudio, vídeo e compartilhamento de tela em tempo real.
+    tetris: SDK para adicionar capacidades de comunicação em tempo real (voz, vídeo, mensagens, PSTN) ...
+
+Clean Rooms  ->  AWS Clean Rooms
+    game  : Faça a correspondência, analise e colabore em conjuntos de dados, sem compartilhar nem rev
+    tetris: Serviço que permite a múltiplas empresas colaborar em análises conjuntas de dados sem comp...
+
+Cloud Map  ->  AWS Cloud Map
+    game  : Descoberta de serviços para recursos da nuvem.
+    tetris: Serviço de descoberta de recursos de nuvem que permite registrar e descobrir dinamicamente...
+
+Cloud9  ->  Cloud9
+    game  : Crie, execute e depure código em um IDE na nuvem.
+    tetris: IDE baseado em nuvem que permite escrever, executar e depurar código diretamente no navega...
+
+CloudFormation  ->  CloudFormation
+    game  : Crie e gerencie recursos com modelos.
+    tetris: Serviço de Infraestrutura como Código (IaC) nativo da AWS que provisiona e gerencia recurs...
+
+CloudFront  ->  CloudFront
+    game  : Rede global de entrega de conteúdo.
+    tetris: Rede de distribuição de conteúdo (CDN) global da AWS com mais de 450 pontos de presença no...
+
+CloudHSM  ->  CloudHSM
+    game  : Armazenamento de chaves baseado em hardware para conformidade regulatória.
+    tetris: Serviço que fornece módulos de segurança de hardware (HSM) dedicados na nuvem para gestão ...
+
+CloudSearch  ->  CloudSearch
+    game  : Serviço gerenciado de pesquisa.
+    tetris: Serviço de busca gerenciado para adicionar capacidades de pesquisa full-text a sites e apl...
+
+CloudShell  ->  CloudShell
+    game  : Acesso a linha de comando a recursos da AWS diretamente de um navegador.
+    tetris: Terminal baseado em navegador com acesso direto ao AWS CLI e ferramentas de desenvolviment...
+
+CloudTrail  ->  CloudTrail
+    game  : Rastreie o uso de APIs e as atividades de usuários.
+    tetris: Serviço que registra toda a atividade de API e ação do usuário em uma conta AWS, criando u...
+
+CloudWatch  ->  CloudWatch
+    game  : Monitore recursos e aplicações.
+    tetris: Serviço de observabilidade da AWS que coleta e monitora métricas, logs e traces de serviço...
+
+CodeArtifact  ->  CodeArtifact
+    game  : Gerenciamento seguro, escalável e econômico de artefatos para o desenvolvimento de softwar
+    tetris: Repositório de artefatos de software totalmente gerenciado para armazenar e distribuir pac...
+
+CodeBuild  ->  CodeBuild
+    game  : Crie e teste código.
+    tetris: Serviço de integração contínua (CI) totalmente gerenciado que compila código-fonte, execut...
+
+CodeCatalyst  ->  Amazon CodeCatalyst
+    game  : Serviço de desenvolvimento de software unificado para desenvolvimento e entrega mais rápid
+    tetris: Plataforma unificada de desenvolvimento de software que combina repositório de código, CI/...
+
+CodeCommit  ->  CodeCommit
+    game  : Armazene código em repositórios Git privados.
+    tetris: Serviço de repositório Git privado e gerenciado pela AWS, com alta disponibilidade e segur...
+
+CodeDeploy  ->  CodeDeploy
+    game  : Automatize implantações de código.
+    tetris: Serviço de deploy automatizado que distribui código para EC2, Fargate, Lambda e servidores...
+
+CodeGuru  ->  Amazon CodeGuru
+    game  : Localize suas linhas de código mais caras.
+    tetris: Serviço de revisão de código e profiling de performance alimentado por machine learning. C...
+
+CodePipeline  ->  CodePipeline
+    game  : Faça o lançamento de software usando entrega contínua.
+    tetris: Serviço de entrega contínua (CD) que automatiza os pipelines de release de software. Orque...
+
+Cognito  ->  Cognito
+    game  : Gerenciamento de identidades para aplicações.
+    tetris: Serviço de identidade para aplicações web e mobile que gerencia autenticação, autorização ...
+
+Comprehend  ->  Amazon Comprehend
+    game  : Descubra insights e relações em textos.
+    tetris: Serviço de NLP (Processamento de Linguagem Natural) gerenciado que extrai insights de text...
+
+Config  ->  AWS Config
+    game  : Rastreie o inventário e as alterações de recursos.
+    tetris: Serviço de avaliação, auditoria e revisão de configurações de recursos AWS. Registra conti...
+
+Connect  ->  Amazon Connect
+    game  : Desbloqueie dados entre limites organizacionais com governança integrada.
+    tetris: Plataforma de contact center na nuvem omnichannel criada pela Amazon, usada internamente a...
+
+Control Tower  ->  Control Tower
+    game  : Configure e controle um ambiente multicontas seguro e compatível.
+    tetris: Serviço para configurar e governar um ambiente multi-conta seguro na AWS seguindo melhores...
+
+Data Exchange  ->  AWS Data Exchange
+    game  : Encontre, assine e use dados de terceiros na nuvem.
+    tetris: Marketplace para descobrir, subscrever e usar dados de terceiros diretamente na AWS. Ofere...
+
+Amazon Data Firehose  ->  Amazon Data Firehose
+    game  : Entrega de streaming data para destinos AWS. Transforma e comprime dados automaticamente.
+    tetris: Serviço de entrega de streams de dados em tempo real para destinos como S3, Redshift, Open...
+
+Database Migration Service (DMS)  ->  Database Migration Service
+    game  : Migre Banco De Dados com tempo mínimo de inatividade.
+    tetris: Serviço para migrar bancos de dados para a AWS com tempo mínimo de indisponibilidade. Supo...
+
+DataSync  ->  DataSync
+    game  : Transferência de dados simples, rápida e online.
+    tetris: Serviço para transferência automatizada e acelerada de dados entre armazenamento on-premis...
+
+DataZone  ->  Amazon DataZone
+    game  : Desbloqueie dados entre limites organizacionais com governança integrada.
+    tetris: Serviço de catálogo de dados e governança para descoberta, compartilhamento e acesso a dad...
+
+Deadline Cloud  ->  AWS Deadline Cloud
+    game  : Gerenciamento de renderização na nuvem.
+    tetris: Serviço gerenciado de farm de renderização para estúdios de animação, VFX e jogos que prec...
+
+Detective  ->  Detective
+    game  : Investigue possíveis problemas de segurança.
+    tetris: Serviço de análise forense e investigação de segurança que facilita a análise de possíveis...
+
+Device Farm  ->  Device Farm
+    game  : Teste aplicações Web e para Android e iOS em dispositivos reais na Nuvem AWS.
+    tetris: Serviço de teste de aplicações mobile e web em dispositivos físicos reais hospedados na AW...
+
+Amazon DevOps Guru  ->  Amazon DevOps Guru
+    game  : ML-powered cloud operations service to improve application availability
+    tetris: Serviço de operações de ML que detecta anomalias operacionais e identifica problemas de ap...
+
+AWS Direct Connect  ->  Direct Connect
+    game  : Dedicated network connection to AWS
+    tetris: Serviço que estabelece uma conexão de rede dedicada e privada entre o data center on-premi...
+
+AWS Directory Service  ->  Directory Service
+    game  : Host and manage active directory
+    tetris: Serviço que oferece diretórios Microsoft Active Directory gerenciados na AWS. Oferece três...
+
+DocumentDB  ->  Amazon DocumentDB
+    game  : Banco de dados de documentos totalmente gerenciado.
+    tetris: Banco de dados de documentos gerenciado compatível com MongoDB, projetado para alta perfor...
+
+DynamoDB  ->  DynamoDB
+    game  : Banco de dados NoSQL gerenciado.
+    tetris: Banco de dados NoSQL totalmente gerenciado com latência de milissegundo em qualquer escala...
+
+EC2  ->  EC2
+    game  : Servidores virtuais na nuvem.
+    tetris: Da categoria Computação, oferece servidores virtuais na nuvem com capacidade de processame...
+
+EC2 Image Builder  ->  EC2 Image Builder
+    game  : Crie e mantenha imagens seguras do Linux ou Windows Server.
+    tetris: Serviço para automatizar a criação, manutenção e validação de imagens de máquina virtual (...
+
+Elastic Beanstalk  ->  Elastic Beanstalk
+    game  : Execute e gerencie aplicações Web.
+    tetris: Plataforma como serviço (PaaS) que facilita o deploy e o gerenciamento de aplicações web s...
+
+Elastic Container Registry  ->  Elastic Container Registry
+    game  : Easily store, manage, and deploy container images
+    tetris: Registro privado de imagens Docker totalmente gerenciado e integrado ao ecossistema AWS. A...
+
+Elastic Container Service  ->  Elastic Container Service
+    game  : Uma maneira altamente segura, confiável e escalável para executar contêineres.
+    tetris: Serviço de orquestração de contêineres Docker totalmente gerenciado pela AWS. Permite exec...
+
+Elastic Disaster Recovery (DRS)  ->  AWS Elastic Disaster Recovery
+    game  : Recuperação de aplicações escalável e econômica para a AWS.
+    tetris: Serviço de recuperação de desastres que replica servidores físicos, virtuais e em nuvem pa...
+
+Elastic Kubernetes Service  ->  Elastic Kubernetes Service
+    game  : A forma mais confiável de executar o Kubernetes.
+    tetris: Serviço gerenciado de Kubernetes na AWS que elimina a necessidade de instalar e operar o c...
+
+ElastiCache  ->  ElastiCache
+    game  : Serviço de caching in-memory para Redis e Memcached.
+    tetris: Serviço gerenciado de cache em memória compatível com Redis e Memcached. Reduz a latência ...
+
+EMR  ->  EMR
+    game  : Framework do Hadoop hospedado.
+    tetris: Plataforma de big data gerenciada para processar grandes volumes de dados usando Spark, Ha...
+
+End User Messaging  ->  AWS End User Messaging
+    game  : Sistema de mensagens confiável e econômico que não compromete a segurança, a proteção ou o
+    tetris: Serviço consolidado para envio de mensagens SMS, MMS e WhatsApp para usuários finais em es...
+
+FinSpace  ->  Amazon FinSpace
+    game  : Armazene, catalogue, prepare e analise dados do setor financeiro em poucos minutos.
+    tetris: Serviço especializado para o setor financeiro que facilita o armazenamento, catálogo e aná...
+
+Firewall Manager  ->  AWS Firewall Manager
+    game  : Gerenciamento central de regras de firewall.
+    tetris: Serviço de gerenciamento centralizado de políticas de segurança de rede em múltiplas conta...
+
+Forecast  ->  Amazon Forecast
+    game  : Aumente a precisão das previsões usando machine learning.
+    tetris: Serviço de previsão de séries temporais baseado em machine learning, sem necessidade de ex...
+
+Fraud Detector  ->  Amazon Fraud Detector
+    game  : Detecte mais fraudes online em menos tempo.
+    tetris: Serviço gerenciado para detectar fraudes online em tempo real usando machine learning. Tre...
+
+Amazon FSx  ->  FSx
+    game  : Launch, run, and scale feature-rich and highly-performant file systems with just a few cli
+    tetris: Serviço de sistemas de arquivos gerenciados de alto desempenho com suporte a múltiplos tip...
+
+Global Accelerator  ->  Global Accelerator
+    game  : Melhore a disponibilidade e a performance de aplicações globais.
+    tetris: Serviço de rede que melhora a disponibilidade e performance de aplicações globais roteando...
+
+Glue  ->  AWS Glue
+    game  : Integração de dados simples, escalável e sem servidor.
+    tetris: Serviço serverless de integração de dados para ETL, catalogação e preparação de dados para...
+
+Ground Station  ->  Ground Station
+    game  : Estação terrestre totalmente gerenciada como serviço.
+    tetris: Serviço de estação terrestre de satélite totalmente gerenciado que permite controlar satél...
+
+Amazon GuardDuty  ->  GuardDuty
+    game  : Managed threat detection service
+    tetris: Serviço de detecção de ameaças que monitora continuamente contas e workloads AWS em busca ...
+
+Amazon HealthLake  ->  AWS HealthLake
+    game  : Serviço de e análise de dados de . Compatível com FHIR e integrado com ML.
+    tetris: Serviço compatível com FHIR para armazenar, transformar e analisar dados de saúde em escal...
+
+HealthOmics  ->  AWS HealthOmics
+    game  : Transforme dados ómicos em insights de dados.
+    tetris: Serviço especializado para armazenar, processar e analisar dados ômicos de larga escala co...
+
+AWS IAM Identity Center  ->  IAM Identity Center
+    game  : Manage single sign-on access to AWS accounts and apps
+    tetris: Serviço de Single Sign-On (SSO) para acesso centralizado a múltiplas contas AWS e aplicaçõ...
+
+Amazon Inspector  ->  Amazon Inspector
+    game  : Automated and continual vulnerability management for Amazon EC2 and Amazon ECR
+    tetris: Serviço de avaliação de vulnerabilidades que escaneia continuamente workloads EC2, contêin...
+
+IoT Core  ->  IoT Core
+    game  : Conecte dispositivos à nuvem.
+    tetris: Plataforma gerenciada de conectividade IoT que permite conectar bilhões de dispositivos à ...
+
+IoT Device Defender  ->  IoT Device Defender
+    game  : Gerenciamento de segurança para dispositivos IoT.
+    tetris: Serviço de segurança para frotas IoT que audita configurações de dispositivos e detecta co...
+
+IoT Device Management  ->  IoT Device Management
+    game  : Integre, organize e gerencie remotamente dispositivos IoT.
+    tetris: Serviço para registrar, organizar, monitorar e gerenciar remotamente frotas de dispositivo...
+
+IoT Events  ->  IoT Events
+    game  : Detecção e resposta a eventos de IoT.
+    tetris: Serviço para detectar e responder a eventos em dados de sensores e aplicações IoT usando m...
+
+IoT FleetWise  ->  AWS IoT FleetWise
+    game  : Colete, transforme e transfira dados de veículos para a nuvem com facilidade e praticament
+    tetris: Serviço para coletar e transferir dados de veículos conectados para a nuvem de forma efici...
+
+IoT Greengrass  ->  IoT Greengrass
+    game  : Computação, sistema de mensagens e sincronização local para dispositivos.
+    tetris: Runtime de edge computing da AWS que estende capacidades cloud para dispositivos IoT locai...
+
+IoT SiteWise  ->  IoT SiteWise
+    game  : Colete e interprete de dados de IoT.
+    tetris: Serviço para coletar, organizar e analisar dados de equipamentos industriais em escala. Co...
+
+IoT TwinMaker  ->  IoT TwinMaker
+    game  : Otimize operações ao criar com facilidade gêmeos digitais de sistemas reais.
+    tetris: Serviço para criar gêmeos digitais de ambientes físicos como fábricas, edifícios e infraes...
+
+Amazon Kendra  ->  Amazon Kendra
+    game  : empresarial inteligente com NLP. Compreende documentos e responde perguntas contextuais.
+    tetris: Serviço de busca empresarial inteligente alimentado por ML que compreende linguagem natura...
+
+Amazon Keyspaces  ->  Amazon Keyspaces
+    game  : Apache Cassandra gerenciado com alta disponibilidade. Ideal para aplicações NoSQL escaláve
+    tetris: Banco de dados de wide-column totalmente gerenciado e compatível com Apache Cassandra. Per...
+
+Amazon Kinesis Video Streams  ->  Kinesis Video Streams
+    game  : Streaming seguro de vídeo para e playback. Ingestão de câmeras e dispositivos IoT.
+    tetris: Serviço gerenciado para ingestão, processamento e armazenamento de streams de vídeo de câm...
+
+Lake Formation  ->  AWS Lake Formation
+    game  : Crie um data lake seguro em poucos dias.
+    tetris: Serviço para construir, proteger e gerenciar data lakes de forma centralizada e simplifica...
+
+Lambda  ->  Lambda
+    game  : Execute código sem preocupações com servidores.
+    tetris: Serviço de computação serverless que executa código em resposta a eventos sem necessidade ...
+
+Launch Wizard  ->  Launch Wizard
+    game  : Dimensione, configure e implante facilmente aplicações de terceiros na AWS.
+    tetris: Serviço para simplificar o provisionamento de aplicações empresariais de terceiros na AWS ...
+
+Lex  ->  Amazon Lex
+    game  : Crie chatbots de voz e texto.
+    tetris: Serviço para construir interfaces conversacionais (chatbots) com voz e texto usando a mesm...
+
+License Manager  ->  AWS License Manager
+    game  : Você pode gerenciar suas licenças de software de vários fornecedores de software (como Mic
+    tetris: Serviço para rastrear e gerenciar licenças de software na AWS e em ambientes on-premises. ...
+
+Lightsail  ->  Lightsail
+    game  : Inicie e gerencie servidores privados virtuais.
+    tetris: Serviço de computação simplificado da AWS, ideal para pequenos projetos, sites e desenvolv...
+
+Location Service  ->  Amazon Location Service
+    game  : Adicione dados de localização a aplicações com segurança e facilidade.
+    tetris: Serviço para adicionar funcionalidades de localização como mapas, geocodificação, rastream...
+
+Lookout for Equipment  ->  Amazon Lookout for Equipment
+    game  : Detecte comportamentos anormais dos equipamentos analisando dados dos sensores.
+    tetris: Serviço que usa ML para detectar anomalias em equipamentos industriais analisando dados de...
+
+Macie  ->  Amazon Macie
+    game  : Descubra e proteja seus dados sensíveis em escala.
+    tetris: Serviço de segurança de dados que usa ML para descobrir e proteger dados sensíveis no S3 a...
+
+Mainframe Modernization  ->  AWS Mainframe Modernization
+    game  : Migre, modernize, opere e execute workloads de mainframe.
+    tetris: Plataforma gerenciada para migrar e modernizar aplicações mainframe COBOL e PL/I para a AW...
+
+Managed Services  ->  Managed Services
+    game  : Gerenciamento de operações de infraestrutura da AWS.
+    tetris: Serviço de operações gerenciadas onde a AWS assume responsabilidade por operar a infraestr...
+
+Migration Hub  ->  AWS Migration Hub
+    game  : Acompanhe as migrações em um único lugar.
+    tetris: Centro de controle unificado para planejar, rastrear e gerenciar migrações de aplicações p...
+
+Amazon Monitron  ->  Amazon Monitron
+    game  : Reduce unplanned equipment downtime with predictive maintenance and machine learning
+    tetris: Solução end-to-end para monitoramento de condições de equipamentos industriais usando sens...
+
+Amazon MQ  ->  Amazon MQ
+    game  : serviço de agente de mensagens de código aberto e gerenciado para Apache ActiveMQ e Rabbit
+    tetris: Serviço de broker de mensagens gerenciado compatível com Apache ActiveMQ e RabbitMQ. Facil...
+
+Neptune  ->  Neptune
+    game  : Serviço de banco de dados de gráficos totalmente gerenciado.
+    tetris: Banco de dados de grafos totalmente gerenciado, otimizado para armazenar e consultar redes...
+
+OpenSearch Service  ->  Amazon OpenSearch Service
+    game  : Pesquise, visualize e analise até petabytes de texto e dados não estruturados.
+    tetris: Serviço gerenciado para busca, análise de logs e visualização em tempo real baseado no Ope...
+
+Organizations  ->  AWS Organizations
+    game  : Governança e gerenciamento centralizados para contas da AWS.
+    tetris: Serviço para gerenciar centralmente múltiplas contas AWS como uma organização unificada. P...
+
+Outposts  ->  AWS Outposts
+    game  : Execute a infraestrutura da AWS on-premises.
+    tetris: Extensão da infraestrutura AWS para o data center ou colocation do cliente, oferecendo har...
+
+Panorama  ->  AWS Panorama
+    game  : Aprimore as suas operações com visão computacional na borda.
+    tetris: Serviço que permite executar modelos de visão computacional em câmeras de vídeo on-premise...
+
+Personalize  ->  Amazon Personalize
+    game  : Crie recomendações em tempo real em suas aplicações da palma da mão.
+    tetris: Serviço gerenciado para criar sistemas de recomendação personalizados em tempo real sem ex...
+
+Pinpoint  ->  Amazon Pinpoint
+    game  : Comunicações de marketing multicanal.
+    tetris: Plataforma de engajamento de clientes multicanal para enviar comunicações personalizadas v...
+
+Polly  ->  Amazon Polly
+    game  : Transforme texto em falas realistas.
+    tetris: Serviço de conversão de texto em fala (TTS) com vozes altamente naturais em dezenas de idi...
+
+Proton  ->  AWS Proton
+    game  : Automatize o gerenciamento de implantações de contêineres e de tecnologia sem servidor.
+    tetris: Serviço para que equipes de plataforma definam e mantenham templates de infraestrutura pad...
+
+Amazon Q  ->  Amazon Q
+    game  : Assistente baseado em IA generativa, com segurança e privacidade para atender às mais rigo
+    tetris: Assistente de IA generativa da AWS para empresas que responde perguntas, gera conteúdo e e...
+
+Q Developer  ->  Amazon Q Developer
+    game  : Construa aplicações mais rápido com um guia de programação baseado em ML.
+    tetris: Assistente de IA especializado em desenvolvimento de software, integrado a IDEs como VS Co...
+
+QuickSight  ->  QuickSight
+    game  : Serviço rápido de análise empresarial.
+    tetris: Serviço de business intelligence (BI) serverless e nativo da nuvem para criar dashboards e...
+
+Red Hat OpenShift Service  ->  Red Hat OpenShift Service on AWS
+    game  : Managed OpenShift in the cloud
+    tetris: Serviço gerenciado de OpenShift na AWS, resultado da parceria entre Red Hat e Amazon. Ofer...
+
+Redshift  ->  Amazon Redshift
+    game  : Data warehousing rápido, simples e econômico.
+    tetris: Data warehouse em nuvem totalmente gerenciado, otimizado para análise de petabytes de dado...
+
+Amazon Rekognition  ->  Amazon Rekognition
+    game  : Analyze image and video
+    tetris: Serviço de visão computacional que analisa imagens e vídeos para detectar objetos, cenas, ...
+
+Resilience Hub  ->  AWS Resilience Hub
+    game  : Prepare e proteja suas aplicações contra interrupções.
+    tetris: Serviço para definir, validar e monitorar continuamente a resiliência de aplicações AWS. P...
+
+Resource Access Manager  ->  Resource Access Manager
+    game  : Serviço simples e seguro para compartilhar recursos da AWS.
+    tetris: Serviço que permite compartilhar recursos AWS com outras contas da mesma organização ou co...
+
+Resource Explorer  ->  AWS Resource Explorer
+    game  : Pesquise recursos na AWS de forma rápida.
+    tetris: Serviço de busca e descoberta de recursos AWS em múltiplas regiões e contas. Permite encon...
+
+Route 53  ->  Route 53
+    game  : Sistema de Nomes de Domínio (DNS) escalável do 53.
+    tetris: Serviço de DNS altamente disponível e escalável da AWS com SLA de 100% de disponibilidade....
+
+S3 Glacier  ->  S3 Glacier
+    game  : Armazenamento de baixo custo para arquivos na nuvem.
+    tetris: Serviço de armazenamento de arquivamento de dados com custo extremamente baixo, projetado ...
+
+Secrets Manager  ->  Secrets Manager
+    game  : Altere, gerencie e recupere segredos.
+    tetris: Serviço para armazenar, rotacionar e gerenciar segredos como credenciais de banco de dados...
+
+Security Hub  ->  Security Hub
+    game  : Central unificada de conformidade e segurança.
+    tetris: Centro unificado de gerenciamento de segurança que agrega alertas e findings de múltiplos ...
+
+Security Lake  ->  Security Lake
+    game  : Centralize automaticamente seus dados de segurança com apenas alguns cliques.
+    tetris: Serviço que centraliza e normaliza dados de segurança de fontes AWS e de terceiros em um d...
+
+Serverless Application Repository  ->  Serverless Application Repository
+    game  : Descubra, implante e publique aplicações sem servidor.
+    tetris: Repositório gerenciado para descoberta, deploy e publicação de aplicações serverless na AW...
+
+Service Catalog  ->  Service Catalog
+    game  : Crie e use produtos padronizados.
+    tetris: Serviço para criar e gerenciar catálogos de produtos de TI aprovados para uso na AWS. Perm...
+
+Service Quotas  ->  Service Quotas
+    game  : Você pode visualizar e gerenciar suas cotas para Serviços da AWS de uma localização centra
+    tetris: Serviço para visualizar e gerenciar os limites (cotas) de serviços AWS em uma conta. Mostr...
+
+Signer  ->  AWS Signer
+    game  : Assine código para integridade e autenticidade.
+    tetris: Serviço para assinatura digital de código que garante a integridade e autenticidade de art...
+
+Simple Email Service  ->  Amazon Simple Email Service
+    game  : E-mail de entrada e saída em alta escala.
+    tetris: Serviço de envio e recebimento de emails em larga escala para aplicações, com alta taxa de...
+
+Simple Notification Service  ->  Simple Notification Service
+    game  : Publicação assíncrona, SMS, e-mail e notificações por push para dispositivos móveis.
+    tetris: Serviço de mensageria pub/sub totalmente gerenciado para envio de notificações e mensagens...
+
+Simple Queue Service  ->  Simple Queue Service
+    game  : Filas gerenciadas de mensagens.
+    tetris: Serviço de filas de mensagens totalmente gerenciado para desacoplar componentes de sistema...
+
+Snow Family  ->  AWS Snow Family
+    game  : Dispositivos físicos para agregar e processar dados em locais da borda com transferência s
+    tetris: Família de dispositivos físicos para transferência de grandes volumes de dados para a AWS ...
+
+Step Functions  ->  Step Functions
+    game  : Coordenação para aplicações distribuídas.
+    tetris: Serviço de orquestração serverless que coordena múltiplos serviços AWS em fluxos de trabal...
+
+Storage Gateway  ->  Storage Gateway
+    game  : Integração de armazenamento híbrido.
+    tetris: Serviço híbrido que conecta ambientes on-premises à nuvem AWS, oferecendo acesso transpare...
+
+Systems Manager  ->  Systems Manager
+    game  : Obtenha insights operacionais e tome medidas na infraestrutura da AWS.
+    tetris: Suite de ferramentas para visualizar e controlar infraestrutura AWS e on-premises de forma...
+
+Textract  ->  Amazon Textract
+    game  : Extrai texto e dados de documentos.
+    tetris: Serviço que extrai automaticamente texto, dados de formulários e informações de tabelas de...
+
+Timestream  ->  Amazon Timestream
+    game  : Banco de dados totalmente gerenciado de séries temporais.
+    tetris: Banco de dados de séries temporais serverless e totalmente gerenciado para IoT e dados ope...
+
+Transcribe  ->  Amazon Transcribe
+    game  : Reconhecimento automático de fala para recuperar áudio em texto.
+    tetris: Serviço de reconhecimento automático de fala (ASR) que converte áudio em texto com alta pr...
+
+Transfer Family  ->  AWS Transfer Family
+    game  : Serviços SFTP, FTPS e FTP totalmente gerenciados.
+    tetris: Serviço gerenciado para transferência de arquivos diretamente para o S3 e EFS usando proto...
+
+Translate  ->  Amazon Translate
+    game  : Tradução natural e fluente de idiomas.
+    tetris: Serviço de tradução automática neural que oferece traduções rápidas, acessíveis e de alta ...
+
+Trusted Advisor  ->  Trusted Advisor
+    game  : Otimize a performance e a segurança.
+    tetris: Serviço de consultoria automatizada que analisa o ambiente AWS e recomenda melhores prátic...
+
+AWS User Notifications  ->  AWS User Notifications
+    game  : Configure and view notifications from AWS services
+    tetris: Serviço centralizado para gerenciar e entregar notificações de eventos da conta AWS em múl...
+
+Verified Permissions  ->  Amazon Verified Permissions
+    game  : Permissões autorizadas detalhadas para suas aplicações.
+    tetris: Serviço de autorização baseado em políticas para aplicações, usando a linguagem Cedar para...
+
+VPC  ->  VPC
+    game  : Recursos de nuvem isolados.
+    tetris: Permite criar redes virtuais isoladas logicamente dentro da AWS, com controle total sobre ...
+
+Well-Architected Tool  ->  AWS Well-Architected Tool
+    game  : Analise e aprimore suas workloads.
+    tetris: Ferramenta que guia revisões de arquitetura baseadas nos seis pilares do AWS Well-Architec...
+
+Wickr  ->  AWS Wickr
+    game  : Proteja as comunicações empresariais com criptografia de ponta a ponta.
+    tetris: Plataforma de comunicação empresarial segura com criptografia de ponta a ponta para mensag...
+
+WorkSpaces Thin Client  ->  WorkSpaces Thin Client
+    game  : O   WorkSpaces Thin Client reduz custos, simplifica a logística, acelera a implantação e f
+    tetris: Dispositivo de hardware leve e de baixo custo otimizado para acessar WorkSpaces e AppStrea...
+
+X-Ray  ->  X-Ray
+    game  : Analise e depure suas aplicações.
+    tetris: Serviço de rastreamento distribuído para analisar e depurar aplicações distribuídas e micr...
+

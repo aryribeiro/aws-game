@@ -1,17 +1,45 @@
+import base64
+import json
+from collections import Counter
+from pathlib import Path
+
 import streamlit as st
 import streamlit.components.v1 as components
-import json
-import os
-import base64
 
-# Configuração da página
+BASE_DIR = Path(__file__).parent
+
 st.set_page_config(
     page_title="AWS Game 🎮",
     page_icon="☁️",
     layout="centered"
 )
 
-# Título e descrição centralizados
+# Mesma técnica do app-live: mantém o <header> no DOM porque é dentro do
+# stToolbar que o Streamlit renderiza a seta de expandir a sidebar
+# (stExpandSidebarButton). Esconder o header inteiro trava a sidebar fechada.
+st.markdown("""
+<style>
+    header[data-testid="stHeader"] {
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+    [data-testid="stToolbarActions"],
+    [data-testid="stAppDeployButton"],
+    [data-testid="stMainMenu"],
+    [data-testid="stStatusWidget"],
+    [data-testid="stDecoration"],
+    #MainMenu,
+    footer { display: none !important; }
+
+    div[data-testid="stAppViewBlockContainer"] {
+        padding-top: 2.5rem !important;
+        padding-bottom: 0 !important;
+    }
+    div[data-testid="stVerticalBlock"] { gap: 0 !important; }
+    .element-container { margin-top: 0 !important; margin-bottom: 0 !important; }
+</style>
+""", unsafe_allow_html=True)
+
 st.markdown("""
 <div style="text-align: center;">
     <h1>☁️ AWS Game 🎮</h1>
@@ -19,154 +47,186 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Função para carregar imagem como base64
-@st.cache_data
-def load_image_as_base64(image_path):
+# --------------------------------------------------------------------------
+# Categorias e cores — fonte única da verdade (Python injeta no JS)
+# --------------------------------------------------------------------------
+
+# Categorias oficiais AWS 2026. Os slugs vêm do aws-tetris-pro e são a chave
+# canônica no servicos.json; a tradução abaixo é só para exibir na legenda.
+#
+# A paleta é a oficial da AWS, com uma ressalva: a AWS reusa o mesmo hex em até
+# 3 categorias (Analytics/Networking/Games são todas #8C4FFF). Como aqui a cor
+# da plataforma É o sinal da categoria, as colisões foram desfeitas deslocando a
+# luminosidade — mesmo matiz, tom distinto. O hex oficial fica com a categoria
+# mais populosa de cada grupo.
+CATEGORY_COLORS = {
+    "Analytics": "#8C4FFF",
+    "App-Integration": "#F05DA5",
+    "Artificial-Intelligence": "#01A88D",
+    "Blockchain": "#EF924D",
+    "Business-Applications": "#C7131F",
+    "Cloud-Financial-Management": "#3FB523",
+    "Compute": "#ED7100",
+    "Containers": "#FF9B40",
+    "Customer-Enablement": "#5A30B5",
+    "Database": "#527FFF",
+    "Developer-Tools": "#437ABA",
+    "End-User-Computing": "#01F9D1",
+    "Front-End-Web-Mobile": "#ED3F4B",
+    "Games": "#5700FC",
+    "General-Icons": "#232F3E",
+    "Internet-of-Things": "#1B660F",
+    "Management-Governance": "#E7157B",
+    "Media-Services": "#D86613",
+    "Migration-Modernization": "#2EAD19",
+    "Networking-Content-Delivery": "#B68FFF",
+    "Quantum-Technologies": "#9B4A00",
+    "Satellite": "#1A3C6E",
+    "Security-Identity-Compliance": "#DD344C",
+    "Storage": "#277116",
+    "Start": "#FFD700",
+}
+
+CATEGORY_LABELS = {
+    "Analytics": "Análise",
+    "App-Integration": "Integração de Aplicações",
+    "Artificial-Intelligence": "Inteligência Artificial",
+    "Blockchain": "Blockchain",
+    "Business-Applications": "Aplicações Empresariais",
+    "Cloud-Financial-Management": "Gestão Financeira na Nuvem",
+    "Compute": "Computação",
+    "Containers": "Contêineres",
+    "Customer-Enablement": "Capacitação do Cliente",
+    "Database": "Banco de Dados",
+    "Developer-Tools": "Ferramentas de Desenvolvedor",
+    "End-User-Computing": "Computação do Usuário Final",
+    "Front-End-Web-Mobile": "Front-End Web e Mobile",
+    "Games": "Jogos",
+    "General-Icons": "Geral",
+    "Internet-of-Things": "Internet das Coisas",
+    "Management-Governance": "Gerenciamento e Governança",
+    "Media-Services": "Serviços de Mídia",
+    "Migration-Modernization": "Migração e Modernização",
+    "Networking-Content-Delivery": "Redes e Entrega de Conteúdo",
+    "Quantum-Technologies": "Tecnologias Quânticas",
+    "Satellite": "Satélite",
+    "Security-Identity-Compliance": "Segurança, Identidade e Conformidade",
+    "Storage": "Armazenamento",
+}
+
+FALLBACK_COLOR = "#666666"
+
+
+def _darken(hex_color, amount=50):
+    r, g, b = (int(hex_color[i:i + 2], 16) for i in (1, 3, 5))
+    return "#%02X%02X%02X" % (max(0, r - amount), max(0, g - amount), max(0, b - amount))
+
+
+# Bordas pré-calculadas: o JS não precisa mais parsear hex a cada quadro.
+CATEGORY_STYLES = {
+    name: {"color": color, "border": _darken(color)}
+    for name, color in CATEGORY_COLORS.items()
+}
+
+
+# --------------------------------------------------------------------------
+# Carregamento
+# --------------------------------------------------------------------------
+
+@st.cache_data(show_spinner=False)
+def load_asset_b64(relative_path):
     try:
-        with open(image_path, "rb") as image_file:
-            return base64.b64encode(image_file.read()).decode()
+        return base64.b64encode((BASE_DIR / relative_path).read_bytes()).decode()
     except FileNotFoundError:
         return None
 
-# Função para carregar áudio como base64
-@st.cache_data
-def load_audio_as_base64(audio_path):
-    try:
-        with open(audio_path, "rb") as audio_file:
-            return base64.b64encode(audio_file.read()).decode()
-    except FileNotFoundError:
-        return None
 
-# Carregar dados dos serviços AWS
-@st.cache_data
+@st.cache_data(show_spinner=False)
 def load_aws_services():
     try:
-        with open('servicos.json', 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        
-        # Extrair apenas os serviços (excluindo o nó central)
-        services = [node for node in data['nodes'] if not node.get('isCentral', False)]
-        
-        # Combinar serviços reais
-        all_services = []
-        
-        # Adicionar serviços reais primeiro
-        for service in services:
-            # Verificar diferentes possíveis nomes do campo categoria (maiúsculo e minúsculo)
-            category = (service.get('Category') or service.get('category') or 
-                       service.get('Categoria') or service.get('group') or 
-                       service.get('type') or 'AWS')
-            all_services.append({
-                'name': service['name'],
-                'description': service.get('Description', service.get('description', '')),
-                'category': category
-            })
-        
-        return all_services
-        
+        data = json.loads((BASE_DIR / "servicos.json").read_text(encoding="utf-8"))
     except FileNotFoundError:
         st.error("Arquivo servicos.json não encontrado na raiz do projeto!")
         return []
-    except json.JSONDecodeError:
-        st.error("Erro ao decodificar o arquivo servicos.json!")
+    except json.JSONDecodeError as exc:
+        st.error(f"Erro ao decodificar servicos.json: {exc}")
         return []
 
-# Carregar categorias AWS
-@st.cache_data
-def load_aws_categories():
-    try:
-        with open('categorias aws.txt', 'r', encoding='utf-8') as f:
-            categories = [line.strip() for line in f.readlines() if line.strip()]
-        return categories
-    except FileNotFoundError:
-        # Fallback categories from document
-        return [
-            "Análise", "Aplicação Empresarial", "Armazenamento", "Banco De Dados", "Blockchain",
-            "Computação", "Computação De Usuário Final", "Contêineres", "Estratégia De Arquitetura",
-            "Ferramentas De Desenvolvedor", "Front-End Plataformas Móveis E Web",
-            "Gerenciamento E Governança", "Gerenciamento Financeiro Na Nuvem", "IA Generativa",
-            "Integração De Aplicações", "Internet Das Coisas", "Machine Learning",
-            "Migração", "Redes E Entrega De Conteúdo", "Robótica", "Satélite",
-            "Segurança Identidade Conformidade", "Serviços De Mídia",
-            "Sust. Cadeia de Suprimentos AWS", "Tecnologias Quânticas"
-        ]
+    services, seen = [], set()
+    for node in data.get("nodes", []):
+        name = (node.get("name") or "").strip()
+        if not name or name in seen:
+            continue  # a base traz 3 serviços repetidos
+        seen.add(name)
 
-# Carregar recursos
+        services.append({
+            "name": name,
+            "description": (node.get("Description") or node.get("description") or "").strip(),
+            "category": (node.get("Category") or "General-Icons").strip(),
+        })
+    return services
+
+
+def to_js(value):
+    """json.dumps seguro para injetar dentro de <script>."""
+    return json.dumps(value, ensure_ascii=True).replace("</", "<\\/")
+
+
 aws_services = load_aws_services()
-aws_categories = load_aws_categories()
-mascot_base64 = load_image_as_base64('static/mascote.png')
-aplausos_base64 = load_audio_as_base64('static/aplausos.mp3')
-pulo_base64 = load_audio_as_base64('static/pulo.mp3')
-gameover_base64 = load_audio_as_base64('static/gameover.mp3')
-sonora_base64 = load_audio_as_base64('static/sonora.mp3')
-
 if not aws_services:
     st.stop()
 
-# Definir cores para cada categoria
-category_colors = {
-    "Análise": "#FFA502",
-    "Aplicação Empresarial": "#5F27CD", 
-    "Armazenamento": "#FF4757",
-    "Banco De Dados": "#3742FA",
-    "Blockchain": "#2ED573",
-    "Computação": "#FF6348",
-    "Computação De Usuário Final": "#4ECDC4",
-    "Contêineres": "#A4B0BE",
-    "Estratégia De Arquitetura": "#00D2D3",
-    "Ferramentas De Desenvolvedor": "#747D8C",
-    "Front-End Plataformas Móveis E Web": "#5F27CD",
-    "Gerenciamento E Governança": "#FF9FF3",
-    "Gerenciamento Financeiro Na Nuvem": "#54A0FF",
-    "IA Generativa": "#5F27CD",
-    "Integração De Aplicações": "#FF6B35",
-    "Internet Das Coisas": "#26DE81",
-    "Machine Learning": "#FD79A8",
-    "Migração": "#FDCB6E",
-    "Redes E Entrega De Conteúdo": "#6C5CE7",
-    "Robótica": "#A29BFE",
-    "Satélite": "#FC7753",
-    "Segurança Identidade Conformidade": "#F8B500",
-    "Serviços De Mídia": "#E17055",
-    "Sust. Cadeia de Suprimentos AWS": "#00B894",
-    "Tecnologias Quânticas": "#00CEC9",
-    "S3 Services": "#FF6B35",
-    "AWS": "#32CD32",
-    "Start": "#FFD700"
+# A legenda sai dos dados, não de uma lista paralela que envelhece sozinha.
+category_counts = Counter(s["category"] for s in aws_services)
+
+mascot_b64 = load_asset_b64("static/mascote.png")
+audio_b64 = {
+    "aplausos": load_asset_b64("static/aplausos.mp3"),
+    "pulo": load_asset_b64("static/pulo.mp3"),
+    "gameover": load_asset_b64("static/gameover.mp3"),
+    "sonora": load_asset_b64("static/sonora.mp3"),
 }
 
-# HTML do jogo modificado
-game_html = f'''
+
+# --------------------------------------------------------------------------
+# Jogo
+# --------------------------------------------------------------------------
+
+@st.cache_data(show_spinner=False)
+def build_game_html(services, styles, mascot, audio, fallback_color):
+    """Monta o HTML uma vez só. São ~2,7 MB de base64: remontar a cada rerun é caro."""
+    return f'''
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ... S3 Climbing Adventure</title>
+    <title>S3 Climbing Adventure</title>
     <style>
+        * {{ box-sizing: border-box; }}
         body {{
             margin: 0;
             padding: 0;
-            background: linear-gradient(180deg, #001122 0%, #003366 50%, #87CEEB 100%);
+            background: transparent;
             font-family: 'Arial', sans-serif;
             overflow: hidden;
         }}
-        
         #gameContainer {{
             position: relative;
             width: 700px;
             height: 650px;
+            max-width: 100%;
             margin: 0 auto;
             border: 3px solid #2E8B57;
             border-radius: 10px;
             overflow: hidden;
         }}
-        
         canvas {{
             display: block;
             background: transparent;
+            outline: none;
+            max-width: 100%;
         }}
-        
         #ui {{
             position: absolute;
             top: 12px;
@@ -176,9 +236,9 @@ game_html = f'''
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
             z-index: 100;
             font-size: 18px;
+            pointer-events: none;
         }}
-        
-        #gameOver, #gameWin {{
+        #gameOver, #gameWin, #startOverlay {{
             position: absolute;
             top: 50%;
             left: 50%;
@@ -188,11 +248,11 @@ game_html = f'''
             padding: 30px;
             border-radius: 15px;
             text-align: center;
-            display: none;
             z-index: 200;
             border: 3px solid #FFD700;
         }}
-        
+        #gameOver, #gameWin {{ display: none; }}
+        #startOverlay p {{ font-size: 14px; color: #CFCFCF; }}
         button {{
             background: #228B22;
             color: white;
@@ -203,25 +263,26 @@ game_html = f'''
             font-size: 16px;
             margin-top: 10px;
         }}
-        
-        button:hover {{
-            background: #32CD32;
-        }}
+        button:hover {{ background: #32CD32; }}
     </style>
 </head>
 <body>
     <div id="gameContainer">
-        <canvas id="gameCanvas" width="700" height="650"></canvas>
-        
-        <!-- UI Elements -->
+        <canvas id="gameCanvas" width="700" height="650" tabindex="0"></canvas>
+
         <div id="ui">
             <div>Pontos: <span id="score">0</span></div>
             <div>Vidas: <span id="lives">5</span></div>
             <div>Altura: <span id="height">0</span>m</div>
             <div style="font-size: 12px; margin-top: 5px;">Atual: <span id="currentService">Início</span></div>
         </div>
-        
-        <!-- Game Over Screen -->
+
+        <div id="startOverlay">
+            <h2>☁️ S3 Climbing Adventure</h2>
+            <p>← → mover &nbsp;•&nbsp; ↑ ou espaço para pular</p>
+            <button id="startBtn">▶ Clique para jogar</button>
+        </div>
+
         <div id="gameOver">
             <h2>💀 Game Over!</h2>
             <p>Você parou no: <span id="finalService">Início</span></p>
@@ -229,75 +290,87 @@ game_html = f'''
             <p>Pontuação Final: <span id="finalScore">0</span></p>
             <button onclick="restartGame()">🔄 Jogar Novamente</button>
         </div>
-        
-        <!-- Victory Screen -->
+
         <div id="gameWin">
             <h2>🏆 PARABÉNS!</h2>
-            <p>Completou + de 340 serviços AWS!</p>
+            <p>Você escalou os {len(services)} serviços AWS!</p>
             <p>Pontuação Final: <span id="winScore">0</span></p>
             <button onclick="restartGame()">🔄 Jogar Novamente</button>
         </div>
     </div>
 
     <script>
-        // Audio Setup
-        const audioSources = {{
-            aplausos: {json.dumps(aplausos_base64) if aplausos_base64 else 'null'},
-            pulo: {json.dumps(pulo_base64) if pulo_base64 else 'null'},
-            gameover: {json.dumps(gameover_base64) if gameover_base64 else 'null'},
-            sonora: {json.dumps(sonora_base64) if sonora_base64 else 'null'}
-        }};
-        
+        const awsServices = {to_js(services)};
+        const CATEGORY_STYLES = {to_js(styles)};
+        const FALLBACK_STYLE = {{ color: {to_js(fallback_color)}, border: '#444444' }};
+        const audioSources = {to_js(audio)};
+        const mascotB64 = {to_js(mascot)};
+
+        const TOTAL_SERVICES = awsServices.length;
+        const PLATFORM_SPACING = 220;
+        const GROUND_HEIGHT = 60;
+        const WORLD_HEIGHT = TOTAL_SERVICES * PLATFORM_SPACING;
+        const GROUND_TOP = WORLD_HEIGHT - GROUND_HEIGHT;
+
+        // --- Passo fixo -----------------------------------------------------
+        // A física conta TICKS, nunca quadros. requestAnimationFrame dispara na
+        // taxa do monitor (60/120/144Hz), então amarrar a física a ele fazia o
+        // jogo acelerar junto com o refresh rate. 1 tick == 1 quadro dos 60fps
+        // originais, o que mantém todas as constantes de ajuste válidas.
+        const TICK_MS = 1000 / 60;
+        const MAX_FRAME_MS = 250;   // teto após aba em segundo plano
+        const MAX_TICKS_PER_FRAME = 5;
+        let accumulator = 0;
+        let lastFrameTime = null;
+
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
         const audioElements = {{}};
-        
-        // Initialize audio elements
         function initAudio() {{
-            for (const [key, base64Data] of Object.entries(audioSources)) {{
-                if (base64Data) {{
-                    audioElements[key] = new Audio('data:audio/mp3;base64,' + base64Data);
-                    if (key === 'sonora') {{
-                        audioElements[key].loop = true;
-                        audioElements[key].volume = 0.3;
-                    }}
+            for (const [key, b64] of Object.entries(audioSources)) {{
+                if (!b64) continue;
+                audioElements[key] = new Audio('data:audio/mp3;base64,' + b64);
+                if (key === 'sonora') {{
+                    audioElements[key].loop = true;
+                    audioElements[key].volume = 0.3;
                 }}
             }}
         }}
-        
-        // Play audio function
-        function playAudio(audioKey) {{
-            if (audioElements[audioKey]) {{
-                audioElements[audioKey].currentTime = 0;
-                audioElements[audioKey].play().catch(e => console.log('Audio play failed:', e));
+
+        function playAudio(key) {{
+            const el = audioElements[key];
+            if (!el) return;
+            el.currentTime = 0;
+            el.play().catch(e => console.log('Audio play failed:', e));
+        }}
+
+        function stopAllAudio() {{
+            for (const el of Object.values(audioElements)) {{
+                el.pause();
+                el.currentTime = 0;
             }}
         }}
-        
-        // AWS Services Data
-        const awsServices = {json.dumps(aws_services)};
-        
-        // Game Canvas Setup
-        const canvas = document.getElementById('gameCanvas');
-        const ctx = canvas.getContext('2d');
-        
-        // Game State
-        let gameState = {{
-            score: 0,
-            lives: 5,
-            currentPlatform: 0,
-            gameRunning: true,
-            keys: {{}},
-            camera: {{ x: 0, y: 0 }},
-            worldHeight: awsServices.length * 220,
-            backgroundMusicStarted: false
-        }};
-        
-        // Load mascot image
+
         let mascotImage = null;
-        if ({json.dumps(bool(mascot_base64))}) {{
+        if (mascotB64) {{
             mascotImage = new Image();
-            mascotImage.src = 'data:image/png;base64,{mascot_base64 or ""}';
+            mascotImage.src = 'data:image/png;base64,' + mascotB64;
         }}
-        
-        // Player Class (Mascot)
+
+        function newGameState() {{
+            return {{
+                score: 0,
+                lives: 5,
+                currentPlatform: 0,
+                started: false,
+                gameRunning: true,
+                keys: {{}},
+                cameraY: 0
+            }};
+        }}
+        let gameState = newGameState();
+
         class Player {{
             constructor(x, y) {{
                 this.x = x;
@@ -309,15 +382,15 @@ game_html = f'''
                 this.speed = 6;
                 this.jumpPower = 25;
                 this.onGround = false;
+                this.standingOn = null;
                 this.direction = 1;
                 this.invulnerable = false;
                 this.invulnerabilityTimer = 0;
                 this.maxFallDistance = 700;
                 this.lastGroundY = y;
             }}
-            
+
             update() {{
-                // Handle input
                 if (gameState.keys['ArrowLeft']) {{
                     this.velocityX = -this.speed;
                     this.direction = -1;
@@ -331,54 +404,43 @@ game_html = f'''
                     this.onGround = false;
                     playAudio('pulo');
                 }}
-                
-                // Apply gravity
+
                 this.velocityY += 0.8;
-                
-                // Update position
                 this.x += this.velocityX;
                 this.y += this.velocityY;
-                
-                // Friction
                 this.velocityX *= 0.85;
-                
-                // Boundary checks (horizontal wrapping)
+
                 if (this.x < -this.width) this.x = canvas.width;
                 if (this.x > canvas.width) this.x = -this.width;
-                
-                // Check for fall death
+
+                // Consome o estado de "no chão": checkPlatformCollisions() o
+                // restaura ainda neste tick se ainda houver plataforma embaixo.
+                // Sem isso, andar para fora da borda dava um pulo grátis no ar.
+                this.onGround = false;
+                this.standingOn = null;
+
                 if (this.y > this.lastGroundY + this.maxFallDistance) {{
                     this.takeDamage();
                 }}
-                
-                // Invulnerability timer
-                if (this.invulnerable) {{
-                    this.invulnerabilityTimer--;
-                    if (this.invulnerabilityTimer <= 0) {{
-                        this.invulnerable = false;
-                    }}
+
+                if (this.invulnerable && --this.invulnerabilityTimer <= 0) {{
+                    this.invulnerable = false;
                 }}
-                
-                // Update camera to follow player
-                gameState.camera.y = this.y - canvas.height / 2;
-                if (gameState.camera.y < 0) gameState.camera.y = 0;
-                if (gameState.camera.y > gameState.worldHeight - canvas.height) {{
-                    gameState.camera.y = gameState.worldHeight - canvas.height;
-                }}
+
+                gameState.cameraY = Math.max(
+                    0,
+                    Math.min(this.y - canvas.height / 2, WORLD_HEIGHT - canvas.height)
+                );
             }}
-            
+
             draw() {{
                 ctx.save();
-                
-                // Apply camera transform
-                ctx.translate(0, -gameState.camera.y);
-                
-                // Flashing effect when invulnerable
+                ctx.translate(0, -gameState.cameraY);
+
                 if (this.invulnerable && Math.floor(this.invulnerabilityTimer / 10) % 2) {{
                     ctx.globalAlpha = 0.5;
                 }}
-                
-                // Draw mascot image if available, otherwise draw fallback
+
                 if (mascotImage && mascotImage.complete) {{
                     ctx.save();
                     if (this.direction === -1) {{
@@ -389,11 +451,8 @@ game_html = f'''
                     }}
                     ctx.restore();
                 }} else {{
-                    // Fallback: simple colored rectangle
                     ctx.fillStyle = '#228B22';
                     ctx.fillRect(this.x, this.y, this.width, this.height);
-                    
-                    // Simple face
                     ctx.fillStyle = 'white';
                     ctx.fillRect(this.x + 8, this.y + 10, 6, 6);
                     ctx.fillRect(this.x + 26, this.y + 10, 6, 6);
@@ -402,57 +461,61 @@ game_html = f'''
                     ctx.fillRect(this.x + 28, this.y + 12, 2, 2);
                     ctx.fillRect(this.x + 18, this.y + 20, 4, 2);
                 }}
-                
+
                 ctx.restore();
             }}
-            
+
             takeDamage() {{
-                if (!this.invulnerable) {{
-                    gameState.lives--;
-                    this.invulnerable = true;
-                    this.invulnerabilityTimer = 180;
-                    
-                    if (gameState.lives <= 0) {{
-                        gameOver();
-                    }} else {{
-                        this.respawn();
-                    }}
+                if (this.invulnerable) return;
+
+                gameState.lives--;
+                this.invulnerable = true;
+                this.invulnerabilityTimer = 180;
+
+                if (gameState.lives <= 0) {{
+                    gameOver();
+                }} else {{
+                    this.respawn();
                 }}
             }}
-            
+
             respawn() {{
-                let respawnPlatform = null;
-                let highestY = Infinity;
-                
-                for (let platform of platforms) {{
-                    if (platform.number <= gameState.currentPlatform && platform.y < highestY) {{
-                        highestY = platform.y;
-                        respawnPlatform = platform;
+                let target = null;
+                let highest = Infinity;
+                for (const platform of platforms) {{
+                    if (platform.number <= gameState.currentPlatform && platform.y < highest) {{
+                        highest = platform.y;
+                        target = platform;
                     }}
                 }}
-                
-                if (respawnPlatform) {{
-                    this.x = respawnPlatform.x + respawnPlatform.width / 2 - this.width / 2;
-                    this.y = respawnPlatform.y - this.height;
-                    this.lastGroundY = respawnPlatform.y;
+
+                if (target) {{
+                    this.x = target.x + target.width / 2 - this.width / 2;
+                    this.y = target.y - this.height;
+                    this.lastGroundY = target.y;
                 }} else {{
                     this.x = 150;
-                    this.y = gameState.worldHeight - 150;
-                    this.lastGroundY = gameState.worldHeight - 100;
+                    this.y = GROUND_TOP - this.height;
+                    this.lastGroundY = GROUND_TOP;
                 }}
-                
+
                 this.velocityX = 0;
                 this.velocityY = 0;
                 this.onGround = true;
+                this.standingOn = null;
             }}
-            
-            setOnGround(y) {{
+
+            setOnGround(platform) {{
                 this.onGround = true;
-                this.lastGroundY = y;
+                this.standingOn = platform;
+                this.lastGroundY = platform.y;
+            }}
+
+            heightInMeters() {{
+                return Math.max(0, Math.floor((GROUND_TOP - (this.y + this.height)) / 15));
             }}
         }}
-        
-        // Platform Class
+
         class Platform {{
             constructor(x, y, width, height, number, type = 'normal') {{
                 this.x = x;
@@ -461,114 +524,89 @@ game_html = f'''
                 this.height = height;
                 this.number = number;
                 this.type = type;
-                this.visited = false;
-                this.serviceName = number === 0 ? 'Início da Escalada AWS' : (awsServices[number - 1] ? awsServices[number - 1].name : `Serviço AWS ${{number}}`);
-                this.serviceCategory = number === 0 ? 'Start' : (awsServices[number - 1] ? awsServices[number - 1].category : 'AWS');
-                this.serviceDescription = number === 0 ? 'Comece sua aventura pelos serviços AWS!' : (awsServices[number - 1] ? awsServices[number - 1].description : 'Serviço AWS especializado');
+                this.breaking = false;
+                this.breakTimer = 0;
+
+                const service = number === 0 ? null : awsServices[number - 1];
+                this.serviceName = number === 0 ? 'Início da Escalada AWS' : service.name;
+                this.serviceCategory = number === 0 ? 'Start' : service.category;
+                // Ainda não é desenhada, mas é o gancho para exibir a descrição
+                // do serviço na UI — próximo passo do projeto.
+                this.serviceDescription = number === 0
+                    ? 'Comece sua aventura pelos serviços AWS!'
+                    : service.description;
+
+                this.isFinal = number === TOTAL_SERVICES;
+
+                // Só as 'moving' usam isto, mas manter no construtor evita
+                // criar campos depois (deoptimiza a classe na V8).
+                this.startX = x;
+                this.range = 90;
+                this.velocityX = number % 2 === 0 ? 1.2 : -1.2;
+                this.minX = Math.max(0, x - this.range);
+                this.maxX = Math.min(canvas.width - width, x + this.range);
             }}
-            
+
+            update() {{
+                if (this.type !== 'moving' || this.minX >= this.maxX) return;
+
+                const previousX = this.x;
+                this.x += this.velocityX;
+
+                if (this.x <= this.minX) {{
+                    this.x = this.minX;
+                    this.velocityX = Math.abs(this.velocityX);
+                }} else if (this.x >= this.maxX) {{
+                    this.x = this.maxX;
+                    this.velocityX = -Math.abs(this.velocityX);
+                }}
+
+                // Carrega o jogador junto, senão ela desliza debaixo dos pés dele.
+                if (player.standingOn === this) {{
+                    player.x += this.x - previousX;
+                }}
+            }}
+
+            style() {{
+                if (this.isFinal) return {{ color: '#FFD700', border: '#CC9A00' }};
+                if (this.breaking) return {{ color: '#8B4513', border: '#5D2E0A' }};
+                if (this.type === 'breakable') return {{ color: '#8B4513', border: '#5D2E0A' }};
+                if (this.type === 'moving') return {{ color: '#4169E1', border: '#2E4BC7' }};
+                return CATEGORY_STYLES[this.serviceCategory] || FALLBACK_STYLE;
+            }}
+
             draw() {{
                 ctx.save();
-                ctx.translate(0, -gameState.camera.y);
-                
-                // Platform color based on type and category
-                let color = '#228B22';
-                let borderColor = '#1F5F1F';
-                
-                if (this.type === 'breakable') {{
-                    color = '#8B4513';
-                    borderColor = '#5D2E0A';
-                }} else if (this.type === 'moving') {{
-                    color = '#4169E1';
-                    borderColor = '#2E4BC7';
-                }} else if (this.number === awsServices.length) {{
-                    color = '#FFD700';
-                    borderColor = '#CC9A00';
-                }} else {{
-                    // Mapeamento de cores baseado nas categorias AWS
-                    const categoryColors = {{
-                        'Análise': '#FFA502',
-                        'Aplicação Empresarial': '#5F27CD',
-                        'Armazenamento': '#FF4757',
-                        'Banco De Dados': '#3742FA',
-                        'Blockchain': '#2ED573',
-                        'Computação': '#FF6348',
-                        'Computação De Usuário Final': '#4ECDC4',
-                        'Contêineres': '#A4B0BE',
-                        'Estratégia De Arquitetura': '#00D2D3',
-                        'Ferramentas De Desenvolvedor': '#747D8C',
-                        'Front-End Plataformas Móveis E Web': '#5F27CD',
-                        'Gerenciamento E Governança': '#FF9FF3',
-                        'Gerenciamento Financeiro Na Nuvem': '#54A0FF',
-                        'IA Generativa': '#5F27CD',
-                        'Integração De Aplicações': '#FF6B35',
-                        'Internet Das Coisas': '#26DE81',
-                        'Machine Learning': '#FD79A8',
-                        'Migração': '#FDCB6E',
-                        'Redes E Entrega De Conteúdo': '#6C5CE7',
-                        'Robótica': '#A29BFE',
-                        'Satélite': '#FC7753',
-                        'Segurança Identidade Conformidade': '#F8B500',
-                        'Serviços De Mídia': '#E17055',
-                        'Sust. Cadeia de Suprimentos AWS': '#00B894',
-                        'Tecnologias Quânticas': '#00CEC9',
-                        'S3 Services': '#FF6B35',
-                        'AWS': '#32CD32',
-                        'Start': '#FFD700'
-                    }};
-                    
-                    // Definir cor da plataforma baseada na categoria
-                    if (categoryColors[this.serviceCategory]) {{
-                        color = categoryColors[this.serviceCategory];
-                        // Calcular cor da borda (mais escura)
-                        const hexToRgb = (hex) => {{
-                            const r = parseInt(hex.slice(1, 3), 16);
-                            const g = parseInt(hex.slice(3, 5), 16);
-                            const b = parseInt(hex.slice(5, 7), 16);
-                            return [r, g, b];
-                        }};
-                        const [r, g, b] = hexToRgb(color);
-                        borderColor = `rgb(${{Math.max(0, r-50)}}, ${{Math.max(0, g-50)}}, ${{Math.max(0, b-50)}})`;
-                    }} else {{
-                        // Fallback para categorias não mapeadas
-                        color = '#666666';
-                        borderColor = '#444444';
-                    }}
-                }}
-                
-                // Draw platform shadow
+                ctx.translate(0, -gameState.cameraY);
+
+                const {{ color, border }} = this.style();
+
                 ctx.fillStyle = 'rgba(0,0,0,0.3)';
                 ctx.fillRect(this.x + 3, this.y + 3, this.width, this.height);
-                
-                // Draw platform border
-                ctx.fillStyle = borderColor;
+
+                ctx.fillStyle = border;
                 ctx.fillRect(this.x - 2, this.y - 2, this.width + 4, this.height + 4);
-                
-                // Draw platform main body
+
                 ctx.fillStyle = color;
                 ctx.fillRect(this.x, this.y, this.width, this.height);
-                
-                // Platform top highlight
-                ctx.fillStyle = this.number === awsServices.length ? '#FFFF00' : 'rgba(255,255,255,0.4)';
+
+                ctx.fillStyle = this.isFinal ? '#FFFF00' : 'rgba(255,255,255,0.4)';
                 ctx.fillRect(this.x, this.y, this.width, 4);
-                
-                // Service name (wrapped text for long names)
+
                 ctx.fillStyle = 'white';
                 ctx.font = 'bold 14px Arial';
                 ctx.textAlign = 'center';
                 ctx.strokeStyle = 'black';
                 ctx.lineWidth = 2;
-                
+
                 const maxWidth = this.width - 15;
                 const words = this.serviceName.split(' ');
                 let line = '';
                 let lines = [];
-                
+
                 for (let n = 0; n < words.length; n++) {{
                     const testLine = line + words[n] + ' ';
-                    const metrics = ctx.measureText(testLine);
-                    const testWidth = metrics.width;
-                    if (testWidth > maxWidth && n > 0) {{
+                    if (ctx.measureText(testLine).width > maxWidth && n > 0) {{
                         lines.push(line.trim());
                         line = words[n] + ' ';
                     }} else {{
@@ -576,24 +614,20 @@ game_html = f'''
                     }}
                 }}
                 lines.push(line.trim());
-                
-                // Limit to 3 lines max
+
                 if (lines.length > 3) {{
                     lines = lines.slice(0, 3);
-                    lines[2] = lines[2] + '...';
+                    lines[2] += '...';
                 }}
-                
-                // Draw text lines
+
                 const lineHeight = 13;
                 const startY = this.y + (this.height / 2) - ((lines.length - 1) * lineHeight / 2);
-                
                 for (let i = 0; i < lines.length; i++) {{
                     const yPos = startY + (i * lineHeight);
-                    ctx.strokeText(lines[i], this.x + this.width/2, yPos);
-                    ctx.fillText(lines[i], this.x + this.width/2, yPos);
+                    ctx.strokeText(lines[i], this.x + this.width / 2, yPos);
+                    ctx.fillText(lines[i], this.x + this.width / 2, yPos);
                 }}
-                
-                // Platform number in corner
+
                 ctx.font = 'bold 10px Arial';
                 ctx.fillStyle = 'yellow';
                 ctx.textAlign = 'left';
@@ -601,522 +635,484 @@ game_html = f'''
                 ctx.lineWidth = 1;
                 ctx.strokeText(this.number.toString(), this.x + 5, this.y + 15);
                 ctx.fillText(this.number.toString(), this.x + 5, this.y + 15);
-                
-                // Special indicator for final platform
-                if (this.number === awsServices.length) {{
+
+                if (this.isFinal) {{
                     ctx.fillStyle = '#FF0000';
                     ctx.font = 'bold 14px Arial';
                     ctx.textAlign = 'center';
                     ctx.strokeStyle = 'white';
                     ctx.lineWidth = 2;
-                    ctx.strokeText('FINAL!', this.x + this.width/2, this.y - 15);
-                    ctx.fillText('FINAL!', this.x + this.width/2, this.y - 15);
+                    ctx.strokeText('FINAL!', this.x + this.width / 2, this.y - 15);
+                    ctx.fillText('FINAL!', this.x + this.width / 2, this.y - 15);
                 }}
-                
+
                 ctx.restore();
             }}
         }}
-        
-        // Enemy Class
+
         class Enemy {{
-            constructor(x, y, emoji = '👾') {{
+            constructor(x, y, emoji, patrolDistance) {{
                 this.x = x;
                 this.y = y;
                 this.width = 30;
                 this.height = 30;
                 this.velocityX = Math.random() > 0.5 ? 2 : -2;
                 this.emoji = emoji;
-                this.patrolDistance = 120;
+                this.patrolDistance = patrolDistance;
                 this.startX = x;
             }}
-            
+
             update() {{
                 this.x += this.velocityX;
-                
                 if (Math.abs(this.x - this.startX) > this.patrolDistance) {{
                     this.velocityX *= -1;
                 }}
             }}
-            
+
             draw() {{
                 ctx.save();
-                ctx.translate(0, -gameState.camera.y);
+                ctx.translate(0, -gameState.cameraY);
                 ctx.font = '24px Arial';
                 ctx.textAlign = 'center';
-                ctx.fillText(this.emoji, this.x + this.width/2, this.y + this.height - 5);
+                ctx.fillText(this.emoji, this.x + this.width / 2, this.y + this.height - 5);
                 ctx.restore();
             }}
         }}
-        
-        // PowerUp Class
+
         class PowerUp {{
-            constructor(x, y, type = 'life') {{
+            constructor(x, y, type) {{
                 this.x = x;
                 this.y = y;
                 this.width = 25;
                 this.height = 25;
                 this.type = type;
-                this.collected = false;
                 this.bobOffset = 0;
                 this.emoji = type === 'life' ? '💖' : type === 'score' ? '⭐' : '🍄';
             }}
-            
+
             update() {{
                 this.bobOffset += 0.1;
             }}
-            
+
             draw() {{
-                if (!this.collected) {{
-                    ctx.save();
-                    ctx.translate(0, -gameState.camera.y);
-                    const bobY = this.y + Math.sin(this.bobOffset) * 5;
-                    ctx.font = '20px Arial';
-                    ctx.textAlign = 'center';
-                    ctx.fillText(this.emoji, this.x + this.width/2, bobY + this.height - 5);
-                    ctx.restore();
-                }}
+                ctx.save();
+                ctx.translate(0, -gameState.cameraY);
+                ctx.font = '20px Arial';
+                ctx.textAlign = 'center';
+                const bobY = this.y + Math.sin(this.bobOffset) * 5;
+                ctx.fillText(this.emoji, this.x + this.width / 2, bobY + this.height - 5);
+                ctx.restore();
             }}
         }}
-        
-        // Collectible Class
+
         class Collectible {{
             constructor(x, y) {{
                 this.x = x;
                 this.y = y;
                 this.width = 20;
                 this.height = 20;
-                this.collected = false;
                 this.rotation = 0;
             }}
-            
+
             update() {{
                 this.rotation += 0.2;
             }}
+
             draw() {{
-               if (!this.collected) {{
-                   ctx.save();
-                   ctx.translate(0, -gameState.camera.y);
-                   ctx.font = '16px Arial';
-                   ctx.textAlign = 'center';
-                   let coin = Math.floor(this.rotation * 2) % 2 === 0 ? '🪙' : '💰';
-                   ctx.fillText(coin, this.x + this.width/2, this.y + this.height - 2);
-                   ctx.restore();
-               }}
-           }}
-       }}
-       
-       // Game Objects
-       let player = new Player(150, 0);
-       let platforms = [];
-       let enemies = [];
-       let powerUps = [];
-       let collectibles = [];
-       
-       // Initialize Level
-       function initLevel() {{
-           platforms = [];
-           enemies = [];
-           powerUps = [];
-           collectibles = [];
-           
-           // Ground platform (platform 0)
-           platforms.push(new Platform(0, gameState.worldHeight - 60, canvas.width, 60, 0));
-           
-           // Generate platforms going upward
-           for (let i = 1; i <= awsServices.length; i++) {{
-               let x = Math.random() * (canvas.width - 250);
-               let y = gameState.worldHeight - (i * 220);
-               let width = 200 + Math.random() * 80;
-               
-               let type = 'normal';
-               if (i % 25 === 0 && i < awsServices.length) type = 'breakable';
-               if (i % 35 === 0 && i < awsServices.length) type = 'moving';
-               
-               platforms.push(new Platform(x, y, width, 30, i, type));
-               
-               if (i > 5 && Math.random() < 0.25) {{
-                   let enemyEmojis = ['🔥', '🦑', '🦨', '🐀', '🐓', '🦆', '🐖', '💩'];
-                   let emoji = enemyEmojis[Math.floor(Math.random() * enemyEmojis.length)];
-                   enemies.push(new Enemy(x + 30, y - 35, emoji));
-               }}
-               
-               if (Math.random() < 0.12) {{
-                   let types = ['life', 'score', 'power'];
-                   let type = types[Math.floor(Math.random() * types.length)];
-                   powerUps.push(new PowerUp(x + width/2, y - 35, type));
-               }}
-               
-               if (Math.random() < 0.35) {{
-                   collectibles.push(new Collectible(x + Math.random() * (width - 40) + 20, y - 30));
-               }}
-           }}
-           
-           player.x = 150;
-           player.y = gameState.worldHeight - 180;
-           player.lastGroundY = gameState.worldHeight - 60;
-       }}
-       
-       function checkCollision(rect1, rect2) {{
-           return rect1.x < rect2.x + rect2.width &&
-                  rect1.x + rect1.width > rect2.x &&
-                  rect1.y < rect2.y + rect2.height &&
-                  rect1.y + rect1.height > rect2.y;
-       }}
-       
-       function checkPlatformCollisions() {{
-           for (let platform of platforms) {{
-               if (checkCollision(player, platform)) {{
-                   if (player.velocityY > 0 && player.y < platform.y) {{
-                       player.y = platform.y - player.height;
-                       player.velocityY = 0;
-                       player.setOnGround(platform.y);
-                       
-                       if (platform.number > gameState.currentPlatform) {{
-                           gameState.currentPlatform = platform.number;
-                           gameState.score += 75;
-                           
-                           updateCurrentServiceUI(platform.serviceName);
-                           
-                           if (platform.number === awsServices.length) {{
-                               gameWin();
-                               return;
-                           }}
-                       }}
-                       
-                       if (platform.type === 'breakable' && !platform.visited) {{
-                           platform.visited = true;
-                           setTimeout(() => {{
-                               let index = platforms.indexOf(platform);
-                               if (index > -1) platforms.splice(index, 1);
-                           }}, 1500);
-                           gameState.score += 150;
-                       }}
-                   }}
-               }}
-           }}
-       }}
-       
-       function updateCurrentServiceUI(serviceName) {{
-           const serviceElement = document.getElementById('currentService');
-           if (serviceElement) {{
-               const displayName = serviceName.length > 25 ? 
-                   serviceName.substring(0, 25) + '...' : serviceName;
-               serviceElement.textContent = displayName;
-           }}
-       }}
-       
-       function checkEnemyCollisions() {{
-           for (let i = enemies.length - 1; i >= 0; i--) {{
-               let enemy = enemies[i];
-               if (checkCollision(player, enemy)) {{
-                   if (player.velocityY > 0 && player.y < enemy.y) {{
-                       enemies.splice(i, 1);
-                       player.velocityY = -12;
-                       gameState.score += 250;
-                   }} else {{
-                       player.takeDamage();
-                   }}
-               }}
-           }}
-       }}
-       
-       function checkPowerUpCollisions() {{
-           for (let powerUp of powerUps) {{
-               if (!powerUp.collected && checkCollision(player, powerUp)) {{
-                   powerUp.collected = true;
-                   if (powerUp.type === 'life') {{
-                       gameState.lives++;
-                       gameState.score += 500;
-                   }} else if (powerUp.type === 'score') {{
-                       gameState.score += 1000;
-                   }} else if (powerUp.type === 'power') {{
-                       gameState.score += 300;
-                   }}
-               }}
-           }}
-       }}
-       
-       function checkCollectibleCollisions() {{
-           for (let collectible of collectibles) {{
-               if (!collectible.collected && checkCollision(player, collectible)) {{
-                   collectible.collected = true;
-                   gameState.score += 100;
-               }}
-           }}
-       }}
-       
-       function update() {{
-           if (!gameState.gameRunning) return;
-           
-           if (!gameState.backgroundMusicStarted && (gameState.keys['ArrowLeft'] || gameState.keys['ArrowRight'] || gameState.keys['ArrowUp'] || gameState.keys[' '])) {{
-               playAudio('sonora');
-               gameState.backgroundMusicStarted = true;
-           }}
-           
-           player.update();
-           
-           for (let enemy of enemies) {{
-               enemy.update();
-           }}
-           
-           for (let powerUp of powerUps) {{
-               powerUp.update();
-           }}
-           
-           for (let collectible of collectibles) {{
-               collectible.update();
-           }}
-           
-           checkPlatformCollisions();
-           checkEnemyCollisions();
-           checkPowerUpCollisions();
-           checkCollectibleCollisions();
-           
-           document.getElementById('score').textContent = gameState.score;
-           document.getElementById('lives').textContent = gameState.lives;
-           document.getElementById('height').textContent = Math.floor((gameState.worldHeight - player.y) / 15);
-       }}
-       
-       function draw() {{
-           let gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-           gradient.addColorStop(0, '#001122');
-           gradient.addColorStop(0.3, '#003366');
-           gradient.addColorStop(0.7, '#004488');
-           gradient.addColorStop(1, '#87CEEB');
-           ctx.fillStyle = gradient;
-           ctx.fillRect(0, 0, canvas.width, canvas.height);
-           
-           for (let platform of platforms) {{
-               if (platform.y > gameState.camera.y - 150 && platform.y < gameState.camera.y + canvas.height + 150) {{
-                   platform.draw();
-               }}
-           }}
-           
-           for (let enemy of enemies) {{
-               if (enemy.y > gameState.camera.y - 100 && enemy.y < gameState.camera.y + canvas.height + 100) {{
-                   enemy.draw();
-               }}
-           }}
-           
-           for (let powerUp of powerUps) {{
-               if (powerUp.y > gameState.camera.y - 100 && powerUp.y < gameState.camera.y + canvas.height + 100) {{
-                   powerUp.draw();
-               }}
-           }}
-           
-           for (let collectible of collectibles) {{
-               if (collectible.y > gameState.camera.y - 100 && collectible.y < gameState.camera.y + canvas.height + 100) {{
-                   collectible.draw();
-               }}
-           }}
-           
-           player.draw();
-           
-           drawProgressIndicator();
-       }}
-       
-       function drawProgressIndicator() {{
-           const progressWidth = 200;
-           const progressHeight = 20;
-           const progressX = canvas.width - progressWidth - 20;
-           const progressY = 20;
-           
-           ctx.fillStyle = 'rgba(0,0,0,0.5)';
-           ctx.fillRect(progressX - 5, progressY - 5, progressWidth + 10, progressHeight + 10);
-           
-           ctx.fillStyle = '#333';
-           ctx.fillRect(progressX, progressY, progressWidth, progressHeight);
-           
-           const progress = gameState.currentPlatform / awsServices.length;
-           ctx.fillStyle = progress < 0.5 ? '#FF6B35' : progress < 0.8 ? '#FFA502' : '#32CD32';
-           ctx.fillRect(progressX, progressY, progressWidth * progress, progressHeight);
-           
-           ctx.fillStyle = 'white';
-           ctx.font = '10px Arial';
-           ctx.textAlign = 'center';
-           ctx.fillText(`${{gameState.currentPlatform}}/${{awsServices.length}}`, progressX + progressWidth/2, progressY + 14);
-       }}
-       
-       function gameLoop() {{
-           update();
-           draw();
-           requestAnimationFrame(gameLoop);
-       }}
-       
-       function gameOver() {{
-           gameState.gameRunning = false;
-           
-           if (audioElements.sonora) {{
-               audioElements.sonora.pause();
-               audioElements.sonora.currentTime = 0;
-           }}
-           
-           playAudio('gameover');
-           
-           document.getElementById('finalScore').textContent = gameState.score;
-           document.getElementById('finalHeight').textContent = Math.floor((gameState.worldHeight - player.y) / 15);
-           
-           let currentServiceName = 'Início da Escalada AWS';
-           if (gameState.currentPlatform > 0 && awsServices[gameState.currentPlatform - 1]) {{
-               currentServiceName = awsServices[gameState.currentPlatform - 1].name;
-           }}
-           document.getElementById('finalService').textContent = currentServiceName;
-           
-           document.getElementById('gameOver').style.display = 'block';
-       }}
-       
-       function gameWin() {{
-           gameState.gameRunning = false;
-           
-           if (audioElements.sonora) {{
-               audioElements.sonora.pause();
-               audioElements.sonora.currentTime = 0;
-           }}
-           
-           playAudio('aplausos');
-           
-           document.getElementById('winScore').textContent = gameState.score;
-           document.getElementById('gameWin').style.display = 'block';
-       }}
-       
-       function restartGame() {{
-           gameState = {{
-               score: 0,
-               lives: 5,
-               currentPlatform: 0,
-               gameRunning: true,
-               keys: {{}},
-               camera: {{ x: 0, y: 0 }},
-               worldHeight: awsServices.length * 220,
-               backgroundMusicStarted: false
-           }};
-           player = new Player(150, gameState.worldHeight - 180);
-           initLevel();
-           updateCurrentServiceUI('Início da Escalada AWS');
-           document.getElementById('gameOver').style.display = 'none';
-           document.getElementById('gameWin').style.display = 'none';
-           
-           for (const audio of Object.values(audioElements)) {{
-               if (audio) {{
-                   audio.pause();
-                   audio.currentTime = 0;
-               }}
-           }}
-       }}
-       
-       document.addEventListener('keydown', (e) => {{
-           gameState.keys[e.key] = true;
-           if (e.key === ' ' || e.key === 'ArrowUp') e.preventDefault();
-       }});
-       
-       document.addEventListener('keyup', (e) => {{
-           gameState.keys[e.key] = false;
-       }});
-       
-       let touchStartX = 0;
-       let touchStartY = 0;
-       
-       canvas.addEventListener('touchstart', (e) => {{
-           e.preventDefault();
-           const touch = e.touches[0];
-           touchStartX = touch.clientX;
-           touchStartY = touch.clientY;
-       }});
-       
-       canvas.addEventListener('touchend', (e) => {{
-           e.preventDefault();
-           const touch = e.changedTouches[0];
-           const deltaX = touch.clientX - touchStartX;
-           const deltaY = touch.clientY - touchStartY;
-           
-           if (Math.abs(deltaY) > Math.abs(deltaX)) {{
-               if (deltaY < -30) {{
-                   if (player.onGround) {{
-                       player.velocityY = -player.jumpPower;
-                       player.onGround = false;
-                       playAudio('pulo');
-                   }}
-               }}
-           }} else {{
-               if (Math.abs(deltaX) > 30) {{
-                   if (deltaX > 0) {{
-                       gameState.keys['ArrowRight'] = true;
-                       setTimeout(() => gameState.keys['ArrowRight'] = false, 200);
-                   }} else {{
-                       gameState.keys['ArrowLeft'] = true;
-                       setTimeout(() => gameState.keys['ArrowLeft'] = false, 200);
-                   }}
-               }}
-           }}
-       }});
-       
-       initAudio();
-       initLevel();
-       updateCurrentServiceUI('Início da Escalada AWS');
-       gameLoop();
-   </script>
+                ctx.save();
+                ctx.translate(0, -gameState.cameraY);
+                ctx.font = '16px Arial';
+                ctx.textAlign = 'center';
+                const coin = Math.floor(this.rotation * 2) % 2 === 0 ? '🪙' : '💰';
+                ctx.fillText(coin, this.x + this.width / 2, this.y + this.height - 2);
+                ctx.restore();
+            }}
+        }}
+
+        let player = new Player(150, GROUND_TOP - 50);
+        let platforms = [];
+        let enemies = [];
+        let powerUps = [];
+        let collectibles = [];
+
+        function initLevel() {{
+            platforms = [];
+            enemies = [];
+            powerUps = [];
+            collectibles = [];
+
+            platforms.push(new Platform(0, GROUND_TOP, canvas.width, GROUND_HEIGHT, 0));
+
+            const enemyEmojis = ['🔥', '🦑', '🦨', '🐀', '🐓', '🦆', '🐖', '💩'];
+
+            for (let i = 1; i <= TOTAL_SERVICES; i++) {{
+                const width = 200 + Math.random() * 80;
+                // A largura entra na conta: antes a plataforma vazava pela direita.
+                const x = Math.random() * (canvas.width - width);
+                const y = WORLD_HEIGHT - (i * PLATFORM_SPACING);
+
+                // else-if: 175 e 350 são múltiplos de 25 E de 35, e o segundo if
+                // sobrescrevia o primeiro, matando aquelas 'breakable'.
+                let type = 'normal';
+                if (i < TOTAL_SERVICES) {{
+                    if (i % 35 === 0) type = 'moving';
+                    else if (i % 25 === 0) type = 'breakable';
+                }}
+
+                platforms.push(new Platform(x, y, width, 30, i, type));
+
+                if (i > 5 && Math.random() < 0.25) {{
+                    const emoji = enemyEmojis[Math.floor(Math.random() * enemyEmojis.length)];
+                    // Patrulha limitada à plataforma: antes eles flutuavam no vazio.
+                    const patrol = Math.max(10, (width - 30) / 2 - 5);
+                    enemies.push(new Enemy(x + width / 2 - 15, y - 35, emoji, patrol));
+                }}
+
+                if (Math.random() < 0.12) {{
+                    const types = ['life', 'score', 'power'];
+                    powerUps.push(new PowerUp(
+                        x + width / 2,
+                        y - 35,
+                        types[Math.floor(Math.random() * types.length)]
+                    ));
+                }}
+
+                if (Math.random() < 0.35) {{
+                    collectibles.push(new Collectible(x + Math.random() * (width - 40) + 20, y - 30));
+                }}
+            }}
+
+            player.x = 150;
+            player.y = GROUND_TOP - player.height;
+            player.velocityX = 0;
+            player.velocityY = 0;
+            player.onGround = true;
+            player.standingOn = null;
+            player.lastGroundY = GROUND_TOP;
+        }}
+
+        function checkCollision(a, b) {{
+            return a.x < b.x + b.width &&
+                   a.x + a.width > b.x &&
+                   a.y < b.y + b.height &&
+                   a.y + a.height > b.y;
+        }}
+
+        function checkPlatformCollisions() {{
+            for (let i = platforms.length - 1; i >= 0; i--) {{
+                const platform = platforms[i];
+
+                if (platform.breaking) {{
+                    if (--platform.breakTimer <= 0) platforms.splice(i, 1);
+                }}
+
+                if (!checkCollision(player, platform)) continue;
+                if (player.velocityY <= 0 || player.y >= platform.y) continue;
+
+                player.y = platform.y - player.height;
+                player.velocityY = 0;
+                player.setOnGround(platform);
+
+                if (platform.number > gameState.currentPlatform) {{
+                    gameState.currentPlatform = platform.number;
+                    gameState.score += 75;
+                    updateCurrentServiceUI(platform.serviceName);
+
+                    if (platform.isFinal) {{
+                        gameWin();
+                        return;
+                    }}
+                }}
+
+                if (platform.type === 'breakable' && !platform.breaking) {{
+                    platform.breaking = true;
+                    platform.breakTimer = 90;   // 1,5s em ticks — não setTimeout,
+                    gameState.score += 150;     // que ignora pausa e restart.
+                }}
+            }}
+        }}
+
+        function updateCurrentServiceUI(serviceName) {{
+            const el = document.getElementById('currentService');
+            el.textContent = serviceName.length > 25
+                ? serviceName.substring(0, 25) + '...'
+                : serviceName;
+        }}
+
+        function checkEnemyCollisions() {{
+            for (let i = enemies.length - 1; i >= 0; i--) {{
+                const enemy = enemies[i];
+                if (!checkCollision(player, enemy)) continue;
+
+                if (player.velocityY > 0 && player.y < enemy.y) {{
+                    enemies.splice(i, 1);
+                    player.velocityY = -12;
+                    gameState.score += 250;
+                }} else {{
+                    player.takeDamage();
+                }}
+            }}
+        }}
+
+        function checkPowerUpCollisions() {{
+            for (let i = powerUps.length - 1; i >= 0; i--) {{
+                const powerUp = powerUps[i];
+                if (!checkCollision(player, powerUp)) continue;
+
+                if (powerUp.type === 'life') {{
+                    gameState.lives++;
+                    gameState.score += 500;
+                }} else if (powerUp.type === 'score') {{
+                    gameState.score += 1000;
+                }} else {{
+                    gameState.score += 300;
+                }}
+                powerUps.splice(i, 1);   // coletado sai do array, não fica sendo iterado para sempre
+            }}
+        }}
+
+        function checkCollectibleCollisions() {{
+            for (let i = collectibles.length - 1; i >= 0; i--) {{
+                if (!checkCollision(player, collectibles[i])) continue;
+                collectibles.splice(i, 1);
+                gameState.score += 100;
+            }}
+        }}
+
+        function update() {{
+            if (!gameState.gameRunning) return;
+
+            for (const platform of platforms) platform.update();
+
+            player.update();
+
+            for (const enemy of enemies) enemy.update();
+            for (const powerUp of powerUps) powerUp.update();
+            for (const collectible of collectibles) collectible.update();
+
+            checkPlatformCollisions();
+            checkEnemyCollisions();
+            checkPowerUpCollisions();
+            checkCollectibleCollisions();
+
+            document.getElementById('score').textContent = gameState.score;
+            document.getElementById('lives').textContent = gameState.lives;
+            document.getElementById('height').textContent = player.heightInMeters();
+        }}
+
+        function isVisible(entity, margin) {{
+            return entity.y > gameState.cameraY - margin &&
+                   entity.y < gameState.cameraY + canvas.height + margin;
+        }}
+
+        function draw() {{
+            const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            gradient.addColorStop(0, '#001122');
+            gradient.addColorStop(0.3, '#003366');
+            gradient.addColorStop(0.7, '#004488');
+            gradient.addColorStop(1, '#87CEEB');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            for (const platform of platforms) if (isVisible(platform, 150)) platform.draw();
+            for (const enemy of enemies) if (isVisible(enemy, 100)) enemy.draw();
+            for (const powerUp of powerUps) if (isVisible(powerUp, 100)) powerUp.draw();
+            for (const collectible of collectibles) if (isVisible(collectible, 100)) collectible.draw();
+
+            player.draw();
+            drawProgressIndicator();
+        }}
+
+        function drawProgressIndicator() {{
+            const width = 200;
+            const height = 20;
+            const x = canvas.width - width - 20;
+            const y = 20;
+
+            ctx.fillStyle = 'rgba(0,0,0,0.5)';
+            ctx.fillRect(x - 5, y - 5, width + 10, height + 10);
+
+            ctx.fillStyle = '#333';
+            ctx.fillRect(x, y, width, height);
+
+            const progress = gameState.currentPlatform / TOTAL_SERVICES;
+            ctx.fillStyle = progress < 0.5 ? '#FF6B35' : progress < 0.8 ? '#FFA502' : '#32CD32';
+            ctx.fillRect(x, y, width * progress, height);
+
+            ctx.fillStyle = 'white';
+            ctx.font = '10px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(
+                gameState.currentPlatform + '/' + TOTAL_SERVICES,
+                x + width / 2,
+                y + 14
+            );
+        }}
+
+        function gameLoop(now) {{
+            requestAnimationFrame(gameLoop);
+
+            if (lastFrameTime === null) lastFrameTime = now;
+            const elapsed = Math.min(now - lastFrameTime, MAX_FRAME_MS);
+            lastFrameTime = now;
+
+            if (gameState.started) {{
+                accumulator += elapsed;
+                let ticks = 0;
+                while (accumulator >= TICK_MS && ticks < MAX_TICKS_PER_FRAME) {{
+                    update();
+                    accumulator -= TICK_MS;
+                    ticks++;
+                }}
+                // Não deixa a dívida acumular se a máquina não deu conta.
+                if (ticks === MAX_TICKS_PER_FRAME) accumulator = 0;
+            }}
+
+            draw();
+        }}
+
+        function endRound(screenId, sound) {{
+            gameState.gameRunning = false;
+            if (audioElements.sonora) {{
+                audioElements.sonora.pause();
+                audioElements.sonora.currentTime = 0;
+            }}
+            playAudio(sound);
+            document.getElementById(screenId).style.display = 'block';
+        }}
+
+        function gameOver() {{
+            document.getElementById('finalScore').textContent = gameState.score;
+            document.getElementById('finalHeight').textContent = player.heightInMeters();
+
+            const service = gameState.currentPlatform > 0
+                ? awsServices[gameState.currentPlatform - 1]
+                : null;
+            document.getElementById('finalService').textContent =
+                service ? service.name : 'Início da Escalada AWS';
+
+            endRound('gameOver', 'gameover');
+        }}
+
+        function gameWin() {{
+            document.getElementById('winScore').textContent = gameState.score;
+            endRound('gameWin', 'aplausos');
+        }}
+
+        function restartGame() {{
+            stopAllAudio();
+
+            gameState = newGameState();
+            gameState.started = true;
+            accumulator = 0;
+            lastFrameTime = null;
+
+            player = new Player(150, GROUND_TOP - 50);
+            initLevel();
+            updateCurrentServiceUI('Início da Escalada AWS');
+
+            document.getElementById('gameOver').style.display = 'none';
+            document.getElementById('gameWin').style.display = 'none';
+
+            playAudio('sonora');
+            canvas.focus();
+        }}
+
+        function startGame() {{
+            initAudio();
+            gameState.started = true;
+            accumulator = 0;
+            lastFrameTime = null;
+            document.getElementById('startOverlay').style.display = 'none';
+            // play() aqui dentro do clique: é o único momento em que o navegador
+            // libera o áudio. Fora do handler ele bloqueia por autoplay policy.
+            playAudio('sonora');
+            canvas.focus();
+        }}
+
+        document.getElementById('startBtn').addEventListener('click', startGame);
+
+        // O jogo vive num iframe. Sem isso, as setas iam para a página do
+        // Streamlit (que rolava a tela) e o jogo não respondia ao teclado.
+        canvas.addEventListener('mousedown', () => canvas.focus());
+
+        window.addEventListener('keydown', (e) => {{
+            gameState.keys[e.key] = true;
+            if (e.key === ' ' || e.key.startsWith('Arrow')) e.preventDefault();
+        }});
+
+        window.addEventListener('keyup', (e) => {{
+            gameState.keys[e.key] = false;
+        }});
+
+        let touchStartX = 0;
+        let touchStartY = 0;
+
+        canvas.addEventListener('touchstart', (e) => {{
+            e.preventDefault();
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+        }}, {{ passive: false }});
+
+        canvas.addEventListener('touchend', (e) => {{
+            e.preventDefault();
+            const touch = e.changedTouches[0];
+            const deltaX = touch.clientX - touchStartX;
+            const deltaY = touch.clientY - touchStartY;
+
+            if (Math.abs(deltaY) > Math.abs(deltaX)) {{
+                if (deltaY < -30 && player.onGround) {{
+                    player.velocityY = -player.jumpPower;
+                    player.onGround = false;
+                    playAudio('pulo');
+                }}
+            }} else if (Math.abs(deltaX) > 30) {{
+                const key = deltaX > 0 ? 'ArrowRight' : 'ArrowLeft';
+                gameState.keys[key] = true;
+                setTimeout(() => {{ gameState.keys[key] = false; }}, 200);
+            }}
+        }}, {{ passive: false }});
+
+        initLevel();
+        updateCurrentServiceUI('Início da Escalada AWS');
+        requestAnimationFrame(gameLoop);
+    </script>
 </body>
 </html>
 '''
 
-# Sidebar com legenda de categorias
+
 with st.sidebar:
-    st.markdown("""
+    st.markdown(f"""
     <div style="text-align: center; margin-bottom: 20px;">
-        <h3 style="color: #333; font-size: 18px;">🎨Categorias & Cores</h3>
-        <p style="font-size: 12px; color: #666; margin-bottom: 15px;">📊 Total: """ + str(len(aws_services)) + """ serviços AWS</p>
+        <h3 style="color: #333; font-size: 18px;">🎨 Categorias & Cores</h3>
+        <p style="font-size: 12px; color: #666; margin-bottom: 15px;">
+            📊 Total: {len(aws_services)} serviços AWS
+        </p>
     </div>
     """, unsafe_allow_html=True)
-    
-    # Criar lista vertical de categorias
-    for category in aws_categories:
-        color = category_colors.get(category, '#666')
+
+    for category, count in sorted(category_counts.items(), key=lambda kv: (-kv[1], kv[0])):
+        color = CATEGORY_COLORS.get(category, FALLBACK_COLOR)
+        label = CATEGORY_LABELS.get(category, category)
         st.markdown(f"""
         <div style="display: flex; align-items: center; background: rgba(255,255,255,0.9); padding: 6px 10px; border-radius: 20px; border: 2px solid {color}; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 8px;">
             <div style="width: 16px; height: 16px; background: {color}; border-radius: 50%; margin-right: 8px; border: 1px solid rgba(0,0,0,0.2); flex-shrink: 0;"></div>
-            <span style="font-size: 11px; font-weight: 600; color: #333; text-align: left;">{category}</span>
+            <span style="font-size: 11px; font-weight: 600; color: #333; text-align: left;">{label}</span>
+            <span style="margin-left: auto; font-size: 10px; color: #888;">{count}</span>
         </div>
         """, unsafe_allow_html=True)
 
-# Renderizar o jogo
-components.html(game_html, height=650, scrolling=False)
-
-st.markdown("""
-<style>
-    .main {
-        background-color: #ffffff;
-        color: #333333;
-    }
-    .block-container {
-        padding-top: 1rem;
-        padding-bottom: 0rem;
-    }
-    /* Esconde completamente todos os elementos da barra padrão do Streamlit */
-    header {display: none !important;}
-    footer {display: none !important;}
-    #MainMenu {display: none !important;}
-    /* Remove qualquer espaço em branco adicional */
-    div[data-testid="stAppViewBlockContainer"] {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-    div[data-testid="stVerticalBlock"] {
-        gap: 0 !important;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-    /* Remove quaisquer margens extras */
-    .element-container {
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-    }
-</style>
-""", unsafe_allow_html=True)
+components.html(
+    build_game_html(aws_services, CATEGORY_STYLES, mascot_b64, audio_b64, FALLBACK_COLOR),
+    height=670,
+    scrolling=False,
+)
 
 st.markdown("""
 <div style="text-align: center;">
     <h4>AWS Game: S3 Climbing Adventure</h4>
-    🧠 Memorize os serviços AWS enquanto escala com o S3! - Por <strong>Ary Ribeiro</strong>: <a href="mailto:aryribeiro@gmail.com">aryribeiro@gmail.com</a><br>
-    <em>Obs.: o web game foi testado apenas em computador.</em>
+    🧠 Memorize os serviços AWS enquanto escala com o S3!<br>
+    Por <strong>Ary Ribeiro</strong> — <a href="https://linkedin.com/in/aryribeiro" target="_blank">linkedin.com/in/aryribeiro</a>
 </div>
 """, unsafe_allow_html=True)

@@ -1,0 +1,197 @@
+--- Networking-Content-Delivery (25) ---
+  AWS Verified Access                        | Fornece acesso seguro a aplicações empresariais sem uma VP
+  Client VPN                                 | Acesse recursos de rede com segurança.
+  Cloud WAN                                  | Crie, gerencie e monitore facilmente redes globais de long
+  Egress-only internet gateway               | Horizontalmente dimensionado, redundante e altamente dispo
+  Elastic IP                                 | Recursos de nuvem isolados.
+  Elastic Load Balancing (ELB)               | Distribute incoming traffic across multiple targets
+  Internet Gateway                           | Recursos de nuvem isolados.
+  Lambda@Edge                                | recurso do Amazon CloudFront que permite executar o código
+  NACL                                       | Recursos de nuvem isolados.
+  NAT Gateway                                | Recursos de nuvem isolados.
+  NAT instances                              | Fornece tradução de endereço de rede. Você pode usar uma i
+  Private 5G                                 | Implante, gerencie e escale facilmente uma rede celular pr
+  PrivateLink                                | Acesse com segurança serviços hospedados na AWS.
+  Route Table                                | Recursos de nuvem isolados.
+  Security Groups (SG)                       | Recursos de nuvem isolados.
+  Site-to-Site VPN                           | Acesse recursos de rede com segurança.
+  Subnets                                    | Recursos de nuvem isolados.
+  Traffic Mirroring                          | Recurso da Amazon VPC que você pode usar para copiar o trá
+  Transit Gateway                            | Escala facilmente VPCs e conexões de contas.
+  VPC Endpoints                              | Recursos de nuvem isolados.
+  VPC Flow logs                              | Recursos de nuvem isolados.
+  VPC Lattice                                | Simplifique a conectividade, segurança e o monitoramento d
+  VPC Peering                                | Conexão de rede entre duas VPCs que permite direcionar o t
+  VPN CloudHub                               | opera em um hub-and-spoke modelo simples que você pode usa
+  Virtual Private Gateway                    | Recursos de nuvem isolados.
+
+--- Compute (24) ---
+  Auto Scaling Group                         | Escale vários recursos para atender à demanda.
+  EC2 Auto Scaling                           | Escale a capacidade computacional para atender à demanda.
+  Instâncias C7g/Graviton3 do EC2            | A melhor performance de preço para workloads com uso inten
+  Instâncias C7gn do EC2                     | Instâncias Graviton otimizadas para computação com até 200
+  Instâncias G5g do EC2                      | A melhor performance de preço para workloads de jogos Andr
+  Instâncias Hpc6id do EC2                   | As instâncias Hpc6id do   EC2 oferecem desempenho econômic
+  Instâncias Hpc7g do EC2                    | Ofereça performance até 60% melhor em relação à instância 
+  Instâncias Im4gn/Is4gen do EC2             | A melhor performance de preço e o menor custo para armazen
+  Instâncias Inf2 do EC2                     | Alta performance com custos baixos no   EC2 para as worklo
+  Instâncias M6a do EC2                      | Instâncias de uso geral habilitadas pela 3ª geração de pro
+  Instâncias Mac M1 do EC2                   | Melhor performance de compilação de aplicações e testes ma
+  Instâncias R8g do EC2                      | O melhor preço, desempenho e eficiência energética no EC2 
+  Instâncias Trn1 do EC2                     | A melhor performance de preço para o treinamento de modelo
+  Instâncias X2idn/X2iedn do EC2             | Performance de preço de computação até 50% melhor em relaç
+  Instâncias X2iezn do EC2                   | Rapido processador Intel Xeon escalável na nuvem.
+  Instâncias spot do EC2                     | Execute workloads com até 90% de desconto.
+  Lambda SnapStart                           | Obtenha tempos de inicialização de funções Java até dez ve
+  Local Zones                                | Execute aplicações sensíveis à latência mais perto de usuá
+  Outposts 1U e 2U                           | Execute o AWS Outposts em locais menores.
+  Outposts rack                              | Execute infraestrutura da AWS on-premises para uma experiê
+  Outposts servers                           | Execute a AWS em locais com espaço e energia limitados.
+  ParallelCluster                            | Cluster de computação de alta performance na AWS.
+  SimSpace Weaver                            | Crie simulações espaciais dinâmicas em grande escala na in
+  Wavelength                                 | Disponibilize aplicações com latência ultrabaixa para disp
+
+--- Storage (23) ---
+  AWS Backup para S3                         | Gerencie backup de forma centralizada e restaure dados de 
+  AWS Backup para VMware                     | Proteja centralmente ambientes híbridos de VMware.
+  Amazon FSx for Lustre                      | High-performance file system integrated with S3
+  Amazon FSx for NetApp ONTAP                | FSx para NetApp ONTAP oferece performance de armazenamento
+  Amazon FSx for OpenZFS                     | Fully managed storage built on the popular OpenZFS file sy
+  Amazon FSx for Windows File Server         | Fully managed Windows native file system
+  Amazon S3 Vectors                          | Novo tipo de bucket com um conjunto dedicado de APIs para 
+  EBS Snapshots Archive                      | Faça a arquivamento de snapshots do EBS e economize até 75
+  EFS Archive                                | Uma nova classe de armazenamento em que os clientes podem 
+  Elastic Block Store                        | Volumes de armazenamento em bloco do EC2.
+  S3 Express One Zone                        | alta performance com zona de disponibilidade única criada 
+  S3 Glacier Deep Archive                    | oferece suporte à retenção e preservação digital de longo 
+  S3 Glacier Instant Retrieval               | Armazenamento com custo mais baixo para dados raramente ac
+  S3 Intelligent-Tiering                     | armazenamento em nuvem que reduz automaticamente os custos
+  S3 Inventory                               | Ajuda a gerenciar seu armazenamento. Audita e relata o sta
+  S3 One Zone-IA                             | indicado para dados acessados com menos frequência, mas qu
+  S3 Standard                                | oferece armazenamento de objetos com altos níveis de resil
+  S3 Standard-IA                             | indicado para dados acessados com menos frequência, mas qu
+  S3 Transfer Acceleration                   | Uploads e downloads de longa distância do S3 mais rápidos
+  S3 multipart upload                        | Upload programático de um único objeto para o Amazon S3 e 
+  S3 on Outposts                             | armazenamento de objetos para seu ambiente de AWS Outposts
+  Snow Edge Computing                        | Dispositivos físicos para computação de borda e ambientes 
+  Snowcone                                   | Dispositivos fisicos para migração de dados com origem ou 
+
+--- Artificial-Intelligence (18) ---
+  AWS Deep Learning Containers               | Docker images for deep learning
+  Amazon Nova                                | Serviço de IA generativa para criação de conteúdo e automa
+  DevOps Guru for RDS                        | Detecte, faça diagnósticos e corrija problemas de performa
+  Governance ML com SageMaker                | Simplifique o controle de acesso e aumente a transparência
+  HealthScribe                               | Transforme anotações clínicas em insights usando IA genera
+  IA do   SageMaker                          | Crie, treine e implante modelos de Machine Learning em gra
+  Inferentia                                 | Chip de inferência de machine learning.
+  Lex Automated Chatbot Designer             | Crie chatbots usando transcrições existentes de conversas.
+  Lookout for Metrics                        | Detecte automaticamente anomalias em métricas e identifiqu
+  SageMaker Canvas                           | Gere previsões precisas de machine learning sem codificar.
+  SageMaker Ground Truth                     | Crie conjuntos de dados precisos para treinamento de ML.
+  SageMaker Ground Truth Plus                | Crie conjuntos de dados de alta qualidade para treinar mod
+  SageMaker HyperPod                         | Reduza o tempo de treinamento de FMs em até 40%, com uma i
+  SageMaker Studio                           | Acelere o desenvolvimento de ML com ferramentas preferidas
+  SageMaker Studio Lab                       | Apenda a faça testes com ML usando notebooks Jupyter na nu
+  SageMaker Training Compiler                | Treine modelos de ML com rapidez e economia usando o   Sag
+  TensorFlow na AWS                          | Biblioteca de inteligência de máquina de código aberto.
+  Transformação de código do Q               | Acelere a manutenção, os upgrades ou a migração de aplicaç
+
+--- Analytics (15) ---
+  Amazon EMR Serverless                      | Run big data applications using open-source frameworks wit
+  Amazon Kinesis Data Streams                | Captura de dados em tempo real para processamento. Oferece
+  Amazon Q in QuickSight                     | Reinvent a inteligência de negócios e melhore a produtivid
+  Amazon SageMaker Lakehouse                 | Plataforma para gerenciar data lakes e realizar análises a
+  Clean Rooms ML                             | Aplique machine learning com seus parceiros, sem compartil
+  Glue Data Catalog                          | Armazenamento persistente de metadados técnicos. É um serv
+  Glue Data Quality                          | Forneça dados de alta qualidade em seus data lakes e pipel
+  Glue Studio                                | Você pode usar a interface visual simples no AWS Glue Stud
+  Glue for Ray                               | Escaley simplefique com código Python para ETL, com tecnol
+  Kibana                                     | Usado para visualizar e explorar dados armazenados no Elas
+  OpenSearch Serverless                      | Ofereça análises de pesquisa e logs sem provisionamento ne
+  QuickSight Paginated Reports               | Crie, programe e compartilhe relatórios e exportações de d
+  Redshift Serverless                        | Ajusta sua escala de preco/performance inteligentemente pa
+  Redshift para Apache Spark                 | Crie aplicações Apache Spark para leitura e gravação de da
+  Suporte Spark no Athena                    | Execute análises interativas no Apache Spark em menos de u
+
+--- Management-Governance (12) ---
+  AWS Distro for OpenTelemetry               | Secure, production-ready open source distribution with pre
+  AWS Management Console                     | Interface de usuário baseada na Web.
+  Amazon CloudWatch Internet Monitor         | Visualize your application's global internet health and di
+  Basic Support                              | Suporte básico disponível a todos os clientes da AWS
+  Business Support                           | Nível mínimo recomendado para quem tem workloads de produç
+  Chatbot                                    | Operações de conversa para a AWS.
+  Developer Support                          | Recomendado se você estiver experimentando ou testando a A
+  Enterprise On-Ramp Support                 | Recomendado para quem tem workloads essenciais à produção 
+  Enterprise Support                         | Recomendado para quem tem negócios e/ou workloads essencia
+  Health                                     | Fornece dados para eventos e mudanças que afetam seus recu
+  Management Console Mobile Application      | Acesse recursos em atividade.
+  Service Management Connector               | Provisionar, gerenciar e operar recursos da AWS nas ferram
+
+--- Database (8) ---
+  Aurora                                     | Banco de dados relacional gerenciado de alta performance.
+  Aurora Limitless Database                  | Alimenta aplicações em escala de petabytes com milhões de 
+  DynamoDB Accelerator (DAX)                 | Serviço de armazenamento em cache com propósito específico
+  ElasticCache sem servidor                  | Crie um cache de alta disponibilidade em segundos de manei
+  Neptune Analytics                          | Analise dados gráficios com dezenas de bilhões de conexões
+  RDS                                        | Serviço gerenciado de banco de dados relacional para MySQL
+  RDS Custom for SQL                         | Serviço de banco de dados gerenciado para aplicações que e
+  RDS para Db2                               | Facilita configurar, operar e escalar um banco de dados Db
+
+--- Internet-of-Things (8) ---
+  AWS IoT FleetHub                           | Gerenciamento centralizado de frotas de dispositivos IoT.
+  IoT 1-Click                                | Criação de um disparador do AWS Lambda com um clique.
+  IoT Analytics                              | Análise para dispositivos IoT.
+  IoT Button                                 | Dash Button programável na nuvem.
+  IoT EduKit                                 | Aprenda a criar aplicações simples para a IoT com hardware
+  IoT ExpressLink                            | Desenvolva dispositivos de IoT seguros com rapidez e facil
+  IoT RoboRunner                             | Construa aplicações que ajudam frotas de robôs a trabalhar
+  Partner Device Catalog                     | Catálogo selecionado de hardware de IoT compatível com a A
+
+--- Security-Identity-Compliance (7) ---
+  IAM Access Analyzer                        | Ajuda definir, verificar e refinar políticas do IAM, forne
+  Network Firewall                           | Proteja sua rede em suas   VPCs com apenas alguns cliques.
+  Security Token Service                     | Serviço web que permite a criação e o fornecimento de cred
+  Shield                                     | Proteção contra DDoS.
+  Shield Advanced                            | Proteção avançada contra ataques DDoS com garantia AWS.
+  Single Sign-On                             | Gerencie SSO para aplicações na nuvem.
+  WAF                                        | Filtre o tráfego da Web mal-intencionado.
+
+--- Business-Applications (7) ---
+  Cadeia de Suprimentos AWS                  | Minimize os riscos e o custo de fornecimento com tecnologi
+  Carrinho do Dash                           | Permita que consumidores comprem com eficiência e facilida
+  Guias atendentes do Connect                | Resolva problemas de clientes em centrais de atendimento c
+  Nível N Cadeia de Suprimentos              | Amplie a visibilidade e os insights para incluir seus parc
+  One Enterprise                             | Um serviço de identidade seguro por reconhecimento da palm
+  Q na Cadeia de Suprimentos AWS             | Faça perguntas e obtenha respostas inteligentes sobre o qu
+  Sust. Cadeia Suprimentos AWS               | Obtenha os documentos de conformidade de sustentabilidade 
+
+--- Developer-Tools (7) ---
+  Amazon Corretto                            | Production-ready distribution of OpenJDK
+  Cloud Control API                          | Gerencie infraestrutura na nuvem da AWS e de terceiros com
+  Cloud Development Kit                      | Model cloud infrastructure using code
+  Command Line Interface (CLI)               | Ferramenta unificada de interface de linha de comando para
+  Fault Injection Simulator                  | Melhore a resiliência e a performance com experimentos con
+  Ferramentas de Desenvolvedor               | Ferramentas SDKs para a AWS.
+  SDKs para a AWS                            | Ferramentas e SDKs para a AWS.
+
+--- Containers (4) ---
+  App2Container                              | Crie contêineres e migre aplicações existentes.
+  Copilot                                    | O AWS Copilot é a maneira mais fácil de inicializar e gere
+  Fargate                                    | Computação com tecnologia sem servidor para contêineres.
+  Marketplace for Containers Anywhere        | Encontre, assine e implante aplicações de terceiros que po
+
+--- Cloud-Financial-Management (4) ---
+  Budgets                                    | Defina orçamentos personalizados de custo e uso.
+  Cost Explorer                              | Analise seus custos e uso da AWS.
+  Cost and Usage Report                      | Acesse informações abrangentes de custos e uso.
+  Savings Plans                              | Economize até 72% no uso de computação com preços flexívei
+
+--- Migration-Modernization (3) ---
+  Migration Evaluator                        | Create a business case for cloud migration
+  Snow migração origem/destino               | Dispositivos físicos para migração de dados com origem ou 
+  Snowball                                   | Dispositivos físicos para migração de dados em petabytes p
+
+--- End-User-Computing (1) ---
+  AppStream 2.0                              | Transmita por streaming aplicações de desktop para um nave
+
+TOTAL: 166

@@ -1,0 +1,196 @@
+65 servicos ainda precisam de categoria
+
+AWS AppConfig
+    Serviço para gerenciar, validar e implantar configurações de aplicações de forma segura e gradual. Permite atualizar configurações em produção sem rei
+
+AWS AppFabric
+    Serviço para normalizar e agregar logs de atividade de aplicações SaaS (como Microsoft 365, Okta, Salesforce, Slack) em um formato padronizado OCSF. S
+
+AWS Auto Scaling
+    Serviço que monitora aplicações e ajusta automaticamente a capacidade para manter performance estável ao menor custo possível. Suporta escalonamento d
+
+AWS B2B Data Interchange
+    Serviço para trocar documentos EDI (Electronic Data Interchange) entre empresas de forma gerenciada na AWS. Transforma automaticamente arquivos EDI (X
+
+AWS Billing Conductor
+    Serviço para provedores de serviços gerenciados e revendedores AWS criarem modelos de cobrança customizados para clientes finais. Permite aplicar marg
+
+AWS Compute Optimizer
+    Serviço que usa ML para analisar métricas históricas de utilização e recomendar tipos de recursos AWS otimizados para melhor custo-performance. Analis
+
+AWS DevOps Agent
+    Agente de IA autônomo lançado em 2025 que executa tarefas de DevOps como criação de pipelines, configuração de infraestrutura e resolução de problemas
+
+AWS Entity Resolution
+    Serviço gerenciado para identificar e vincular registros relacionados a mesma entidade (pessoa, produto, empresa) espalhados em múltiplos datasets. Us
+
+AWS FIS
+    Serviço de engenharia do caos que permite injetar falhas controladas em workloads AWS para testar resiliência. Simula cenários como falha de instância
+
+AWS Global View
+    Painel centralizado para visualizar e gerenciar recursos AWS em múltiplas regiões e contas de forma unificada. Oferece visibilidade global do inventár
+
+AWS Glue DataBrew
+    Ferramenta visual de preparação de dados que permite analistas e cientistas de dados limpar e normalizar dados sem escrever código. Oferece mais de 25
+
+AWS HealthImaging
+    Serviço gerenciado para armazenar, acessar e analisar imagens médicas em escala de petabytes na nuvem. Suporta imagens DICOM de modalidades como resso
+
+AWS IQ
+    Marketplace para conectar clientes AWS com especialistas certificados para projetos de consultoria on-demand. Permite publicar projetos, receber propo
+
+AWS Marketplace
+    Catálogo digital com milhares de soluções de software de fornecedores independentes que rodam na AWS. Permite descobrir, testar, comprar e implantar s
+
+AWS Partner Central
+    Portal de colaboração e gestão de negócios para parceiros do AWS Partner Network (APN). Permite que parceiros gerenciem oportunidades de co-selling co
+
+AWS Payment Cryptography
+    Serviço gerenciado para operações criptográficas do setor de pagamentos, compatível com padrões como PCI PIN e TR-31. Substitui HSMs físicos usados em
+
+AWS Private Certificate Authority
+    Autoridade certificadora privada gerenciada para emitir certificados TLS/SSL para uso interno em redes privadas e aplicações internas. Elimina a neces
+
+AWS Security Agent
+    Agente de IA autônomo especializado em segurança que monitora, detecta e responde a ameaças automaticamente. Analisa logs de CloudTrail, GuardDuty e S
+
+AWS Security Incident Response
+    Serviço lançado em 2024 que fornece um ambiente estruturado para gerenciar e responder a incidentes de segurança na AWS. Cria casos de incidente, cons
+
+AWS Supply Chain
+    Solução de gestão de cadeia de suprimentos em nuvem que integra dados de múltiplos sistemas legados (ERP, WMS, TMS) em uma visão unificada. Usa ML par
+
+AWS Sustainability
+    Hub de sustentabilidade da AWS que oferece ferramentas e dados para ajudar organizações a medir e reduzir o impacto ambiental de seus workloads na nuv
+
+AWS Telco Network Builder
+    Serviço para operadoras de telecomunicações automatizarem o deployment e gerenciamento de funções de rede (VNFs/CNFs) na AWS. Permite que telcos const
+
+AWS Transform
+    Serviço que usa inteligência artificial para accelerar a modernização e migração de aplicações legadas para a AWS. Analisa o código-fonte e sugere ou 
+
+AWS para SAP
+    Conjunto de serviços, ferramentas e suporte especializado da AWS para migrar e executar workloads SAP (S/4HANA, ECC, BW) na nuvem. Inclui Launch Wizar
+
+AWS re:Post Private
+    Versão privada e corporativa do AWS re:Post (fórum técnico da AWS) para uso interno de organizações. Permite criar uma comunidade técnica interna onde
+
+Activate for Startups
+    Programa da AWS que oferece créditos, treinamento e suporte técnico para startups em estágio inicial. Fornece créditos AWS para testar e construir pro
+
+Amazon Bedrock AgentCore
+    Runtime gerenciado para implantação e execução de agentes de IA em produção, lançado em 2025. Fornece infraestrutura para memória persistente de agent
+
+Amazon Bio Discovery
+    Plataforma de descoberta de medicamentos e pesquisa biológica alimentada por IA generativa e machine learning. Acelera a descoberta de novos compostos
+
+Amazon Chime
+    Serviço de comunicação unificada para reuniões de vídeo, chamadas e chat empresarial. Permite reuniões com qualidade HD sem instalação de cliente para
+
+Amazon Comprehend Medical
+    Versão especializada do Comprehend para extrair informações médicas de texto clínico não estruturado. Identifica entidades como diagnósticos, medicame
+
+Amazon Connect Health
+    Serviço especializado em contact center para o setor de saúde, integrado ao Amazon Connect. Inclui recursos específicos para saúde como agendamento de
+
+Amazon Elastic VMware Service
+    Serviço que permite executar workloads VMware nativamente na infraestrutura AWS sem necessidade de replatforming. Oferece o ambiente vSphere completo 
+
+Amazon EventBridge
+    Barramento de eventos serverless para construir arquiteturas orientadas a eventos conectando aplicações AWS, SaaS e customizadas. Roteia eventos basea
+
+Amazon GameLift Servers
+    Serviço gerenciado para hospedar servidores de jogos multiplayer dedicados com escalonamento automático e match-making integrado. Gerencia automaticam
+
+Amazon GameLift Streams
+    Serviço lançado em 2025 para streaming de jogos de alta fidelidade diretamente para dispositivos dos jogadores sem necessidade de hardware de gaming l
+
+Amazon Interactive Video Service
+    Serviço gerenciado para construir experiências de streaming de vídeo ao vivo interativo em aplicações e sites. Permite adicionar live streaming com la
+
+Amazon Managed Blockchain
+    Serviço para criar e gerenciar redes blockchain escaláveis usando frameworks como Ethereum e Hyperledger Fabric. Elimina o trabalho pesado de configur
+
+Amazon Nova Act
+    Modelo de ação da Amazon treinado para executar tarefas em ambientes computacionais como navegadores web e interfaces de desktop. Diferente de modelos
+
+Amazon Q Business
+    Assistente de IA generativa para empresas que conecta bases de conhecimento internas e responde perguntas de funcionários. Indexa documentos de fontes
+
+Amazon Q Developer in chat applications
+    Anteriormente conhecido como AWS Chatbot, integra notificações e interações de operações AWS com plataformas de chat como Slack e Microsoft Teams. Per
+
+Amazon Quick
+    Serviço de business intelligence serverless que permite criar dashboards interativos e análises visuais de dados sem necessidade de infraestrutura. Co
+
+Amazon Route 53 Global Resolver
+    Recurso do Route 53 que permite resolução de DNS entre redes on-premises e VPCs AWS de forma bidirecional. Possibilita que recursos on-premises resolv
+
+Amazon SageMaker AI
+    Plataforma completa e gerenciada para construir, treinar e implantar modelos de machine learning em escala. Inclui notebooks Jupyter gerenciados, pipe
+
+Amazon WorkDocs
+    Serviço de colaboração e armazenamento de documentos empresariais totalmente gerenciado na AWS. Permite criar, editar e compartilhar documentos com co
+
+Amazon WorkMail
+    Serviço gerenciado de email e calendário corporativo compatível com Microsoft Outlook, dispositivos móveis e clientes de email padrão. Integra-se com 
+
+Application Recovery Controller
+    Serviço para gerenciar e orquestrar a recuperação de aplicações em múltiplas regiões e zonas de disponibilidade. Monitora continuamente a prontidão pa
+
+Aurora DSQL
+    Banco de dados relacional distribuído e serverless da AWS lançado em 2024, com consistência forte e disponibilidade ativa-ativa multi-region. Combina 
+
+Elemental Appliances & Software
+    Linha de hardware e software on-premises da AWS Elemental para processamento de vídeo em data centers e instalações de broadcast. Oferece versões físi
+
+Elemental Inference
+    Serviço de inferência de machine learning otimizado para workloads de vídeo e mídia da família AWS Elemental. Permite executar modelos de ML para anál
+
+Gerenciamento de cobrança e custos
+    Conjunto de ferramentas para visualizar, analisar e otimizar gastos na AWS. Inclui Cost Explorer para análise visual de custos, Budgets para alertas d
+
+Incident Manager
+    Serviço para gerenciar e resolver incidentes operacionais de forma estruturada e rápida. Automatiza planos de resposta com runbooks, escalonamento de 
+
+Infrastructure Composer
+    Ferramenta visual para projetar, visualizar e construir arquiteturas serverless e IaC na AWS. Permite arrastar e soltar componentes para criar templat
+
+Kinesis
+    Família de serviços para captura, processamento e análise de dados de streaming em tempo real. Kinesis Data Streams é o canal de ingestão de streams d
+
+Kiro
+    IDE da AWS com IA integrada ao ciclo de desenvolvimento, lançado em 2025 como evolução do desenvolvimento assistido por IA. Implementa o fluxo spec-to
+
+MSK
+    Serviço totalmente gerenciado para Apache Kafka, o padrão de streaming de eventos em nível empresarial. Automatiza o provisionamento, configuração, pa
+
+Oracle Database@AWS
+    Solução resultante da parceria entre Oracle e AWS que permite rodar o Oracle Exadata Database Service diretamente dentro das regiões AWS. Elimina a ne
+
+Parallel Computing Service
+    Serviço gerenciado para criação e operação de clusters HPC (High Performance Computing) na AWS. Facilita o provisionamento de ambientes de computação 
+
+RTB Fabric
+    Serviço especializado da AWS para o setor de publicidade digital, otimizando a infraestrutura de Real-Time Bidding (RTB). Oferece conectividade de ult
+
+Recycle Bin
+    Recurso que protege contra exclusão acidental de snapshots do EBS e AMIs na AWS. Mantém recursos excluídos em uma lixeira por um período configurável 
+
+S3
+    É o serviço de armazenamento de objetos mais utilizado do mundo, com durabilidade de 99,999999999% (11 noves). Armazena qualquer tipo de arquivo com a
+
+SWF
+    Serviço que coordena tarefas e fluxos de trabalho distribuídos entre aplicações e componentes. Mantém o estado de execução de workflows de longa duraç
+
+Security Hub CSPM
+    Serviço de gestão de postura de segurança em nuvem (CSPM) que agrega alertas de segurança de múltiplos serviços AWS e ferramentas de terceiros em um p
+
+Terminal de Transferência de Dados da AWS
+    Serviço que acelera transferências de dados de e para a AWS por meio de locais físicos de aceleração distribuídos globalmente. Reduz a latência de upl
+
+WorkSpaces Applications
+    Serviço para transmitir aplicações Windows específicas para usuários sem precisar de um desktop virtual completo. Os usuários acessam apenas as aplica
+
+WorkSpaces Secure Browser
+    Serviço de browser isolado na nuvem que permite acesso seguro a aplicações web sem expor dispositivos locais a ameaças. O browser roda em um ambiente 

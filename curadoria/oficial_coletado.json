@@ -1,0 +1,782 @@
+[
+ {
+  "key": "s3 glacier instant retrieval",
+  "name_game": "S3 Glacier Instant Retrieval",
+  "name_oficial": "Amazon S3 Glacier Instant Retrieval",
+  "cat_oficial": "Armazenamento",
+  "url": "https://aws.amazon.com/s3/storage-classes/glacier/instant-retrieval/",
+  "summary": "Armazenamento com custo mais baixo com recuperação em milissegundos para dados raramente acessados",
+  "meta": "Long-term, secure, durable S3 object storage with milliseconds retrieval for rarely accessed data at the lowest storage cost.",
+  "erro": null
+ },
+ {
+  "key": "marketplace for containers anywhere",
+  "name_game": "Marketplace for Containers Anywhere",
+  "name_oficial": "AWS Marketplace for Containers Anywhere",
+  "cat_oficial": "Contêineres",
+  "url": "https://aws.amazon.com/marketplace/features/containers/",
+  "summary": "Encontre, assine e implante aplicações de terceiros que podem ser executadas em qualquer ambiente Kubernetes",
+  "meta": "AWS Marketplace for Containers Anywhere lets you find, subscribe to, and deploy third-party Kubernetes applications on AWS or on premises.",
+  "erro": null
+ },
+ {
+  "key": "sagemaker canvas",
+  "name_game": "SageMaker Canvas",
+  "name_oficial": "Amazon SageMaker Canvas",
+  "cat_oficial": "Machine learning",
+  "url": "https://aws.amazon.com/sagemaker/canvas/",
+  "summary": "Gere previsões precisas de machine learning sem usar código",
+  "meta": "Amazon SageMaker Canvas offers a no-code ML interface for business analysts can create highly accurate machine learning models—without any ML experience.",
+  "erro": null
+ },
+ {
+  "key": "management console mobile application",
+  "name_game": "Management Console Mobile Application",
+  "name_oficial": "AWS Management Console Mobile Application",
+  "cat_oficial": "Gerenciamento e governança",
+  "url": "https://aws.amazon.com/console/mobile/",
+  "summary": "Acesse recursos em atividade",
+  "meta": "The AWS Console Mobile Application provides customers the ability to view and manage select AWS resources from their mobile device.",
+  "erro": null
+ },
+ {
+  "key": "app2container",
+  "name_game": "App2Container",
+  "name_oficial": "AWS App2Container",
+  "cat_oficial": "Contêineres",
+  "url": "https://aws.amazon.com/app2container/",
+  "summary": "Crie contêineres e migre aplicações existentes",
+  "meta": "O primeiro serviço de IA agêntica a acelerar a transformação do Windows, do mainframe, do VMware e muito mais, reduzindo a dívida técnica e preparando você para a IA.",
+  "erro": null
+ },
+ {
+  "key": "ebs snapshots archive",
+  "name_game": "EBS Snapshots Archive",
+  "name_oficial": "Amazon EBS Snapshots Archive",
+  "cat_oficial": "Armazenamento",
+  "url": "https://aws.amazon.com/ebs/snapshots/",
+  "summary": "Faça o arquivamento de snapshots do EBS e economize até 75% nos custos de armazenamento de snapshots",
+  "meta": "Amazon EBS Snapshots provide a simple and secure data protection solution that is designed to protect your block storage data such as EBS volumes, boot volumes, as well as on-premises block data. EBS Snapshots are a point in time copy of your data, and can be used to enable disaster recovery, migrate data across regions and accounts, and improve backup compliance.",
+  "erro": null
+ },
+ {
+  "key": "privatelink",
+  "name_game": "PrivateLink",
+  "name_oficial": "AWS PrivateLink",
+  "cat_oficial": "Redes e entrega de conteúdo",
+  "url": "https://aws.amazon.com/privatelink/",
+  "summary": "Acesse com segurança serviços hospedados na AWS",
+  "meta": "O AWS PrivateLink fornece conectividade privada e segura entre VPCs, serviços da AWS e aplicações on-premises na AWS.",
+  "erro": null
+ },
+ {
+  "key": "rds",
+  "name_game": "RDS",
+  "name_oficial": "Amazon RDS",
+  "cat_oficial": "Bancos de dados",
+  "url": "https://aws.amazon.com/rds/",
+  "summary": "Serviço gerenciado de banco de dados relacional para MySQL, PostgreSQL, Oracle, SQL Server e MariaDB",
+  "meta": "O Amazon Relational Database Service (RDS) é um serviço de banco de dados em nuvem de código aberto totalmente gerenciado que permite operar e escalar com facilidade o banco de dados relacional de sua preferência, inclusive o Amazon Aurora, o PostgreSQL, o SQL Server e o MySQL.",
+  "erro": null
+ },
+ {
+  "key": "ec2 auto scaling",
+  "name_game": "EC2 Auto Scaling",
+  "name_oficial": "Amazon EC2 Auto Scaling",
+  "cat_oficial": "Computação",
+  "url": "https://aws.amazon.com/ec2/autoscaling/",
+  "summary": "Escale a capacidade computacional para atender à demanda",
+  "meta": "O Amazon EC2 Auto Scaling ajuda a manter a disponibilidade da aplicação e a definir como dimensionar a capacidade do Amazon EC2 para atender às demandas da sua aplicação.",
+  "erro": null
+ },
+ {
+  "key": "quicksight paginated reports",
+  "name_game": "QuickSight Paginated Reports",
+  "name_oficial": "Amazon QuickSight Paginated Reports",
+  "cat_oficial": "Análise",
+  "url": "https://aws.amazon.com/quicksight/paginated-reports/",
+  "summary": "Crie, programe e compartilhe relatórios e exportações de dados",
+  "meta": "Crie, programe e compartilhe relatórios e exportações de dados usando uma solução de business intelligence (BI) única, totalmente gerenciada e baseada na nuvem.",
+  "erro": null
+ },
+ {
+  "key": "cloud control api",
+  "name_game": "Cloud Control API",
+  "name_oficial": "AWS Cloud Control API",
+  "cat_oficial": "Ferramentas do desenvolvedor",
+  "url": "https://aws.amazon.com/cloudcontrolapi/",
+  "summary": "Gerencie infraestrutura de nuvem da AWS e de terceiros com APIs consistentes",
+  "meta": null,
+  "erro": null
+ },
+ {
+  "key": "wavelength",
+  "name_game": "Wavelength",
+  "name_oficial": "AWS Wavelength",
+  "cat_oficial": "Computação",
+  "url": "https://aws.amazon.com/wavelength/",
+  "summary": "Disponibilize aplicações com latência ultrabaixa para dispositivos 5G",
+  "meta": "Implante aplicações localmente com o AWS Wavelength, aproveitando o poder dos recursos de computação e o armazenamento da AWS na borda. Crie soluções de latência ultrabaixa que atendam aos seus requisitos de residência de dados e ofereçam experiências perfeitas em tempo real.",
+  "erro": null
+ },
+ {
+  "key": "iot analytics",
+  "name_game": "IoT Analytics",
+  "name_oficial": "AWS IoT Analytics",
+  "cat_oficial": "Internet das Coisas",
+  "url": "https://aws.amazon.com/iot-analytics/",
+  "summary": "Análise para dispositivos IoT",
+  "meta": "O AWS IoT permite que você conecte e gerencie dispositivos com segurança, colete e analise dados de dispositivos e crie e implante soluções que geram maior valor empresarial.",
+  "erro": null
+ },
+ {
+  "key": "iot edukit",
+  "name_game": "IoT EduKit",
+  "name_oficial": "AWS IoT EduKit",
+  "cat_oficial": "Internet das Coisas",
+  "url": "https://aws.amazon.com/iot/edukit/",
+  "summary": "Aprenda a criar aplicações simples para a IoT com hardware de referência e tutoriais detalhados",
+  "meta": "O AWS IoT permite que você conecte e gerencie dispositivos com segurança, colete e analise dados de dispositivos e crie e implante soluções que geram maior valor empresarial.",
+  "erro": null
+ },
+ {
+  "key": "cost explorer",
+  "name_game": "Cost Explorer",
+  "name_oficial": "AWS Cost Explorer",
+  "cat_oficial": "Gerenciamento financeiro na nuvem",
+  "url": "https://aws.amazon.com/aws-cost-management/aws-cost-explorer/",
+  "summary": "Analise seus custos e uso da AWS",
+  "meta": "AWS Cost Explorer has an easy-to-use interface that lets you visualize, understand, and manage your AWS cloud costs and usage over time.",
+  "erro": null
+ },
+ {
+  "key": "chatbot",
+  "name_game": "Chatbot",
+  "name_oficial": "AWS Chatbot",
+  "cat_oficial": "Gerenciamento e governança",
+  "url": "https://aws.amazon.com/chatbot/",
+  "summary": "Operações de conversa para a AWS",
+  "meta": "O AWS Chatbot é um atendente interativo que facilita o monitoramento e a interação com os recursos da AWS utilizando os canais de chat da sua equipe.",
+  "erro": null
+ },
+ {
+  "key": "cloud wan",
+  "name_game": "Cloud WAN",
+  "name_oficial": "AWS Cloud WAN",
+  "cat_oficial": "Redes e entrega de conteúdo",
+  "url": "https://aws.amazon.com/cloud-wan/",
+  "summary": "Crie, gerencie e monitore facilmente redes globais de longa distância",
+  "meta": "O AWS Cloud WAN torna fácil construir, gerenciar e monitorar uma rede global unificada, conectando seus recursos na nuvem e on-premises.",
+  "erro": null
+ },
+ {
+  "key": "tensorflow na aws",
+  "name_game": "TensorFlow na AWS",
+  "name_oficial": "TensorFlow na AWS",
+  "cat_oficial": "Machine Learning",
+  "url": "https://aws.amazon.com/tensorflow/",
+  "summary": "Biblioteca de inteligência de máquina de código aberto",
+  "meta": "O TensorFlow é um framework altamente flexível e versátil de aprendizado profundo com código aberto para o desenvolvimento de aplicações de inteligência artificial.",
+  "erro": null
+ },
+ {
+  "key": "command line interface",
+  "name_game": "Command Line Interface (CLI)",
+  "name_oficial": "AWS Command Line Interface (CLI)",
+  "cat_oficial": "Ferramentas de desenvolvedor",
+  "url": "https://aws.amazon.com/cli/",
+  "summary": "Ferramenta unificada de interface de linha de comando para gerenciar serviços da AWS",
+  "meta": "A AWS Command Line Interface (AWS CLI) é uma ferramenta unificada para o gerenciamento de seus produtos da AWS. Com apenas uma ferramenta para baixar e configurar, você poderá controlar vários produtos da AWS pela linha de comando e automatizá-los usando scripts.",
+  "erro": null
+ },
+ {
+  "key": "cost and usage report",
+  "name_game": "Cost and Usage Report",
+  "name_oficial": "AWS Cost and Usage Report",
+  "cat_oficial": "Gerenciamento financeiro na nuvem",
+  "url": "https://aws.amazon.com/aws-cost-management/aws-cost-and-usage-reporting/",
+  "summary": "Acesse informações abrangentes de custos e uso",
+  "meta": "Os Relatórios de Custos e Uso da AWS (AWS CUR) contêm o conjunto mais abrangente de dados de uso e custo da AWS disponíveis, incluindo metadados adicionais sobre serviços, preços e reservas da AWS.",
+  "erro": null
+ },
+ {
+  "key": "sagemaker ground truth plus",
+  "name_game": "SageMaker Ground Truth Plus",
+  "name_oficial": "Amazon SageMaker Ground Truth Plus",
+  "cat_oficial": "Machine learning",
+  "url": "https://aws.amazon.com/sagemaker/data-labeling/",
+  "summary": "Crie conjuntos de dados de alta qualidade para treinar modelos de machine learning",
+  "meta": "A rotulagem de dados do Amazon SageMaker permite que você crie rapidamente conjuntos de dados de treinamento altamente precisos para machine learning.",
+  "erro": null
+ },
+ {
+  "key": "vpc lattice",
+  "name_game": "VPC Lattice",
+  "name_oficial": "Amazon VPC Lattice",
+  "cat_oficial": "Redes e entrega de conteúdo",
+  "url": "https://aws.amazon.com/vpc/lattice/",
+  "summary": "Simplifique a conectividade, a segurança e o monitoramento serviço a serviço",
+  "meta": "Use o Amazon VPC Lattice para conectar suas aplicações e serviços com segurança definindo políticas para acesso à rede, gerenciamento de tráfego e monitoramento.",
+  "erro": null
+ },
+ {
+  "key": "deep learning containers",
+  "name_game": "AWS Deep Learning Containers",
+  "name_oficial": "AWS Deep Learning Containers",
+  "cat_oficial": "Machine Learning",
+  "url": "https://aws.amazon.com/machine-learning/containers/",
+  "summary": "Imagens do Docker para aprendizado profundo",
+  "meta": "Contêineres de deep learning da AWS (contêineres de DL da AWS) são imagens do Docker com estruturas de aprendizado profundo pré-instaladas para facilitar a implantação de ambientes personalizados de machine learning.",
+  "erro": null
+ },
+ {
+  "key": "lex automated chatbot designer",
+  "name_game": "Lex Automated Chatbot Designer",
+  "name_oficial": "Amazon Lex Automated Chatbot Designer",
+  "cat_oficial": "Machine Learning",
+  "url": "https://aws.amazon.com/lex/chatbot-designer/",
+  "summary": "Crie chatbots usando transcrições existentes de conversas",
+  "meta": "O Amazon Lex é um serviço de IA totalmente gerenciado para a criação de interfaces de chat com IA em qualquer aplicação. Comece a criar um chatbot, assistente de voz, sistema de IVR com machine learning ou atendente virtual hoje mesmo.",
+  "erro": null
+ },
+ {
+  "key": "migration evaluator",
+  "name_game": "Migration Evaluator",
+  "name_oficial": "Migration Evaluator (anteriormente TSO Logic)",
+  "cat_oficial": "Migração",
+  "url": "https://aws.amazon.com/migration-evaluator/",
+  "summary": "Crie um caso de negócios de migração para a nuvem",
+  "meta": "Crie um caso de negócios orientado por dados, obtenha acesso a insights e acelere a tomada de decisões para a migração para a AWS sem custos com o Migration Evaluator.",
+  "erro": null
+ },
+ {
+  "key": "iot button",
+  "name_game": "IoT Button",
+  "name_oficial": "AWS IoT Button",
+  "cat_oficial": "Internet das Coisas",
+  "url": "https://aws.amazon.com/iotbutton/",
+  "summary": "Dash Button programável na nuvem",
+  "meta": null,
+  "erro": null
+ },
+ {
+  "key": "budgets",
+  "name_game": "Budgets",
+  "name_oficial": "AWS Budgets",
+  "cat_oficial": "Gerenciamento financeiro na nuvem",
+  "url": "https://aws.amazon.com/aws-cost-management/aws-budgets/",
+  "summary": "Defina orçamentos personalizados de custo e uso",
+  "meta": "O AWS Budgets é a maneira mais simples de monitorar seus gastos com a AWS e ser alertado quando você exceder ou houver previsão de exceder seu limite de gastos desejado.",
+  "erro": null
+ },
+ {
+  "key": "q no quicksight",
+  "name_game": "Amazon Q in QuickSight",
+  "name_oficial": "Amazon Q no QuickSight",
+  "cat_oficial": "Análise",
+  "url": "https://aws.amazon.com/quicksight/q/scenarios/",
+  "summary": "Ajuda os usuários corporativos a realizar análises complexas de cenários até 10 vezes mais rápido do que planilhas",
+  "meta": "BI baseado em IA que transforma dados em insights estratégicos para todos por meio de inteligência unificada, analytics acionável e acesso democratizado aos dados.",
+  "erro": null
+ },
+ {
+  "key": "glue data quality",
+  "name_game": "Glue Data Quality",
+  "name_oficial": "AWS Glue Data Quality",
+  "cat_oficial": "Análise",
+  "url": "https://aws.amazon.com/glue/features/data-quality/",
+  "summary": "Forneça dados de alta qualidade em seus data lakes e pipelines",
+  "meta": "AWS Glue Data Quality automatically measures, monitors, and manages data quality in data lakes and pipelines in the AWS Glue ETL and data integration service.",
+  "erro": null
+ },
+ {
+  "key": "simspace weaver",
+  "name_game": "SimSpace Weaver",
+  "name_oficial": "AWS SimSpace Weaver",
+  "cat_oficial": "Computação",
+  "url": "https://aws.amazon.com/simspaceweaver/",
+  "summary": "Crie simulações espaciais dinâmicas e em grande escala na infraestrutura gerenciada da AWS",
+  "meta": "A Amazon Web Services oferece serviços de computação em nuvem confiáveis, escaláveis e acessíveis. A inscrição é gratuita, você paga apenas pelo que usar.",
+  "erro": null
+ },
+ {
+  "key": "aurora",
+  "name_game": "Aurora",
+  "name_oficial": "Amazon Aurora",
+  "cat_oficial": "Bancos de dados",
+  "url": "https://aws.amazon.com/rds/aurora/",
+  "summary": "Banco de dados relacional gerenciado de alta performance",
+  "meta": "O Amazon Aurora é um serviço de banco de dados relacional em escala global criado para a nuvem com total compatibilidade com MySQL e PostgreSQL.",
+  "erro": null
+ },
+ {
+  "key": "service management connector",
+  "name_game": "Service Management Connector",
+  "name_oficial": "AWS Service Management Connector",
+  "cat_oficial": "Gerenciamento e governança",
+  "url": "https://aws.amazon.com/service-management-connector/",
+  "summary": "Provisionar, gerenciar e operar recursos da AWS nas ferramentas de gerenciamento de serviços",
+  "meta": "AWS Service Management Connector enables you to provision, manage, and operate native AWS resources/capabilities in familiar ITSM tooling.",
+  "erro": null
+ },
+ {
+  "key": "sagemaker hyperpod",
+  "name_game": "SageMaker HyperPod",
+  "name_oficial": "Amazon SageMaker HyperPod",
+  "cat_oficial": "Machine Learning",
+  "url": "https://aws.amazon.com/sagemaker/hyperpod",
+  "summary": "Reduza o tempo de treinamento de FMs em até 40% com uma infraestrutura desenvolvida especificamente para treinamento distribuído",
+  "meta": "O Amazon SageMaker HyperPod oferece uma infraestrutura específica para treinamento distribuído em escala, acelerando o desenvolvimento de modelos para inovação em IA generativa.",
+  "erro": null
+ },
+ {
+  "key": "lambda snapstart",
+  "name_game": "Lambda SnapStart",
+  "name_oficial": "AWS Lambda SnapStart",
+  "cat_oficial": "Computação",
+  "url": "https://aws.amazon.com/blogs/aws/new-accelerate-your-lambda-functions-with-lambda-snapstart/",
+  "summary": "Obtenha tempos de inicialização de funções Java até dez vezes mais rápidos",
+  "meta": null,
+  "erro": null
+ },
+ {
+  "key": "one enterprise",
+  "name_game": "One Enterprise",
+  "name_oficial": "Amazon One Enterprise",
+  "cat_oficial": "Aplicação empresarial",
+  "url": "https://aws.amazon.com/one-enterprise/",
+  "summary": "Um serviço de identidade seguro por reconhecimento da palma da mão para controle de acesso à empresa",
+  "meta": "A Amazon Web Services oferece serviços de computação em nuvem confiáveis, escaláveis e acessíveis. A inscrição é gratuita, você paga apenas pelo que usar.",
+  "erro": null
+ },
+ {
+  "key": "savings plans",
+  "name_game": "Savings Plans",
+  "name_oficial": "Savings Plans",
+  "cat_oficial": "Gerenciamento financeiro na nuvem",
+  "url": "https://aws.amazon.com/savingsplans/",
+  "summary": "Economize até 72% no uso de computação com preços flexíveis",
+  "meta": "O Savings Plans é um modelo de preço flexível que oferece uma economia de até 72% no uso da AWS, comparado aos preços sob demanda.",
+  "erro": null
+ },
+ {
+  "key": "inferentia",
+  "name_game": "Inferentia",
+  "name_oficial": "AWS Inferentia",
+  "cat_oficial": "Machine Learning",
+  "url": "https://aws.amazon.com/machine-learning/inferentia/",
+  "summary": "Chip de inferência de machine learning",
+  "meta": "Saiba mais sobre o AWS Inferentia, um chip de ML apresentado pela AWS.",
+  "erro": null
+ },
+ {
+  "key": "cloud development kit",
+  "name_game": "Cloud Development Kit",
+  "name_oficial": "AWS Cloud Development Kit (CDK)",
+  "cat_oficial": "Ferramentas de desenvolvedor",
+  "url": "https://aws.amazon.com/cdk/",
+  "summary": "Modele infraestrutura de nuvem usando código",
+  "meta": "AWS Cloud Development Kit (CDK) is an open-source software development framework used to model and provision your cloud application resources with familiar programming languages.",
+  "erro": null
+ },
+ {
+  "key": "aurora limitless database",
+  "name_game": "Aurora Limitless Database",
+  "name_oficial": "Amazon Aurora Limitless Database",
+  "cat_oficial": "Banco de dados",
+  "url": "https://pages.awscloud.com/Aurora-Limitless-Database-Preview.html",
+  "summary": "Alimenta aplicações em escala de petabytes com milhões de gravações por segundo",
+  "meta": "Amazon Aurora Limitless Database now available in preview.",
+  "erro": null
+ },
+ {
+  "key": "cadeia de suprimentos aws",
+  "name_game": "Cadeia de Suprimentos AWS",
+  "name_oficial": "Cadeia de Suprimentos AWS",
+  "cat_oficial": "Aplicações de negócios",
+  "url": "https://aws.amazon.com/aws-supply-chain/",
+  "summary": "Minimize os riscos e os custos com uma aplicação de cadeia de fornecimento com tecnologia de ML",
+  "meta": "A Cadeia de Suprimentos AWS é uma aplicação baseada na nuvem que unifica dados, fornece insights acionáveis baseados em ML e oferece colaboração contextual integrada.",
+  "erro": null
+ },
+ {
+  "key": "sagemaker studio lab",
+  "name_game": "SageMaker Studio Lab",
+  "name_oficial": "Amazon SageMaker Studio Lab",
+  "cat_oficial": "Machine Learning",
+  "url": "https://aws.amazon.com/sagemaker/studio-lab/",
+  "summary": "Aprenda e faça testes com ML usando Notebooks Jupyter na nuvem, gratuitos e que não exigem configuração",
+  "meta": "O Amazon SageMaker Studio Lab é um ambiente gratuito de desenvolvimento de machine learning (ML) ou um serviço gratuito e sem configuração que habilita cientistas de dados a aprender e experimentar o ML similar ao JupyterLab.",
+  "erro": null
+ },
+ {
+  "key": "appstream 2 0",
+  "name_game": "AppStream 2.0",
+  "name_oficial": "Amazon AppStream 2.0",
+  "cat_oficial": "Computação de usuário final",
+  "url": "https://aws.amazon.com/appstream2/",
+  "summary": "Transmita por streaming aplicações de desktop para um navegador com segurança",
+  "meta": null,
+  "erro": null
+ },
+ {
+  "key": "fsx for lustre",
+  "name_game": "Amazon FSx for Lustre",
+  "name_oficial": "Amazon FSx for Lustre",
+  "cat_oficial": "Armazenamento",
+  "url": "https://aws.amazon.com/fsx/lustre/",
+  "summary": "Sistema de arquivos de alta performance integrado ao S3",
+  "meta": "Sistema de arquivos Lustre totalmente gerenciado integrado com o S3 para cargas de trabalho que exigem acesso rápido para computação e alta taxa de transferência, como computação de alto desempenho (HPC), renderização de mídia e conjuntos de dados de treinamento de machine learning (ML).",
+  "erro": null
+ },
+ {
+  "key": "local zones",
+  "name_game": "Local Zones",
+  "name_oficial": "AWS Local Zones",
+  "cat_oficial": "Computação",
+  "url": "https://aws.amazon.com/about-aws/global-infrastructure/localzones/",
+  "summary": "Execute aplicações sensíveis à latência mais perto de usuários finais",
+  "meta": "As zonas locais da AWS são um tipo de infraestrutura da AWS que estende os serviços da AWS para mais locais, permitindo que você execute aplicações sensíveis à latência mais perto de usuários e workloads e atenda às necessidades de residência de dados para suas workloads regulamentadas.",
+  "erro": null
+ },
+ {
+  "key": "elastic block store",
+  "name_game": "Elastic Block Store",
+  "name_oficial": "Amazon Elastic Block Store (EBS)",
+  "cat_oficial": "Armazenamento",
+  "url": "https://aws.amazon.com/ebs/",
+  "summary": "Volumes de armazenamento em bloco do EC2",
+  "meta": "O Amazon Elastic Block Store (EBS) é uma rede de área de armazenamento (SAN) na nuvem de alta performance e fácil de usar.",
+  "erro": null
+ },
+ {
+  "key": "s3 express one zone",
+  "name_game": "S3 Express One Zone",
+  "name_oficial": "Amazon S3 Express One Zone",
+  "cat_oficial": "Armazenamento",
+  "url": "https://aws.amazon.com/s3/storage-classes/express-one-zone/",
+  "summary": "Armazenamento mais rápido de objetos na nuvem para aplicações de desempenho crítico que exigem latência sistemática de um dígito em milissegundos",
+  "meta": "S3 Express One Zone storage class delivers the fastest cloud object storage for performance-critical applications demanding single-digit millisecond latency.",
+  "erro": null
+ },
+ {
+  "key": "partner device catalog",
+  "name_game": "Partner Device Catalog",
+  "name_oficial": "AWS Partner Device Catalog",
+  "cat_oficial": "Internet das Coisas",
+  "url": "https://devices.amazonaws.com/",
+  "summary": "Catálogo selecionado de hardware de IoT compatível com a AWS",
+  "meta": null,
+  "erro": null
+ },
+ {
+  "key": "opensearch sem servidor",
+  "name_game": "OpenSearch Serverless",
+  "name_oficial": "Amazon OpenSearch Sem Servidor",
+  "cat_oficial": "Análise",
+  "url": "https://aws.amazon.com/opensearch-service/features/serverless/",
+  "summary": "Ofereça análises de pesquisa e logs sem provisionamento nem ajuste de recursos",
+  "meta": "Scale search, vetor and AI workloads to zero with no infrastructure management. Amazon OpenSearch Serverless offers resource creation in seconds, usage-based pricing, and up to 60% savings.",
+  "erro": null
+ },
+ {
+  "key": "efs archive",
+  "name_game": "EFS Archive",
+  "name_oficial": "Amazon EFS Archive",
+  "cat_oficial": "Armazenamento",
+  "url": "https://aws.amazon.com/efs/storage-classes/archive/",
+  "summary": "Uma nova classe de armazenamento em que os clientes podem economizar até 50% nos custos de armazenamento em comparação com o Amazon EFS Infrequent Access",
+  "meta": null,
+  "erro": null
+ },
+ {
+  "key": "acesso verificado pela aws",
+  "name_game": "AWS Verified Access",
+  "name_oficial": "Acesso Verificado pela AWS",
+  "cat_oficial": "Redes e entrega de conteúdo",
+  "url": "https://aws.amazon.com/verified-access/",
+  "summary": "Forneça acesso seguro a aplicações empresariais sem uma VPN",
+  "meta": "O Acesso Verificado pela AWS ajuda você a fornecer acesso seguro para aplicações corporativas sem uma VPN.",
+  "erro": null
+ },
+ {
+  "key": "iot expresslink",
+  "name_game": "IoT ExpressLink",
+  "name_oficial": "AWS IoT ExpressLink",
+  "cat_oficial": "Internet das Coisas",
+  "url": "https://aws.amazon.com/iot-expresslink/",
+  "summary": "Desenvolva dispositivos de IoT seguros com rapidez e facilidade",
+  "meta": "O AWS IoT ExpressLink torna mais fácil e rápido conectar praticamente qualquer dispositivo à nuvem, incluindo dispositivos médicos, sensores industriais, produtos de consumo e muito mais.",
+  "erro": null
+ },
+ {
+  "key": "copilot",
+  "name_game": "Copilot",
+  "name_oficial": "AWS Copilot",
+  "cat_oficial": "Contêineres",
+  "url": "https://aws.amazon.com/containers/copilot/",
+  "summary": "O AWS Copilot é a maneira mais fácil de inicializar e gerenciar suas aplicações conteinerizadas na AWS",
+  "meta": "AWS Copilot is a command line interface that lets you develop, release, and operate containerized applications on AWS.",
+  "erro": null
+ },
+ {
+  "key": "corretto",
+  "name_game": "Amazon Corretto",
+  "name_oficial": "Amazon Corretto",
+  "cat_oficial": "Ferramentas de desenvolvedor",
+  "url": "https://aws.amazon.com/corretto/",
+  "summary": "Distribuição do OpenJDK pronta para produção",
+  "meta": "O Amazon Corretto é uma distribuição gratuita, multiplataforma e pronta para produção do Open Java Development Kit (OpenJDK). O Corretto é fornecido com suporte gratuito de longo prazo. A Amazon executa o Corretto internamente em milhares de serviços de produção. O Corretto é certificado como compatível com o padrão Java SE.",
+  "erro": null
+ },
+ {
+  "key": "neptune analytics",
+  "name_game": "Neptune Analytics",
+  "name_oficial": "Amazon Neptune Analytics",
+  "cat_oficial": "Banco de dados",
+  "url": "https://aws.amazon.com/neptune/",
+  "summary": "Analise dados gráficos com dezenas de bilhões de conexões em segundos",
+  "meta": "O Amazon Neptune é um serviço de banco de dados rápido e totalmente gerenciado que atende a casos de uso com grafos, como grafos de identidade, grafos de conhecimento e detecção de fraudes.",
+  "erro": null
+ },
+ {
+  "key": "lookout for metrics",
+  "name_game": "Lookout for Metrics",
+  "name_oficial": "Amazon Lookout for Metrics",
+  "cat_oficial": "Machine Learning",
+  "url": "https://aws.amazon.com/lookout-for-metrics/",
+  "summary": "Detecte automaticamente anomalias em métricas e identifique as respectivas causas básicas",
+  "meta": "A Amazon Web Services oferece serviços de computação em nuvem confiáveis, escaláveis e acessíveis. A inscrição é gratuita, você paga apenas pelo que usar.",
+  "erro": null
+ },
+ {
+  "key": "clean rooms ml",
+  "name_game": "Clean Rooms ML",
+  "name_oficial": "AWS Clean Rooms ML",
+  "cat_oficial": "Análise",
+  "url": "https://aws.amazon.com/clean-rooms/ml",
+  "summary": "Aplique a machine learning com seus parceiros, sem compartilhar dados subjacentes",
+  "meta": "Explore o AWS Clean Rooms ML, que ajuda as empresas a executar modelos personalizados de machine learning (ML) e por semelhança com seus parceiros sem compartilhar dados subjacentes nem modelos.",
+  "erro": null
+ },
+ {
+  "key": "outposts 1u e 2u",
+  "name_game": "Outposts 1U e 2U",
+  "name_oficial": "AWS Outposts 1U e 2U",
+  "cat_oficial": "Computação",
+  "url": "https://aws.amazon.com/outposts/servers/",
+  "summary": "Execute o AWS Outposts em locais menores",
+  "meta": "O AWS Outposts oferece servidores montáveis em rack nos formatos de 1U e 2U para locais com espaço limitado ou requisitos de capacidade menores.",
+  "erro": null
+ },
+ {
+  "key": "healthscribe",
+  "name_game": "HealthScribe",
+  "name_oficial": "AWS HealthScribe",
+  "cat_oficial": "Machine Learning",
+  "url": "https://aws.amazon.com/healthscribe/",
+  "summary": "Transforme anotações clínicas em insights usando a IA generativa",
+  "meta": "Gere anotações clínicas automaticamente analisando conversas entre pacientes e médicos nas suas aplicações.",
+  "erro": null
+ },
+ {
+  "key": "q na cadeia de suprimentos aws",
+  "name_game": "Q na Cadeia de Suprimentos AWS",
+  "name_oficial": "Amazon Q na Cadeia de Suprimentos AWS (em breve)",
+  "cat_oficial": "Aplicação empresarial",
+  "url": "https://aws.amazon.com/aws-supply-chain/features/",
+  "summary": "​Faça perguntas e obtenha respostas inteligentes sobre o que está acontecendo em sua cadeia de suprimentos, por que e quais ações tomar",
+  "meta": "Saiba mais sobre os recursos do AWS Supply Chain, como data lake, planejamento de demanda, planejamento de suprimentos, visibilidade de nível N e sustentabilidade.",
+  "erro": null
+ },
+ {
+  "key": "distro for opentelemetry",
+  "name_game": "AWS Distro for OpenTelemetry",
+  "name_oficial": "AWS Distro for OpenTelemetry",
+  "cat_oficial": "Gerenciamento e governança",
+  "url": "https://aws.amazon.com/otel/",
+  "summary": "Distribuição de código aberto segura e pronta para produção com performance previsível",
+  "meta": "AWS Distro for OpenTelemetry provides secure, production-ready distribution that lets you instrument applications just once to send metrics and traces to multiple monitoring solutions.",
+  "erro": null
+ },
+ {
+  "key": "shield",
+  "name_game": "Shield",
+  "name_oficial": "AWS Shield",
+  "cat_oficial": "Segurança, identidade e conformidade",
+  "url": "https://aws.amazon.com/shield/",
+  "summary": "Proteção contra DDoS",
+  "meta": "O AWS Shield protege redes e aplicações através da análise das configurações de segurança da rede e fornecendo proteção DDoS gerenciada",
+  "erro": null
+ },
+ {
+  "key": "iot 1 click",
+  "name_game": "IoT 1-Click",
+  "name_oficial": "AWS IoT 1-Click",
+  "cat_oficial": "Internet das Coisas",
+  "url": "https://aws.amazon.com/iot-1-click/",
+  "summary": "Criação de um disparador do AWS Lambda com um clique",
+  "meta": "Learn about AWS IoT and its features to manage communications between your devices and the AWS Cloud.",
+  "erro": null
+ },
+ {
+  "key": "private 5g",
+  "name_game": "Private 5G",
+  "name_oficial": "AWS Private 5G",
+  "cat_oficial": "Redes e entrega de conteúdo",
+  "url": "https://aws.amazon.com/private5g/",
+  "summary": "Implante, gerencie e escale facilmente uma rede celular privada",
+  "meta": "A Amazon Web Services oferece serviços de computação em nuvem confiáveis, escaláveis e acessíveis. A inscrição é gratuita, você paga apenas pelo que usar.",
+  "erro": null
+ },
+ {
+  "key": "health",
+  "name_game": "Health",
+  "name_oficial": "AWS Health",
+  "cat_oficial": "Gerenciamento e governança",
+  "url": "https://aws.amazon.com/premiumsupport/technology/aws-health/",
+  "summary": "Fonte de dados para eventos e mudanças que afetam seus recursos da Nuvem AWS",
+  "meta": "O AWS Health é a fonte confiável de informações sobre eventos de serviços e mudanças planejadas que afetam seus recursos da Nuvem AWS.",
+  "erro": null
+ },
+ {
+  "key": "waf",
+  "name_game": "WAF",
+  "name_oficial": "AWS WAF",
+  "cat_oficial": "Segurança, identidade e conformidade",
+  "url": "https://aws.amazon.com/waf/",
+  "summary": "Filtre o tráfego da Web mal-intencionado",
+  "meta": "O AWS WAF ajuda você a se proteger contra explorações comuns da Web e bots que podem afetar a disponibilidade, comprometer a segurança ou consumir recursos excessivos.",
+  "erro": null
+ },
+ {
+  "key": "sagemaker ground truth",
+  "name_game": "SageMaker Ground Truth",
+  "name_oficial": "Amazon SageMaker Ground Truth",
+  "cat_oficial": "Machine Learning",
+  "url": "https://aws.amazon.com/sagemaker/groundtruth/",
+  "summary": "Crie conjuntos de dados precisos para treinamento de ML",
+  "meta": "A rotulagem de dados do Amazon SageMaker permite que você crie rapidamente conjuntos de dados de treinamento altamente precisos para machine learning.",
+  "erro": null
+ },
+ {
+  "key": "iot roborunner",
+  "name_game": "IoT RoboRunner",
+  "name_oficial": "AWS IoT RoboRunner (Prévia)",
+  "cat_oficial": "Internet das Coisas",
+  "url": "https://aws.amazon.com/roborunner",
+  "summary": "Construa aplica&ccedil;&otilde;es que ajudam frotas de rob&ocirc;s a trabalhar juntas com perfei&ccedil;&atilde;o",
+  "meta": "Uncover deeper insights from your data and build rich and scalable industrial applications using AWS IoT",
+  "erro": null
+ },
+ {
+  "key": "fault injection simulator",
+  "name_game": "Fault Injection Simulator",
+  "name_oficial": "AWS Fault Injection Simulator",
+  "cat_oficial": "Ferramentas do desenvolvedor",
+  "url": "https://aws.amazon.com/fis/",
+  "summary": "Melhore a resiliência e a performance com experimentos controlados",
+  "meta": "O AWS Fault Injection Service ajuda a criar condições reais necessárias para descobrir bugs ocultos, monitorar pontos cegos e descobrir gargalos de performance.",
+  "erro": null
+ },
+ {
+  "key": "nova",
+  "name_game": "Amazon Nova",
+  "name_oficial": "Amazon Nova",
+  "cat_oficial": "IA generativa",
+  "url": "https://aws.amazon.com/nova/",
+  "summary": "Modelos multimodal e de geração de conteúdo com um bom custo-benefício e inteligência de ponta",
+  "meta": "O Amazon Nova é uma família de modelos e serviços de base que oferece inteligência avançada e o melhor custo-benefício do setor.",
+  "erro": null
+ },
+ {
+  "key": "rds para db2",
+  "name_game": "RDS para Db2",
+  "name_oficial": "Amazon RDS para Db2",
+  "cat_oficial": "Banco de dados",
+  "url": "https://aws.amazon.com/rds/db2/",
+  "summary": "Facilita configurar, operar e escalar um banco de dados Db2 gerenciado na nuvem",
+  "meta": "O Amazon RDS para Db2 é um banco de dados relacional seguro e totalmente gerenciado que facilita configurar, operar e escalar implantações do Db2 na nuvem.",
+  "erro": null
+ },
+ {
+  "key": "redshift sem servidor",
+  "name_game": "Redshift Serverless",
+  "name_oficial": "Amazon Redshift sem servidor (previsualização)",
+  "cat_oficial": "Análise",
+  "url": "https://aws.amazon.com/redshift/redshift-serverless/",
+  "summary": "Atinja suas metas de preço/performance com ajuste de escala automático inteligente para workloads dinâmicas",
+  "meta": "O Amazon Redshift sem servidor facilita a execução e a escalabilidade das análises em segundos, sem a necessidade de configurar, gerenciar ou escalar a infraestrutura de data warehouse.",
+  "erro": null
+ },
+ {
+  "key": "devops guru for rds",
+  "name_game": "DevOps Guru for RDS",
+  "name_oficial": "Amazon DevOps Guru for RDS",
+  "cat_oficial": "Machine Learning",
+  "url": "https://aws.amazon.com/devops-guru/features/devops-guru-for-rds/",
+  "summary": "Detecte, faça diagnósticos e corrija problemas de performance no Amazon RDS",
+  "meta": "Amazon DevOps Guru is a machine learning service designed to detect abnormal operating patterns so you can identify issues before they impact your customers.",
+  "erro": null
+ },
+ {
+  "key": "fargate",
+  "name_game": "Fargate",
+  "name_oficial": "AWS Fargate",
+  "cat_oficial": "Contêineres",
+  "url": "https://aws.amazon.com/fargate/",
+  "summary": "Computação com tecnologia sem servidor para contêineres",
+  "meta": "O AWS Fargate é um mecanismo de computação sem servidor para contêineres que funciona tanto com o Amazon Elastic Container Service (ECS) quanto com o Amazon Elastic Kubernetes (EKS).",
+  "erro": null
+ },
+ {
+  "key": "sagemaker training compiler",
+  "name_game": "SageMaker Training Compiler",
+  "name_oficial": "Amazon SageMaker Training Compiler",
+  "cat_oficial": "Machine Learning",
+  "url": "https://aws.amazon.com/sagemaker/train/",
+  "summary": "Treine modelos de ML com rapidez e economia usando o Amazon SageMaker",
+  "meta": "A próxima geração do Amazon SageMaker centraliza todos os seus dados, analytics e IA",
+  "erro": null
+ },
+ {
+  "key": "sagemaker studio",
+  "name_game": "SageMaker Studio",
+  "name_oficial": "Amazon SageMaker Studio",
+  "cat_oficial": "Machine Learning",
+  "url": "https://aws.amazon.com/sagemaker/studio/",
+  "summary": "Acelere o desenvolvimento de ML com seu IDE preferido, ferramentas de ML e assistência de codificação baseada em IA",
+  "meta": "O Amazon SageMaker Studio oferece uma ampla variedade de ferramentas específicas para realizar todas as etapas de desenvolvimento de machine learning (ML), desde a preparação de dados até a criação, o treinamento, a implantação e o gerenciamento dos seus modelos de ML.",
+  "erro": null
+ },
+ {
+  "key": "elastic load balancing",
+  "name_game": "Elastic Load Balancing (ELB)",
+  "name_oficial": "Elastic Load Balancing (ELB)",
+  "cat_oficial": "Redes e entrega de conteúdo",
+  "url": "https://aws.amazon.com/elasticloadbalancing/",
+  "summary": "Distribua tráfego de entrada entre vários destinos",
+  "meta": "O Elastic Load Balancing (ELB) distribui automaticamente o tráfego de aplicações de entrada entre vários destinos e dispositivos virtuais em uma ou mais zonas de disponibilidade (AZs).",
+  "erro": null
+ },
+ {
+  "key": "network firewall",
+  "name_game": "Network Firewall",
+  "name_oficial": "AWS Network Firewall",
+  "cat_oficial": "Segurança, identidade e conformidade",
+  "url": "https://aws.amazon.com/network-firewall/",
+  "summary": "Implante segurança de rede em suas Amazon VPCs com apenas alguns cliques",
+  "meta": "Com o AWS Network Firewall, é possível criar regras de firewall que proporcionam controle refinado sobre o tráfego de rede e implantar a segurança do firewall em suas VPCs.",
+  "erro": null
+ },
+ {
+  "key": "transit gateway",
+  "name_game": "Transit Gateway",
+  "name_oficial": "AWS Transit Gateway",
+  "cat_oficial": "Redes e entrega de conteúdo",
+  "url": "https://aws.amazon.com/transit-gateway/",
+  "summary": "Escale facilmente VPCs e conexões de contas",
+  "meta": "O AWS Transit Gateway conecta as AWS Transit Gateway e as redes on-premises por meio de um hub central. Ele atua como um roteador de nuvem altamente escalável, para que você adicione facilmente elementos à sua rede.",
+  "erro": null
+ }
+]

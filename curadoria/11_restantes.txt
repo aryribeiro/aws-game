@@ -1,0 +1,104 @@
+##### Artificial-Intelligence (15)
+deep learning containers           :: AWS Deep Learning Containers       :: Imagens do Docker para aprendizado profundo | Contêineres de deep learning da AWS (contêineres de DL da AWS) são imagens do Docker com estruturas de aprendizado profundo 
+nova                               :: Amazon Nova                        :: Modelos multimodal e de geração de conteúdo com um bom custo-benefício e inteligência de ponta | O Amazon Nova é uma família de modelos e serviços de base que oferece int
+devops guru for rds                :: DevOps Guru for RDS                :: Detecte, faça diagnósticos e corrija problemas de performance no Amazon RDS | Amazon DevOps Guru is a machine learning service designed to detect abnormal operating patte
+healthscribe                       :: HealthScribe                       :: Transforme anotações clínicas em insights usando a IA generativa | Gere anotações clínicas automaticamente analisando conversas entre pacientes e médicos nas suas aplicaç
+inferentia                         :: Inferentia                         :: Chip de inferência de machine learning | Saiba mais sobre o AWS Inferentia, um chip de ML apresentado pela AWS.
+lex automated chatbot designer     :: Lex Automated Chatbot Designer     :: Crie chatbots usando transcrições existentes de conversas | O Amazon Lex é um serviço de IA totalmente gerenciado para a criação de interfaces de chat com IA em qualquer 
+lookout for metrics                :: Lookout for Metrics                :: Detecte automaticamente anomalias em métricas e identifique as respectivas causas básicas | A Amazon Web Services oferece serviços de computação em nuvem confiáveis, esca
+sagemaker canvas                   :: SageMaker Canvas                   :: Gere previsões precisas de machine learning sem usar código | Amazon SageMaker Canvas offers a no-code ML interface for business analysts can create highly accurate machi
+sagemaker ground truth             :: SageMaker Ground Truth             :: Crie conjuntos de dados precisos para treinamento de ML | A rotulagem de dados do Amazon SageMaker permite que você crie rapidamente conjuntos de dados de treinamento alt
+sagemaker ground truth plus        :: SageMaker Ground Truth Plus        :: Crie conjuntos de dados de alta qualidade para treinar modelos de machine learning | A rotulagem de dados do Amazon SageMaker permite que você crie rapidamente conjuntos 
+sagemaker hyperpod                 :: SageMaker HyperPod                 :: Reduza o tempo de treinamento de FMs em até 40% com uma infraestrutura desenvolvida especificamente para treinamento distribuído | O Amazon SageMaker HyperPod oferece uma
+sagemaker studio                   :: SageMaker Studio                   :: Acelere o desenvolvimento de ML com seu IDE preferido, ferramentas de ML e assistência de codificação baseada em IA | O Amazon SageMaker Studio oferece uma ampla variedad
+sagemaker studio lab               :: SageMaker Studio Lab               :: Aprenda e faça testes com ML usando Notebooks Jupyter na nuvem, gratuitos e que não exigem configuração | O Amazon SageMaker Studio Lab é um ambiente gratuito de desenvol
+sagemaker training compiler        :: SageMaker Training Compiler        :: Treine modelos de ML com rapidez e economia usando o Amazon SageMaker | A próxima geração do Amazon SageMaker centraliza todos os seus dados, analytics e IA
+tensorflow na aws                  :: TensorFlow na AWS                  :: Biblioteca de inteligência de máquina de código aberto | O TensorFlow é um framework altamente flexível e versátil de aprendizado profundo com código aberto para o desenv
+
+##### Analytics (13)
+emr serverless                     :: Amazon EMR Serverless              :: O Amazon EMR Sem Servidor é uma opção de implantação do Amazon EMR que fornece um ambiente de runtime com tecnologia sem servidor. Isso simplifica a operação de aplicaçõe
+kinesis data streams               :: Amazon Kinesis Data Streams        :: É possível usar o Amazon Kinesis Data Streams para coletar e processar grandes fluxos de registros de dados em tempo real. É possível criar aplicações de processamento de
+q no quicksight                    :: Amazon Q in QuickSight             :: Ajuda os usuários corporativos a realizar análises complexas de cenários até 10 vezes mais rápido do que planilhas | BI baseado em IA que transforma dados em insights est
+sagemaker lakehouse                :: Amazon SageMaker Lakehouse         :: (so o atual) Plataforma para gerenciar data lakes e realizar análises avançadas com integração de machine learning.
+clean rooms ml                     :: Clean Rooms ML                     :: Aplique a machine learning com seus parceiros, sem compartilhar dados subjacentes | Explore o AWS Clean Rooms ML, que ajuda as empresas a executar modelos personalizados 
+glue data catalog                  :: Glue Data Catalog                  :: O AWS Glue Data Catalog é um repositório centralizado que armazena metadados sobre os conjuntos de dados da sua organização. Ele funciona como um índice para métricas de 
+glue data quality                  :: Glue Data Quality                  :: Forneça dados de alta qualidade em seus data lakes e pipelines | AWS Glue Data Quality automatically measures, monitors, and manages data quality in data lakes and pipeli
+glue studio                        :: Glue Studio                        :: (so o atual) Você pode usar a interface visual simples no AWS Glue Studio para criar seus trabalhos de ETL. .
+glue for ray                       :: Glue for Ray                       :: (so o atual) Escaley simplefique com código Python para ETL, com tecnologia sem servidor.
+opensearch sem servidor            :: OpenSearch Serverless              :: Ofereça análises de pesquisa e logs sem provisionamento nem ajuste de recursos | Scale search, vetor and AI workloads to zero with no infrastructure management. Amazon Op
+quicksight paginated reports       :: QuickSight Paginated Reports       :: Crie, programe e compartilhe relatórios e exportações de dados | Crie, programe e compartilhe relatórios e exportações de dados usando uma solução de business intelligenc
+redshift sem servidor              :: Redshift Serverless                :: Atinja suas metas de preço/performance com ajuste de escala automático inteligente para workloads dinâmicas | O Amazon Redshift sem servidor facilita a execução e a escal
+redshift para apache spark         :: Redshift para Apache Spark         :: (so o atual) Crie aplicações Apache Spark para leitura e gravação de dados usando o Redshift.
+
+##### Management-Governance (12)
+distro for opentelemetry           :: AWS Distro for OpenTelemetry       :: Distribuição de código aberto segura e pronta para produção com performance previsível | AWS Distro for OpenTelemetry provides secure, production-ready distribution that 
+console de gerenciamento           :: AWS Management Console             :: (so o atual) Interface de usuário baseada na Web.
+cloudwatch internet monitor        :: Amazon CloudWatch Internet Monitor :: O Monitor de Internet fornece visibilidade de como os problemas de internet afetam a performance e a disponibilidade entre as aplicações hospedadas na AWS e seus usuários
+basic support                      :: Basic Support                      :: (so o atual) Suporte básico disponível a todos os clientes da AWS
+business support                   :: Business Support                   :: (so o atual) Nível mínimo recomendado para quem tem workloads de produção na AWS.
+chatbot                            :: Chatbot                            :: Operações de conversa para a AWS | O AWS Chatbot é um atendente interativo que facilita o monitoramento e a interação com os recursos da AWS utilizando os canais de chat 
+developer support                  :: Developer Support                  :: (so o atual) Recomendado se você estiver experimentando ou testando a AWS.
+enterprise on ramp support         :: Enterprise On-Ramp Support         :: (so o atual) Recomendado para quem tem workloads essenciais à produção ou aos negócios na AWS
+enterprise support                 :: Enterprise Support                 :: (so o atual) Recomendado para quem tem negócios e/ou workloads essenciais na AWS
+health                             :: Health                             :: Fonte de dados para eventos e mudanças que afetam seus recursos da Nuvem AWS | O AWS Health é a fonte confiável de informações sobre eventos de serviços e mudanças planej
+management console mobile application :: Management Console Mobile Application :: Acesse recursos em atividade | The AWS Console Mobile Application provides customers the ability to view and manage select AWS resources from their mobile device.
+service management connector       :: Service Management Connector       :: Provisionar, gerenciar e operar recursos da AWS nas ferramentas de gerenciamento de serviços | AWS Service Management Connector enables you to provision, manage, and oper
+
+##### Internet-of-Things (8)
+iot fleethub                       :: AWS IoT FleetHub                   :: (so o atual) Gerenciamento centralizado de frotas de dispositivos IoT.
+iot 1 click                        :: IoT 1-Click                        :: Criação de um disparador do AWS Lambda com um clique | Learn about AWS IoT and its features to manage communications between your devices and the AWS Cloud.
+iot analytics                      :: IoT Analytics                      :: Análise para dispositivos IoT | O AWS IoT permite que você conecte e gerencie dispositivos com segurança, colete e analise dados de dispositivos e crie e implante soluçõe
+iot button                         :: IoT Button                         :: (so o atual) Dash Button programável na nuvem.
+iot edukit                         :: IoT EduKit                         :: Aprenda a criar aplicações simples para a IoT com hardware de referência e tutoriais detalhados | O AWS IoT permite que você conecte e gerencie dispositivos com segurança
+iot expresslink                    :: IoT ExpressLink                    :: Desenvolva dispositivos de IoT seguros com rapidez e facilidade | O AWS IoT ExpressLink torna mais fácil e rápido conectar praticamente qualquer dispositivo à nuvem, incl
+iot roborunner                     :: IoT RoboRunner                     :: Construa aplica&ccedil;&otilde;es que ajudam frotas de rob&ocirc;s a trabalhar juntas com perfei&ccedil;&atilde;o | Uncover deeper insights from your data and build rich 
+partner device catalog             :: Partner Device Catalog             :: (so o atual) Catálogo selecionado de hardware de IoT compatível com a AWS.
+
+##### Database (7)
+aurora                             :: Aurora                             :: Banco de dados relacional gerenciado de alta performance | O Amazon Aurora é um serviço de banco de dados relacional em escala global criado para a nuvem com total compat
+aurora limitless database          :: Aurora Limitless Database          :: Alimenta aplicações em escala de petabytes com milhões de gravações por segundo | Amazon Aurora Limitless Database now available in preview.
+dynamodb accelerator               :: DynamoDB Accelerator (DAX)         :: O Amazon DynamoDB foi concebido para escala e performance. Na maioria dos casos, os tempos de resposta do DynamoDB podem ser medidos em milissegundos de um dígito. No ent
+neptune analytics                  :: Neptune Analytics                  :: Analise dados gráficos com dezenas de bilhões de conexões em segundos | O Amazon Neptune é um serviço de banco de dados rápido e totalmente gerenciado que atende a casos 
+rds                                :: RDS                                :: Serviço gerenciado de banco de dados relacional para MySQL, PostgreSQL, Oracle, SQL Server e MariaDB | O Amazon Relational Database Service (RDS) é um serviço de banco de
+rds custom for sql                 :: RDS Custom for SQL                 :: (so o atual) Serviço de banco de dados gerenciado para aplicações que exijem sistema operacional e banco de dados personalizado.
+rds para db2                       :: RDS para Db2                       :: Facilita configurar, operar e escalar um banco de dados Db2 gerenciado na nuvem | O Amazon RDS para Db2 é um banco de dados relacional seguro e totalmente gerenciado que 
+
+##### Security-Identity-Compliance (6)
+iam access analyzer                :: IAM Access Analyzer                :: AWS Identity and Access Management Access Analyzer fornece as seguintes capacidades: Os analisadores de acessos externos do IAM Access Analyzer ajudam a identificar os re
+network firewall                   :: Network Firewall                   :: Implante segurança de rede em suas Amazon VPCs com apenas alguns cliques | Com o AWS Network Firewall, é possível criar regras de firewall que proporcionam controle refin
+security token service             :: Security Token Service             :: (so o atual) Serviço web que permite a criação e o fornecimento de credenciais de segurança temporárias e com privilégios limitados para recursos da AWS.
+shield                             :: Shield                             :: Proteção contra DDoS | O AWS Shield protege redes e aplicações através da análise das configurações de segurança da rede e fornecendo proteção DDoS gerenciada
+shield advanced                    :: Shield Advanced                    :: Agora você pode usar a experiência atualizada para acessar a AWS WAF funcionalidade em qualquer lugar do console. Para obter mais detalhes, consulte Trabalhando com o con
+waf                                :: WAF                                :: Filtre o tráfego da Web mal-intencionado | O AWS WAF ajuda você a se proteger contra explorações comuns da Web e bots que podem afetar a disponibilidade, comprometer a se
+
+##### Developer-Tools (5)
+corretto                           :: Amazon Corretto                    :: Distribuição do OpenJDK pronta para produção | O Amazon Corretto é uma distribuição gratuita, multiplataforma e pronta para produção do Open Java Development Kit (OpenJDK
+cloud control api                  :: Cloud Control API                  :: Use AWS API Cloud Control para criar, ler, atualizar, excluir e listar (CRUD-L) seus recursos de nuvem que pertencem a serviços de terceiros AWS e a eles. Com o conjunto 
+cloud development kit              :: Cloud Development Kit              :: Modele infraestrutura de nuvem usando código | AWS Cloud Development Kit (CDK) is an open-source software development framework used to model and provision your cloud app
+command line interface             :: Command Line Interface (CLI)       :: Ferramenta unificada de interface de linha de comando para gerenciar serviços da AWS | A AWS Command Line Interface (AWS CLI) é uma ferramenta unificada para o gerenciame
+fault injection simulator          :: Fault Injection Simulator          :: Melhore a resiliência e a performance com experimentos controlados | O AWS Fault Injection Service ajuda a criar condições reais necessárias para descobrir bugs ocultos, 
+
+##### Containers (4)
+app2container                      :: App2Container                      :: Crie contêineres e migre aplicações existentes | O primeiro serviço de IA agêntica a acelerar a transformação do Windows, do mainframe, do VMware e muito mais, reduzindo 
+copilot                            :: Copilot                            :: O AWS Copilot é a maneira mais fácil de inicializar e gerenciar suas aplicações conteinerizadas na AWS | AWS Copilot is a command line interface that lets you develop, re
+fargate                            :: Fargate                            :: Computação com tecnologia sem servidor para contêineres | O AWS Fargate é um mecanismo de computação sem servidor para contêineres que funciona tanto com o Amazon Elastic
+marketplace for containers anywhere :: Marketplace for Containers Anywhere :: Encontre, assine e implante aplicações de terceiros que podem ser executadas em qualquer ambiente Kubernetes | AWS Marketplace for Containers Anywhere lets you find, subs
+
+##### Cloud-Financial-Management (4)
+budgets                            :: Budgets                            :: Defina orçamentos personalizados de custo e uso | O AWS Budgets é a maneira mais simples de monitorar seus gastos com a AWS e ser alertado quando você exceder ou houver p
+cost explorer                      :: Cost Explorer                      :: Analise seus custos e uso da AWS | AWS Cost Explorer has an easy-to-use interface that lets you visualize, understand, and manage your AWS cloud costs and usage over time
+cost and usage report              :: Cost and Usage Report              :: Acesse informações abrangentes de custos e uso | Os Relatórios de Custos e Uso da AWS (AWS CUR) contêm o conjunto mais abrangente de dados de uso e custo da AWS disponíve
+savings plans                      :: Savings Plans                      :: Economize até 72% no uso de computação com preços flexíveis | O Savings Plans é um modelo de preço flexível que oferece uma economia de até 72% no uso da AWS, comparado a
+
+##### Business-Applications (3)
+cadeia de suprimentos aws          :: Cadeia de Suprimentos AWS          :: Minimize os riscos e os custos com uma aplicação de cadeia de fornecimento com tecnologia de ML | A Cadeia de Suprimentos AWS é uma aplicação baseada na nuvem que unifica
+one enterprise                     :: One Enterprise                     :: Um serviço de identidade seguro por reconhecimento da palma da mão para controle de acesso à empresa | A Amazon Web Services oferece serviços de computação em nuvem confi
+q na cadeia de suprimentos aws     :: Q na Cadeia de Suprimentos AWS     :: ​Faça perguntas e obtenha respostas inteligentes sobre o que está acontecendo em sua cadeia de suprimentos, por que e quais ações tomar | Saiba mais sobre os recursos do 
+
+##### Migration-Modernization (2)
+migration evaluator                :: Migration Evaluator                :: Crie um caso de negócios de migração para a nuvem | Crie um caso de negócios orientado por dados, obtenha acesso a insights e acelere a tomada de decisões para a migração
+snowball                           :: Snowball                           :: AWS Snowball Edge não está mais disponível para novos clientes. Novos clientes devem explorar AWS DataSynctransferências on-line, o Terminal de Transferência de AWS Dados
+
+##### End-User-Computing (1)
+appstream 2 0                      :: AppStream 2.0                      :: O Amazon WorkSpaces Applications é um serviço de streaming de aplicativos totalmente gerenciado que fornece aos usuários acesso instantâneo aos seus aplicativos de deskto
+

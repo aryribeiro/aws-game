@@ -1,0 +1,522 @@
+##### Compute (24) #####
+KEY: auto scaling group
+NOME: Auto Scaling Group
+FONTE: [DOC] Se você não tem experiência com grupos do Auto Scaling, siga as etapas do tutorial Criar seu primeiro grupo do Auto Scaling para começar e ver como um grupo do Auto Scaling responde quando uma instância do grupo é encerrada. Um grupo do Auto Scaling contém um conjunto de instâncias do EC2 que são tratadas como um agrupamento lógico para fins de gerenciamento e escalabilidade automática. Um grupo do Auto Scaling também pe
+
+KEY: ec2 auto scaling
+NOME: EC2 Auto Scaling
+FONTE: [CAT] Escale a capacidade computacional para atender à demanda | [META] O Amazon EC2 Auto Scaling ajuda a manter a disponibilidade da aplicação e a definir como dimensionar a capacidade do Amazon EC2 para atender às demandas da sua aplicação.
+
+KEY: instancias c7g graviton3 do ec2
+NOME: Instâncias C7g/Graviton3 do EC2
+FONTE: [ATUAL] A melhor performance de preço para workloads com uso intensivo de computação no   EC2.
+
+KEY: instancias c7gn do ec2
+NOME: Instâncias C7gn do EC2
+FONTE: [ATUAL] Instâncias Graviton otimizadas para computação com até 200 Gbps de largura de banda de rede.
+
+KEY: instancias g5g do ec2
+NOME: Instâncias G5g do EC2
+FONTE: [ATUAL] A melhor performance de preço para workloads de jogos Android transmitidos da plataforma.
+
+KEY: instancias hpc6id do ec2
+NOME: Instâncias Hpc6id do EC2
+FONTE: [ATUAL] As instâncias Hpc6id do   EC2 oferecem desempenho econômico para workloads de HPC que fazem uso intenso de dados.
+
+KEY: instancias hpc7g do ec2
+NOME: Instâncias Hpc7g do EC2
+FONTE: [ATUAL] Ofereça performance até 60% melhor em relação à instância anterior para gerações de computação intensiva.
+
+KEY: instancias im4gn is4gen do ec2
+NOME: Instâncias Im4gn/Is4gen do EC2
+FONTE: [ATUAL] A melhor performance de preço e o menor custo para armazenamento baseado em SSD no   EC2.
+
+KEY: instancias inf2 do ec2
+NOME: Instâncias Inf2 do EC2
+FONTE: [ATUAL] Alta performance com custos baixos no   EC2 para as workloads de inferência mais exigentes.
+
+KEY: instancias m6a do ec2
+NOME: Instâncias M6a do EC2
+FONTE: [ATUAL] Instâncias de uso geral habilitadas pela 3ª geração de processadores AMD EPYC.
+
+KEY: instancias mac m1 do ec2
+NOME: Instâncias Mac M1 do EC2
+FONTE: [ATUAL] Melhor performance de compilação de aplicações e testes mais rápidos para macOS.
+
+KEY: instancias r8g do ec2
+NOME: Instâncias R8g do EC2
+FONTE: [ATUAL] O melhor preço, desempenho e eficiência energética no EC2 para workloads que consomem muita memória.
+
+KEY: instancias trn1 do ec2
+NOME: Instâncias Trn1 do EC2
+FONTE: [ATUAL] A melhor performance de preço para o treinamento de modelos de aprendizado profundo na nuvem.
+
+KEY: instancias x2idn x2iedn do ec2
+NOME: Instâncias X2idn/X2iedn do EC2
+FONTE: [ATUAL] Performance de preço de computação até 50% melhor em relação às instâncias da geração anterior.
+
+KEY: instancias x2iezn do ec2
+NOME: Instâncias X2iezn do EC2
+FONTE: [ATUAL] Rapido processador Intel Xeon escalável na nuvem.
+
+KEY: instancias spot do ec2
+NOME: Instâncias spot do EC2
+FONTE: [DOC] Uma instância spot é uma instância que usa capacidade adicional do EC2 que está disponível por um valor mais baixo que o preço sob demanda. Como as Instâncias spot permitem que você solicite instâncias do EC2 não usadas com descontos consideráveis, é possível reduzir seus custos do Amazon EC2 significativamente. O preço por hora de uma instância spot é chamado de preço spot. O preço spot de cada tipo de instância em cada
+
+KEY: lambda snapstart
+NOME: Lambda SnapStart
+FONTE: [DOC] O Lambda SnapStart pode ter uma performance de startup de até menos de um segundo, geralmente sem alterações no código da função. O SnapStart facilita a criação de aplicações altamente responsivas e escaláveis sem o provisionamento de recursos nem a implementação de otimizações complexas de performance. O maior contribuinte para a latência de inicialização (geralmente chamado de tempo de inicialização a frio) é o tempo q
+
+KEY: local zones
+NOME: Local Zones
+FONTE: [CAT] Execute aplicações sensíveis à latência mais perto de usuários finais | [META] As zonas locais da AWS são um tipo de infraestrutura da AWS que estende os serviços da AWS para mais locais, permitindo que você execute aplicações sensíveis à latência mais perto de usuários e workloads e atenda às necessidades de residência de dados para suas workloads regulamentadas.
+
+KEY: outposts 1u e 2u
+NOME: Outposts 1U e 2U
+FONTE: [CAT] Execute o AWS Outposts em locais menores | [META] O AWS Outposts oferece servidores montáveis em rack nos formatos de 1U e 2U para locais com espaço limitado ou requisitos de capacidade menores.
+
+KEY: outposts rack
+NOME: Outposts rack
+FONTE: [DOC] AWS Outpostsé um serviço totalmente gerenciado que estende a AWS infraestrutura, os serviços, as APIs e as ferramentas até as instalações do cliente. Ao fornecer acesso local à infraestrutura AWS gerenciada, AWS Outposts permite que os clientes criem e executem aplicativos no local usando as mesmas interfaces de programação AWSdas regiões, enquanto usam recursos locais de computação e armazenamento para reduzir a latênci
+
+KEY: outposts servers
+NOME: Outposts servers
+FONTE: [DOC] AWS Outpostsé um serviço totalmente gerenciado que estende a AWS infraestrutura, os serviços, as APIs e as ferramentas até as instalações do cliente. Ao fornecer acesso local à infraestrutura AWS gerenciada, AWS Outposts permite que os clientes criem e executem aplicativos no local usando as mesmas interfaces de programação AWSdas regiões, enquanto usam recursos locais de computação e armazenamento para reduzir a latênci
+
+KEY: parallelcluster
+NOME: ParallelCluster
+FONTE: [DOC] AWS ParallelCluster é uma ferramenta de gerenciamento de cluster de código aberto AWS compatível que ajuda você a implantar e gerenciar clusters de High-Performance computação (HPC) no Nuvem AWS. Ele configura automaticamente os recursos computacionais, o agendador e o sistema de arquivos compartilhados necessários. Você pode usar AWS ParallelCluster com AWS Batch e Slurm agendadores. Com AWS ParallelCluster, você pode c
+
+KEY: simspace weaver
+NOME: SimSpace Weaver
+FONTE: [CAT] Crie simulações espaciais dinâmicas e em grande escala na infraestrutura gerenciada da AWS | [META] A Amazon Web Services oferece serviços de computação em nuvem confiáveis, escaláveis e acessíveis. A inscrição é gratuita, você paga apenas pelo que usar.
+
+KEY: wavelength
+NOME: Wavelength
+FONTE: [CAT] Disponibilize aplicações com latência ultrabaixa para dispositivos 5G | [META] Implante aplicações localmente com o AWS Wavelength, aproveitando o poder dos recursos de computação e o armazenamento da AWS na borda. Crie soluções de latência ultrabaixa que atendam aos seus requisitos de residência de dados e ofereçam experiências perfeitas em tempo real.
+
+##### Storage (23) #####
+KEY: backup para o s3
+NOME: AWS Backup para S3
+FONTE: [ATUAL] Gerencie backup de forma centralizada e restaure dados de aplicações armazenados no S3.
+
+KEY: suporte backup vmware
+NOME: AWS Backup para VMware
+FONTE: [ATUAL] Proteja centralmente ambientes híbridos de VMware.
+
+KEY: fsx for lustre
+NOME: Amazon FSx for Lustre
+FONTE: [CAT] Sistema de arquivos de alta performance integrado ao S3 | [META] Sistema de arquivos Lustre totalmente gerenciado integrado com o S3 para cargas de trabalho que exigem acesso rápido para computação e alta taxa de transferência, como computação de alto desempenho (HPC), renderização de mídia e conjuntos de dados de treinamento de machine learning (ML).
+
+KEY: sistemas de arquivos escalaveis
+NOME: Amazon FSx for NetApp ONTAP
+FONTE: [ATUAL] FSx para NetApp ONTAP oferece performance de armazenamento até nove vezes maior do que opções existentes para workloads intensivos de computação.
+
+KEY: fsx for openzfs
+NOME: Amazon FSx for OpenZFS
+FONTE: [DOC] Amazon FSx for OpenZFS is a fully managed file storage service that makes it easy to move data to AWS from on-premises ZFS or other Linux-based file servers. You can do this without changing your application code or how you manage data. It offers highly reliable, scalable, performance, and feature-rich file storage built on the open-source OpenZFS file system. It combines these capabilities with the agility, scalability,
+
+KEY: fsx for windows file server
+NOME: Amazon FSx for Windows File Server
+FONTE: [DOC] O Amazon FSx para Windows File Server fornece servidores de arquivos Microsoft Windows totalmente gerenciados, baseados em um sistema de arquivos Windows totalmente nativo. O FSx para Windows File Server possui os atributos, a performance e a compatibilidade necessários para mover sem alterações (lift-and-shift) facilmente as aplicações corporativas para a Nuvem AWS. O Amazon FSx é compatível com um amplo conjunto de wor
+
+KEY: s3 vectors
+NOME: Amazon S3 Vectors
+FONTE: [ATUAL] Novo tipo de bucket com um conjunto dedicado de APIs para armazenar, acessar e consultar dados vetoriais sem necessidade de provisionar infraestrutura.
+
+KEY: ebs snapshots archive
+NOME: EBS Snapshots Archive
+FONTE: [CAT] Faça o arquivamento de snapshots do EBS e economize até 75% nos custos de armazenamento de snapshots | [META] Amazon EBS Snapshots provide a simple and secure data protection solution that is designed to protect your block storage data such as EBS volumes, boot volumes, as well as on-premises block data. EBS Snapshots are a point in time copy of your data, and can be used to enable disaster recovery, migrate data across 
+
+KEY: efs archive
+NOME: EFS Archive
+FONTE: [ATUAL] Uma nova classe de armazenamento em que os clientes podem economizar até 50% nos custos de armazenamento em comparação com   EFS Frequent Access.
+
+KEY: elastic block store
+NOME: Elastic Block Store
+FONTE: [CAT] Volumes de armazenamento em bloco do EC2 | [META] O Amazon Elastic Block Store (EBS) é uma rede de área de armazenamento (SAN) na nuvem de alta performance e fácil de usar.
+
+KEY: s3 express one zone
+NOME: S3 Express One Zone
+FONTE: [CAT] Armazenamento mais rápido de objetos na nuvem para aplicações de desempenho crítico que exigem latência sistemática de um dígito em milissegundos | [META] S3 Express One Zone storage class delivers the fastest cloud object storage for performance-critical applications demanding single-digit millisecond latency.
+
+KEY: s3 glacier deep archive
+NOME: S3 Glacier Deep Archive
+FONTE: [DOC] Cada objeto no Amazon S3 tem uma classe de armazenamento associada a ele. Por padrão, objetos no S3 são armazenados na classe de armazenamento S3 Standard. No entanto, o Amazon S3 oferece uma variedade de outras classes de armazenamento para os objetos que você armazena. Escolha uma classe de acordo com seu cenário de caso de uso e dos requisitos de acesso de performance. A escolha de uma classe de armazenamento desenvol
+
+KEY: s3 glacier instant retrieval
+NOME: S3 Glacier Instant Retrieval
+FONTE: [CAT] Armazenamento com custo mais baixo com recuperação em milissegundos para dados raramente acessados | [META] Long-term, secure, durable S3 object storage with milliseconds retrieval for rarely accessed data at the lowest storage cost.
+
+KEY: s3 intelligent tiering
+NOME: S3 Intelligent-Tiering
+FONTE: [DOC] Cada objeto no Amazon S3 tem uma classe de armazenamento associada a ele. Por padrão, objetos no S3 são armazenados na classe de armazenamento S3 Standard. No entanto, o Amazon S3 oferece uma variedade de outras classes de armazenamento para os objetos que você armazena. Escolha uma classe de acordo com seu cenário de caso de uso e dos requisitos de acesso de performance. A escolha de uma classe de armazenamento desenvol
+
+KEY: s3 inventory
+NOME: S3 Inventory
+FONTE: [DOC] É possível usar o Inventário Amazon S3 para ajudar a gerenciar o armazenamento. Por exemplo, você pode usá-lo para auditar e gerar relatórios sobre o status da replicação e criptografia de seus objetos para os negócios, a conformidade e as necessidades normativas. Também é possível simplificar e acelerar os fluxos de trabalho de negócios e os trabalhos de big data usando o Inventário Amazon S3, que fornece uma alternativ
+
+KEY: s3 one zone ia
+NOME: S3 One Zone-IA
+FONTE: [DOC] Cada objeto no Amazon S3 tem uma classe de armazenamento associada a ele. Por padrão, objetos no S3 são armazenados na classe de armazenamento S3 Standard. No entanto, o Amazon S3 oferece uma variedade de outras classes de armazenamento para os objetos que você armazena. Escolha uma classe de acordo com seu cenário de caso de uso e dos requisitos de acesso de performance. A escolha de uma classe de armazenamento desenvol
+
+KEY: s3 standard
+NOME: S3 Standard
+FONTE: [DOC] Cada objeto no Amazon S3 tem uma classe de armazenamento associada a ele. Por padrão, objetos no S3 são armazenados na classe de armazenamento S3 Standard. No entanto, o Amazon S3 oferece uma variedade de outras classes de armazenamento para os objetos que você armazena. Escolha uma classe de acordo com seu cenário de caso de uso e dos requisitos de acesso de performance. A escolha de uma classe de armazenamento desenvol
+
+KEY: s3 standard ia
+NOME: S3 Standard-IA
+FONTE: [DOC] Cada objeto no Amazon S3 tem uma classe de armazenamento associada a ele. Por padrão, objetos no S3 são armazenados na classe de armazenamento S3 Standard. No entanto, o Amazon S3 oferece uma variedade de outras classes de armazenamento para os objetos que você armazena. Escolha uma classe de acordo com seu cenário de caso de uso e dos requisitos de acesso de performance. A escolha de uma classe de armazenamento desenvol
+
+KEY: s3 tranfer acceleration
+NOME: S3 Transfer Acceleration
+FONTE: [ATUAL] Uploads e downloads de longa distância do S3 mais rápidos
+
+KEY: s3 multipart upload
+NOME: S3 multipart upload
+FONTE: [DOC] O upload fracionado permite que você faça upload de um único objeto no Amazon S3 como um conjunto de partes. Cada parte é uma parte contígua de dados do objeto. O upload dessas partes de objetos pode ser feito de maneira independente e em qualquer ordem. Para uploads, o cliente da AWS atualizado calcula automaticamente uma soma de verificação do objeto e a envia para o Amazon S3 com o tamanho do objeto como parte da soli
+
+KEY: s3 on outposts
+NOME: S3 on Outposts
+FONTE: [DOC] O AWS Outposts é um serviço totalmente gerenciado que oferece a mesma infraestrutura da AWS, APIs, ferramentas e serviços da AWS, para praticamente qualquer datacenter, espaço de colocalização ou instalação on-premises para uma experiência híbrida verdadeiramente consistente. O AWS Outposts é ideal para workloads que exigem acesso de baixa latência a sistemas on-premises, processamento de dados local, residência de dados
+
+KEY: snow computacao de borda
+NOME: Snow Edge Computing
+FONTE: [ATUAL] Dispositivos físicos para computação de borda e ambientes robustos ou desconectados.
+
+KEY: snowcone
+NOME: Snowcone
+FONTE: [ATUAL] Dispositivos fisicos para migração de dados com origem ou destino na AWS.
+
+##### Artificial-Intelligence (15) #####
+KEY: deep learning containers
+NOME: AWS Deep Learning Containers
+FONTE: [CAT] Imagens do Docker para aprendizado profundo | [META] Contêineres de deep learning da AWS (contêineres de DL da AWS) são imagens do Docker com estruturas de aprendizado profundo pré-instaladas para facilitar a implantação de ambientes personalizados de machine learning.
+
+KEY: nova
+NOME: Amazon Nova
+FONTE: [CAT] Modelos multimodal e de geração de conteúdo com um bom custo-benefício e inteligência de ponta | [META] O Amazon Nova é uma família de modelos e serviços de base que oferece inteligência avançada e o melhor custo-benefício do setor.
+
+KEY: devops guru for rds
+NOME: DevOps Guru for RDS
+FONTE: [CAT] Detecte, faça diagnósticos e corrija problemas de performance no Amazon RDS | [META] Amazon DevOps Guru is a machine learning service designed to detect abnormal operating patterns so you can identify issues before they impact your customers.
+
+KEY: healthscribe
+NOME: HealthScribe
+FONTE: [CAT] Transforme anotações clínicas em insights usando a IA generativa | [META] Gere anotações clínicas automaticamente analisando conversas entre pacientes e médicos nas suas aplicações.
+
+KEY: inferentia
+NOME: Inferentia
+FONTE: [CAT] Chip de inferência de machine learning | [META] Saiba mais sobre o AWS Inferentia, um chip de ML apresentado pela AWS.
+
+KEY: lex automated chatbot designer
+NOME: Lex Automated Chatbot Designer
+FONTE: [CAT] Crie chatbots usando transcrições existentes de conversas | [META] O Amazon Lex é um serviço de IA totalmente gerenciado para a criação de interfaces de chat com IA em qualquer aplicação. Comece a criar um chatbot, assistente de voz, sistema de IVR com machine learning ou atendente virtual hoje mesmo.
+
+KEY: lookout for metrics
+NOME: Lookout for Metrics
+FONTE: [CAT] Detecte automaticamente anomalias em métricas e identifique as respectivas causas básicas | [META] A Amazon Web Services oferece serviços de computação em nuvem confiáveis, escaláveis e acessíveis. A inscrição é gratuita, você paga apenas pelo que usar.
+
+KEY: sagemaker canvas
+NOME: SageMaker Canvas
+FONTE: [CAT] Gere previsões precisas de machine learning sem usar código | [META] Amazon SageMaker Canvas offers a no-code ML interface for business analysts can create highly accurate machine learning models—without any ML experience.
+
+KEY: sagemaker ground truth
+NOME: SageMaker Ground Truth
+FONTE: [CAT] Crie conjuntos de dados precisos para treinamento de ML | [META] A rotulagem de dados do Amazon SageMaker permite que você crie rapidamente conjuntos de dados de treinamento altamente precisos para machine learning.
+
+KEY: sagemaker ground truth plus
+NOME: SageMaker Ground Truth Plus
+FONTE: [CAT] Crie conjuntos de dados de alta qualidade para treinar modelos de machine learning | [META] A rotulagem de dados do Amazon SageMaker permite que você crie rapidamente conjuntos de dados de treinamento altamente precisos para machine learning.
+
+KEY: sagemaker hyperpod
+NOME: SageMaker HyperPod
+FONTE: [CAT] Reduza o tempo de treinamento de FMs em até 40% com uma infraestrutura desenvolvida especificamente para treinamento distribuído | [META] O Amazon SageMaker HyperPod oferece uma infraestrutura específica para treinamento distribuído em escala, acelerando o desenvolvimento de modelos para inovação em IA generativa.
+
+KEY: sagemaker studio
+NOME: SageMaker Studio
+FONTE: [CAT] Acelere o desenvolvimento de ML com seu IDE preferido, ferramentas de ML e assistência de codificação baseada em IA | [META] O Amazon SageMaker Studio oferece uma ampla variedade de ferramentas específicas para realizar todas as etapas de desenvolvimento de machine learning (ML), desde a preparação de dados até a criação, o treinamento, a implantação e o gerenciamento dos seus modelos de ML.
+
+KEY: sagemaker studio lab
+NOME: SageMaker Studio Lab
+FONTE: [CAT] Aprenda e faça testes com ML usando Notebooks Jupyter na nuvem, gratuitos e que não exigem configuração | [META] O Amazon SageMaker Studio Lab é um ambiente gratuito de desenvolvimento de machine learning (ML) ou um serviço gratuito e sem configuração que habilita cientistas de dados a aprender e experimentar o ML similar ao JupyterLab.
+
+KEY: sagemaker training compiler
+NOME: SageMaker Training Compiler
+FONTE: [CAT] Treine modelos de ML com rapidez e economia usando o Amazon SageMaker | [META] A próxima geração do Amazon SageMaker centraliza todos os seus dados, analytics e IA
+
+KEY: tensorflow na aws
+NOME: TensorFlow na AWS
+FONTE: [CAT] Biblioteca de inteligência de máquina de código aberto | [META] O TensorFlow é um framework altamente flexível e versátil de aprendizado profundo com código aberto para o desenvolvimento de aplicações de inteligência artificial.
+
+##### Analytics (13) #####
+KEY: emr serverless
+NOME: Amazon EMR Serverless
+FONTE: [DOC] O Amazon EMR Sem Servidor é uma opção de implantação do Amazon EMR que fornece um ambiente de runtime com tecnologia sem servidor. Isso simplifica a operação de aplicações de analytics que usam as estruturas de código aberto mais recentes, como o Apache Spark e o Apache Hive. Com o EMR Sem Servidor, você não precisa configurar, otimizar, proteger ou operar clusters para executar aplicações com essas estruturas. O EMR Sem
+
+KEY: kinesis data streams
+NOME: Amazon Kinesis Data Streams
+FONTE: [DOC] É possível usar o Amazon Kinesis Data Streams para coletar e processar grandes fluxos de registros de dados em tempo real. É possível criar aplicações de processamento de dados, conhecidas como aplicações do Kinesis Data Streams. Uma aplicação típica do Kinesis Data Streams lê dados de um fluxo de dados como registros de dados. Esses aplicativos podem usar a Kinesis Client Library e podem ser executados em instâncias da 
+
+KEY: q no quicksight
+NOME: Amazon Q in QuickSight
+FONTE: [CAT] Ajuda os usuários corporativos a realizar análises complexas de cenários até 10 vezes mais rápido do que planilhas | [META] BI baseado em IA que transforma dados em insights estratégicos para todos por meio de inteligência unificada, analytics acionável e acesso democratizado aos dados.
+
+KEY: sagemaker lakehouse
+NOME: Amazon SageMaker Lakehouse
+FONTE: [ATUAL] Plataforma para gerenciar data lakes e realizar análises avançadas com integração de machine learning.
+
+KEY: clean rooms ml
+NOME: Clean Rooms ML
+FONTE: [CAT] Aplique a machine learning com seus parceiros, sem compartilhar dados subjacentes | [META] Explore o AWS Clean Rooms ML, que ajuda as empresas a executar modelos personalizados de machine learning (ML) e por semelhança com seus parceiros sem compartilhar dados subjacentes nem modelos.
+
+KEY: glue data catalog
+NOME: Glue Data Catalog
+FONTE: [DOC] O AWS Glue Data Catalog é um repositório centralizado que armazena metadados sobre os conjuntos de dados da sua organização. Ele funciona como um índice para métricas de localização, esquema e runtime das suas fontes de dados. Os metadados são armazenados em tabelas de metadados, onde cada tabela representa um único armazenamento de dados. O Catálogo de Dados pode ser preenchido com a ajuda de um crawler, que verifica au
+
+KEY: glue data quality
+NOME: Glue Data Quality
+FONTE: [CAT] Forneça dados de alta qualidade em seus data lakes e pipelines | [META] AWS Glue Data Quality automatically measures, monitors, and manages data quality in data lakes and pipelines in the AWS Glue ETL and data integration service.
+
+KEY: glue studio
+NOME: Glue Studio
+FONTE: [ATUAL] Você pode usar a interface visual simples no AWS Glue Studio para criar seus trabalhos de ETL. .
+
+KEY: glue for ray
+NOME: Glue for Ray
+FONTE: [ATUAL] Escaley simplefique com código Python para ETL, com tecnologia sem servidor.
+
+KEY: opensearch sem servidor
+NOME: OpenSearch Serverless
+FONTE: [CAT] Ofereça análises de pesquisa e logs sem provisionamento nem ajuste de recursos | [META] Scale search, vetor and AI workloads to zero with no infrastructure management. Amazon OpenSearch Serverless offers resource creation in seconds, usage-based pricing, and up to 60% savings.
+
+KEY: quicksight paginated reports
+NOME: QuickSight Paginated Reports
+FONTE: [CAT] Crie, programe e compartilhe relatórios e exportações de dados | [META] Crie, programe e compartilhe relatórios e exportações de dados usando uma solução de business intelligence (BI) única, totalmente gerenciada e baseada na nuvem.
+
+KEY: redshift sem servidor
+NOME: Redshift Serverless
+FONTE: [CAT] Atinja suas metas de preço/performance com ajuste de escala automático inteligente para workloads dinâmicas | [META] O Amazon Redshift sem servidor facilita a execução e a escalabilidade das análises em segundos, sem a necessidade de configurar, gerenciar ou escalar a infraestrutura de data warehouse.
+
+KEY: redshift para apache spark
+NOME: Redshift para Apache Spark
+FONTE: [ATUAL] Crie aplicações Apache Spark para leitura e gravação de dados usando o Redshift.
+
+##### Management-Governance (12) #####
+KEY: distro for opentelemetry
+NOME: AWS Distro for OpenTelemetry
+FONTE: [CAT] Distribuição de código aberto segura e pronta para produção com performance previsível | [META] AWS Distro for OpenTelemetry provides secure, production-ready distribution that lets you instrument applications just once to send metrics and traces to multiple monitoring solutions.
+
+KEY: console de gerenciamento
+NOME: AWS Management Console
+FONTE: [ATUAL] Interface de usuário baseada na Web.
+
+KEY: cloudwatch internet monitor
+NOME: Amazon CloudWatch Internet Monitor
+FONTE: [DOC] O Monitor de Internet fornece visibilidade de como os problemas de internet afetam a performance e a disponibilidade entre as aplicações hospedadas na AWS e seus usuários finais. Isso pode reduzir o tempo necessário para diagnosticar problemas na Internet de dias para minutos. O Monitor de Internet usa os dados de conectividade que a AWS captura de sua rede global para calcular uma linha de base de performance e de dispo
+
+KEY: basic support
+NOME: Basic Support
+FONTE: [ATUAL] Suporte básico disponível a todos os clientes da AWS
+
+KEY: business support
+NOME: Business Support
+FONTE: [ATUAL] Nível mínimo recomendado para quem tem workloads de produção na AWS.
+
+KEY: chatbot
+NOME: Chatbot
+FONTE: [CAT] Operações de conversa para a AWS | [META] O AWS Chatbot é um atendente interativo que facilita o monitoramento e a interação com os recursos da AWS utilizando os canais de chat da sua equipe.
+
+KEY: developer support
+NOME: Developer Support
+FONTE: [ATUAL] Recomendado se você estiver experimentando ou testando a AWS.
+
+KEY: enterprise on ramp support
+NOME: Enterprise On-Ramp Support
+FONTE: [ATUAL] Recomendado para quem tem workloads essenciais à produção ou aos negócios na AWS
+
+KEY: enterprise support
+NOME: Enterprise Support
+FONTE: [ATUAL] Recomendado para quem tem negócios e/ou workloads essenciais na AWS
+
+KEY: health
+NOME: Health
+FONTE: [CAT] Fonte de dados para eventos e mudanças que afetam seus recursos da Nuvem AWS | [META] O AWS Health é a fonte confiável de informações sobre eventos de serviços e mudanças planejadas que afetam seus recursos da Nuvem AWS.
+
+KEY: management console mobile application
+NOME: Management Console Mobile Application
+FONTE: [CAT] Acesse recursos em atividade | [META] The AWS Console Mobile Application provides customers the ability to view and manage select AWS resources from their mobile device.
+
+KEY: service management connector
+NOME: Service Management Connector
+FONTE: [CAT] Provisionar, gerenciar e operar recursos da AWS nas ferramentas de gerenciamento de serviços | [META] AWS Service Management Connector enables you to provision, manage, and operate native AWS resources/capabilities in familiar ITSM tooling.
+
+##### Internet-of-Things (8) #####
+KEY: iot fleethub
+NOME: AWS IoT FleetHub
+FONTE: [ATUAL] Gerenciamento centralizado de frotas de dispositivos IoT.
+
+KEY: iot 1 click
+NOME: IoT 1-Click
+FONTE: [CAT] Criação de um disparador do AWS Lambda com um clique | [META] Learn about AWS IoT and its features to manage communications between your devices and the AWS Cloud.
+
+KEY: iot analytics
+NOME: IoT Analytics
+FONTE: [CAT] Análise para dispositivos IoT | [META] O AWS IoT permite que você conecte e gerencie dispositivos com segurança, colete e analise dados de dispositivos e crie e implante soluções que geram maior valor empresarial.
+
+KEY: iot button
+NOME: IoT Button
+FONTE: [ATUAL] Dash Button programável na nuvem.
+
+KEY: iot edukit
+NOME: IoT EduKit
+FONTE: [CAT] Aprenda a criar aplicações simples para a IoT com hardware de referência e tutoriais detalhados | [META] O AWS IoT permite que você conecte e gerencie dispositivos com segurança, colete e analise dados de dispositivos e crie e implante soluções que geram maior valor empresarial.
+
+KEY: iot expresslink
+NOME: IoT ExpressLink
+FONTE: [CAT] Desenvolva dispositivos de IoT seguros com rapidez e facilidade | [META] O AWS IoT ExpressLink torna mais fácil e rápido conectar praticamente qualquer dispositivo à nuvem, incluindo dispositivos médicos, sensores industriais, produtos de consumo e muito mais.
+
+KEY: iot roborunner
+NOME: IoT RoboRunner
+FONTE: [CAT] Construa aplica&ccedil;&otilde;es que ajudam frotas de rob&ocirc;s a trabalhar juntas com perfei&ccedil;&atilde;o | [META] Uncover deeper insights from your data and build rich and scalable industrial applications using AWS IoT
+
+KEY: partner device catalog
+NOME: Partner Device Catalog
+FONTE: [ATUAL] Catálogo selecionado de hardware de IoT compatível com a AWS.
+
+##### Database (7) #####
+KEY: aurora
+NOME: Aurora
+FONTE: [CAT] Banco de dados relacional gerenciado de alta performance | [META] O Amazon Aurora é um serviço de banco de dados relacional em escala global criado para a nuvem com total compatibilidade com MySQL e PostgreSQL.
+
+KEY: aurora limitless database
+NOME: Aurora Limitless Database
+FONTE: [CAT] Alimenta aplicações em escala de petabytes com milhões de gravações por segundo | [META] Amazon Aurora Limitless Database now available in preview.
+
+KEY: dynamodb accelerator
+NOME: DynamoDB Accelerator (DAX)
+FONTE: [DOC] O Amazon DynamoDB foi concebido para escala e performance. Na maioria dos casos, os tempos de resposta do DynamoDB podem ser medidos em milissegundos de um dígito. No entanto, existem certos casos de uso que exigem tempos de resposta em microssegundos. Para esses casos de uso, o DynamoDB Accelerator (DAX) oferece tempos de resposta rápidos para acessar dados finais consistentes. O DAX é um serviço de armazenamento em cac
+
+KEY: neptune analytics
+NOME: Neptune Analytics
+FONTE: [CAT] Analise dados gráficos com dezenas de bilhões de conexões em segundos | [META] O Amazon Neptune é um serviço de banco de dados rápido e totalmente gerenciado que atende a casos de uso com grafos, como grafos de identidade, grafos de conhecimento e detecção de fraudes.
+
+KEY: rds
+NOME: RDS
+FONTE: [CAT] Serviço gerenciado de banco de dados relacional para MySQL, PostgreSQL, Oracle, SQL Server e MariaDB | [META] O Amazon Relational Database Service (RDS) é um serviço de banco de dados em nuvem de código aberto totalmente gerenciado que permite operar e escalar com facilidade o banco de dados relacional de sua preferência, inclusive o Amazon Aurora, o PostgreSQL, o SQL Server e o MySQL.
+
+KEY: rds custom for sql
+NOME: RDS Custom for SQL
+FONTE: [ATUAL] Serviço de banco de dados gerenciado para aplicações que exijem sistema operacional e banco de dados personalizado.
+
+KEY: rds para db2
+NOME: RDS para Db2
+FONTE: [CAT] Facilita configurar, operar e escalar um banco de dados Db2 gerenciado na nuvem | [META] O Amazon RDS para Db2 é um banco de dados relacional seguro e totalmente gerenciado que facilita configurar, operar e escalar implantações do Db2 na nuvem.
+
+##### Security-Identity-Compliance (6) #####
+KEY: iam access analyzer
+NOME: IAM Access Analyzer
+FONTE: [DOC] AWS Identity and Access Management Access Analyzer fornece as seguintes capacidades: Os analisadores de acessos externos do IAM Access Analyzer ajudam a identificar os recursos da organização e as contas que são compartilhadas com uma entidade externa. Os analisadores de acesso interno do IAM Access Analyzer ajudam a identificar acesso interno a recursos selecionados da sua organização e das suas contas.
+
+KEY: network firewall
+NOME: Network Firewall
+FONTE: [CAT] Implante segurança de rede em suas Amazon VPCs com apenas alguns cliques | [META] Com o AWS Network Firewall, é possível criar regras de firewall que proporcionam controle refinado sobre o tráfego de rede e implantar a segurança do firewall em suas VPCs.
+
+KEY: security token service
+NOME: Security Token Service
+FONTE: [ATUAL] Serviço web que permite a criação e o fornecimento de credenciais de segurança temporárias e com privilégios limitados para recursos da AWS.
+
+KEY: shield
+NOME: Shield
+FONTE: [CAT] Proteção contra DDoS | [META] O AWS Shield protege redes e aplicações através da análise das configurações de segurança da rede e fornecendo proteção DDoS gerenciada
+
+KEY: shield advanced
+NOME: Shield Advanced
+FONTE: [DOC] Agora você pode usar a experiência atualizada para acessar a AWS WAF funcionalidade em qualquer lugar do console. Para obter mais detalhes, consulte Trabalhando com o console.  AWS Shield Advanced é um serviço gerenciado que ajuda você a proteger seu aplicativo contra ameaças externas, como ataques DDo S, bots volumétricos e tentativas de exploração de vulnerabilidades. Para níveis mais altos de proteção contra ataques, 
+
+KEY: waf
+NOME: WAF
+FONTE: [CAT] Filtre o tráfego da Web mal-intencionado | [META] O AWS WAF ajuda você a se proteger contra explorações comuns da Web e bots que podem afetar a disponibilidade, comprometer a segurança ou consumir recursos excessivos.
+
+##### Developer-Tools (5) #####
+KEY: corretto
+NOME: Amazon Corretto
+FONTE: [CAT] Distribuição do OpenJDK pronta para produção | [META] O Amazon Corretto é uma distribuição gratuita, multiplataforma e pronta para produção do Open Java Development Kit (OpenJDK). O Corretto é fornecido com suporte gratuito de longo prazo. A Amazon executa o Corretto internamente em milhares de serviços de produção. O Corretto é certificado como compatível com o padrão Java SE.
+
+KEY: cloud control api
+NOME: Cloud Control API
+FONTE: [DOC] Use AWS API Cloud Control para criar, ler, atualizar, excluir e listar (CRUD-L) seus recursos de nuvem que pertencem a serviços de terceiros AWS e a eles. Com o conjunto padronizado de interfaces de programação de aplicativos (APIs) da Cloud Control API, você pode realizar operações CRUD-L em qualquer recurso compatível em seu. Conta da AWS Usando a API de Controle da Nuvem, você não precisará gerar códigos ou scripts es
+
+KEY: cloud development kit
+NOME: Cloud Development Kit
+FONTE: [CAT] Modele infraestrutura de nuvem usando código | [META] AWS Cloud Development Kit (CDK) is an open-source software development framework used to model and provision your cloud application resources with familiar programming languages.
+
+KEY: command line interface
+NOME: Command Line Interface (CLI)
+FONTE: [CAT] Ferramenta unificada de interface de linha de comando para gerenciar serviços da AWS | [META] A AWS Command Line Interface (AWS CLI) é uma ferramenta unificada para o gerenciamento de seus produtos da AWS. Com apenas uma ferramenta para baixar e configurar, você poderá controlar vários produtos da AWS pela linha de comando e automatizá-los usando scripts.
+
+KEY: fault injection simulator
+NOME: Fault Injection Simulator
+FONTE: [CAT] Melhore a resiliência e a performance com experimentos controlados | [META] O AWS Fault Injection Service ajuda a criar condições reais necessárias para descobrir bugs ocultos, monitorar pontos cegos e descobrir gargalos de performance.
+
+##### Containers (4) #####
+KEY: app2container
+NOME: App2Container
+FONTE: [CAT] Crie contêineres e migre aplicações existentes | [META] O primeiro serviço de IA agêntica a acelerar a transformação do Windows, do mainframe, do VMware e muito mais, reduzindo a dívida técnica e preparando você para a IA.
+
+KEY: copilot
+NOME: Copilot
+FONTE: [CAT] O AWS Copilot é a maneira mais fácil de inicializar e gerenciar suas aplicações conteinerizadas na AWS | [META] AWS Copilot is a command line interface that lets you develop, release, and operate containerized applications on AWS.
+
+KEY: fargate
+NOME: Fargate
+FONTE: [CAT] Computação com tecnologia sem servidor para contêineres | [META] O AWS Fargate é um mecanismo de computação sem servidor para contêineres que funciona tanto com o Amazon Elastic Container Service (ECS) quanto com o Amazon Elastic Kubernetes (EKS).
+
+KEY: marketplace for containers anywhere
+NOME: Marketplace for Containers Anywhere
+FONTE: [CAT] Encontre, assine e implante aplicações de terceiros que podem ser executadas em qualquer ambiente Kubernetes | [META] AWS Marketplace for Containers Anywhere lets you find, subscribe to, and deploy third-party Kubernetes applications on AWS or on premises.
+
+##### Cloud-Financial-Management (4) #####
+KEY: budgets
+NOME: Budgets
+FONTE: [CAT] Defina orçamentos personalizados de custo e uso | [META] O AWS Budgets é a maneira mais simples de monitorar seus gastos com a AWS e ser alertado quando você exceder ou houver previsão de exceder seu limite de gastos desejado.
+
+KEY: cost explorer
+NOME: Cost Explorer
+FONTE: [CAT] Analise seus custos e uso da AWS | [META] AWS Cost Explorer has an easy-to-use interface that lets you visualize, understand, and manage your AWS cloud costs and usage over time.
+
+KEY: cost and usage report
+NOME: Cost and Usage Report
+FONTE: [CAT] Acesse informações abrangentes de custos e uso | [META] Os Relatórios de Custos e Uso da AWS (AWS CUR) contêm o conjunto mais abrangente de dados de uso e custo da AWS disponíveis, incluindo metadados adicionais sobre serviços, preços e reservas da AWS.
+
+KEY: savings plans
+NOME: Savings Plans
+FONTE: [CAT] Economize até 72% no uso de computação com preços flexíveis | [META] O Savings Plans é um modelo de preço flexível que oferece uma economia de até 72% no uso da AWS, comparado aos preços sob demanda.
+
+##### Business-Applications (3) #####
+KEY: cadeia de suprimentos aws
+NOME: Cadeia de Suprimentos AWS
+FONTE: [CAT] Minimize os riscos e os custos com uma aplicação de cadeia de fornecimento com tecnologia de ML | [META] A Cadeia de Suprimentos AWS é uma aplicação baseada na nuvem que unifica dados, fornece insights acionáveis baseados em ML e oferece colaboração contextual integrada.
+
+KEY: one enterprise
+NOME: One Enterprise
+FONTE: [CAT] Um serviço de identidade seguro por reconhecimento da palma da mão para controle de acesso à empresa | [META] A Amazon Web Services oferece serviços de computação em nuvem confiáveis, escaláveis e acessíveis. A inscrição é gratuita, você paga apenas pelo que usar.
+
+KEY: q na cadeia de suprimentos aws
+NOME: Q na Cadeia de Suprimentos AWS
+FONTE: [CAT] ​Faça perguntas e obtenha respostas inteligentes sobre o que está acontecendo em sua cadeia de suprimentos, por que e quais ações tomar | [META] Saiba mais sobre os recursos do AWS Supply Chain, como data lake, planejamento de demanda, planejamento de suprimentos, visibilidade de nível N e sustentabilidade.
+
+##### Migration-Modernization (2) #####
+KEY: migration evaluator
+NOME: Migration Evaluator
+FONTE: [CAT] Crie um caso de negócios de migração para a nuvem | [META] Crie um caso de negócios orientado por dados, obtenha acesso a insights e acelere a tomada de decisões para a migração para a AWS sem custos com o Migration Evaluator.
+
+KEY: snowball
+NOME: Snowball
+FONTE: [DOC] AWS Snowball Edge não está mais disponível para novos clientes. Novos clientes devem explorar AWS DataSynctransferências on-line, o Terminal de Transferência de AWS Dados para transferências físicas seguras ou soluções de AWS parceiros. Para computação de ponta, explore AWS Outposts.  O Snowball Edge é um dispositivo com armazenamento integrado e capacidade de computação para recursos selecionados.AWS O Snowball Edge pod
+
+##### End-User-Computing (1) #####
+KEY: appstream 2 0
+NOME: AppStream 2.0
+FONTE: [DOC] O Amazon WorkSpaces Applications é um serviço de streaming de aplicativos totalmente gerenciado que fornece aos usuários acesso instantâneo aos seus aplicativos de desktop de qualquer lugar. WorkSpaces Os aplicativos gerenciam AWS os recursos necessários para hospedar e executar seus aplicativos, escalam automaticamente e fornecem acesso aos usuários sob demanda. WorkSpaces Os aplicativos fornecem aos usuários acesso aos
+

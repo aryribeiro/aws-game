@@ -1,0 +1,4 @@
+QUASE-CASAMENTOS — conferir se sao o mesmo servico (1)
+======================================================
+
+tetris: Key Management Service                        ~~ game: KMS Key Management Service (KMS)

@@ -1,0 +1,386 @@
+[
+ {
+  "key": "subnets",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/configure-subnets.html",
+  "texto": "Uma sub-rede consiste em um intervalo de endereços IP na VPC. É possível criar recursos da AWS, como instâncias do EC2, em sub-redes específicas. Cada sub-rede deve residir inteiramente dentro de uma zona de disponibilidade e não pode abranger zonas. Ao iniciar recursos da AWS em zonas de disponibilidade separadas, é possível proteger suas aplicações contra a falha de uma única zona de disponibilidade. Ao criar uma sub-rede, especifique seus endereços IP, dependendo da configuração da VPC:",
+  "erro": null
+ },
+ {
+  "key": "route table",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/VPC_Route_Tables.html",
+  "texto": "Uma tabela de rotas serve como controlador de tráfego para sua nuvem privada virtual (VPC). Cada tabela de rotas contém um conjunto de regras, chamado de rotas, que determinam para onde o tráfego de rede de sua sub-rede ou gateway é direcionado. Quando uma VPC é criada, nós também criamos a tabela de rotas principal para a VPC. Você pode criar tabelas de rotas adicionais para sua VPC para ter um controle mais granular sobre os caminhos de rede da sua VPC. É possível usar tabelas de rotas para especificar com quais redes sua VPC pode se comunicar, como outras VPCs ou redes on-premises. Cada rota especifica um destino (bloco CIDR ou lista de prefixos) e um alvo (como um gateway da Internet, ga",
+  "erro": null
+ },
+ {
+  "key": "nacl",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/vpc-network-acls.html",
+  "texto": "Uma lista de controle de acesso (ACL) de rede permite ou não determinado tráfego de entrada ou de saída no nível da sub-rede. Você pode usar a ACL de rede padrão para a VPC ou pode criar uma ACL de rede personalizada para a VPC com regras semelhantes às regras dos grupos de segurança para adicionar mais uma camada de segurança à VPC. O diagrama a seguir mostra uma VPC com duas sub-redes. Cada sub-rede tem uma ACL de rede. Quando o tráfego entra na VPC (por exemplo, de uma VPC emparelhada, de uma conexão VPN ou da Internet), o roteador envia o tráfego para seu destino. A ACL da rede A determina qual tráfego destinado à sub-rede 1 tem permissão para entrar na sub-rede 1 e qual tráfego destinad",
+  "erro": null
+ },
+ {
+  "key": "security groups",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/vpc-security-groups.html",
+  "texto": "Um grupo de segurança controla o tráfego que tem permissão para acessar e sair dos recursos aos quais está associado. Por exemplo, depois de associar um grupo de segurança a uma instância do EC2, ele controla o tráfego de entrada e saída da instância. Quando você cria uma VPC, ela vem com um grupo de segurança padrão. É possível criar grupos de segurança adicionais para uma VPC, cada um com suas próprias regras de entrada e saída. Você pode especificar a origem, o intervalo de portas e o protocolo de cada regra de entrada. Você pode especificar o destino, o intervalo de portas e o protocolo de cada regra de saída. O diagrama a seguir mostra uma VPC com uma sub-rede, um gateway da Internet e ",
+  "erro": null
+ },
+ {
+  "key": "elastic ip",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/vpc-eips.html",
+  "texto": "Um endereço IP elástico é um endereço IPv4 público estático desenvolvido especificamente para a natureza dinâmica da computação em nuvem. Esse recurso permite associar um endereço IP elástico a qualquer instância ou interface de rede em qualquer nuvem privada virtual (VPC) em sua conta da AWS. Ao utilizar endereços IP elásticos, você pode desbloquear uma série de benefícios que simplificam o gerenciamento e a resiliência de sua infraestrutura baseada em nuvem. Uma das principais vantagens dos endereços IP elásticos é a capacidade de mascarar a falha de uma instância. Caso uma instância sofra uma interrupção inesperada ou precise ser substituída, o endereço IP elástico associado poderá ser re",
+  "erro": null
+ },
+ {
+  "key": "internet gateway",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/VPC_Internet_Gateway.html",
+  "texto": "Um gateway da Internet é um componente da VPC horizontalmente dimensionado, redundante e altamente disponível que permite a comunicação entre a VPC e a Internet. Ele oferece suporte para tráfego IPv4 e IPv6. Não causa riscos de disponibilidade ou restrições de largura de banda no tráfego de rede. Um gateway da Internet habilita recursos em suas sub-redes públicas (como instâncias do EC2) para estabelecer conexão com a Internet se o recurso tiver um endereço IPv4 ou um endereço IPv6 público. Da mesma forma, os recursos na Internet podem iniciar uma conexão com recursos em sua sub-rede usando o endereço IPv4 ou o endereço IPv6 público. Por exemplo, um gateway da Internet permite que você estab",
+  "erro": null
+ },
+ {
+  "key": "egress only internet gateway",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/egress-only-internet-gateway.html",
+  "texto": "Um gateway da Internet somente de saída é um componente da VPC horizontalmente escalado, redundante e altamente disponível que permite a comunicação de saída pela IPv6 das instâncias na VPC para a Internet e impede a Internet de iniciar uma conexão IPv6 com suas instâncias. Um gateway da Internet somente de saída deve ser usado apenas com tráfego IPv6. Para habilitar a comunicação via Internet somente de saída pela IPv4, use um gateway NAT. Para obter mais informações, consulte Gateways NAT. Não há cobrança por um gateway da Internet somente de saída, mas há cobranças para a transferência de dados para instâncias do EC2 que usam gateways da Internet. Para mais informações, consulte Amazon EC",
+  "erro": null
+ },
+ {
+  "key": "nat gateway",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/vpc-nat-gateway.html",
+  "texto": "Um gateway NAT é um serviço de Network Address Translation (NAT – Conversão de endereços de rede). Você pode usar um gateway NAT para que as instâncias em uma sub-rede privada possam se conectar a serviços fora da VPC, mas os serviços externos não podem iniciar uma conexão com essas instâncias. Ao criar um gateway NAT, você deve especificar um dos seguintes tipos de conectividade: Pública (padrão): as instâncias em sub-redes privadas podem se conectar à Internet por meio de um gateway NAT público, mas não podem receber conexões de entrada não solicitadas da internet. Você cria um gateway NAT público em uma sub-rede pública e deve associar um endereço IP elástico ao gateway NAT na criação. En",
+  "erro": null
+ },
+ {
+  "key": "nat instances",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/vpc-nat-instance.html",
+  "texto": null,
+  "erro": null
+ },
+ {
+  "key": "vpc peering",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/peering/what-is-vpc-peering.html",
+  "texto": "Uma nuvem privada virtual (VPC) é uma rede virtual dedicada à sua Conta da AWS. Ela é isolada de maneira lógica de outras redes virtuais na Nuvem da AWS. É possível iniciar os recursos da AWS, como instâncias do Amazon EC2, na sua VPC. Uma conexão de emparelhamento de VPC é uma conexão de rede entre duas VPCs que permite direcionar o tráfego entre elas usando endereços IPv4 ou IPv6 privados. Instâncias em qualquer VPC podem se comunicar umas com as outras como se estivessem na mesma rede. É possível criar uma conexão de emparelhamento de VPC entre suas próprias VPCs ou com uma VPC em outra conta da AWS. As VPCs podem estar em regiões diferentes (também conhecidas como conexão de emparelhamen",
+  "erro": null
+ },
+ {
+  "key": "vpc endpoints",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/privatelink/concepts.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. É possível usar a Amazon VPC para definir uma nuvem privada virtual (VPC), que é uma rede virtual isolada logicamente. Você pode permitir que os clientes em sua VPC se conectem a destinos fora dela. Por exemplo, adicione um gateway da internet à VPC para permitir o acesso à internet ou adicione uma conexão de VPN para permitir o acesso à rede on-premises. Como alternativa, use AWS PrivateLink para permitir que os clientes em sua VPC se conectem a serviços e recursos em outras VPCs usando endereços IP privados, como se esses serviço",
+  "erro": null
+ },
+ {
+  "key": "vpc flow logs",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/flow-logs.html",
+  "texto": "O VPC Flow Logs é um recurso que possibilita que você capture informações sobre o tráfego de IP para e proveniente de interfaces de rede da VPC. Os dados do log de fluxo podem ser publicados nos seguintes locais: Amazon CloudWatch Logs, Amazon S3 ou Amazon Data Firehose. O caminho de entrega configurado e as permissões que permitem que os logs de tráfego de rede sejam enviados para um destino como o CloudWatch Logs ou o S3 são chamados de assinaturas. Depois de criar um log de fluxo, você poderá recuperar e visualizar os registros do log de fluxo no grupo de logs, no bucket ou no fluxo de entrega configurado. Determinar a direção de entrada e saída do tráfego das interfaces de rede Os dados ",
+  "erro": null
+ },
+ {
+  "key": "virtual private gateway",
+  "url": "https://docs.aws.amazon.com/pt_br/vpn/latest/s2svpn/how_it_works.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. A conexão VPN oferece dois túneis VPN entre um gateway privado virtual ou gateway de trânsito no AWS lado e um gateway de cliente no lado local. Para obter mais informações sobre cotas de Site-to-Site VPN, consulteAWS Site-to-Site VPN cotas.",
+  "erro": null
+ },
+ {
+  "key": "vpn cloudhub",
+  "url": "https://docs.aws.amazon.com/pt_br/vpn/latest/s2svpn/VPN_CloudHub.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. Se você tiver várias AWS Site-to-Site VPN conexões, poderá fornecer comunicação segura entre sites usando a AWS VPN CloudHub. Isso permite que os sites comuniquem-se entre si e não somente com os recursos na VPC. A VPN CloudHub opera em um hub-and-spoke modelo simples que você pode usar com ou sem uma VPC. Esse design é adequado se você tiver várias filiais e conexões de Internet existentes e quiser implementar um hub-and-spoke modelo conveniente e potencialmente de baixo custo para conectividade primária ou de backup entre esses l",
+  "erro": null
+ },
+ {
+  "key": "client vpn",
+  "url": "https://docs.aws.amazon.com/pt_br/vpn/latest/clientvpn-admin/what-is.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. AWS Client VPN é um serviço VPN gerenciado baseado em cliente que permite acessar com segurança seus AWS recursos e recursos em sua rede local. com a Client VPN, você pode acessar seus recursos de qualquer local usando um cliente de VPN com base no OpenVPN. Conexões seguras: estabelece conexões TLS criptografadas de qualquer local por meio do cliente OpenVPN, garantindo a privacidade e a integridade dos dados.",
+  "erro": null
+ },
+ {
+  "key": "site to site vpn",
+  "url": "https://docs.aws.amazon.com/pt_br/vpn/latest/s2svpn/VPC_VPN.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. Por padrão, uma instância que você executa na Amazon VPC não pode se comunicar com uma rede local (Nuvem AWS) e um dispositivo remoto, que pode ser, por exemplo, um dispositivo local ou on-premises. Você pode habilitar o acesso aos seus dispositivos remotos a partir da sua VPC criando uma conexão AWS Site-to-Site VPN(Site-to-Site VPN) e configurando o roteamento para transmitir o tráfego pela conexão. Embora o termo conexão VPN seja um termo geral, nesta documentação, uma conexão VPN se refere à conexão entre sua VPC e sua própria ",
+  "erro": null
+ },
+ {
+  "key": "traffic mirroring",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/mirroring/what-is-traffic-mirroring.html",
+  "texto": "Traffic Mirroring is an Amazon VPC feature that you can use to copy network traffic from an elastic network interface of type interface. You can then send the traffic to out-of-band security and monitoring appliances for: The security and monitoring appliances can be deployed as individual instances, or as a fleet of instances behind either a Network Load Balancer or a Gateway Load Balancer with a UDP listener. Traffic Mirroring supports filters and packet truncation, so that you can extract only the traffic of interest, using the monitoring tools of your choice. Session — Establishes a relationship between a source, a filter, and a target.",
+  "erro": null
+ },
+ {
+  "key": "lambda edge",
+  "url": "https://docs.aws.amazon.com/pt_br/AmazonCloudFront/latest/DeveloperGuide/lambda-at-the-edge.html",
+  "texto": "O Lambda@Edge é uma extensão do AWS Lambda. O Lambda@Edge é um serviço de computação que permite executar funções que personalizam o conteúdo fornecido pelo Amazon CloudFront. É possível criar funções do Node.js ou Python no console do Lambda em uma Região da AWS, Leste dos EUA (Norte da Virgínia). Depois de criar a função, é possível adicionar acionadores usando o console do Lambda ou do CloudFront para que as funções sejam executadas nos locais da AWS mais próximos do visualizador, sem provisionar ou gerenciar servidores. Se desejar, você poderá usar as operações de API do Lambda e do CloudFront para configurar as funções e os acionadores de forma programática. O Lambda@Edge é automaticame",
+  "erro": null
+ },
+ {
+  "key": "auto scaling group",
+  "url": "https://docs.aws.amazon.com/pt_br/autoscaling/ec2/userguide/auto-scaling-groups.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. Se você não tem experiência com grupos do Auto Scaling, siga as etapas do tutorial Criar seu primeiro grupo do Auto Scaling para começar e ver como um grupo do Auto Scaling responde quando uma instância do grupo é encerrada. Um grupo do Auto Scaling contém um conjunto de instâncias do EC2 que são tratadas como um agrupamento lógico para fins de gerenciamento e escalabilidade automática. Um grupo do Auto Scaling também permite que você use recursos do Amazon EC2 Auto Scaling como substituições de verificação de integridade e polític",
+  "erro": null
+ },
+ {
+  "key": "ec2 auto scaling",
+  "url": "https://docs.aws.amazon.com/pt_br/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. O Amazon EC2 Auto Scaling ajuda a garantir que você tenha o número correto de instâncias do Amazon EC2 disponíveis para processar a carga da sua aplicação. Você cria coleções de instâncias do EC2, chamadas de grupos de Auto Scaling. Você pode especificar o número mínimo de instâncias em cada grupo do Auto Scaling, e o Amazon EC2 Auto Scaling garante que seu grupo nunca seja menor que esse tamanho. Você pode especificar o número máximo de instâncias em cada grupo do Auto Scaling, e o Amazon EC2 Auto Scaling garante que seu grupo nun",
+  "erro": null
+ },
+ {
+  "key": "s3 standard",
+  "url": "https://docs.aws.amazon.com/pt_br/AmazonS3/latest/userguide/storage-class-intro.html",
+  "texto": "Cada objeto no Amazon S3 tem uma classe de armazenamento associada a ele. Por padrão, objetos no S3 são armazenados na classe de armazenamento S3 Standard. No entanto, o Amazon S3 oferece uma variedade de outras classes de armazenamento para os objetos que você armazena. Escolha uma classe de acordo com seu cenário de caso de uso e dos requisitos de acesso de performance. A escolha de uma classe de armazenamento desenvolvida para seu caso de uso permite otimizar os custos de armazenamento, o desempenho e a disponibilidade dos objetos. Todas essas classes de armazenamento oferecem alta durabilidade. As seções a seguir fornecem detalhes das várias classes de armazenamento e como definir a clas",
+  "erro": null
+ },
+ {
+  "key": "s3 standard ia",
+  "url": "https://docs.aws.amazon.com/pt_br/AmazonS3/latest/userguide/storage-class-intro.html",
+  "texto": "Cada objeto no Amazon S3 tem uma classe de armazenamento associada a ele. Por padrão, objetos no S3 são armazenados na classe de armazenamento S3 Standard. No entanto, o Amazon S3 oferece uma variedade de outras classes de armazenamento para os objetos que você armazena. Escolha uma classe de acordo com seu cenário de caso de uso e dos requisitos de acesso de performance. A escolha de uma classe de armazenamento desenvolvida para seu caso de uso permite otimizar os custos de armazenamento, o desempenho e a disponibilidade dos objetos. Todas essas classes de armazenamento oferecem alta durabilidade. As seções a seguir fornecem detalhes das várias classes de armazenamento e como definir a clas",
+  "erro": null
+ },
+ {
+  "key": "s3 one zone ia",
+  "url": "https://docs.aws.amazon.com/pt_br/AmazonS3/latest/userguide/storage-class-intro.html",
+  "texto": "Cada objeto no Amazon S3 tem uma classe de armazenamento associada a ele. Por padrão, objetos no S3 são armazenados na classe de armazenamento S3 Standard. No entanto, o Amazon S3 oferece uma variedade de outras classes de armazenamento para os objetos que você armazena. Escolha uma classe de acordo com seu cenário de caso de uso e dos requisitos de acesso de performance. A escolha de uma classe de armazenamento desenvolvida para seu caso de uso permite otimizar os custos de armazenamento, o desempenho e a disponibilidade dos objetos. Todas essas classes de armazenamento oferecem alta durabilidade. As seções a seguir fornecem detalhes das várias classes de armazenamento e como definir a clas",
+  "erro": null
+ },
+ {
+  "key": "s3 intelligent tiering",
+  "url": "https://docs.aws.amazon.com/pt_br/AmazonS3/latest/userguide/storage-class-intro.html",
+  "texto": "Cada objeto no Amazon S3 tem uma classe de armazenamento associada a ele. Por padrão, objetos no S3 são armazenados na classe de armazenamento S3 Standard. No entanto, o Amazon S3 oferece uma variedade de outras classes de armazenamento para os objetos que você armazena. Escolha uma classe de acordo com seu cenário de caso de uso e dos requisitos de acesso de performance. A escolha de uma classe de armazenamento desenvolvida para seu caso de uso permite otimizar os custos de armazenamento, o desempenho e a disponibilidade dos objetos. Todas essas classes de armazenamento oferecem alta durabilidade. As seções a seguir fornecem detalhes das várias classes de armazenamento e como definir a clas",
+  "erro": null
+ },
+ {
+  "key": "s3 glacier deep archive",
+  "url": "https://docs.aws.amazon.com/pt_br/AmazonS3/latest/userguide/storage-class-intro.html",
+  "texto": "Cada objeto no Amazon S3 tem uma classe de armazenamento associada a ele. Por padrão, objetos no S3 são armazenados na classe de armazenamento S3 Standard. No entanto, o Amazon S3 oferece uma variedade de outras classes de armazenamento para os objetos que você armazena. Escolha uma classe de acordo com seu cenário de caso de uso e dos requisitos de acesso de performance. A escolha de uma classe de armazenamento desenvolvida para seu caso de uso permite otimizar os custos de armazenamento, o desempenho e a disponibilidade dos objetos. Todas essas classes de armazenamento oferecem alta durabilidade. As seções a seguir fornecem detalhes das várias classes de armazenamento e como definir a clas",
+  "erro": null
+ },
+ {
+  "key": "s3 glacier instant retrieval",
+  "url": "https://docs.aws.amazon.com/pt_br/AmazonS3/latest/userguide/storage-class-intro.html",
+  "texto": "Cada objeto no Amazon S3 tem uma classe de armazenamento associada a ele. Por padrão, objetos no S3 são armazenados na classe de armazenamento S3 Standard. No entanto, o Amazon S3 oferece uma variedade de outras classes de armazenamento para os objetos que você armazena. Escolha uma classe de acordo com seu cenário de caso de uso e dos requisitos de acesso de performance. A escolha de uma classe de armazenamento desenvolvida para seu caso de uso permite otimizar os custos de armazenamento, o desempenho e a disponibilidade dos objetos. Todas essas classes de armazenamento oferecem alta durabilidade. As seções a seguir fornecem detalhes das várias classes de armazenamento e como definir a clas",
+  "erro": null
+ },
+ {
+  "key": "s3 express one zone",
+  "url": "https://docs.aws.amazon.com/pt_br/AmazonS3/latest/userguide/s3-express-one-zone.html",
+  "texto": null,
+  "erro": null
+ },
+ {
+  "key": "s3 inventory",
+  "url": "https://docs.aws.amazon.com/pt_br/AmazonS3/latest/userguide/storage-inventory.html",
+  "texto": "É possível usar o Inventário Amazon S3 para ajudar a gerenciar o armazenamento. Por exemplo, você pode usá-lo para auditar e gerar relatórios sobre o status da replicação e criptografia de seus objetos para os negócios, a conformidade e as necessidades normativas. Também é possível simplificar e acelerar os fluxos de trabalho de negócios e os trabalhos de big data usando o Inventário Amazon S3, que fornece uma alternativa programada para as operações síncronas da API List do Amazon S3. O Inventário Amazon S3 não usa as operações de API List para auditar os objetos e não afeta a taxa de solicitação do bucket. O Inventário Amazon S3 fornece arquivos de saída nos formatos CSV (valores separados",
+  "erro": null
+ },
+ {
+  "key": "s3 transfer acceleration",
+  "url": "https://docs.aws.amazon.com/pt_br/AmazonS3/latest/userguide/transfer-acceleration.html",
+  "texto": "A Aceleração de Transferências do Amazon S3 é um recurso em nível de bucket que possibilita transferências de arquivos rápidas, fáceis e seguras em longas distâncias entre o cliente e um bucket de uso geral do S3. A Aceleração de Transferências foi projetada para otimizar as velocidades de transferência ao redor do mundo para buckets de uso geral do S3. O Transfer Acceleration tira proveito dos pontos de presença distribuídos globalmente no Amazon CloudFront. Conforme os dados chegam em um ponto de presença, eles são roteados para o Amazon S3 por um caminho de rede otimizado. Quando você usa o Transfer Acceleration, podem ser aplicadas cobranças adicionais de transferência de dados. Para obt",
+  "erro": null
+ },
+ {
+  "key": "s3 multipart upload",
+  "url": "https://docs.aws.amazon.com/pt_br/AmazonS3/latest/userguide/mpuoverview.html",
+  "texto": "O upload fracionado permite que você faça upload de um único objeto no Amazon S3 como um conjunto de partes. Cada parte é uma parte contígua de dados do objeto. O upload dessas partes de objetos pode ser feito de maneira independente e em qualquer ordem. Para uploads, o cliente da AWS atualizado calcula automaticamente uma soma de verificação do objeto e a envia para o Amazon S3 com o tamanho do objeto como parte da solicitação. Se a transmissão de alguma parte falhar, você poderá retransmitir essa parte sem afetar outras partes. Depois que todas as partes do objeto forem carregadas, o Amazon S3 montará as partes e criará o objeto. É uma prática recomendada usar o upload fracionado para obje",
+  "erro": null
+ },
+ {
+  "key": "s3 on outposts",
+  "url": "https://docs.aws.amazon.com/pt_br/AmazonS3/latest/userguide/S3onOutposts.html",
+  "texto": "O AWS Outposts é um serviço totalmente gerenciado que oferece a mesma infraestrutura da AWS, APIs, ferramentas e serviços da AWS, para praticamente qualquer datacenter, espaço de colocalização ou instalação on-premises para uma experiência híbrida verdadeiramente consistente. O AWS Outposts é ideal para workloads que exigem acesso de baixa latência a sistemas on-premises, processamento de dados local, residência de dados e migração de aplicações com interdependências do sistema local. Para obter mais informações, consulte O que é o AWS Outposts? no Guia do usuário do AWS Outposts. Com o Amazon S3 no Outposts, você pode criar buckets do S3 em seu Outposts, além de armazenar e recuperar objeto",
+  "erro": null
+ },
+ {
+  "key": "ebs snapshots archive",
+  "url": "https://docs.aws.amazon.com/pt_br/ebs/latest/userguide/snapshot-archive.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. O Arquivo de Snapshots do Amazon EBS é um novo nível de armazenamento que pode ser usado para armazenamento de baixo custo e longo prazo dos snapshots raramente acessados que não precisam de recuperação frequente ou rápida. Por padrão, quando você cria um snapshot, ele é armazenado na camada padrão para snapshots do Amazon EBS (camada padrão). Os snapshots armazenados na camada padrão são incrementais. Isso significa que apenas os blocos de volumes que foram alterados após o snapshot mais recente são salvos.",
+  "erro": null
+ },
+ {
+  "key": "efs archive",
+  "url": "https://docs.aws.amazon.com/pt_br/efs/latest/ug/storage-classes.html",
+  "texto": null,
+  "erro": null
+ },
+ {
+  "key": "snowball",
+  "url": "https://docs.aws.amazon.com/pt_br/snowball/latest/developer-guide/whatisedge.html",
+  "texto": "AWS Snowball Edge não está mais disponível para novos clientes. Novos clientes devem explorar AWS DataSynctransferências on-line, o Terminal de Transferência de AWS Dados para transferências físicas seguras ou soluções de AWS parceiros. Para computação de ponta, explore AWS Outposts. As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. O Snowball Edge é um dispositivo com armazenamento integrado e capacidade de computação para recursos selecionados.AWS O Snowball Edge pode processar dados localmente, executar workloads de computação de borda e transferir dados de ou para o Nuvem AWS.",
+  "erro": null
+ },
+ {
+  "key": "snowcone",
+  "url": "https://docs.aws.amazon.com/pt_br/snowball/latest/snowcone-guide/snowcone-what-is.html",
+  "texto": null,
+  "erro": null
+ },
+ {
+  "key": "snow edge computing",
+  "url": "https://docs.aws.amazon.com/pt_br/snowball/latest/developer-guide/compute-index.html",
+  "texto": null,
+  "erro": null
+ },
+ {
+  "key": "instancias spot do ec2",
+  "url": "https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/using-spot-instances.html",
+  "texto": "Uma instância spot é uma instância que usa capacidade adicional do EC2 que está disponível por um valor mais baixo que o preço sob demanda. Como as Instâncias spot permitem que você solicite instâncias do EC2 não usadas com descontos consideráveis, é possível reduzir seus custos do Amazon EC2 significativamente. O preço por hora de uma instância spot é chamado de preço spot. O preço spot de cada tipo de instância em cada zona de disponibilidade é definido pelo Amazon EC2 e ajustado gradualmente com base na oferta e a demanda de longo prazo das Instâncias spot. Sua instância spot executará sempre que houver capacidade disponível. As Instâncias spot são uma opção econômica se houver flexibilid",
+  "erro": null
+ },
+ {
+  "key": "local zones",
+  "url": "https://docs.aws.amazon.com/pt_br/local-zones/latest/ug/what-is-aws-local-zones.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. AWS O Local Zones coloca computação, armazenamento, banco de dados e outros AWS recursos selecionados perto de grandes centros populacionais e industriais. Você pode usar as Zonas Locais para fornecer aos usuários acesso de baixa latência aos seus aplicativos. Execute aplicativos de baixa latência na borda — Crie e implante aplicativos perto dos usuários finais para permitir jogos em tempo real, transmissão ao vivo, realidade aumentada e virtual (AR/VR), estações de trabalho virtuais e muito mais.",
+  "erro": null
+ },
+ {
+  "key": "wavelength",
+  "url": "https://docs.aws.amazon.com/pt_br/wavelength/latest/developerguide/what-is-wavelength.html",
+  "texto": "AWS Wavelength enables developers to build applications that require edge computing infrastructure to deliver low latency to mobile devices and end users or increase the resiliency of their existing edge applications. Wavelength deploys standard AWS compute and storage services to the edge of communications service providers' (CSP) networks. You can extend a virtual private cloud (VPC) to one or more Wavelength Zones. You can then use AWS resources such as Amazon Elastic Compute Cloud (Amazon EC2) instances to run the applications that require low latency or edge resiliency within the Wavelength Zone, while seamlessly communicating back to your existing AWS services deployed in the parent AW",
+  "erro": null
+ },
+ {
+  "key": "outposts rack",
+  "url": "https://docs.aws.amazon.com/pt_br/outposts/latest/userguide/what-is-outposts.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. AWS Outpostsé um serviço totalmente gerenciado que estende a AWS infraestrutura, os serviços, as APIs e as ferramentas até as instalações do cliente. Ao fornecer acesso local à infraestrutura AWS gerenciada, AWS Outposts permite que os clientes criem e executem aplicativos no local usando as mesmas interfaces de programação AWSdas regiões, enquanto usam recursos locais de computação e armazenamento para reduzir a latência e as necessidades locais de processamento de dados. Um posto avançado é um pool de capacidade de AWS computação",
+  "erro": null
+ },
+ {
+  "key": "outposts servers",
+  "url": "https://docs.aws.amazon.com/pt_br/outposts/latest/server-userguide/what-is-outposts.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. AWS Outpostsé um serviço totalmente gerenciado que estende a AWS infraestrutura, os serviços, as APIs e as ferramentas até as instalações do cliente. Ao fornecer acesso local à infraestrutura AWS gerenciada, AWS Outposts permite que os clientes criem e executem aplicativos no local usando as mesmas interfaces de programação AWSdas regiões, enquanto usam recursos locais de computação e armazenamento para reduzir a latência e as necessidades locais de processamento de dados. Um posto avançado é um pool de capacidade de AWS computação",
+  "erro": null
+ },
+ {
+  "key": "parallelcluster",
+  "url": "https://docs.aws.amazon.com/pt_br/parallelcluster/latest/ug/what-is-aws-parallelcluster.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. AWS ParallelCluster é uma ferramenta de gerenciamento de cluster de código aberto AWS compatível que ajuda você a implantar e gerenciar clusters de High-Performance computação (HPC) no Nuvem AWS. Ele configura automaticamente os recursos computacionais, o agendador e o sistema de arquivos compartilhados necessários. Você pode usar AWS ParallelCluster com AWS Batch e Slurm agendadores. Com AWS ParallelCluster, você pode criar e implantar rapidamente ambientes computacionais de HPC de prova de conceito e produção. Além disso, você po",
+  "erro": null
+ },
+ {
+  "key": "lambda snapstart",
+  "url": "https://docs.aws.amazon.com/pt_br/lambda/latest/dg/snapstart.html",
+  "texto": "O Lambda SnapStart pode ter uma performance de startup de até menos de um segundo, geralmente sem alterações no código da função. O SnapStart facilita a criação de aplicações altamente responsivas e escaláveis sem o provisionamento de recursos nem a implementação de otimizações complexas de performance. O maior contribuinte para a latência de inicialização (geralmente chamado de tempo de inicialização a frio) é o tempo que o Lambda demora para inicializar a função, que inclui carregar o código da função, iniciar o runtime e inicializar o código da função. Com o SnapStart, o Lambda inicializará a função quando você publicar uma versão da função. O Lambda usa um snapshot microVM do Firecracker",
+  "erro": null
+ },
+ {
+  "key": "iam access analyzer",
+  "url": "https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/what-is-access-analyzer.html",
+  "texto": "AWS Identity and Access Management Access Analyzer fornece as seguintes capacidades: Os analisadores de acessos externos do IAM Access Analyzer ajudam a identificar os recursos da organização e as contas que são compartilhadas com uma entidade externa. Os analisadores de acesso interno do IAM Access Analyzer ajudam a identificar acesso interno a recursos selecionados da sua organização e das suas contas.",
+  "erro": null
+ },
+ {
+  "key": "security token service",
+  "url": "https://docs.aws.amazon.com/pt_br/STS/latest/APIReference/welcome.html",
+  "texto": null,
+  "erro": "HTTPError"
+ },
+ {
+  "key": "dynamodb accelerator",
+  "url": "https://docs.aws.amazon.com/pt_br/amazondynamodb/latest/developerguide/DAX.html",
+  "texto": "O Amazon DynamoDB foi concebido para escala e performance. Na maioria dos casos, os tempos de resposta do DynamoDB podem ser medidos em milissegundos de um dígito. No entanto, existem certos casos de uso que exigem tempos de resposta em microssegundos. Para esses casos de uso, o DynamoDB Accelerator (DAX) oferece tempos de resposta rápidos para acessar dados finais consistentes. O DAX é um serviço de armazenamento em cache compatível com o DynamoDB no qual você pode se beneficiar da rápida performance em memória para aplicações exigentes. O DAX lida com três cenários principais: Como um cache na memória, o DAX reduz os tempos de resposta de workloads de leitura final consistente por uma orde",
+  "erro": null
+ },
+ {
+  "key": "glue data catalog",
+  "url": "https://docs.aws.amazon.com/pt_br/glue/latest/dg/catalog-and-crawler.html",
+  "texto": "O AWS Glue Data Catalog é um repositório centralizado que armazena metadados sobre os conjuntos de dados da sua organização. Ele funciona como um índice para métricas de localização, esquema e runtime das suas fontes de dados. Os metadados são armazenados em tabelas de metadados, onde cada tabela representa um único armazenamento de dados. O Catálogo de Dados pode ser preenchido com a ajuda de um crawler, que verifica automaticamente suas fontes de dados e extrai metadados. Um crawler pode se conectar a fontes de dados internas (baseadas na AWS) e externas à AWS. Para obter mais informações sobre as fontes de dados compatíveis, consulte Fontes de dados compatíveis para crawling.",
+  "erro": null
+ },
+ {
+  "key": "glue studio",
+  "url": "https://docs.aws.amazon.com/pt_br/glue/latest/ug/what-is-glue-studio.html",
+  "texto": null,
+  "erro": null
+ },
+ {
+  "key": "glue for ray",
+  "url": "https://docs.aws.amazon.com/pt_br/glue/latest/dg/edit-jobs-ray.html",
+  "texto": null,
+  "erro": null
+ },
+ {
+  "key": "glue data quality",
+  "url": "https://docs.aws.amazon.com/pt_br/glue/latest/dg/glue-data-quality.html",
+  "texto": "O AWS Glue Data Quality permite que você meça e monitore a qualidade dos dados para que você possa tomar decisões de negócios acertadas. Baseado na estrutura de código aberto do DeeQu, o AWS Glue Data Quality fornece uma experiência de tecnologia sem servidor gerenciada para ajudar você a avaliar e monitorar a qualidade dos dados. O AWS Glue Data Quality trabalha com Data Quality Definition Language (DQDL), que é uma linguagem específica de domínio que você usa para definir regras para o de qualidade de dados. Para saber mais sobre a DQDL e os tipos de regras compatíveis, consulte Referência de Data Quality Definition Language (DQDL). Para detalhes adicionais sobre o produto e os preços, con",
+  "erro": null
+ },
+ {
+  "key": "shield advanced",
+  "url": "https://docs.aws.amazon.com/pt_br/waf/latest/developerguide/ddos-advanced-summary.html",
+  "texto": "Agora você pode usar a experiência atualizada para acessar a AWS WAF funcionalidade em qualquer lugar do console. Para obter mais detalhes, consulte Trabalhando com o console. As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. AWS Shield Advanced é um serviço gerenciado que ajuda você a proteger seu aplicativo contra ameaças externas, como ataques DDo S, bots volumétricos e tentativas de exploração de vulnerabilidades. Para níveis mais altos de proteção contra ataques, você pode se inscrever no AWS Shield Advanced.",
+  "erro": null
+ },
+ {
+  "key": "emr serverless",
+  "url": "https://docs.aws.amazon.com/pt_br/emr/latest/EMR-Serverless-UserGuide/emr-serverless.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. O Amazon EMR Sem Servidor é uma opção de implantação do Amazon EMR que fornece um ambiente de runtime com tecnologia sem servidor. Isso simplifica a operação de aplicações de analytics que usam as estruturas de código aberto mais recentes, como o Apache Spark e o Apache Hive. Com o EMR Sem Servidor, você não precisa configurar, otimizar, proteger ou operar clusters para executar aplicações com essas estruturas. O EMR Sem Servidor ajuda você a evitar o provisionamento excessivo ou insuficiente de recursos em trabalhos de processamen",
+  "erro": null
+ },
+ {
+  "key": "kinesis data streams",
+  "url": "https://docs.aws.amazon.com/pt_br/streams/latest/dev/introduction.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. É possível usar o Amazon Kinesis Data Streams para coletar e processar grandes fluxos de registros de dados em tempo real. É possível criar aplicações de processamento de dados, conhecidas como aplicações do Kinesis Data Streams. Uma aplicação típica do Kinesis Data Streams lê dados de um fluxo de dados como registros de dados. Esses aplicativos podem usar a Kinesis Client Library e podem ser executados em instâncias da Amazon EC2. É possível enviar os registros processados para painéis, usá-los para gerar alertas, alterar dinamica",
+  "erro": null
+ },
+ {
+  "key": "cloudwatch internet monitor",
+  "url": "https://docs.aws.amazon.com/pt_br/AmazonCloudWatch/latest/monitoring/CloudWatch-InternetMonitor.html",
+  "texto": "O Monitor de Internet fornece visibilidade de como os problemas de internet afetam a performance e a disponibilidade entre as aplicações hospedadas na AWS e seus usuários finais. Isso pode reduzir o tempo necessário para diagnosticar problemas na Internet de dias para minutos. O Monitor de Internet usa os dados de conectividade que a AWS captura de sua rede global para calcular uma linha de base de performance e de disponibilidade para tráfego voltado para a Internet. Esses são os mesmos dados que a AWS usa para monitorar o tempo de atividade e a disponibilidade de Internet. Com essas medições como base, o Monitor de Internet chama a sua atenção quando há problemas significativos para seus u",
+  "erro": null
+ },
+ {
+  "key": "fsx for lustre",
+  "url": "https://docs.aws.amazon.com/pt_br/fsx/latest/LustreGuide/what-is.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. O FSx para Lustre torna fácil e econômico iniciar e executar o popular sistema de arquivos de alto desempenho do Lustre. É possível usar o Lustre para workloads em que a velocidade é importante, como machine learning, computação de alta desempenho (HPC), processamento de vídeo e modelagem financeira. O sistema de arquivos Lustre foi desenvolvido para aplicações que exigem armazenamento rápido, em que é necessário que o armazenamento acompanhe a computação. O Lustre foi criado para resolver o problema do processamento rápido e barat",
+  "erro": null
+ },
+ {
+  "key": "fsx for openzfs",
+  "url": "https://docs.aws.amazon.com/pt_br/fsx/latest/OpenZFSGuide/what-is-fsx.html",
+  "texto": "Amazon FSx for OpenZFS is a fully managed file storage service that makes it easy to move data to AWS from on-premises ZFS or other Linux-based file servers. You can do this without changing your application code or how you manage data. It offers highly reliable, scalable, performance, and feature-rich file storage built on the open-source OpenZFS file system. It combines these capabilities with the agility, scalability, and simplicity of a fully managed AWS service. Amazon FSx for OpenZFS file systems are broadly accessible from Linux, Windows, and macOS compute instances and containers using the industry-standard NFS protocol (v3, v4.0, v4.1, v4.2). Powered by the latest AWS compute, disk,",
+  "erro": null
+ },
+ {
+  "key": "fsx for windows file server",
+  "url": "https://docs.aws.amazon.com/pt_br/fsx/latest/WindowsGuide/what-is.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. O Amazon FSx para Windows File Server fornece servidores de arquivos Microsoft Windows totalmente gerenciados, baseados em um sistema de arquivos Windows totalmente nativo. O FSx para Windows File Server possui os atributos, a performance e a compatibilidade necessários para mover sem alterações (lift-and-shift) facilmente as aplicações corporativas para a Nuvem AWS. O Amazon FSx é compatível com um amplo conjunto de workloads corporativas do Windows com armazenamento de arquivos totalmente gerenciado criado no Microsoft Windows Se",
+  "erro": null
+ },
+ {
+  "key": "fsx for netapp ontap",
+  "url": "https://docs.aws.amazon.com/pt_br/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. O Amazon FSx for NetApp ONTAP é um serviço totalmente gerenciado que fornece armazenamento de arquivos altamente confiável, escalável, de alto desempenho e rico em recursos, baseado no popular sistema de arquivos ONTAP. NetApp O FSx for ONTAP combina os recursos, o desempenho, os recursos e as operações de API familiares dos sistemas de NetApp arquivos com a agilidade, escalabilidade e simplicidade de um sistema totalmente gerenciado. AWS service (Serviço da AWS) O FSx for ONTAP fornece armazenamento de arquivos compartilhado rico ",
+  "erro": null
+ },
+ {
+  "key": "management console",
+  "url": "https://docs.aws.amazon.com/pt_br/awsconsolehelpdocs/latest/gsg/getting-started.html",
+  "texto": null,
+  "erro": null
+ },
+ {
+  "key": "appstream 2 0",
+  "url": "https://docs.aws.amazon.com/pt_br/appstream2/latest/developerguide/what-is-appstream.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. O Amazon WorkSpaces Applications é um serviço de streaming de aplicativos totalmente gerenciado que fornece aos usuários acesso instantâneo aos seus aplicativos de desktop de qualquer lugar. WorkSpaces Os aplicativos gerenciam AWS os recursos necessários para hospedar e executar seus aplicativos, escalam automaticamente e fornecem acesso aos usuários sob demanda. WorkSpaces Os aplicativos fornecem aos usuários acesso aos aplicativos de que precisam no dispositivo de sua escolha, com uma experiência de usuário responsiva e fluida qu",
+  "erro": null
+ },
+ {
+  "key": "cloud control api",
+  "url": "https://docs.aws.amazon.com/pt_br/cloudcontrolapi/latest/userguide/what-is-cloudcontrolapi.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. Use AWS API Cloud Control para criar, ler, atualizar, excluir e listar (CRUD-L) seus recursos de nuvem que pertencem a serviços de terceiros AWS e a eles. Com o conjunto padronizado de interfaces de programação de aplicativos (APIs) da Cloud Control API, você pode realizar operações CRUD-L em qualquer recurso compatível em seu. Conta da AWS Usando a API de Controle da Nuvem, você não precisará gerar códigos ou scripts específicos para cada serviço individual responsável por esses recursos. Se você estiver usando a API de Controle d",
+  "erro": null
+ },
+ {
+  "key": "elastic load balancing",
+  "url": "https://docs.aws.amazon.com/pt_br/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. O Elastic Load Balancing distribui automaticamente seu tráfego de entrada em vários destinos, como EC2 instâncias, contêineres e endereços IP, em uma ou mais zonas de disponibilidade. Ele monitora a integridade dos destinos registrados e roteia o tráfego apenas para os destinos íntegros. O Elastic Load Balancing escalona automaticamente sua capacidade de balanceador de carga em resposta a mudanças ao tráfego de entrada. Um load balancer distribui cargas de trabalho para vários recursos computacionais, como servidores virtuais. Usar",
+  "erro": null
+ },
+ {
+  "key": "privatelink",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/privatelink/what-is-privatelink.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. AWS PrivateLink é uma tecnologia altamente disponível e escalável que você pode usar para conectar de forma privada sua VPC a serviços e recursos como se estivessem em sua VPC. Você não precisa usar um gateway de internet, dispositivo NAT, endereço IP público, conexão ou Direct Connect AWS Site-to-Site VPN conexão para permitir a comunicação com o serviço ou recurso a partir de suas sub-redes privadas. Assim, você controla os endpoints de API, os sites, os serviços e os recursos específicos que sua VPC pode alcançar. Você pode cria",
+  "erro": null
+ },
+ {
+  "key": "transit gateway",
+  "url": "https://docs.aws.amazon.com/pt_br/vpc/latest/tgw/what-is-transit-gateway.html",
+  "texto": "As traduções são geradas por tradução automática. Em caso de conflito entre o conteúdo da tradução e da versão original em inglês, a versão em inglês prevalecerá. AWS O Transit Gateway é um hub de trânsito de rede usado para interconectar nuvens privadas virtuais (VPCs) e redes locais. À medida que sua infraestrutura de nuvem se expande globalmente, o peering entre regiões conecta os gateways de trânsito usando a infraestrutura global. AWS Todo o tráfego de rede entre os datacenters da AWS é criptografado automaticamente na camada física. Um anexo de função de rede. Para obter mais informações, consulte Anexos de funções de rede.",
+  "erro": null
+ }
+]

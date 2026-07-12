@@ -3,41 +3,50 @@ Obs.: caso o app esteja no modo "sleeping" (dormindo) ao entrar, basta clicar no
   <img src="https://github.com/user-attachments/assets/00ad39c9-d15c-49c9-89fa-1a598d89e0ee" alt="mascote" width="150" height="212">
 </p>
 
-# ☁️ AWS Game 🎮 - S3 Climbing Adventure
+# ☁️ AWS Game - S3 Climbing Adventure 🎮
 
-**AWS Game - S3 Climbing Adventure** é um jogo de plataforma 2D desenvolvido em Python com Streamlit por Ary Ribeiro, onde o jogador controla o mascote S3, que deve escalar plataformas representando diferentes itens AWS. O objetivo é alcançar o topo, passando por + de 370 produtos, serviços e recursos AWS, disponíveis até o momento.
+Um jogo de plataforma interativo onde você escala através de **376 serviços AWS**! Teste seus conhecimentos sobre os serviços da Amazon Web Services enquanto se diverte em uma aventura de escalada.
+
+## 🎯 Sobre o Jogo
+
+**AWS Game - S3 Climbing Adventure** é um jogo de plataforma 2D desenvolvido em Python com Streamlit por Ary Ribeiro, onde o jogador controla o mascote S3, que deve escalar plataformas representando diferentes serviços AWS. O objetivo é alcançar o topo, passando por todos os serviços disponíveis até o momento.
+
+O número de plataformas é derivado do `servicos.json` em tempo de execução — não há contagem fixa no código.
 
 ### 🌟 Características
 
-- **Plataformas Únicas**: Cada plataforma representa um produto, serviço ou recurso AWS
-- **Mascote Personalizável**: Use sua própria imagem como personagem principal
-- **Sistema de Pontuação**: Ganhe pontos explorando novos serviços AWS
-- **Efeitos Sonoros**: Áudios imersivos para pulos, vitória e game over
-- **Controles Intuitivos**: Suporte para teclado e touch (mobile)
-- **Inimigos e Power-ups**: Elementos de gameplay que tornam a experiência mais desafiadora
-- **Sistema de Vidas**: 5 vidas para completar a jornada
-- **Indicador de Progresso**: Acompanhe seu avanço através dos serviços AWS
+- **Uma plataforma por serviço AWS**, colorida pela categoria do serviço
+- **Física independente da taxa de quadros**: o jogo simula 60 ticks/s em qualquer monitor (60, 120 ou 165Hz)
+- **Mascote personalizável**: use sua própria imagem como personagem principal
+- **Sistema de pontuação**: ganhe pontos explorando novos serviços AWS
+- **Efeitos sonoros**: áudios para pulo, vitória e game over, além de música de fundo
+- **Controles**: teclado e touch
+- **Inimigos, power-ups e moedas**
+- **Sistema de vidas**: 5 vidas para completar a jornada
+- **Indicador de progresso**: acompanhe seu avanço através dos serviços AWS
 
 ## 🚀 Como Jogar
 
+Clique em **▶ Jogar** para começar — o clique também dá foco ao jogo (ele roda dentro de um iframe) e libera o áudio no navegador.
+
 ### Controles do Teclado
-- **Setas Esquerda/Direita**: Mover o personagem
-- **Seta para Cima ou Espaço**: Pular
-- **Movimento Horizontal**: Atravessar as bordas da tela para aparecer do outro lado
+- **Setas Esquerda/Direita**: mover o personagem
+- **Seta para Cima ou Espaço**: pular
+- **Bordas da tela**: atravesse para aparecer do outro lado
 
 ### Controles Touch (Mobile)
-- **Deslizar para Cima**: Pular
-- **Deslizar Esquerda/Direita**: Mover o personagem
+- **Deslizar para cima**: pular
+- **Deslizar esquerda/direita**: mover o personagem
 
 ### Objetivos
 1. Escale através das plataformas dos serviços AWS
-2. Evite ou derrote os inimigos
+2. Evite ou derrote os inimigos (pule em cima deles)
 3. Colete power-ups e moedas para aumentar sua pontuação
-4. Alcance a plataforma 234 para vencer o jogo!
+4. Alcance a última plataforma para vencer o jogo
 
 ## 📋 Pré-requisitos
 
-- Python 3.7 ou superior
+- Python 3.9 ou superior
 - pip (gerenciador de pacotes do Python)
 
 ## 🛠️ Instalação
@@ -53,158 +62,117 @@ cd aws-game
 pip install -r requirements.txt
 ```
 
-3. **Prepare os arquivos necessários**
+3. **Estrutura esperada**
 
-   Certifique-se de ter os seguintes arquivos na estrutura correta:
-
-   ```
-   aws-game/
-   ├── app.py
-   ├── servicos.json
-   ├── requirements.txt
-   ├── README.md
-   └── static/
-       ├── mascote.png
-       ├── aplausos.mp3
-       ├── pulo.mp3
-       ├── gameover.mp3
-       └── sonora.mp3
-   ```
+```
+aws-game/
+├── app.py
+├── servicos.json
+├── requirements.txt
+├── README.md
+└── static/
+    ├── mascote.png
+    ├── aplausos.mp3
+    ├── pulo.mp3
+    ├── gameover.mp3
+    └── sonora.mp3
+```
 
 ## 📁 Estrutura de Arquivos
 
-### Arquivos Obrigatórios
-- **`app.py`**: Arquivo principal da aplicação Streamlit
-- **`servicos.json`**: Dados dos serviços AWS (deve conter array de nodes com name, description, category)
+### Obrigatórios
+- **`app.py`**: aplicação Streamlit (o jogo inteiro é gerado a partir daqui)
+- **`servicos.json`**: dados dos serviços AWS
 
-### Arquivos Opcionais (Static)
-- **`static/mascote.png`**: Imagem do mascote (personagem principal)
-- **`static/aplausos.mp3`**: Som de vitória
-- **`static/pulo.mp3`**: Som de pulo
-- **`static/gameover.mp3`**: Som de game over
-- **`static/sonora.mp3`**: Música de fundo
+### Opcionais (Static)
+- **`static/mascote.png`**: imagem do mascote
+- **`static/aplausos.mp3`**: som de vitória
+- **`static/pulo.mp3`**: som de pulo
+- **`static/gameover.mp3`**: som de game over
+- **`static/sonora.mp3`**: música de fundo
 
-> **Nota**: Os arquivos da pasta `static/` são opcionais. O jogo funcionará mesmo sem eles, usando fallbacks visuais e sem áudio.
+> **Nota**: os arquivos de `static/` são opcionais. O jogo funciona sem eles, com um sprite simples como fallback e sem áudio.
 
 ## ▶️ Executando o Jogo
 
-1. **Inicie a aplicação Streamlit**
 ```bash
 streamlit run app.py
 ```
 
-2. **Acesse o jogo**
-   - O Streamlit abrirá automaticamente seu navegador
-   - Ou acesse manualmente: `http://localhost:8501`
-
-3. **Comece a jogar!**
-   - Use as setas do teclado ou gestos touch para controlar o mascote
-   - Escale através dos serviços AWS e divirta-se!
+Acesse `http://localhost:8501`.
 
 ## 🎨 Personalização
 
-### Adicionando seu Próprio Mascote
-1. Substitua o arquivo `static/mascote.png` pela sua imagem
-2. Recomendado: imagem 40x50 pixels, formato PNG com fundo transparente
+### Mascote
+Substitua `static/mascote.png`. Recomendado: PNG com fundo transparente, proporção próxima de 40×50.
 
-### Personalizando Áudios
-1. Substitua os arquivos MP3 na pasta `static/` pelos seus próprios áudios
-2. Mantenha os mesmos nomes de arquivo
+### Áudios
+Substitua os MP3 em `static/`, mantendo os mesmos nomes.
 
-### Modificando Serviços AWS
-1. Edite o arquivo `servicos.json`
-2. Estrutura esperada:
+> Os assets são embutidos no HTML como base64 (~2,7 MB no total, dos quais `sonora.mp3` sozinho responde por ~2 MB). Trocar a música de fundo por um arquivo menor é a forma mais direta de reduzir o peso da página.
+
+### Serviços AWS
+Edite `servicos.json`. Schema real (atenção à caixa das chaves):
+
 ```json
 {
   "nodes": [
     {
-      "name": "Nome do Serviço",
-      "category": "Categoria",
-      "description": "Descrição do serviço",      
-      "isCentral": false
+      "name": "Amazon MQ",
+      "Category": "Integração De Aplicações",
+      "Description": "serviço de agente de mensagens gerenciado..."
     }
   ]
 }
 ```
 
+- `name` é obrigatório; entradas sem nome ou com nome repetido são descartadas.
+- `Category` alimenta a cor da plataforma e a legenda da sidebar. Categorias que não estiverem em `CATEGORY_COLORS` (em `app.py`) caem num cinza de fallback.
+- A legenda da sidebar é gerada a partir dos dados, então basta editar o JSON.
+
 ## 🎮 Mecânicas do Jogo
 
-### Sistema de Pontuação
-- **75 pontos**: Por alcançar uma nova plataforma/serviço
-- **100 pontos**: Por coletar moedas
-- **150 pontos**: Por quebrar plataformas especiais
-- **250 pontos**: Por derrotar inimigos
-- **300-1000 pontos**: Por power-ups especiais
+### Pontuação
+- **75 pontos**: alcançar uma nova plataforma/serviço
+- **100 pontos**: coletar uma moeda
+- **150 pontos**: pisar numa plataforma quebrável
+- **250 pontos**: derrotar um inimigo
+- **300 / 500 / 1000 pontos**: power-ups
 
 ### Tipos de Plataformas
-- **Normais**: Plataformas padrão coloridas por categoria
-- **Quebráveis**: Desaparecem após alguns segundos (a cada 25 níveis)
-- **Móveis**: Plataformas em movimento (a cada 35 níveis)
-- **Final**: Plataforma dourada especial (nível 234)
+- **Normais**: coloridas pela categoria do serviço
+- **Quebráveis** (marrom): somem 1,5s depois que você pisa — a cada 25 níveis
+- **Móveis** (azul): deslizam na horizontal e carregam o jogador junto — a cada 35 níveis
+- **Final** (dourada): a última plataforma, marcada com "FINAL!"
 
-### Power-ups Disponíveis
-- **💖 Vida Extra**: Adiciona uma vida
-- **⭐ Pontos Bônus**: 1000 pontos extras
-- **🍄 Power**: 300 pontos e efeitos especiais
+### Power-ups
+- **💖 Vida Extra**: +1 vida e 500 pontos
+- **⭐ Pontos Bônus**: 1000 pontos
+- **🍄 Cogumelo**: 300 pontos
 
 ## 🐛 Solução de Problemas
 
-### Jogo não carrega
-- Verifique se o arquivo `servicos.json` existe na raiz do projeto
-- Confirme que a estrutura JSON está correta
+### O jogo não responde ao teclado
+Clique dentro da área do jogo. Ele roda num iframe e precisa de foco — o botão **▶ Jogar** faz isso automaticamente.
 
 ### Sem áudio
-- Verifique se os arquivos MP3 estão na pasta `static/`
-- O jogo funcionará normalmente sem áudio
+O navegador só libera áudio após uma interação. Comece pelo botão **▶ Jogar**. Se ainda assim não houver som, confira se os MP3 estão em `static/`.
 
-### Mascote não aparece
-- Verifique se `static/mascote.png` existe
-- O jogo usará um sprite simples como fallback
+### O jogo não carrega
+Verifique se `servicos.json` existe na raiz e se o JSON é válido.
 
 ### Erro de porta em uso
 ```bash
 streamlit run app.py --server.port 8502
 ```
 
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Para contribuir:
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
 ## 🎯 Roadmap
 
-### Próximas Features
+- [ ] Curadoria do dataset: unificar com a lista oficial 2026 e remover serviços descontinuados
+- [ ] Exibir a descrição do serviço da plataforma atual na UI
 - [ ] Sistema de high scores local
-- [ ] Mais tipos de power-ups
-- [ ] Novos tipos de inimigos
-- [ ] Modo multiplayer local
-- [ ] Exportação de estatísticas
-- [ ] Aumento dos serviços AWS
+- [ ] Mais tipos de power-ups e inimigos
 
 ---
 
-Se encontrar problemas ou tiver sugestões:
-
-** Ary Ribeiro - aryribeiro@gmail.com
-
-
-
-
-
-
-
-
-
-
-
-
-
+Por **Ary Ribeiro** — [linkedin.com/in/aryribeiro](https://linkedin.com/in/aryribeiro)

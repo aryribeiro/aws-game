@@ -1,0 +1,224 @@
+SO NO GAME — candidatos a remocao (221)
+=======================================
+
+[revisar       ] Acesso Verificado pela AWS  |  Redes E Entrega De Conteúdo
+[revisar       ] Airflow (MWAA)  |  Integração De Aplicações
+[NAO-SERVICO   ] Apache MXNet on AWS  |  Machine Learning
+[revisar       ] App2Container  |  Contêineres
+[revisar       ] AppStream 2.0  |  Computação De Usuário Final
+[revisar       ] Aurora  |  Banco De Dados
+[revisar       ] Aurora Limitless Database  |  Banco De Dados
+[NAO-SERVICO   ] Aurora PostgreSQL zero-ETL Redshift  |  Banco De Dados
+[revisar       ] Auto Scaling Group  |  Computação
+[NAO-SERVICO   ] Automated data-prep QuickSight Q  |  Análise
+[revisar       ] Backup para o S3  |  Armazenamento
+[revisar       ] Basic Support  |  Gerenciamento E Governança
+[revisar       ] Budgets  |  Gerenciamento Financeiro Na Nuvem
+[revisar       ] Business Support  |  Gerenciamento E Governança
+[revisar       ] Cadeia de Suprimentos AWS  |  Aplicação Empresarial
+[revisar       ] Carrinho do Dash  |  Aplicação Empresarial
+[revisar       ] Chatbot  |  Gerenciamento E Governança
+[revisar       ] Clean Rooms ML  |  Análise
+[revisar       ] Client VPN  |  Redes E Entrega De Conteúdo
+[revisar       ] Cloud Control API  |  Ferramentas De Desenvolvedor
+[revisar       ] Cloud Development Kit  |  Ferramentas De Desenvolvedor
+[revisar       ] Cloud WAN  |  Redes E Entrega De Conteúdo
+[revisar       ] Amazon CloudWatch Internet Monitor  |  Gerenciamento E Governança
+[DESCONTINUADO?] CodeStar  |  Ferramentas De Desenvolvedor
+[revisar       ] Command Line Interface (CLI)  |  Ferramentas De Desenvolvedor
+[revisar       ] Console de Gerenciamento  |  Gerenciamento E Governança
+[revisar       ] Control Tower Data Residency Guardrails  |  Gerenciamento E Governança
+[revisar       ] Copilot  |  Contêineres
+[revisar       ] Amazon Corretto  |  Ferramentas De Desenvolvedor
+[revisar       ] Cost and Usage Report  |  Gerenciamento Financeiro Na Nuvem
+[revisar       ] Cost Explorer  |  Gerenciamento Financeiro Na Nuvem
+[DESCONTINUADO?] Data Pipeline  |  Análise
+[NAO-SERVICO   ] AWS Deep Learning AMIs  |  Machine Learning
+[revisar       ] AWS Deep Learning Containers  |  Machine Learning
+[DESCONTINUADO?] DeepComposer  |  Machine Learning
+[DESCONTINUADO?] AWS DeepLens  |  Machine Learning
+[DESCONTINUADO?] AWS DeepRacer  |  Machine Learning
+[revisar       ] Developer Support  |  Gerenciamento E Governança
+[revisar       ] DevOps Guru for RDS  |  Machine Learning
+[revisar       ] Dispositivos/software do Elemental  |  Serviços De Mídia
+[revisar       ] AWS Distro for OpenTelemetry  |  Gerenciamento E Governança
+[revisar       ] DynamoDB Accelerator (DAX)  |  Banco De Dados
+[NAO-SERVICO   ] DynamoDB zero-ETL OpenSearch  |  Banco De Dados
+[NAO-SERVICO   ] DynamoDB zero-ETL Redshift  |  Banco De Dados
+[revisar       ] EBS Snapshots Archive  |  Armazenamento
+[revisar       ] EC2 Auto Scaling  |  Computação
+[revisar       ] EFS Archive  |  Armazenamento
+[revisar       ] Egress-only internet gateway  |  Redes E Entrega De Conteúdo
+[revisar       ] Elastic Block Store  |  Armazenamento
+[revisar       ] Elastic File System  |  Armazenamento
+[DESCONTINUADO?] Amazon Elastic Inference  |  Machine Learning
+[revisar       ] Elastic IP  |  Redes E Entrega De Conteúdo
+[revisar       ] Elastic Load Balancing (ELB)  |  Redes E Entrega De Conteúdo
+[DESCONTINUADO?] Elastic Transcoder  |  Serviços De Mídia
+[revisar       ] ElasticCache sem servidor  |  Banco De Dados
+[revisar       ] Elemental MediaConnect  |  Serviços De Mídia
+[revisar       ] Elemental MediaConvert  |  Serviços De Mídia
+[revisar       ] Elemental MediaLive  |  Serviços De Mídia
+[revisar       ] Elemental MediaPackage  |  Serviços De Mídia
+[revisar       ] Elemental MediaStore  |  Serviços De Mídia
+[revisar       ] Elemental MediaTailor  |  Serviços De Mídia
+[revisar       ] Amazon EMR Serverless  |  Análise
+[revisar       ] Enterprise On-Ramp Support  |  Gerenciamento E Governança
+[revisar       ] Enterprise Support  |  Gerenciamento E Governança
+[revisar       ] ETL zero Aurora e Redshift  |  Banco De Dados
+[revisar       ] ETL zero do OpenSearch  |  Banco De Dados
+[revisar       ] Família AWS Snow  |  Computação
+[revisar       ] Família WorkSpaces  |  Computação De Usuário Final
+[revisar       ] Fargate  |  Contêineres
+[revisar       ] Fault Injection Simulator  |  Ferramentas De Desenvolvedor
+[revisar       ] Ferramentas de Desenvolvedor  |  Ferramentas De Desenvolvedor
+[revisar       ] Amazon FSx for Lustre  |  Armazenamento
+[revisar       ] Amazon FSx for OpenZFS  |  Armazenamento
+[revisar       ] Amazon FSx for Windows File Server  |  Armazenamento
+[revisar       ] AWS GameLift  |  Jogos
+[revisar       ] Glue Data Catalog  |  Análise
+[revisar       ] Glue Data Quality  |  Análise
+[revisar       ] Glue for Ray  |  Análise
+[revisar       ] Glue Studio  |  Análise
+[revisar       ] Governance ML com SageMaker  |  Machine Learning
+[NAO-SERVICO   ] GuardDuty ECS Runtime Monitoring  |  Segurança Identidade Conformidade
+[revisar       ] Guias atendentes do Connect  |  Aplicação Empresarial
+[revisar       ] Health  |  Gerenciamento E Governança
+[revisar       ] HealthScribe  |  Machine Learning
+[revisar       ] IA do   SageMaker  |  Machine Learning
+[revisar       ] IAM Access Analyzer  |  Segurança Identidade Conformidade
+[revisar       ] Identity and Access Management  |  Segurança Identidade Conformidade
+[revisar       ] Inferentia  |  Machine Learning
+[revisar       ] Instâncias C7g/Graviton3 do EC2  |  Computação
+[revisar       ] Instâncias C7gn do EC2  |  Computação
+[revisar       ] Instâncias G5g do EC2  |  Computação
+[revisar       ] Instâncias Hpc6id do EC2  |  Computação
+[revisar       ] Instâncias Hpc7g do EC2  |  Computação
+[revisar       ] Instâncias Im4gn/Is4gen do EC2  |  Computação
+[revisar       ] Instâncias Inf2 do EC2  |  Computação
+[revisar       ] Instâncias M6a do EC2  |  Computação
+[revisar       ] Instâncias Mac M1 do EC2  |  Computação
+[revisar       ] Instâncias R8g do EC2  |  Computação
+[revisar       ] Instâncias spot do EC2  |  Computação
+[revisar       ] Instâncias Trn1 do EC2  |  Computação
+[revisar       ] Instâncias X2idn/X2iedn do EC2  |  Computação
+[revisar       ] Instâncias X2iezn do EC2  |  Computação
+[revisar       ] Internet Gateway  |  Redes E Entrega De Conteúdo
+[revisar       ] IoT 1-Click  |  Internet Das Coisas
+[revisar       ] IoT Analytics  |  Internet Das Coisas
+[revisar       ] IoT Button  |  Internet Das Coisas
+[revisar       ] IoT EduKit  |  Internet Das Coisas
+[revisar       ] IoT ExpressLink  |  Internet Das Coisas
+[revisar       ] AWS IoT FleetHub  |  Internet Das Coisas
+[revisar       ] IoT RoboRunner  |  Internet Das Coisas
+[revisar       ] Kibana  |  Análise
+[revisar       ] Amazon Kinesis Data Streams  |  Análise
+[revisar       ] KMS Key Management Service (KMS)  |  Segurança Identidade Conformidade
+[revisar       ] Lambda@Edge  |  Redes E Entrega De Conteúdo
+[revisar       ] Lambda SnapStart  |  Computação
+[revisar       ] Lex Automated Chatbot Designer  |  Machine Learning
+[revisar       ] Local Zones  |  Computação
+[revisar       ] Lookout for Metrics  |  Machine Learning
+[DESCONTINUADO?] Lookout for Vision  |  Machine Learning
+[revisar       ] Managed Grafana  |  Gerenciamento E Governança
+[revisar       ] Managed Grafana Enhancements  |  Gerenciamento E Governança
+[revisar       ] Managed Service Apache Flink  |  Análise
+[revisar       ] Managed Service Prometheus  |  Gerenciamento E Governança
+[NAO-SERVICO   ] Managed Str. Apache Kafka Serverless  |  Análise
+[revisar       ] Managed Streaming Kafka (MSK)  |  Análise
+[revisar       ] Management Console Mobile Application  |  Gerenciamento E Governança
+[revisar       ] Marketplace for Containers Anywhere  |  Contêineres
+[revisar       ] MemoryDB for Redis  |  Banco De Dados
+[revisar       ] Migration Evaluator  |  Migração
+[revisar       ] NACL  |  Redes E Entrega De Conteúdo
+[revisar       ] NAT Gateway  |  Redes E Entrega De Conteúdo
+[revisar       ] NAT instances  |  Redes E Entrega De Conteúdo
+[revisar       ] Neptune Analytics  |  Banco De Dados
+[revisar       ] Network Firewall  |  Segurança Identidade Conformidade
+[NAO-SERVICO   ] New exp. API cap. QuickSight  |  Análise
+[DESCONTINUADO?] Nimble Studio  |  Serviços De Mídia
+[revisar       ] Nível N Cadeia de Suprimentos  |  Aplicação Empresarial
+[revisar       ] Amazon Nova  |  IA Generativa
+[revisar       ] One Enterprise  |  Aplicação Empresarial
+[revisar       ] OpenSearch Sem Servidor  |  Análise
+[DESCONTINUADO?] OpsWorks  |  Gerenciamento E Governança
+[revisar       ] Outposts 1U e 2U  |  Computação
+[revisar       ] Outposts rack  |  Computação
+[revisar       ] Outposts Rack Enhancements  |  Computação
+[revisar       ] Outposts servers  |  Computação
+[revisar       ] ParallelCluster  |  Computação
+[revisar       ] Partner Device Catalog  |  Internet Das Coisas
+[revisar       ] Personal Health Dashboard  |  Gerenciamento E Governança
+[revisar       ] Private 5G  |  Redes E Entrega De Conteúdo
+[revisar       ] Private CA  |  Segurança Identidade Conformidade
+[revisar       ] PrivateLink  |  Redes E Entrega De Conteúdo
+[NAO-SERVICO   ] PyTorch on AWS  |  Machine Learning
+[revisar       ] Q na Cadeia de Suprimentos AWS  |  Aplicação Empresarial
+[revisar       ] Q no QuickSight  |  Análise
+[revisar       ] QLDB  |  Blockchain
+[revisar       ] QLDB Enhancements  |  Blockchain
+[revisar       ] QuickSight Paginated Reports  |  Análise
+[revisar       ] RDS  |  Banco De Dados
+[revisar       ] RDS Custom for SQL  |  Banco De Dados
+[NAO-SERVICO   ] RDS MySQL zero-ETL Redshift  |  Banco De Dados
+[revisar       ] RDS para Db2  |  Banco De Dados
+[revisar       ] Redshift para Apache Spark  |  Análise
+[revisar       ] Redshift sem servidor  |  Análise
+[NAO-SERVICO   ] Relatórios de instâncias reservadas (IRs)  |  Gerenciamento Financeiro Na Nuvem
+[revisar       ] Resource Groups  |  Gerenciamento E Governança
+[revisar       ] RoboMaker  |  Robótica
+[revisar       ] Route Table  |  Redes E Entrega De Conteúdo
+[revisar       ] S3 Express One Zone  |  Armazenamento
+[revisar       ] S3 Glacier Deep Archive  |  Armazenamento
+[revisar       ] S3 Glacier Instant Retrieval  |  Armazenamento
+[revisar       ] S3 Intelligent-Tiering  |  Armazenamento
+[revisar       ] S3 Inventory  |  Armazenamento
+[revisar       ] S3 multipart upload  |  Armazenamento
+[revisar       ] S3 on Outposts  |  Armazenamento
+[revisar       ] S3 One Zone-IA  |  Armazenamento
+[revisar       ] S3 Standard  |  Armazenamento
+[revisar       ] S3 Standard-IA  |  Armazenamento
+[revisar       ] S3 Tranfer Acceleration  |  Armazenamento
+[revisar       ] Amazon S3 Vectors  |  Armazenamento
+[revisar       ] SageMaker Canvas  |  Machine Learning
+[revisar       ] SageMaker Ground Truth  |  Machine Learning
+[revisar       ] SageMaker Ground Truth Plus  |  Machine Learning
+[revisar       ] SageMaker HyperPod  |  Machine Learning
+[revisar       ] Amazon SageMaker Lakehouse  |  Análise
+[revisar       ] SageMaker Studio  |  Machine Learning
+[revisar       ] SageMaker Studio Lab  |  Machine Learning
+[revisar       ] SageMaker supports geospatial ML  |  Machine Learning
+[revisar       ] SageMaker Training Compiler  |  Machine Learning
+[revisar       ] Savings Plans  |  Gerenciamento Financeiro Na Nuvem
+[revisar       ] SDKs para a AWS  |  Ferramentas De Desenvolvedor
+[revisar       ] Security Token Service  |  Segurança Identidade Conformidade
+[revisar       ] Secutity Groups (SG)  |  Redes E Entrega De Conteúdo
+[revisar       ] Service Management Connector  |  Gerenciamento E Governança
+[revisar       ] Shield  |  Segurança Identidade Conformidade
+[revisar       ] Shield Advanced  |  Segurança Identidade Conformidade
+[revisar       ] SimSpace Weaver  |  Computação
+[revisar       ] Single Sign-On  |  Segurança Identidade Conformidade
+[revisar       ] Sistemas de arquivos escaláveis  |  Armazenamento
+[revisar       ] Site-to-Site VPN  |  Redes E Entrega De Conteúdo
+[revisar       ] Snow computação de borda  |  Armazenamento
+[revisar       ] Snow migração origem/destino  |  Migração
+[revisar       ] Snowball  |  Migração
+[revisar       ] Snowcone  |  Armazenamento
+[revisar       ] AWS Snowmobile  |  Migração
+[revisar       ] Subnets  |  Redes E Entrega De Conteúdo
+[revisar       ] Suporte Backup VMware  |  Armazenamento
+[revisar       ] Suporte Spark no Athena  |  Análise
+[revisar       ] Sust. Cadeia Suprimentos AWS  |  Sust. Cadeia de Suprimentos AWS
+[revisar       ] TensorFlow na AWS  |  Machine Learning
+[revisar       ] Traffic Mirroring  |  Redes E Entrega De Conteúdo
+[revisar       ] Transformação de código do Q  |  IA Generativa
+[revisar       ] Transit Gateway  |  Redes E Entrega De Conteúdo
+[revisar       ] Virtual Private Gateway  |  Redes E Entrega De Conteúdo
+[NAO-SERVICO   ] VMware Cloud on AWS  |  Computação
+[revisar       ] VPC Endpoints  |  Redes E Entrega De Conteúdo
+[revisar       ] VPC Flow logs  |  Redes E Entrega De Conteúdo
+[revisar       ] VPC Lattice  |  Redes E Entrega De Conteúdo
+[revisar       ] VPC Peering  |  Redes E Entrega De Conteúdo
+[revisar       ] VPN CloudHub  |  Redes E Entrega De Conteúdo
+[revisar       ] WAF  |  Segurança Identidade Conformidade
+[revisar       ] Wavelength  |  Computação

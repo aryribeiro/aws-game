@@ -1,0 +1,101 @@
+--- LIXO (14) ---
+   Carrinho do Dash                         Dash Cart e hardware de loja fisica (Amazon Go), nao servico AWS
+   ElasticCache sem servidor                typo (ElastiCache) + e um modo, nao servico
+   Ferramentas de Desenvolvedor             e uma CATEGORIA, nao um servico
+   Governance ML com SageMaker              feature do SageMaker, nome truncado
+   Guias atendentes do Connect              feature do Connect, nome truncado
+   IA do   SageMaker                        nome corrompido (espaco duplo), duplica SageMaker AI
+   Kibana                                   nao e servico AWS (e OSS dentro do OpenSearch)
+   Nível N Cadeia de Suprimentos            nome truncado/sem sentido
+   SDKs para a AWS                          e um conjunto de bibliotecas, nao um servico
+   Single Sign-On                           renomeado para IAM Identity Center (ja existe)
+   Snow migração origem/destino             nome truncado
+   Suporte Spark no Athena                  feature do Athena, nao servico
+   Sust. Cadeia Suprimentos AWS             duplica AWS Supply Chain, nome truncado
+   Transformação de código do Q             feature do Amazon Q, nome truncado
+
+--- tipos de instancia EC2 (14) ---
+   Instâncias C7g/Graviton3 do EC2          
+   Instâncias C7gn do EC2                   
+   Instâncias G5g do EC2                    
+   Instâncias Hpc6id do EC2                 
+   Instâncias Hpc7g do EC2                  
+   Instâncias Im4gn/Is4gen do EC2           
+   Instâncias Inf2 do EC2                   
+   Instâncias M6a do EC2                    
+   Instâncias Mac M1 do EC2                 
+   Instâncias R8g do EC2                    
+   Instâncias Trn1 do EC2                   
+   Instâncias X2idn/X2iedn do EC2           
+   Instâncias X2iezn do EC2                 
+   Instâncias spot do EC2                   
+
+--- classe/feature do S3 (12) ---
+   Amazon S3 Vectors                        
+   S3 Glacier Deep Archive                  
+   S3 Intelligent-Tiering                   
+   S3 Inventory                             
+   S3 One Zone-IA                           
+   S3 Standard                              
+   S3 Standard-IA                           
+   S3 Transfer Acceleration                 
+   S3 multipart upload                      
+   S3 on Outposts                           
+   Snowball                                 
+   Snowcone                                 
+
+--- plano de suporte (5) ---
+   Basic Support                            
+   Business Support                         
+   Developer Support                        
+   Enterprise On-Ramp Support               
+   Enterprise Support                       
+
+--- primitiva de VPC/rede (18) ---
+   Auto Scaling Group                       
+   Client VPN                               
+   Egress-only internet gateway             
+   Elastic IP                               
+   Internet Gateway                         
+   Lambda@Edge                              
+   NACL                                     
+   NAT Gateway                              
+   NAT instances                            
+   Route Table                              
+   Site-to-Site VPN                         
+   Subnets                                  
+   Traffic Mirroring                        
+   VPC Endpoints                            
+   VPC Flow logs                            
+   VPC Peering                              
+   VPN CloudHub                             
+   Virtual Private Gateway                  
+
+--- servico/feature legitimo (25) ---
+   AWS Backup para S3                       
+   AWS Backup para VMware                   
+   AWS IoT FleetHub                         
+   AWS Management Console                   
+   Amazon CloudWatch Internet Monitor       
+   Amazon EMR Serverless                    
+   Amazon FSx for NetApp ONTAP              
+   Amazon FSx for OpenZFS                   
+   Amazon FSx for Windows File Server       
+   Amazon Kinesis Data Streams              
+   Amazon SageMaker Lakehouse               
+   DynamoDB Accelerator (DAX)               
+   Glue Data Catalog                        
+   Glue Studio                              
+   Glue for Ray                             
+   IAM Access Analyzer                      
+   Outposts rack                            
+   Outposts servers                         
+   ParallelCluster                          
+   RDS Custom for SQL                       
+   Redshift para Apache Spark               
+   Security Groups (SG)                     
+   Security Token Service                   
+   Shield Advanced                          
+   Snow Edge Computing                      
+
+TOTAL sem fonte: 88

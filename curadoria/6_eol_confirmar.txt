@@ -1,0 +1,20 @@
+CANDIDATOS A REMOCAO — ainda presentes nas 401 (16)
+
+   AWS IQ                             [tetris ] descontinuado
+   AWS Panorama                       [ambos  ] descontinuado
+   AWS Snowmobile                     [game   ] descontinuado (2024)
+   Amazon Chime                       [tetris ] encerramento anunciado (fev/2026)
+   Amazon Chime SDK                   [ambos  ] encerramento anunciado (fev/2026)
+   Amazon Forecast                    [ambos  ] fechado para novos clientes
+   Amazon Lookout for Equipment       [ambos  ] descontinuado
+   Amazon Monitron                    [ambos  ] descontinuado
+   Amazon Pinpoint                    [ambos  ] depreciacao anunciada (out/2026)
+   Amazon Timestream                  [ambos  ] LiveAnalytics segue ativo — CONFERIR
+   Amazon WorkDocs                    [tetris ] descontinuado, sem novos clientes
+   Cloud9                             [ambos  ] fechado para novos clientes (jul/2024)
+   CloudSearch                        [ambos  ] legado, substituido pelo OpenSearch
+   CodeCommit                         [ambos  ] fechado para novos clientes (jun/2024)
+   QLDB                               [game   ] fim de suporte anunciado (jul/2025)
+   RoboMaker                          [game   ] descontinuado (set/2025)
+
+Obs.: os marcados [tetris]/[ambos] VIERAM da lista oficial 2026.

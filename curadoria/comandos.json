@@ -1,0 +1,942 @@
+[
+  {
+    "comando": "EC2",
+    "descricao": "Da categoria Computação, oferece servidores virtuais na nuvem com capacidade de processamento escalável. Permite escolher entre centenas de tipos de instância otimizadas para CPU, memória, armazenamento ou GPU. Suporta Linux, Windows e outros sistemas operacionais. É o serviço base para hospedar aplicações, APIs e workloads customizados na AWS."
+  },
+  {
+    "comando": "Lightsail",
+    "descricao": "Serviço de computação simplificado da AWS, ideal para pequenos projetos, sites e desenvolvedores que não precisam da complexidade do EC2. Oferece servidores virtuais, bancos de dados, armazenamento e redes em pacotes com preço fixo e previsível. Perfeito para blogs WordPress, landing pages e aplicações simples. Inclui painel de gerenciamento intuitivo."
+  },
+  {
+    "comando": "Lambda",
+    "descricao": "Serviço de computação serverless que executa código em resposta a eventos sem necessidade de provisionar ou gerenciar servidores. Você paga apenas pelo tempo de execução do código, com cobrança por milissegundo. Suporta Node.js, Python, Java, Go, Ruby, .NET e mais. Ideal para automações, APIs, processamento de eventos e integrações entre serviços AWS."
+  },
+  {
+    "comando": "Batch",
+    "descricao": "Serviço gerenciado para execução de jobs de processamento em lote em grande escala na AWS. Provisiona automaticamente a quantidade de recursos computacionais necessários com base na fila de trabalhos. Ideal para simulações científicas, renderização de imagens, análise de dados e ETL pesado. Integra-se com EC2, Fargate e Spot Instances para otimização de custos."
+  },
+  {
+    "comando": "Elastic Beanstalk",
+    "descricao": "Plataforma como serviço (PaaS) que facilita o deploy e o gerenciamento de aplicações web sem precisar configurar infraestrutura. Basta fazer upload do código e o Beanstalk cuida do provisionamento, balanceamento de carga, escalonamento e monitoramento automaticamente. Suporta Java, .NET, PHP, Node.js, Python, Ruby, Go e Docker. Mantém controle total sobre os recursos AWS subjacentes."
+  },
+  {
+    "comando": "Serverless Application Repository",
+    "descricao": "Repositório gerenciado para descoberta, deploy e publicação de aplicações serverless na AWS. Permite que desenvolvedores compartilhem e reutilizem componentes prontos baseados em AWS Lambda. Contém milhares de aplicações públicas para casos como processamento de imagens, autenticação e notificações. Acelera o desenvolvimento com padrões de arquitetura serverless testados."
+  },
+  {
+    "comando": "AWS Outposts",
+    "descricao": "Extensão da infraestrutura AWS para o data center ou colocation do cliente, oferecendo hardware físico gerenciado pela própria Amazon. Permite rodar serviços AWS como EC2, ECS, RDS e S3 on-premises com baixíssima latência local. Ideal para workloads que exigem processamento de dados residindo localmente por questões regulatórias ou de latência. A AWS instala, gerencia e atualiza o hardware remotamente."
+  },
+  {
+    "comando": "EC2 Image Builder",
+    "descricao": "Serviço para automatizar a criação, manutenção e validação de imagens de máquina virtual (AMIs) e imagens de contêiner. Permite definir pipelines para instalar software, aplicar patches de segurança e testar imagens automaticamente. Reduz o esforço manual de gestão de golden images para EC2 e ECS. Integra-se com Systems Manager e Inspector para validação de segurança."
+  },
+  {
+    "comando": "AWS App Runner",
+    "descricao": "Serviço totalmente gerenciado para deploy rápido de aplicações web e APIs containerizadas diretamente do código-fonte ou de uma imagem Docker. Abstrai toda a complexidade de infraestrutura, escalonamento e balanceamento de carga. Ideal para equipes que querem agilidade de deploy sem gerenciar clusters Kubernetes ou configurar infraestrutura. Cobra apenas pelos recursos consumidos durante a execução."
+  },
+  {
+    "comando": "Parallel Computing Service",
+    "descricao": "Serviço gerenciado para criação e operação de clusters HPC (High Performance Computing) na AWS. Facilita o provisionamento de ambientes de computação paralela para simulações científicas, modelagem financeira e engenharia. Integra-se com ambientes de job scheduling como Slurm e AWS ParallelCluster. Permite escalar para milhares de núcleos de processamento sob demanda."
+  },
+  {
+    "comando": "AWS Global View",
+    "descricao": "Painel centralizado para visualizar e gerenciar recursos AWS em múltiplas regiões e contas de forma unificada. Oferece visibilidade global do inventário de recursos como EC2, VPCs e buckets S3 sem precisar trocar de região no console. Facilita a gestão de ambientes multi-region e multi-account para operações e governança. Essencial para arquiteturas globais e estratégias de disaster recovery."
+  },
+  {
+    "comando": "Elastic Container Service",
+    "descricao": "Serviço de orquestração de contêineres Docker totalmente gerenciado pela AWS. Permite executar, escalar e gerenciar contêineres sem precisar instalar ou operar software de orquestração. Suporta dois modos: EC2 (controle total sobre as instâncias) e Fargate (serverless, sem gerenciar servidores). Integra-se nativamente com ALB, IAM, CloudWatch e outros serviços AWS."
+  },
+  {
+    "comando": "Elastic Kubernetes Service",
+    "descricao": "Serviço gerenciado de Kubernetes na AWS que elimina a necessidade de instalar e operar o control plane do K8s. A AWS gerencia a alta disponibilidade e escalabilidade do plano de controle automaticamente. Suporta workloads em EC2, Fargate e Graviton. Ideal para equipes que já adotaram Kubernetes e precisam de portabilidade entre clouds."
+  },
+  {
+    "comando": "Red Hat OpenShift Service on AWS",
+    "descricao": "Serviço gerenciado de OpenShift na AWS, resultado da parceria entre Red Hat e Amazon. Oferece a experiência completa do OpenShift (Kubernetes enterprise com ferramentas DevOps integradas) sem gerenciar a infraestrutura. Ideal para empresas que já utilizam o ecossistema Red Hat e querem migrar workloads para a AWS. Suporte conjunto Red Hat e AWS incluído."
+  },
+  {
+    "comando": "Elastic Container Registry",
+    "descricao": "Registro privado de imagens Docker totalmente gerenciado e integrado ao ecossistema AWS. Armazena, versiona e distribui imagens de contêineres com alta disponibilidade e segurança. Integra-se nativamente com ECS, EKS, Lambda e CodePipeline. Inclui scanning automático de vulnerabilidades e replicação de imagens entre regiões."
+  },
+  {
+    "comando": "S3",
+    "descricao": "É o serviço de armazenamento de objetos mais utilizado do mundo, com durabilidade de 99,999999999% (11 noves). Armazena qualquer tipo de arquivo com acesso via HTTP/HTTPS. Oferece classes de armazenamento para diferentes padrões de acesso, como Standard, Intelligent-Tiering e Glacier. Base para data lakes, backup, hospedagem de sites estáticos e distribuição de conteúdo."
+  },
+  {
+    "comando": "EFS",
+    "descricao": "É um sistema de arquivos NFS totalmente gerenciado e elástico para uso com EC2, ECS e Lambda. Escala automaticamente conforme os dados crescem ou diminuem, sem necessidade de provisionar capacidade. Suporta acesso simultâneo de múltiplas instâncias, ideal para workloads compartilhados. Disponível nas classes Standard e Infrequent Access para otimização de custos."
+  },
+  {
+    "comando": "FSx",
+    "descricao": "Serviço de sistemas de arquivos gerenciados de alto desempenho com suporte a múltiplos tipos: Windows File Server, Lustre (HPC), NetApp ONTAP e OpenZFS. Oferece performance, recursos e APIs nativas de cada sistema sem overhead operacional. Ideal para migrar workloads que dependem de file systems específicos para a nuvem. Integra-se com Active Directory, backup automatizado e criptografia."
+  },
+  {
+    "comando": "S3 Glacier",
+    "descricao": "Serviço de armazenamento de arquivamento de dados com custo extremamente baixo, projetado para dados raramente acessados. Oferece três opções de recuperação: Instant Retrieval (milissegundos), Flexible Retrieval (minutos a horas) e Deep Archive (horas). Ideal para retenção de longo prazo, compliance regulatório e backup histórico. Integra-se com políticas de ciclo de vida do S3 para migração automática de objetos."
+  },
+  {
+    "comando": "Storage Gateway",
+    "descricao": "Serviço híbrido que conecta ambientes on-premises à nuvem AWS, oferecendo acesso transparente ao armazenamento em nuvem. Disponível em três modos: File Gateway (NFS/SMB para S3), Volume Gateway (iSCSI para backups) e Tape Gateway (substituição de fitas magnéticas). Permite que aplicações locais usem armazenamento AWS sem alteração de código. Ideal para backup, DR e migração gradual para a nuvem."
+  },
+  {
+    "comando": "AWS Backup",
+    "descricao": "Serviço centralizado para automatizar e gerenciar backups de múltiplos serviços AWS a partir de um único painel. Suporta EC2, RDS, DynamoDB, EFS, FSx, S3, Storage Gateway e mais. Permite definir políticas de backup com retenção, frequência e criptografia de forma centralizada. Facilita conformidade com requisitos regulatórios de backup e auditoria."
+  },
+  {
+    "comando": "Recycle Bin",
+    "descricao": "Recurso que protege contra exclusão acidental de snapshots do EBS e AMIs na AWS. Mantém recursos excluídos em uma lixeira por um período configurável (1 dia a 1 ano) antes da exclusão definitiva. Permite recuperar recursos deletados por engano dentro da janela de retenção. Ajuda equipes a cumprir políticas de proteção de dados e evitar perda acidental de backups críticos."
+  },
+  {
+    "comando": "AWS Elastic Disaster Recovery",
+    "descricao": "Serviço de recuperação de desastres que replica servidores físicos, virtuais e em nuvem para a AWS com RPO de segundos. Mantém uma cópia atualizada dos servidores de origem na AWS, pronta para inicialização em caso de falha. Suporta failover rápido e failback para o ambiente original após a recuperação. Reduz custos de DR tradicional eliminando a necessidade de infraestrutura de standby sempre ligada."
+  },
+  {
+    "comando": "Aurora and RDS",
+    "descricao": "Amazon RDS é o serviço de banco de dados relacional gerenciado, suportando MySQL, PostgreSQL, MariaDB, Oracle e SQL Server. Amazon Aurora é o banco relacional da própria AWS com performance até 5x superior ao MySQL e 3x ao PostgreSQL. Ambos eliminam tarefas operacionais como patches, backups e failover. Aurora Serverless v2 escala automaticamente por frações de capacidade, ideal para workloads imprevisíveis."
+  },
+  {
+    "comando": "ElastiCache",
+    "descricao": "Serviço gerenciado de cache em memória compatível com Redis e Memcached. Reduz a latência de aplicações ao armazenar dados frequentemente acessados na memória, aliviando a carga dos bancos de dados. ElastiCache for Redis também serve como banco de dados em memória, broker de mensagens e armazenamento de sessão. Suporta clusters multi-AZ com failover automático para alta disponibilidade."
+  },
+  {
+    "comando": "Neptune",
+    "descricao": "Banco de dados de grafos totalmente gerenciado, otimizado para armazenar e consultar redes altamente conectadas. Suporta os modelos Property Graph (via Gremlin e openCypher) e RDF (via SPARQL). Ideal para redes sociais, grafos de conhecimento, detecção de fraudes e sistemas de recomendação. Oferece alta disponibilidade com replicação em até 15 réplicas de leitura e backup automático."
+  },
+  {
+    "comando": "Amazon DocumentDB",
+    "descricao": "Banco de dados de documentos gerenciado compatível com MongoDB, projetado para alta performance e escalabilidade. Permite migrar workloads MongoDB para a AWS sem reescrever o código da aplicação. Armazena dados em formato JSON flexível e oferece índices, consultas e agregações nativas. Suporta replicação em múltiplas AZs, backups contínuos e criptografia em repouso e em trânsito."
+  },
+  {
+    "comando": "Amazon Keyspaces",
+    "descricao": "Banco de dados de wide-column totalmente gerenciado e compatível com Apache Cassandra. Permite executar workloads Cassandra na AWS sem gerenciar servidores, configurações ou tuning de cluster. Oferece escalabilidade serverless automática com performance consistente de milissegundos. Ideal para migrar aplicações Cassandra existentes para a nuvem ou novos casos de uso com grande volume de gravação."
+  },
+  {
+    "comando": "Amazon Timestream",
+    "descricao": "Banco de dados de séries temporais serverless e totalmente gerenciado para IoT e dados operacionais. Otimizado para armazenar e analisar trilhões de eventos por dia com performance muito superior ao relacional para esse padrão. Gerencia automaticamente a migração de dados entre armazenamento em memória e magnético por políticas de tempo. Ideal para telemetria de dispositivos, monitoramento de infraestrutura e análise operacional."
+  },
+  {
+    "comando": "DynamoDB",
+    "descricao": "Banco de dados NoSQL totalmente gerenciado com latência de milissegundo em qualquer escala. Suporta modelos de chave-valor e documento, com performance consistente mesmo com trilhões de itens. Oferece tabelas globais para replicação multi-region ativa-ativa e streams para processamento de eventos em tempo real. Ideal para aplicações mobile, gaming, IoT, e-commerce e sistemas com picos de tráfego imprevisíveis."
+  },
+  {
+    "comando": "Aurora DSQL",
+    "descricao": "Banco de dados relacional distribuído e serverless da AWS lançado em 2024, com consistência forte e disponibilidade ativa-ativa multi-region. Combina a familiaridade do PostgreSQL com escala e resiliência de sistemas distribuídos modernos. Elimina a necessidade de sharding manual ou replicação complexa para bancos globais. Resposta da AWS ao Google Spanner, projetado para aplicações críticas com requisitos de latência global baixa."
+  },
+  {
+    "comando": "Amazon MemoryDB",
+    "descricao": "Banco de dados em memória compatível com Redis, com durabilidade de dados garantida por um log de transações multi-AZ. Diferente do ElastiCache (que é um cache), o MemoryDB é um banco de dados primário com consistência forte e persistência. Oferece performance de microsegundos para leitura e milissegundos para escrita. Ideal para casos em que a velocidade do Redis é necessária sem abrir mão da durabilidade dos dados."
+  },
+  {
+    "comando": "Oracle Database@AWS",
+    "descricao": "Solução resultante da parceria entre Oracle e AWS que permite rodar o Oracle Exadata Database Service diretamente dentro das regiões AWS. Elimina a necessidade de migrar dados para fora do Oracle ao mesmo tempo que oferece conectividade de baixíssima latência com outros serviços AWS. Ideal para empresas que dependem de Oracle Database e desejam consolidar infraestrutura na AWS. Gerenciado conjuntamente por Oracle e AWS."
+  },
+  {
+    "comando": "AWS Migration Hub",
+    "descricao": "Centro de controle unificado para planejar, rastrear e gerenciar migrações de aplicações para a AWS. Consolida o status de todas as ferramentas de migração (Application Migration Service, DMS, etc.) em um único painel. Permite descobrir o inventário on-premises e mapear dependências entre servidores antes da migração. Facilita a criação de grupos de migração e o acompanhamento do progresso de cada onda."
+  },
+  {
+    "comando": "AWS Application Migration Service",
+    "descricao": "Serviço para migração lift-and-shift de servidores físicos, virtuais e em nuvem para a AWS com mínimo de downtime. Replica continuamente os servidores de origem em modo de staging e executa um cutover rápido quando solicitado. Suporta a maioria dos sistemas operacionais e bancos de dados sem necessidade de conversão. Anteriormente conhecido como CloudEndure Migration, é o serviço recomendado pela AWS para rehosting."
+  },
+  {
+    "comando": "Application Discovery Service",
+    "descricao": "Serviço que automatiza a descoberta e o mapeamento de servidores e dependências on-premises para planejar migrações. Coleta dados de configuração, performance e dependências de rede via agente instalado ou integração VMware agentless. Os dados coletados são enviados ao Migration Hub para visualização e análise. Reduz o esforço manual de inventário antes de grandes projetos de migração para a nuvem."
+  },
+  {
+    "comando": "Database Migration Service",
+    "descricao": "Serviço para migrar bancos de dados para a AWS com tempo mínimo de indisponibilidade. Suporta migrações homogêneas (ex: Oracle para Oracle) e heterogêneas (ex: Oracle para Aurora PostgreSQL). Replica dados continuamente durante a migração, mantendo o banco de origem em operação até o cutover. Suporta mais de 20 engines de banco de dados incluindo Oracle, SQL Server, MySQL, PostgreSQL, MongoDB e outros."
+  },
+  {
+    "comando": "AWS Transfer Family",
+    "descricao": "Serviço gerenciado para transferência de arquivos diretamente para o S3 e EFS usando protocolos SFTP, FTPS e FTP. Permite substituir servidores de FTP legados sem alterar workflows ou clientes existentes. Oferece autenticação via IAM, Active Directory ou provedores de identidade customizados. Ideal para integração B2B, troca de arquivos entre parceiros e automação de pipelines de dados."
+  },
+  {
+    "comando": "AWS Snow Family",
+    "descricao": "Família de dispositivos físicos para transferência de grandes volumes de dados para a AWS quando a rede não é viável. Inclui Snowcone (8TB, portátil), Snowball Edge (80TB, com capacidade de computação) e Snowmobile (100PB, container de caminhão). Ideal para migrações de data centers, coleta de dados em campo e ambientes com conectividade limitada. A AWS envia o dispositivo, você carrega os dados e o devolve."
+  },
+  {
+    "comando": "DataSync",
+    "descricao": "Serviço para transferência automatizada e acelerada de dados entre armazenamento on-premises e serviços AWS como S3, EFS e FSx. Usa protocolo proprietário que é até 10x mais rápido que ferramentas de cópia tradicionais. Suporta NFS, SMB e armazenamento de objetos como fonte ou destino. Ideal para migrações de dados, replicação entre regiões AWS e cargas de trabalho híbridas de dados."
+  },
+  {
+    "comando": "AWS Transform",
+    "descricao": "Serviço que usa inteligência artificial para accelerar a modernização e migração de aplicações legadas para a AWS. Analisa o código-fonte e sugere ou executa automaticamente conversões para linguagens e frameworks modernos. Suporta casos como migração de .NET Framework para .NET Core e modernização de código mainframe. Reduz significativamente o esforço manual de refatoração em projetos de modernização."
+  },
+  {
+    "comando": "AWS Mainframe Modernization",
+    "descricao": "Plataforma gerenciada para migrar e modernizar aplicações mainframe COBOL e PL/I para a AWS. Oferece dois padrões: refatoração automatizada (conversão para Java/cloud-native) e rehosting (execução do mainframe emulado na AWS). Inclui ferramentas para análise de código legado, testing e deployment. Reduz drasticamente o custo de licença e operação de mainframes físicos."
+  },
+  {
+    "comando": "Amazon Elastic VMware Service",
+    "descricao": "Serviço que permite executar workloads VMware nativamente na infraestrutura AWS sem necessidade de replatforming. Oferece o ambiente vSphere completo como serviço gerenciado dentro das regiões AWS. Permite migrar VMs VMware para a AWS usando ferramentas nativas como HCX sem alterar as aplicações. Ideal para empresas que desejam mover datacenters VMware para a nuvem mantendo operações e ferramentas existentes."
+  },
+  {
+    "comando": "VPC",
+    "descricao": "Permite criar redes virtuais isoladas logicamente dentro da AWS, com controle total sobre endereçamento IP, sub-redes, tabelas de roteamento e gateways. É a base de toda arquitetura de rede na AWS, isolando recursos e controlando o tráfego de entrada e saída. Suporta VPN, Direct Connect, peering entre VPCs e Transit Gateway para topologias complexas. Inclui VPC Endpoints com AWS PrivateLink para conectividade privada a serviços AWS e aplicações de terceiros sem expor tráfego à Internet pública. Fundamental para segurança e segmentação de ambientes cloud."
+  },
+  {
+    "comando": "CloudFront",
+    "descricao": "Rede de distribuição de conteúdo (CDN) global da AWS com mais de 450 pontos de presença no mundo. Entrega conteúdo estático e dinâmico com baixa latência, cacheando dados próximo aos usuários finais. Integra-se com S3, EC2, ALB e Lambda@Edge para lógica de borda. Inclui proteção contra DDoS com AWS Shield Standard e suporte a HTTPS com certificados gerenciados."
+  },
+  {
+    "comando": "API Gateway",
+    "descricao": "Serviço gerenciado para criar, publicar, manter e proteger APIs REST, HTTP e WebSocket em qualquer escala. Atua como porta de entrada para aplicações serverless com Lambda, microsserviços e backends HTTP. Oferece autenticação via IAM, Cognito e JWT, throttling, caching e monitoramento integrados. Suporta versionamento de APIs e deploy por estágios (dev, staging, prod)."
+  },
+  {
+    "comando": "Direct Connect",
+    "descricao": "Serviço que estabelece uma conexão de rede dedicada e privada entre o data center on-premises e a AWS. Oferece largura de banda consistente de 1 Gbps a 100 Gbps com menor latência e maior estabilidade que conexões via Internet pública. Ideal para workloads híbridos, transferência de grandes volumes de dados e ambientes regulatórios que exigem conectividade privada. Reduz custos de transferência de dados comparado ao tráfego pela Internet."
+  },
+  {
+    "comando": "AWS App Mesh",
+    "descricao": "Service mesh gerenciado que facilita o monitoramento e controle de comunicação entre microsserviços. Implementa o padrão sidecar proxy (baseado em Envoy) para interceptar e controlar todo o tráfego entre serviços. Oferece observabilidade com métricas, logs e rastreamento distribuído sem alterar o código das aplicações. Ideal para arquiteturas de microsserviços em ECS, EKS e EC2 que precisam de controle fino de tráfego."
+  },
+  {
+    "comando": "Global Accelerator",
+    "descricao": "Serviço de rede que melhora a disponibilidade e performance de aplicações globais roteando o tráfego pela backbone privada da AWS. Fornece dois endereços IP Anycast globais e estáticos que direcionam usuários ao endpoint mais próximo e saudável. Diferente do CloudFront (focado em cache), o Global Accelerator acelera aplicações TCP/UDP em tempo real. Ideal para jogos, VoIP, APIs e aplicações que não se beneficiam de cache."
+  },
+  {
+    "comando": "Route 53",
+    "descricao": "Serviço de DNS altamente disponível e escalável da AWS com SLA de 100% de disponibilidade. Além de DNS, oferece registro de domínios, health checks e roteamento de tráfego inteligente com políticas como geolocalização, latência, failover e ponderado. Integra-se com CloudFront, ELB, S3 e outros serviços AWS via Alias Records. Essencial para disponibilidade e resiliência de aplicações distribuídas globalmente."
+  },
+  {
+    "comando": "Terminal de Transferência de Dados da AWS",
+    "descricao": "Serviço que acelera transferências de dados de e para a AWS por meio de locais físicos de aceleração distribuídos globalmente. Reduz a latência de upload e download aproveitando a infraestrutura de backbone da Amazon. Especialmente útil para transferências de grandes arquivos de regiões com conectividade Internet limitada. Integra-se com S3 Transfer Acceleration para otimizar operações de upload em escala global."
+  },
+  {
+    "comando": "Amazon Route 53 Global Resolver",
+    "descricao": "Recurso do Route 53 que permite resolução de DNS entre redes on-premises e VPCs AWS de forma bidirecional. Possibilita que recursos on-premises resolvam nomes de domínio de recursos privados na AWS e vice-versa. Elimina a necessidade de configurar resolvers DNS customizados em ambientes híbridos. Fundamental para arquiteturas híbridas onde aplicações precisam descobrir serviços tanto on-premises quanto na nuvem."
+  },
+  {
+    "comando": "AWS Cloud Map",
+    "descricao": "Serviço de descoberta de recursos de nuvem que permite registrar e descobrir dinamicamente serviços de aplicação. Mantém um registro atualizado de instâncias saudáveis de cada serviço com atributos customizados. Integra-se com ECS, EKS e Lambda para descoberta de serviços em arquiteturas de microsserviços. Suporta verificação de saúde integrada para garantir que apenas endpoints saudáveis sejam retornados."
+  },
+  {
+    "comando": "RTB Fabric",
+    "descricao": "Serviço especializado da AWS para o setor de publicidade digital, otimizando a infraestrutura de Real-Time Bidding (RTB). Oferece conectividade de ultra-baixa latência para plataformas de leilão de anúncios que precisam responder em milissegundos. Integra-se com a rede global da AWS para alcançar ad exchanges e SSPs de todo o mundo. Projetado para empresas de AdTech que necessitam de escala e velocidade em operações de compra programática de mídia."
+  },
+  {
+    "comando": "Application Recovery Controller",
+    "descricao": "Serviço para gerenciar e orquestrar a recuperação de aplicações em múltiplas regiões e zonas de disponibilidade. Monitora continuamente a prontidão para failover e fornece controles seguros para iniciar a recuperação. Utiliza roteamento baseado em Route 53 para desviar tráfego durante incidentes. Ideal para aplicações críticas que exigem RPO e RTO baixíssimos com failover controlado e auditável."
+  },
+  {
+    "comando": "CodeCommit",
+    "descricao": "Serviço de repositório Git privado e gerenciado pela AWS, com alta disponibilidade e segurança integrada. Elimina a necessidade de operar servidores Git próprios. Integra-se com CodeBuild, CodeDeploy e CodePipeline para pipelines de CI/CD completos. Nota: a AWS anunciou em 2024 que novos clientes não podem mais criar repositórios no CodeCommit, sendo o migração para alternativas como CodeCatalyst recomendada."
+  },
+  {
+    "comando": "CodeBuild",
+    "descricao": "Serviço de integração contínua (CI) totalmente gerenciado que compila código-fonte, executa testes e produz artefatos de software. Escala automaticamente e cobra apenas pelo tempo de build utilizado, sem servidores para gerenciar. Suporta ambientes de build customizados via Docker e diversas linguagens e frameworks. Integra-se com CodePipeline, GitHub, Bitbucket e outros repositórios de código."
+  },
+  {
+    "comando": "CodeDeploy",
+    "descricao": "Serviço de deploy automatizado que distribui código para EC2, Fargate, Lambda e servidores on-premises. Suporta estratégias de implantação como blue/green, rolling e canary para minimizar downtime. Integra-se com CodePipeline para automação completa do ciclo de entrega. Monitora a saúde do deploy e executa rollback automático em caso de falha."
+  },
+  {
+    "comando": "CodePipeline",
+    "descricao": "Serviço de entrega contínua (CD) que automatiza os pipelines de release de software. Orquestra as etapas de build, teste e deploy a cada alteração de código nos repositórios. Integra-se com CodeCommit, GitHub, CodeBuild, CodeDeploy, CloudFormation, Lambda e ferramentas de terceiros. Permite modelar pipelines complexos com estágios paralelos, aprovações manuais e integrações customizadas."
+  },
+  {
+    "comando": "Cloud9",
+    "descricao": "IDE baseado em nuvem que permite escrever, executar e depurar código diretamente no navegador. Inclui editor de código, terminal integrado com acesso ao AWS CLI e suporte a dezenas de linguagens. Compartilha ambientes de desenvolvimento em tempo real para pair programming. Ideal para desenvolvedores que trabalham com serverless Lambda, pois oferece depuração local simulada de funções."
+  },
+  {
+    "comando": "CloudShell",
+    "descricao": "Terminal baseado em navegador com acesso direto ao AWS CLI e ferramentas de desenvolvimento pré-instaladas. Autenticado automaticamente com as credenciais da sessão do console, sem necessidade de configurar chaves. Oferece 1GB de armazenamento persistente por região para scripts e arquivos de configuração. Disponível diretamente no console AWS, ideal para administradores e desenvolvedores que precisam de acesso rápido à linha de comando."
+  },
+  {
+    "comando": "X-Ray",
+    "descricao": "Serviço de rastreamento distribuído para analisar e depurar aplicações distribuídas e microsserviços. Cria um mapa visual das requisições à medida que percorrem os diferentes componentes da aplicação. Identifica gargalos de performance, erros e comportamentos anômalos em sistemas complexos. Integra-se com Lambda, EC2, ECS, API Gateway, SNS, SQS e outros serviços AWS."
+  },
+  {
+    "comando": "AWS FIS",
+    "descricao": "Serviço de engenharia do caos que permite injetar falhas controladas em workloads AWS para testar resiliência. Simula cenários como falha de instâncias EC2, throttling de APIs, latência de rede e perda de pacotes. Baseado nos princípios do Chaos Engineering popularizados pelo Netflix. Ajuda equipes a identificar fraquezas na arquitetura antes que falhas reais ocorram em produção."
+  },
+  {
+    "comando": "Infrastructure Composer",
+    "descricao": "Ferramenta visual para projetar, visualizar e construir arquiteturas serverless e IaC na AWS. Permite arrastar e soltar componentes para criar templates CloudFormation e SAM visualmente. Sincroniza bidireccionalmente com arquivos de infraestrutura como código, permitindo trabalhar tanto visual quanto textualmente. Integrada ao VS Code e ao console AWS para acelerar o desenvolvimento de infraestrutura."
+  },
+  {
+    "comando": "AWS App Studio",
+    "descricao": "Plataforma low-code para construção de aplicações empresariais internas alimentada por IA generativa. Permite criar aplicações funcionais descrevendo os requisitos em linguagem natural, sem necessidade de expertise em frontend. Gera automaticamente formulários, tabelas, fluxos e integrações com serviços AWS e APIs externas. Ideal para times de negócio e desenvolvedores cidadãos que precisam de ferramentas internas customizadas rapidamente."
+  },
+  {
+    "comando": "AWS DevOps Agent",
+    "descricao": "Agente de IA autônomo lançado em 2025 que executa tarefas de DevOps como criação de pipelines, configuração de infraestrutura e resolução de problemas operacionais. Integra-se com CodePipeline, CloudFormation e outros serviços para automatizar fluxos de trabalho complexos via linguagem natural. Aprende com o contexto do ambiente AWS do usuário para oferecer sugestões e execuções precisas. Representa a evolução da automação DevOps com IA agêntica."
+  },
+  {
+    "comando": "AWS AppConfig",
+    "descricao": "Serviço para gerenciar, validar e implantar configurações de aplicações de forma segura e gradual. Permite atualizar configurações em produção sem reimplantar o código, com rollback automático em caso de erros. Suporta feature flags, parâmetros de tunning e configurações de ambiente. Integra-se com Lambda, EC2, ECS e outros serviços para distribuição de configurações em tempo real."
+  },
+  {
+    "comando": "CodeArtifact",
+    "descricao": "Repositório de artefatos de software totalmente gerenciado para armazenar e distribuir pacotes de código. Suporta gerenciadores de pacotes populares como npm, PyPI, Maven, NuGet e Gradle. Atua como proxy para repositórios públicos (npmjs, PyPI), fazendo cache de pacotes para aumentar disponibilidade. Integra-se com IAM para controle de acesso e com CodeBuild/CodePipeline para pipelines de CI/CD."
+  },
+  {
+    "comando": "Amazon Q Developer",
+    "descricao": "Assistente de IA especializado em desenvolvimento de software, integrado a IDEs como VS Code e JetBrains. Oferece autocompletar de código, geração de funções, explicação de código legado, sugestões de correção de bugs e geração de testes unitários. Tem conhecimento profundo de serviços AWS e melhores práticas de segurança. Em 2026, inclui capacidades agênticas para transformações de código em larga escala com mínima intervenção."
+  },
+  {
+    "comando": "Amazon CodeCatalyst",
+    "descricao": "Plataforma unificada de desenvolvimento de software que combina repositório de código, CI/CD, gestão de projetos e ambientes de desenvolvimento em um único lugar. Permite criar blueprints de projetos completos com infraestrutura, pipelines e código inicial pré-configurados. Integra-se com GitHub e outros provedores externos. Voltado para equipes que querem acelerar a entrega de software com menos configuração de ferramentas."
+  },
+  {
+    "comando": "Kiro",
+    "descricao": "IDE da AWS com IA integrada ao ciclo de desenvolvimento, lançado em 2025 como evolução do desenvolvimento assistido por IA. Implementa o fluxo spec-to-code, onde o desenvolvedor descreve requisitos e a IA gera especificações técnicas, planos de implementação e código. Aprende com o contexto do projeto para manter consistência arquitetural. Representa a nova geração de ambientes de desenvolvimento onde IA e humano colaboram em todo o ciclo de vida."
+  },
+  {
+    "comando": "AWS IQ",
+    "descricao": "Marketplace para conectar clientes AWS com especialistas certificados para projetos de consultoria on-demand. Permite publicar projetos, receber propostas de especialistas verificados pela AWS e contratar com pagamento via conta AWS. Facilita o acesso rápido a expertise técnica para projetos de migração, arquitetura, segurança e otimização. Ideal para empresas que precisam de ajuda pontual sem contratar consultoras de grande porte."
+  },
+  {
+    "comando": "Managed Services",
+    "descricao": "Serviço de operações gerenciadas onde a AWS assume responsabilidade por operar a infraestrutura AWS do cliente. Inclui monitoramento 24/7, gestão de mudanças, patch management, resposta a incidentes e conformidade. Segue um modelo operacional padronizado baseado em ITIL. Ideal para empresas que desejam mover para a AWS mas não têm equipe de cloud operations suficiente para gerenciar o ambiente."
+  },
+  {
+    "comando": "Activate for Startups",
+    "descricao": "Programa da AWS que oferece créditos, treinamento e suporte técnico para startups em estágio inicial. Fornece créditos AWS para testar e construir produtos sem custo inicial, acesso a mentores técnicos e descontos em ferramentas de parceiros. Segmentado em tiers baseados no estágio da startup. Permite que startups construam sobre infraestrutura de nível enterprise sem o investimento inicial, acelerando o produto ao mercado."
+  },
+  {
+    "comando": "AWS re:Post Private",
+    "descricao": "Versão privada e corporativa do AWS re:Post (fórum técnico da AWS) para uso interno de organizações. Permite criar uma comunidade técnica interna onde funcionários fazem e respondem perguntas sobre AWS, compartilham conhecimento e documentam soluções. Curado com conteúdo oficial da AWS e gerenciado pelos administradores da organização. Ideal para grandes empresas que querem centralizar o conhecimento cloud interno com garantia de qualidade das respostas."
+  },
+  {
+    "comando": "Support",
+    "descricao": "Planos de suporte técnico da AWS que fornecem assistência com produtos, serviços e soluções AWS. Oferece desde suporte básico gratuito até planos Enterprise com Technical Account Manager dedicado. Inclui acesso a engenheiros AWS, tempos de resposta garantidos e ferramentas como AWS Trusted Advisor. Planos Business Support+ incluem AWS DevOps Agent com IA para troubleshooting contextual e resolução acelerada de problemas."
+  },
+  {
+    "comando": "Amazon Managed Blockchain",
+    "descricao": "Serviço para criar e gerenciar redes blockchain escaláveis usando frameworks como Ethereum e Hyperledger Fabric. Elimina o trabalho pesado de configurar e gerenciar infraestrutura de blockchain, certificados e nós de rede. Permite que múltiplas organizações participem de uma rede blockchain compartilhada com governança definida. Ideal para casos de uso como rastreabilidade de cadeia de suprimentos, transferências financeiras e registro de ativos digitais."
+  },
+  {
+    "comando": "Ground Station",
+    "descricao": "Serviço de estação terrestre de satélite totalmente gerenciado que permite controlar satélites e processar dados de missão espacial usando a infraestrutura AWS. Elimina a necessidade de construir e operar estações terrestres físicas, com cobrança por minuto de contato com o satélite. Integra-se diretamente com EC2, S3 e outros serviços AWS para processar dados recebidos do satélite. Ideal para operadores de satélites de observação da Terra, comunicação e meteorologia."
+  },
+  {
+    "comando": "Amazon Braket",
+    "descricao": "Serviço de computação quântica gerenciado que permite explorar e experimentar com hardware quântico de diferentes fornecedores (IonQ, Rigetti, D-Wave, OQC) e simuladores. Oferece um ambiente unificado para desenvolver algoritmos quânticos em Python via SDK. Inclui simuladores clássicos de alta performance para testes antes de executar em hardware quântico real. Ideal para pesquisa em algoritmos quânticos, otimização combinatória e química computacional."
+  },
+  {
+    "comando": "AWS Organizations",
+    "descricao": "Serviço para gerenciar centralmente múltiplas contas AWS como uma organização unificada. Permite criar hierarquias de contas com Organizational Units (OUs) e aplicar Service Control Policies (SCPs) para restringir o que cada conta pode fazer. Facilita cobrança consolidada, provisionamento de contas via Control Tower e aplicação de políticas de segurança em escala. Fundação indispensável para qualquer estratégia multi-conta na AWS."
+  },
+  {
+    "comando": "CloudWatch",
+    "descricao": "Serviço de observabilidade da AWS que coleta e monitora métricas, logs e traces de serviços AWS e aplicações. Permite criar dashboards, alarmes, métricas customizadas e ações automáticas baseadas em condições. CloudWatch Logs Insights permite consultar logs com SQL-like queries. É o hub central de observabilidade da AWS, integrado a praticamente todos os serviços da plataforma."
+  },
+  {
+    "comando": "AWS Auto Scaling",
+    "descricao": "Serviço que monitora aplicações e ajusta automaticamente a capacidade para manter performance estável ao menor custo possível. Suporta escalonamento de EC2, ECS, DynamoDB, Aurora e outros serviços via políticas baseadas em métricas ou agendamento. Oferece planos de escalonamento que otimizam para disponibilidade, custo ou equilíbrio entre ambos. Fundamental para aplicações com tráfego variável que precisam de elasticidade automática."
+  },
+  {
+    "comando": "CloudFormation",
+    "descricao": "Serviço de Infraestrutura como Código (IaC) nativo da AWS que provisiona e gerencia recursos usando templates em JSON ou YAML. Gerencia o ciclo de vida completo de stacks de infraestrutura com criação, atualização e exclusão de recursos em ordem correta. CDK (Cloud Development Kit) permite definir infraestrutura em linguagens como Python, TypeScript e Java que geram templates CloudFormation. A base da automação de infraestrutura na AWS."
+  },
+  {
+    "comando": "AWS Config",
+    "descricao": "Serviço de avaliação, auditoria e revisão de configurações de recursos AWS. Registra continuamente as configurações de recursos e suas mudanças ao longo do tempo, criando um histórico completo. Permite criar regras que verificam automaticamente se os recursos estão em conformidade com políticas da empresa. Essencial para auditorias, troubleshooting de mudanças e compliance contínuo em ambientes AWS."
+  },
+  {
+    "comando": "Service Catalog",
+    "descricao": "Serviço para criar e gerenciar catálogos de produtos de TI aprovados para uso na AWS. Permite que administradores publiquem portfolios de recursos pré-aprovados (stacks CloudFormation) que usuários podem implantar com autoatendimento. Garante que apenas configurações aprovadas e seguras sejam usadas na organização. Ideal para dar autonomia às equipes de desenvolvimento mantendo governança e padrões de segurança corporativos."
+  },
+  {
+    "comando": "Systems Manager",
+    "descricao": "Suite de ferramentas para visualizar e controlar infraestrutura AWS e on-premises de forma centralizada. Inclui Session Manager (acesso SSH seguro sem portas abertas), Patch Manager (aplicação automatizada de patches), Parameter Store (configurações e segredos), Run Command e Automation. Elimina a necessidade de chaves SSH e bastion hosts para gerenciamento de servidores. Fundamental para operações seguras e eficientes de infraestrutura."
+  },
+  {
+    "comando": "Trusted Advisor",
+    "descricao": "Serviço de consultoria automatizada que analisa o ambiente AWS e recomenda melhores práticas em cinco categorias: otimização de custos, performance, segurança, tolerância a falhas e limites de serviço. Identifica recursos ociosos, configurações de segurança inadequadas, single points of failure e riscos de quota. Com plano Business ou Enterprise, oferece verificações adicionais e acesso à API para automação. Um guia prático de saúde do ambiente AWS."
+  },
+  {
+    "comando": "Control Tower",
+    "descricao": "Serviço para configurar e governar um ambiente multi-conta seguro na AWS seguindo melhores práticas. Automatiza a criação de uma landing zone com log archive, audit account e controles preventivos e detectivos pré-configurados. Gerencia guardrails (políticas) obrigatórias e opcionais aplicados a todas as contas da organização. Ponto de partida recomendado pela AWS para qualquer organização que esteja estruturando um ambiente multi-conta."
+  },
+  {
+    "comando": "AWS Well-Architected Tool",
+    "descricao": "Ferramenta que guia revisões de arquitetura baseadas nos seis pilares do AWS Well-Architected Framework: excelência operacional, segurança, confiabilidade, eficiência de performance, otimização de custos e sustentabilidade. Faz perguntas estruturadas sobre a arquitetura e identifica riscos com recomendações de melhoria. Gera planos de melhoria priorizados. Pode ser aplicado a qualquer workload AWS para identificar vulnerabilidades antes que se tornem problemas."
+  },
+  {
+    "comando": "Amazon Q Developer in chat applications",
+    "descricao": "Anteriormente conhecido como AWS Chatbot, integra notificações e interações de operações AWS com plataformas de chat como Slack e Microsoft Teams. Permite receber alertas do CloudWatch, notificações de segurança e atualizações de pipeline diretamente no chat. Possibilita executar comandos AWS e consultar status de recursos sem sair do ambiente de chat. Acelera o ChatOps e a resposta a incidentes operacionais integrando AWS ao fluxo de comunicação das equipes."
+  },
+  {
+    "comando": "Launch Wizard",
+    "descricao": "Serviço para simplificar o provisionamento de aplicações empresariais de terceiros na AWS como SAP, SQL Server, Active Directory e HANA. Guia o usuário por um wizard que coleta parâmetros da aplicação e provisiona automaticamente toda a infraestrutura AWS necessária. Elimina configurações manuais complexas e erros de implantação de software empresarial. Reduz de dias para horas o tempo de implantação de soluções como SAP HANA."
+  },
+  {
+    "comando": "AWS Compute Optimizer",
+    "descricao": "Serviço que usa ML para analisar métricas históricas de utilização e recomendar tipos de recursos AWS otimizados para melhor custo-performance. Analisa EC2, Auto Scaling Groups, funções Lambda, volumes EBS e clusters ECS no Fargate. Identifica instâncias over-provisioned e under-provisioned com recomendações específicas de tipo e tamanho. Pode reduzir custos significativamente sem comprometer performance ao right-sizing recursos."
+  },
+  {
+    "comando": "Resource Groups & Tag Editor",
+    "descricao": "Ferramenta para organizar e gerenciar recursos AWS usando tags e grupos de recursos. Permite criar grupos lógicos de recursos que compartilham tags comuns para facilitar gerenciamento em escala. Tag Editor permite adicionar, editar e remover tags de múltiplos recursos simultaneamente. Essencial para governança, automação, controle de custos e organização de ambientes complexos com centenas de recursos."
+  },
+  {
+    "comando": "Amazon Grafana",
+    "descricao": "Serviço gerenciado e popular para visualização de métricas, logs e traces de múltiplas fontes de dados. Elimina a necessidade de instalar, configurar e manter instâncias. Integra-se nativamente com CloudWatch, X-Ray, Timestream, OpenSearch e dezenas de fontes externas como Prometheus e Datadog. Ideal para dashboards operacionais unificados que correlacionam dados de múltiplas fontes em uma visão única."
+  },
+  {
+    "comando": "Amazon Prometheus",
+    "descricao": "Serviço de monitoramento de métricas gerenciado compatível com um ecossistema de código aberto. Ele elimina a complexidade de operar clusters com alta disponibilidade para ambientes Kubernetes em grande escala. Integra-se com EKS, ECS e cargas de trabalho on-premises via agentes existentes. Armazena métricas com retenção configurável e integra-se nativamente com o Amazon Grafana para visualização."
+  },
+  {
+    "comando": "AWS Resilience Hub",
+    "descricao": "Serviço para definir, validar e monitorar continuamente a resiliência de aplicações AWS. Permite definir RTO e RPO alvo para uma aplicação e avalia automaticamente se a arquitetura atual consegue atender esses objetivos. Identifica componentes sem redundância e sugere melhorias específicas. Integra-se com CloudFormation, Terraform e o ecossistema AWS para mapear todos os componentes de uma aplicação."
+  },
+  {
+    "comando": "Incident Manager",
+    "descricao": "Serviço para gerenciar e resolver incidentes operacionais de forma estruturada e rápida. Automatiza planos de resposta com runbooks, escalonamento de contatos e criação de salas de situação (war rooms). Integra-se com CloudWatch, PagerDuty e outros sistemas de alerta para detectar e abrir automaticamente incidentes. Mantém registro completo de timeline de incidentes para análise post-mortem e melhoria contínua."
+  },
+  {
+    "comando": "AWS para SAP",
+    "descricao": "Conjunto de serviços, ferramentas e suporte especializado da AWS para migrar e executar workloads SAP (S/4HANA, ECC, BW) na nuvem. Inclui Launch Wizard para SAP, instâncias EC2 certificadas para HANA, backups automatizados e integração com AWS Backup. Oferece parceria com SAP para suporte e certificação de arquiteturas. Permite que empresas reduzam TCO de ambientes SAP migrando para infraestrutura elástica e gerenciada na AWS."
+  },
+  {
+    "comando": "AWS Telco Network Builder",
+    "descricao": "Serviço para operadoras de telecomunicações automatizarem o deployment e gerenciamento de funções de rede (VNFs/CNFs) na AWS. Permite que telcos construam e operem redes 5G core, IMS e outras funções de rede como workloads cloud-native na AWS. Gerencia o ciclo de vida completo de funções de rede com rollout e rollback automatizados. Viabiliza a transformação de infraestrutura de telecomunicações de hardware dedicado para software na nuvem."
+  },
+  {
+    "comando": "AWS Health Dashboard",
+    "descricao": "Painel que exibe o estado de saúde dos serviços AWS e alertas personalizados sobre eventos que podem afetar os recursos da sua conta. Separa a saúde geral dos serviços AWS (Service Health) de eventos específicos da conta (Account Health/PHD). Notifica sobre manutenções programadas, degradações de serviço e problemas de segurança que afetam recursos específicos. Fundamental para resposta proativa a incidentes e comunicação com stakeholders durante falhas."
+  },
+  {
+    "comando": "AWS Proton",
+    "descricao": "Serviço para que equipes de plataforma definam e mantenham templates de infraestrutura padronizados que desenvolvedores usam com autoatendimento. Permite que a equipe de plataforma publique templates de ambiente e serviço pré-aprovados com IaC (CloudFormation ou Terraform). Desenvolvedores implantam serviços usando esses templates sem precisar de expertise em infraestrutura. Resolve o desafio de padronização e governança de infraestrutura em organizações com muitas equipes autônomas."
+  },
+  {
+    "comando": "AWS Sustainability",
+    "descricao": "Hub de sustentabilidade da AWS que oferece ferramentas e dados para ajudar organizações a medir e reduzir o impacto ambiental de seus workloads na nuvem. Inclui o Customer Carbon Footprint Tool para visualizar emissões de CO2 associadas ao uso de serviços AWS. Fornece recomendações de otimização de recursos para reduzir consumo energético. Suporta metas ESG e relatórios de sustentabilidade corporativa com dados verificáveis de emissões."
+  },
+  {
+    "comando": "AWS User Notifications",
+    "descricao": "Serviço centralizado para gerenciar e entregar notificações de eventos da conta AWS em múltiplos canais. Consolida notificações de serviços como CloudWatch, Trusted Advisor, Health e Config em um único hub. Entrega notificações via console AWS, email, Slack, Microsoft Teams e Amazon Q in chat. Permite filtrar e personalizar quais eventos geram notificações para quais equipes, reduzindo ruído operacional."
+  },
+  {
+    "comando": "AWS Partner Central",
+    "descricao": "Portal de colaboração e gestão de negócios para parceiros do AWS Partner Network (APN). Permite que parceiros gerenciem oportunidades de co-selling com a AWS, acessem programas de benefícios e rastreiem certificações e competências. Facilita a colaboração entre equipes de vendas de parceiros e da AWS em oportunidades específicas. Hub central para parceiros consultores, ISVs e MSPs que trabalham no ecossistema AWS."
+  },
+  {
+    "comando": "CloudTrail",
+    "descricao": "Serviço que registra toda a atividade de API e ação do usuário em uma conta AWS, criando um log de auditoria completo. Cada chamada a serviços AWS fica registrada com detalhes de quem fez, quando, de onde e com qual resultado. Fundamental para investigação de segurança, conformidade regulatória e diagnóstico de mudanças não autorizadas. Integra-se com S3, CloudWatch Logs, Athena e Security Lake para retenção e análise de logs."
+  },
+  {
+    "comando": "AWS License Manager",
+    "descricao": "Serviço para rastrear e gerenciar licenças de software na AWS e em ambientes on-premises. Controla o uso de licenças de fornecedores como Microsoft, Oracle, SAP e IBM, evitando violações e auditorias de conformidade. Define regras de licença que são aplicadas automaticamente durante o lançamento de instâncias EC2. Fornece relatórios de utilização de licenças para otimização de custos e conformidade contratual."
+  },
+  {
+    "comando": "AWS Resource Explorer",
+    "descricao": "Serviço de busca e descoberta de recursos AWS em múltiplas regiões e contas. Permite encontrar qualquer recurso (instâncias EC2, buckets S3, funções Lambda, etc.) por tag, tipo, região ou nome via interface de busca centralizada. Facilita o inventário e auditoria de recursos em organizações com dezenas de contas AWS. Integra-se com AWS Organizations para visibilidade em toda a organização."
+  },
+  {
+    "comando": "Service Quotas",
+    "descricao": "Serviço para visualizar e gerenciar os limites (cotas) de serviços AWS em uma conta. Mostra o uso atual em relação ao limite configurado para cada serviço e permite solicitar aumentos diretamente no console. Suporta alertas automáticos via CloudWatch quando o uso se aproxima dos limites. Essencial para evitar interrupções por esgotamento de cotas durante crescimento de workloads ou eventos de alto tráfego."
+  },
+  {
+    "comando": "Kinesis Video Streams",
+    "descricao": "Serviço gerenciado para ingestão, processamento e armazenamento de streams de vídeo de câmeras e dispositivos IoT em escala. Facilita a transmissão segura de vídeo da borda para a nuvem para análise com Rekognition Video ou ML customizado. Suporta reprodução em tempo real e sob demanda com retenção configurável. Ideal para vigilância inteligente, monitoramento industrial, análise de tráfego e qualquer caso de vídeo-IoT."
+  },
+  {
+    "comando": "MediaConvert",
+    "descricao": "Serviço de transcodificação de vídeo baseado em arquivo para converter conteúdo para formatos adequados à distribuição em múltiplas plataformas. Suporta entrada de praticamente qualquer formato de vídeo profissional e saída otimizada para OTT, broadcast e web. Oferece recursos avançados como inserção de anúncios, DRM, geração de thumbnails e composição de legendas. Escala automaticamente para processar qualquer volume de conteúdo sem gerenciar servidores."
+  },
+  {
+    "comando": "MediaLive",
+    "descricao": "Serviço de processamento de vídeo ao vivo para canais de broadcast e streaming em tempo real. Ingere feeds de vídeo ao vivo, aplica codificação, inserção de anúncios e gera múltiplas qualidades simultâneas (ABR). Suporta entradas como RTMP, HLS e SDI de equipamentos profissionais de broadcast. Ideal para transmissões ao vivo de eventos esportivos, notícias, shows e qualquer conteúdo linear ao vivo."
+  },
+  {
+    "comando": "MediaPackage",
+    "descricao": "Serviço de empacotamento e proteção de vídeo que prepara conteúdo para distribuição em múltiplos formatos de streaming como HLS, DASH e CMAF. Adiciona DRM (Digital Rights Management) via Widevine, FairPlay e PlayReady para proteger conteúdo premium. Gerencia a origem de vídeo para CDNs como CloudFront com alta disponibilidade. Fundamental na arquitetura de plataformas OTT como serviços de streaming de vídeo."
+  },
+  {
+    "comando": "MediaStore",
+    "descricao": "Serviço de armazenamento de mídia de alta performance otimizado para entrega de vídeo ao vivo com latência extremamente baixa. Funciona como origem de CDN para streams ao vivo, combinando baixa latência de entrega com a durabilidade do S3. Ideal como camada de origem para workloads de vídeo ao vivo onde a latência de entrega do objeto é crítica. Parte de arquiteturas de streaming ao vivo de alta qualidade."
+  },
+  {
+    "comando": "MediaTailor",
+    "descricao": "Serviço de personalização e inserção de anúncios do lado do servidor para streaming de vídeo. Substitui anúncios de forma transparente no fluxo de vídeo sem gaps ou buffering percebidos pelo espectador. Suporta DAI (Dynamic Ad Insertion) para vídeo ao vivo e sob demanda. Permite que plataformas de streaming monetizem conteúdo com anúncios personalizados sem comprometer a experiência de visualização."
+  },
+  {
+    "comando": "Elemental Appliances & Software",
+    "descricao": "Linha de hardware e software on-premises da AWS Elemental para processamento de vídeo em data centers e instalações de broadcast. Oferece versões físicas dos serviços de vídeo AWS como MediaLive e MediaConnect para casos onde o processamento deve ocorrer localmente. Usado por broadcasters, operadoras de TV a cabo e venues de eventos que necessitam de processamento de vídeo local de alta confiabilidade com gestão centralizada na nuvem."
+  },
+  {
+    "comando": "Amazon Interactive Video Service",
+    "descricao": "Serviço gerenciado para construir experiências de streaming de vídeo ao vivo interativo em aplicações e sites. Permite adicionar live streaming com latência ultra-baixa (inferior a 5 segundos) a qualquer aplicação com poucos minutos de integração via SDK. Suporta chat ao vivo integrado, enquetes e reações sincronizadas com o vídeo. Ideal para live commerce, gaming ao vivo, educação interativa e eventos ao vivo com alta interatividade."
+  },
+  {
+    "comando": "Elemental Inference",
+    "descricao": "Serviço de inferência de machine learning otimizado para workloads de vídeo e mídia da família AWS Elemental. Permite executar modelos de ML para análise de conteúdo de vídeo, detecção de objetos, reconhecimento facial e classificação de cenas em tempo real. Integra-se com MediaLive, MediaConvert e outros serviços de mídia para adicionar inteligência artificial aos pipelines de processamento de vídeo."
+  },
+  {
+    "comando": "AWS Deadline Cloud",
+    "descricao": "Serviço gerenciado de farm de renderização para estúdios de animação, VFX e jogos que precisam escalar processamento de renderização na nuvem. Gerencia filas de trabalhos de renderização, escala automaticamente workers EC2 e integra-se com softwares como Maya, Nuke e Blender. Elimina a necessidade de investir em hardware de renderização local que fica ocioso entre projetos. Permite que estúdios independentes acessem capacidade de renderização de nível estúdio major."
+  },
+  {
+    "comando": "MediaConnect",
+    "descricao": "Serviço de transporte de vídeo ao vivo de alta qualidade e baixa latência sobre a Internet usando protocolos de broadcast como Zixi, RIST e SRT. Substitui links satelitais e circuitos dedicados para transporte de vídeo profissional a custo muito menor. Oferece entrega redundante e monitoramento de qualidade em tempo real. Ideal para distribuição de feeds de vídeo entre estúdios, afiliadas e plataformas de distribuição globalmente."
+  },
+  {
+    "comando": "Amazon SageMaker AI",
+    "descricao": "Plataforma completa e gerenciada para construir, treinar e implantar modelos de machine learning em escala. Inclui notebooks Jupyter gerenciados, pipelines de ML automatizados, registro de modelos, monitoramento em produção e ferramentas de MLOps. Suporta frameworks populares como TensorFlow, PyTorch, Scikit-learn e XGBoost. Em 2026 integra capacidades generativas e agênticas para accelerar todo o ciclo de vida de ML."
+  },
+  {
+    "comando": "Amazon Augmented AI",
+    "descricao": "Serviço para adicionar revisão humana a predições de ML quando a confiança do modelo está abaixo de um limiar. Cria fluxos de trabalho para que revisores humanos validem e corrijam predições de serviços como Rekognition e Textract. Gerencia a distribuição de tarefas para workforce interna, fornecedores certificados ou Amazon Mechanical Turk. Garante precisão em casos críticos onde erros de ML têm alto impacto."
+  },
+  {
+    "comando": "Amazon CodeGuru",
+    "descricao": "Serviço de revisão de código e profiling de performance alimentado por machine learning. CodeGuru Reviewer analisa pull requests e identifica bugs, vazamentos de recursos, vulnerabilidades de segurança e problemas de qualidade. CodeGuru Profiler monitora aplicações em produção identificando linhas de código mais custosas em CPU. Integra-se com GitHub, Bitbucket e CodeCommit para revisão automática no fluxo de desenvolvimento."
+  },
+  {
+    "comando": "Amazon DevOps Guru",
+    "descricao": "Serviço de operações de ML que detecta anomalias operacionais e identifica problemas de aplicação antes que afetem os usuários. Analisa logs, métricas e eventos do CloudWatch usando modelos treinados em práticas DevOps da AWS. Fornece recomendações de remediação específicas para cada anomalia detectada. Ideal para equipes que querem inteligência operacional automatizada sem configurar regras manualmente."
+  },
+  {
+    "comando": "Amazon Comprehend",
+    "descricao": "Serviço de NLP (Processamento de Linguagem Natural) gerenciado que extrai insights de textos sem necessidade de expertise em ML. Identifica entidades (pessoas, locais, organizações), sentimento, tópicos, idioma e relações em documentos. Suporta análise em batch de grandes volumes ou em tempo real via API. Ideal para análise de feedback de clientes, moderação de conteúdo e extração de informações de documentos não estruturados."
+  },
+  {
+    "comando": "Amazon Forecast",
+    "descricao": "Serviço de previsão de séries temporais baseado em machine learning, sem necessidade de experiência em ML. Usa os mesmos algoritmos que a Amazon utiliza internamente para previsão de demanda. Aceita dados históricos e variáveis relacionadas (feriados, clima, promoções) para gerar previsões precisas. Ideal para previsão de demanda de estoque, planejamento de capacidade, previsão de vendas e otimização de recursos."
+  },
+  {
+    "comando": "Amazon Fraud Detector",
+    "descricao": "Serviço gerenciado para detectar fraudes online em tempo real usando machine learning. Treina modelos customizados com os dados históricos de fraude da própria empresa, sem expertise em ML. Avalia eventos como criação de contas, pagamentos e logins para identificar comportamentos suspeitos. Inclui modelos pré-construídos para tipos comuns de fraude e integração com outros serviços AWS de segurança."
+  },
+  {
+    "comando": "Amazon Kendra",
+    "descricao": "Serviço de busca empresarial inteligente alimentado por ML que compreende linguagem natural. Diferente de buscas baseadas em palavras-chave, o Kendra entende o contexto e retorna respostas precisas de documentos internos. Conecta-se a fontes de dados como S3, SharePoint, Salesforce, ServiceNow e databases. Ideal para bases de conhecimento corporativas, portais de suporte e sistemas de busca interna de documentos."
+  },
+  {
+    "comando": "Amazon Personalize",
+    "descricao": "Serviço gerenciado para criar sistemas de recomendação personalizados em tempo real sem expertise em ML. Usa os mesmos algoritmos de recomendação que a Amazon.com utiliza no e-commerce. Aceita dados de interações de usuários, catálogo de itens e dados de usuários para gerar recomendações altamente relevantes. Ideal para e-commerce, streaming de mídia, plataformas de conteúdo e campanhas de marketing personalizadas."
+  },
+  {
+    "comando": "Amazon Polly",
+    "descricao": "Serviço de conversão de texto em fala (TTS) com vozes altamente naturais em dezenas de idiomas e sotaques. Suporta o padrão SSML para controle fino de pronúncia, ritmo, volume e ênfase. Oferece vozes neurais com qualidade muito superior às vozes padrão. Ideal para aplicações de acessibilidade, assistentes de voz, narração automática de conteúdo e sistemas de atendimento por telefone."
+  },
+  {
+    "comando": "Amazon Rekognition",
+    "descricao": "Serviço de visão computacional que analisa imagens e vídeos para detectar objetos, cenas, rostos, texto e atividades. Identifica rostos em coleções, detecta equipamentos de proteção individual, conteúdo inapropriado e celebridades. Processa vídeos em tempo real para segurança e vigilância. Amplamente utilizado em verificação de identidade, moderação de conteúdo, análise de audiência e controle de acesso físico."
+  },
+  {
+    "comando": "Amazon Textract",
+    "descricao": "Serviço que extrai automaticamente texto, dados de formulários e informações de tabelas de documentos digitalizados como PDFs e imagens. Vai além de OCR simples, entendendo a estrutura e contexto dos documentos. Detecta campos de formulários e seus valores sem configuração de templates. Ideal para automatizar processamento de documentos como contratos, laudos médicos, formulários fiscais e registros financeiros."
+  },
+  {
+    "comando": "Amazon Transcribe",
+    "descricao": "Serviço de reconhecimento automático de fala (ASR) que converte áudio em texto com alta precisão. Suporta dezenas de idiomas e dialetos, identificação de múltiplos locutores e vocabulário customizado para termos específicos do domínio. Oferece transcrição em tempo real e em batch para arquivos de áudio. Ideal para legendagem automática, análise de calls de call center, transcrição de reuniões e acessibilidade."
+  },
+  {
+    "comando": "Amazon Translate",
+    "descricao": "Serviço de tradução automática neural que oferece traduções rápidas, acessíveis e de alta qualidade entre dezenas de idiomas. Suporta tradução em tempo real e em batch de documentos. Permite terminologia customizada para manter consistência em traduções de domínio específico. Ideal para localização de conteúdo, comunicação multilíngue em aplicações, análise de dados internacionais e suporte ao cliente global."
+  },
+  {
+    "comando": "AWS Panorama",
+    "descricao": "Serviço que permite executar modelos de visão computacional em câmeras de vídeo on-premises sem enviar imagens para a nuvem. O aparelho Panorama conecta câmeras de segurança existentes e executa inferência de ML localmente na borda. Ideal para casos de uso industriais como detecção de defeitos em linha de produção, contagem de pessoas e análise de segurança. Mantém dados de vídeo sensíveis localmente, atendendo requisitos de privacidade."
+  },
+  {
+    "comando": "Amazon Monitron",
+    "descricao": "Solução end-to-end para monitoramento de condições de equipamentos industriais usando sensores IoT e ML. Inclui sensores físicos para medir vibração e temperatura, gateway de comunicação e modelo de ML para detectar anomalias. Identifica padrões que indicam falha iminente de motores, bombas, compressores e outros equipamentos rotativos. Permite manutenção preditiva sem necessidade de expertise em ML ou sensoriamento industrial."
+  },
+  {
+    "comando": "AWS HealthLake",
+    "descricao": "Serviço compatível com FHIR para armazenar, transformar e analisar dados de saúde em escala. Normaliza automaticamente dados clínicos de diferentes fontes em formato FHIR R4, o padrão de interoperabilidade em saúde. Inclui NLP médico integrado para extrair informações de notas clínicas não estruturadas. Habilita análises avançadas e treinamento de modelos de ML com dados de saúde estruturados e em conformidade."
+  },
+  {
+    "comando": "Amazon Lookout for Equipment",
+    "descricao": "Serviço que usa ML para detectar anomalias em equipamentos industriais analisando dados de sensores existentes. Aprende automaticamente os padrões normais de operação de cada máquina e identifica desvios que indicam possíveis falhas. Integra-se com fontes de dados industriais e envia alertas quando anomalias são detectadas. Permite implementar manutenção preditiva sem necessidade de criar e treinar modelos de ML do zero."
+  },
+  {
+    "comando": "Amazon Q Business",
+    "descricao": "Assistente de IA generativa para empresas que conecta bases de conhecimento internas e responde perguntas de funcionários. Indexa documentos de fontes como S3, SharePoint, Confluence, Salesforce e databases corporativos. Permite que colaboradores obtenham respostas precisas fundamentadas nos dados e políticas da empresa. Suporta customização de comportamento, permissões granulares por usuário e integrações com sistemas empresariais."
+  },
+  {
+    "comando": "AWS HealthOmics",
+    "descricao": "Serviço especializado para armazenar, processar e analisar dados ômicos de larga escala como genômica, transcriptômica e proteômica. Gerencia workflows de bioinformática como variante calling, alinhamento de sequências e análise de expressão gênica em escala. Otimizado para os formatos e ferramentas do ecossistema bioinformático. Habilita pesquisa genômica, medicina de precisão e descoberta de drogas na nuvem."
+  },
+  {
+    "comando": "Amazon Nova Act",
+    "descricao": "Modelo de ação da Amazon treinado para executar tarefas em ambientes computacionais como navegadores web e interfaces de desktop. Diferente de modelos de linguagem convencionais, o Nova Act é otimizado para sequências de ações em interfaces gráficas. Permite automatizar fluxos de trabalho complexos que antes exigiam RPA tradicional ou intervenção humana. Usado como base para agentes autônomos que operam aplicações web."
+  },
+  {
+    "comando": "Amazon Bedrock",
+    "descricao": "Serviço totalmente gerenciado que oferece acesso a modelos de fundação (FMs) de líderes como Anthropic (Claude), Meta (Llama), Mistral, Stability AI e os próprios modelos Amazon Nova via API unificada. Permite construir aplicações de IA generativa sem gerenciar infraestrutura de GPU. Suporta fine-tuning, RAG com knowledge bases, guardrails de segurança e avaliação de modelos. É o hub central de GenAI na AWS em 2026."
+  },
+  {
+    "comando": "Amazon Bedrock AgentCore",
+    "descricao": "Runtime gerenciado para implantação e execução de agentes de IA em produção, lançado em 2025. Fornece infraestrutura para memória persistente de agentes, gerenciamento de sessões longas, orquestração de ferramentas e execução segura de código. Resolve os desafios operacionais de escalar agentes de IA além de protótipos. Integra-se com Bedrock e permite que agentes interajam de forma confiável com sistemas externos e dados empresariais."
+  },
+  {
+    "comando": "Amazon Q",
+    "descricao": "Assistente de IA generativa da AWS para empresas que responde perguntas, gera conteúdo e executa tarefas usando dados corporativos. Conecta-se a mais de 40 fontes de dados empresariais como S3, SharePoint, Salesforce e Google Drive. Oferece respostas contextualizadas com citações de fontes, respeitando permissões de acesso dos usuários. Disponível como Amazon Q Business (empresas) e Amazon Q Developer (desenvolvedores)."
+  },
+  {
+    "comando": "Amazon Comprehend Medical",
+    "descricao": "Versão especializada do Comprehend para extrair informações médicas de texto clínico não estruturado. Identifica entidades como diagnósticos, medicamentos, dosagens, sintomas, procedimentos e informações protegidas de saúde (PHI). Otimizado para terminologia médica, prontuários eletrônicos e notas clínicas. Ajuda sistemas de saúde a estruturar dados clínicos para análise, pesquisa e compliance com regulamentações como HIPAA."
+  },
+  {
+    "comando": "Amazon Lex",
+    "descricao": "Serviço para construir interfaces conversacionais (chatbots) com voz e texto usando a mesma tecnologia do Amazon Alexa. Fornece compreensão de linguagem natural (NLU) e reconhecimento automático de fala (ASR) integrados. Gerencia o fluxo de conversação com slots, intenções e fulfillment via Lambda. Ideal para bots de atendimento ao cliente, automação de processos, sistemas IVR e assistentes virtuais empresariais."
+  },
+  {
+    "comando": "Amazon Bio Discovery",
+    "descricao": "Plataforma de descoberta de medicamentos e pesquisa biológica alimentada por IA generativa e machine learning. Acelera a descoberta de novos compostos farmacêuticos, análise de proteínas e design de moléculas. Integra dados de múltiplas fontes científicas e usa modelos de linguagem especializados em biologia. Ideal para empresas farmacêuticas, biotechs e instituições de pesquisa que buscam acelerar o desenvolvimento de terapias."
+  },
+  {
+    "comando": "AWS HealthImaging",
+    "descricao": "Serviço gerenciado para armazenar, acessar e analisar imagens médicas em escala de petabytes na nuvem. Suporta imagens DICOM de modalidades como ressonância magnética, tomografia e radiografia. Oferece API para integração com softwares de visualização e sistemas PACS hospitalares. Reduz os custos de infraestrutura de PACS tradicional enquanto habilita análise de imagens com ML para diagnóstico assistido por IA."
+  },
+  {
+    "comando": "Athena",
+    "descricao": "Serviço de consulta interativa serverless que permite analisar dados no S3 usando SQL padrão sem infraestrutura para gerenciar. Paga apenas pelas consultas executadas, com cobrança por dados escaneados. Suporta formatos como CSV, JSON, Parquet, ORC e Avro. Ideal para análises ad hoc de data lakes, consultas de logs de CloudTrail e CloudFront, e exploração de dados sem necessidade de carga em um banco de dados."
+  },
+  {
+    "comando": "Amazon Redshift",
+    "descricao": "Data warehouse em nuvem totalmente gerenciado, otimizado para análise de petabytes de dados estruturados e semi-estruturados. Usa armazenamento colunar e execução paralela massiva (MPP) para consultas analíticas de alta performance. Redshift Serverless elimina o gerenciamento de clusters com escalonamento automático. Integra-se com S3, Glue, Kinesis, SageMaker e QuickSight para pipelines analíticos completos."
+  },
+  {
+    "comando": "CloudSearch",
+    "descricao": "Serviço de busca gerenciado para adicionar capacidades de pesquisa full-text a sites e aplicações. Suporta 34 idiomas, faceting, highlighting, autocompletar e busca geoespacial. Configura automaticamente os recursos de busca e escala conforme o volume de dados e requisições. Nota: em 2026 o OpenSearch Service é a opção mais recomendada para novos projetos, com recursos mais avançados."
+  },
+  {
+    "comando": "Amazon OpenSearch Service",
+    "descricao": "Serviço gerenciado para busca, análise de logs e visualização em tempo real baseado no OpenSearch (fork do Elasticsearch). Oferece indexação e busca full-text de alta performance com suporte a consultas complexas e agregações. Inclui OpenSearch Dashboards (ex-Kibana) para visualização e o padrão k-NN para busca vetorial em aplicações de IA. Ideal para observabilidade de aplicações, SIEM e motores de busca de produtos."
+  },
+  {
+    "comando": "Kinesis",
+    "descricao": "Família de serviços para captura, processamento e análise de dados de streaming em tempo real. Kinesis Data Streams é o canal de ingestão de streams de alta velocidade. Kinesis Data Firehose entrega dados para S3, Redshift e OpenSearch sem código. Kinesis Video Streams processa streams de vídeo. Ideal para análise de clickstream, telemetria de IoT, logs de aplicações e detecção de fraudes em tempo real."
+  },
+  {
+    "comando": "QuickSight",
+    "descricao": "Serviço de business intelligence (BI) serverless e nativo da nuvem para criar dashboards e relatórios interativos. Usa ML para gerar insights automáticos, detectar anomalias e fazer previsões sem configuração manual. O recurso Q permite fazer perguntas em linguagem natural sobre os dados. Escala automaticamente para milhares de usuários simultâneos sem gerenciar servidores de BI."
+  },
+  {
+    "comando": "AWS Data Exchange",
+    "descricao": "Marketplace para descobrir, subscrever e usar dados de terceiros diretamente na AWS. Oferece milhares de datasets de provedores como Reuters, Foursquare, IMDb e agências governamentais. Permite assinar dados que são entregues automaticamente no S3, sem necessidade de negociações manuais. Facilita o enriquecimento de modelos analíticos e de ML com dados externos de alta qualidade."
+  },
+  {
+    "comando": "AWS Lake Formation",
+    "descricao": "Serviço para construir, proteger e gerenciar data lakes de forma centralizada e simplificada na AWS. Automatiza tarefas complexas de criação de data lake como ingestão, limpeza, catalogação e aplicação de políticas de acesso. Gerencia permissões em nível de coluna e linha sobre dados no S3 e no catálogo do Glue. Essencial para governança de dados em arquiteturas de data lake modernas."
+  },
+  {
+    "comando": "MSK",
+    "descricao": "Serviço totalmente gerenciado para Apache Kafka, o padrão de streaming de eventos em nível empresarial. Automatiza o provisionamento, configuração, patches e operações de clusters Kafka. Oferece MSK Serverless para escalonamento automático sem gerenciar capacidade. Ideal para pipelines de dados em tempo real, event sourcing, integração de microsserviços e replicação de mudanças de banco de dados (CDC)."
+  },
+  {
+    "comando": "AWS Glue DataBrew",
+    "descricao": "Ferramenta visual de preparação de dados que permite analistas e cientistas de dados limpar e normalizar dados sem escrever código. Oferece mais de 250 transformações prontas para aplicar via interface gráfica intuitiva. Perfila automaticamente os dados para detectar anomalias, valores ausentes e distribuições. Integra-se com S3, Redshift, Glue e outros serviços de dados AWS."
+  },
+  {
+    "comando": "Amazon FinSpace",
+    "descricao": "Serviço especializado para o setor financeiro que facilita o armazenamento, catálogo e análise de dados financeiros em escala. Inclui catálogo de dados com contexto financeiro, ferramentas de análise de séries temporais e integração com calendários de mercado. Gerencia dados como preços de ativos, dados de portfólio e análises quantitativas em ambiente governado. Ideal para gestoras de ativos, bancos e fintechs que trabalham com grandes volumes de dados de mercado."
+  },
+  {
+    "comando": "Managed Apache Flink",
+    "descricao": "Serviço gerenciado para executar aplicações Apache Flink de processamento de streams sem gerenciar servidores. Apache Flink é um framework de processamento distribuído para pipelines de dados em tempo real com estado. Suporta Java, Scala, Python e SQL para definir transformações de stream. Ideal para detecção de anomalias em tempo real, ETL de streaming e dashboards de dados ao vivo."
+  },
+  {
+    "comando": "EMR",
+    "descricao": "Plataforma de big data gerenciada para processar grandes volumes de dados usando Spark, Hadoop, Hive, Presto e outros frameworks open source. Provisiona clusters dimensionados automaticamente e os encerra após o processamento, minimizando custos. EMR Serverless elimina o gerenciamento de clusters completamente. Ideal para ETL de dados em escala, treinamento de modelos de ML e análise de logs massivos."
+  },
+  {
+    "comando": "AWS Clean Rooms",
+    "descricao": "Serviço que permite a múltiplas empresas colaborar em análises conjuntas de dados sem compartilhar os dados brutos entre si. Cada parte mantém controle sobre seus dados enquanto contribui com consultas agregadas em um ambiente seguro e governado. Ideal para análises de marketing colaborativas entre anunciantes e publishers, pesquisa farmacêutica conjunta e análises de risco entre instituições financeiras."
+  },
+  {
+    "comando": "Amazon SageMaker",
+    "descricao": "Plataforma completa e gerenciada para construir, treinar e implantar modelos de machine learning em escala. Inclui notebooks Jupyter gerenciados, pipelines de ML automatizados, registro de modelos, monitoramento em produção e ferramentas de MLOps. Suporta frameworks populares como TensorFlow, PyTorch, Scikit-learn e XGBoost. Em 2026 integra capacidades generativas e agênticas para accelerar todo o ciclo de vida de ML."
+  },
+  {
+    "comando": "AWS Entity Resolution",
+    "descricao": "Serviço gerenciado para identificar e vincular registros relacionados a mesma entidade (pessoa, produto, empresa) espalhados em múltiplos datasets. Usa técnicas de record linkage e fuzzy matching para resolver identidades mesmo sem identificadores comuns. Fundamental para criar visão unificada do cliente, deduplicação de dados e enriquecimento de perfis. Integra-se com Data Exchange para resolução de entidades entre dados internos e externos."
+  },
+  {
+    "comando": "AWS Glue",
+    "descricao": "Serviço serverless de integração de dados para ETL, catalogação e preparação de dados para análise. O Glue Data Catalog é o repositório central de metadados que o Athena, Redshift Spectrum e EMR utilizam. Gera automaticamente código ETL em Python ou Scala a partir de mapeamentos visuais. Suporta mais de 70 conectores nativos para fontes de dados diversas."
+  },
+  {
+    "comando": "Amazon Data Firehose",
+    "descricao": "Serviço de entrega de streams de dados em tempo real para destinos como S3, Redshift, OpenSearch e provedores de terceiros. Não requer gerenciamento de infraestrutura ou código de consumidor de stream. Aplica transformações de dados via Lambda antes da entrega e formata automaticamente em Parquet ou ORC. Parte da família Kinesis, ideal para ingestão contínua de logs, métricas e eventos."
+  },
+  {
+    "comando": "Amazon DataZone",
+    "descricao": "Serviço de catálogo de dados e governança para descoberta, compartilhamento e acesso a dados em toda a organização. Cria um marketplace interno de dados onde produtores publicam datasets e consumidores solicitam acesso. Mantém contexto de negócio, linhagem de dados e glossários de termos além dos metadados técnicos. Essencial para implementar estratégias de data mesh e governança descentralizada de dados."
+  },
+  {
+    "comando": "Amazon Quick",
+    "descricao": "Serviço de business intelligence serverless que permite criar dashboards interativos e análises visuais de dados sem necessidade de infraestrutura. Conecta-se a dezenas de fontes de dados incluindo RDS, Redshift, S3, Athena, Salesforce e arquivos Excel. Oferece Q&A em linguagem natural alimentado por IA para fazer perguntas sobre dados. Escala automaticamente para milhares de usuários com performance consistente."
+  },
+  {
+    "comando": "Resource Access Manager",
+    "descricao": "Serviço que permite compartilhar recursos AWS com outras contas da mesma organização ou contas externas. Evita a duplicação de recursos compartilhados como sub-redes VPC, Transit Gateways, endpoints do Route 53 e AMIs. Garante que o compartilhamento seja governado por políticas, mantendo controle sobre quem pode acessar cada recurso. Fundamental em arquiteturas hub-and-spoke de VPC e landing zones multi-conta."
+  },
+  {
+    "comando": "Cognito",
+    "descricao": "Serviço de identidade para aplicações web e mobile que gerencia autenticação, autorização e sincronização de usuários. Oferece User Pools (diretório de usuários com login/senha, MFA e verificação de email) e Identity Pools (credenciais AWS temporárias para usuários autenticados). Suporta federação com Google, Facebook, Apple e qualquer provedor OAuth/SAML. Escala para milhões de usuários sem infraestrutura de identidade para gerenciar."
+  },
+  {
+    "comando": "Secrets Manager",
+    "descricao": "Serviço para armazenar, rotacionar e gerenciar segredos como credenciais de banco de dados, chaves de API e tokens. Rotaciona segredos automaticamente segundo uma programação configurável, sem alterações no código da aplicação. Integra-se nativamente com RDS, Redshift, DocumentDB e outros serviços para rotação automática de senhas. Elimina credenciais hardcoded no código e em arquivos de configuração."
+  },
+  {
+    "comando": "GuardDuty",
+    "descricao": "Serviço de detecção de ameaças que monitora continuamente contas e workloads AWS em busca de atividades maliciosas. Analisa logs de CloudTrail, VPC Flow Logs, DNS e eventos do Kubernetes usando ML e inteligência de ameaças. Detecta comportamentos como acesso de IPs maliciosos, mineração de criptomoeda, exfiltração de dados e movimentação lateral. Habilita-se com um clique sem agentes para instalar ou infraestrutura para gerenciar."
+  },
+  {
+    "comando": "Amazon Inspector",
+    "descricao": "Serviço de avaliação de vulnerabilidades que escaneia continuamente workloads EC2, contêineres e funções Lambda. Detecta vulnerabilidades de software (CVEs), exposições de rede inadequadas e desvios de melhores práticas de segurança. Prioriza vulnerabilidades por risco combinando severidade com exposição real. Gera relatórios detalhados com recomendações de remediação para equipes de segurança."
+  },
+  {
+    "comando": "Amazon Macie",
+    "descricao": "Serviço de segurança de dados que usa ML para descobrir e proteger dados sensíveis no S3 automaticamente. Identifica PII (dados pessoais), informações financeiras, credenciais e outros dados sensíveis em buckets S3. Avalia a postura de segurança dos buckets detectando configurações que expõem dados desnecessariamente. Gera alertas detalhados e relatórios para conformidade com regulamentações como LGPD, GDPR e HIPAA."
+  },
+  {
+    "comando": "IAM Identity Center",
+    "descricao": "Serviço de Single Sign-On (SSO) para acesso centralizado a múltiplas contas AWS e aplicações SaaS com uma única identidade. Integra-se com provedores de identidade corporativos como Active Directory, Okta e Azure AD via SAML 2.0. Gerencia permissões de acesso em todas as contas da organização AWS Organizations de forma centralizada. Substitui a gestão manual de IAM users em cada conta individual."
+  },
+  {
+    "comando": "Certificate Manager",
+    "descricao": "Serviço para provisionar, gerenciar e renovar automaticamente certificados SSL/TLS para uso em serviços AWS. Emite certificados gratuitos para domínios usados com CloudFront, ALB, API Gateway e outros serviços. Renova certificados automaticamente antes do vencimento, eliminando risco de expiração acidental. Suporta certificados públicos (para domínios públicos) e privados (para redes internas via AWS Private CA)."
+  },
+  {
+    "comando": "Key Management Service",
+    "descricao": "Serviço gerenciado para criar e controlar chaves de criptografia usadas para proteger dados em serviços AWS e aplicações customizadas. Integra-se com mais de 100 serviços AWS para criptografia em repouso e em trânsito. Suporta chaves simétricas, assimétricas e HMAC com rotação automática opcional. Mantém registro de auditoria completo de uso de chaves via CloudTrail para conformidade regulatória."
+  },
+  {
+    "comando": "CloudHSM",
+    "descricao": "Serviço que fornece módulos de segurança de hardware (HSM) dedicados na nuvem para gestão de chaves criptográficas. Oferece controle exclusivo sobre as chaves, sem acesso da AWS ao material criptográfico. Certificado FIPS 140-2 Level 3, atendendo requisitos regulatórios que exigem HSM dedicado. Ideal para casos de uso bancários, emissão de certificados, assinatura de código e ambientes de alta segurança."
+  },
+  {
+    "comando": "Directory Service",
+    "descricao": "Serviço que oferece diretórios Microsoft Active Directory gerenciados na AWS. Oferece três opções: AWS Managed Microsoft AD (AD completo na nuvem), AD Connector (proxy para AD on-premises) e Simple AD (AD leve baseado em Samba). Permite que instâncias EC2 e workloads sejam adicionados ao domínio. Integra-se com IAM Identity Center, RDS, FSx for Windows e outras aplicações que exigem AD."
+  },
+  {
+    "comando": "AWS Firewall Manager",
+    "descricao": "Serviço de gerenciamento centralizado de políticas de segurança de rede em múltiplas contas AWS Organizations. Aplica automaticamente regras de WAF, Shield Advanced, Security Groups, Network Firewall e DNS Firewall em toda a organização. Garante que novas contas e recursos criados herdem as políticas de segurança definidas centralmente. Essencial para manter conformidade de segurança em ambientes multi-conta de grande escala."
+  },
+  {
+    "comando": "AWS Artifact",
+    "descricao": "Portal de acesso self-service a relatórios de conformidade e acordos da AWS. Fornece documentos de auditoria como SOC, PCI DSS, ISO 27001, FedRAMP e outros que evidenciam a conformidade da infraestrutura AWS. Permite baixar e aceitar acordos como o BAA (Business Associate Agreement) para HIPAA. Essencial para times de compliance que precisam demonstrar conformidade da plataforma AWS a auditores."
+  },
+  {
+    "comando": "Detective",
+    "descricao": "Serviço de análise forense e investigação de segurança que facilita a análise de possíveis problemas de segurança. Coleta e organiza automaticamente dados de CloudTrail, VPC Flow Logs e GuardDuty em grafos de comportamento. Permite investigar a cadeia completa de eventos de um incidente com visualizações interativas. Reduz o tempo de investigação de incidentes de horas para minutos ao correlacionar automaticamente evidências."
+  },
+  {
+    "comando": "AWS Signer",
+    "descricao": "Serviço para assinatura digital de código que garante a integridade e autenticidade de artefatos de software. Suporta assinatura de código Lambda, imagens de contêiner e pacotes IoT. Permite definir políticas de trust que bloqueiam execução de código não assinado ou com assinatura inválida. Fundamental para supply chain security, garantindo que apenas código autorizado seja implantado em produção."
+  },
+  {
+    "comando": "Security Lake",
+    "descricao": "Serviço que centraliza e normaliza dados de segurança de fontes AWS e de terceiros em um data lake dedicado no S3. Converte automaticamente os dados para o formato OCSF (Open Cybersecurity Schema Framework) para análise uniforme. Facilita análises de segurança usando Athena, SageMaker e ferramentas SIEM externas sobre todos os logs. Soluciona o desafio de agregar e analisar dados de segurança dispersos em múltiplas fontes."
+  },
+  {
+    "comando": "AWS Security Agent",
+    "descricao": "Agente de IA autônomo especializado em segurança que monitora, detecta e responde a ameaças automaticamente. Analisa logs de CloudTrail, GuardDuty e Security Hub para identificar padrões suspeitos e vulnerabilidades. Executa investigações de segurança, sugere remediações e pode aplicar correções automaticamente com aprovação. Representa a evolução da segurança cloud com automação inteligente baseada em IA agêntica."
+  },
+  {
+    "comando": "Amazon Verified Permissions",
+    "descricao": "Serviço de autorização baseado em políticas para aplicações, usando a linguagem Cedar para definir regras de controle de acesso. Externaliza a lógica de autorização do código da aplicação para um motor de políticas centralizado e auditável. Suporta controle de acesso baseado em atributos (ABAC) e papéis (RBAC). Ideal para aplicações multitenancy que precisam de autorização granular e auditável sem implementar lógica de permissão customizada."
+  },
+  {
+    "comando": "AWS Audit Manager",
+    "descricao": "Serviço que automatiza a coleta de evidências de conformidade para auditorias regulatórias e internas. Mapeia controles de frameworks como SOC 2, PCI DSS, HIPAA, NIST e ISO 27001 a configurações e eventos AWS. Coleta evidências continuamente e gera relatórios prontos para auditores. Reduz o esforço manual de preparação para auditorias, centralizando evidências em um repositório organizado por framework."
+  },
+  {
+    "comando": "Security Hub CSPM",
+    "descricao": "Serviço de gestão de postura de segurança em nuvem (CSPM) que agrega alertas de segurança de múltiplos serviços AWS e ferramentas de terceiros em um painel unificado. Avalia continuamente os recursos contra frameworks de segurança como CIS Benchmarks, PCI DSS e AWS Foundational Security Best Practices. Prioriza achados por severidade e facilita a resposta e remediação. Central para operações de segurança em ambientes AWS complexos."
+  },
+  {
+    "comando": "IAM",
+    "descricao": "Serviço central de controle de acesso da AWS que gerencia quem pode fazer o quê nos recursos AWS. Define usuários, grupos, funções (roles) e políticas de permissão baseadas em JSON. Segue o princípio do menor privilégio e suporta autenticação multifator (MFA). É o pilar fundamental de segurança em qualquer arquitetura AWS, devendo ser configurado com atenção máxima."
+  },
+  {
+    "comando": "WAF & Shield",
+    "descricao": "AWS WAF é o firewall de aplicações web que protege contra ataques comuns como SQL injection, XSS e exploits de OWASP Top 10. AWS Shield oferece proteção contra DDoS em dois níveis: Standard (gratuito, automático) e Advanced (proteção sofisticada com SRT e reembolso de custos durante ataques). Integram-se com CloudFront, API Gateway, ALB e AppSync. Essenciais para proteger aplicações web expostas à Internet."
+  },
+  {
+    "comando": "Security Hub",
+    "descricao": "Centro unificado de gerenciamento de segurança que agrega alertas e findings de múltiplos serviços AWS e ferramentas de parceiros. Consolida dados de GuardDuty, Inspector, Macie, IAM Access Analyzer, Firewall Manager e mais de 100 integrações de terceiros. Executa verificações automáticas de conformidade contra frameworks como CIS, PCI DSS e AWS Best Practices. Prioriza findings por severidade e fornece remediações automatizadas."
+  },
+  {
+    "comando": "AWS Private Certificate Authority",
+    "descricao": "Autoridade certificadora privada gerenciada para emitir certificados TLS/SSL para uso interno em redes privadas e aplicações internas. Elimina a necessidade de operar infraestrutura PKI própria. Emite certificados para instâncias EC2, contêineres, dispositivos IoT e APIs internas. Integra-se com ACM, IoT Core e outros serviços para distribuição automática de certificados."
+  },
+  {
+    "comando": "AWS Payment Cryptography",
+    "descricao": "Serviço gerenciado para operações criptográficas do setor de pagamentos, compatível com padrões como PCI PIN e TR-31. Substitui HSMs físicos usados em redes de pagamento para operações como geração de chaves de cartão, PIN blocks e MACs. Elimina o overhead operacional de gerenciar HSMs de pagamento em data centers. Ideal para processadoras de pagamento, bancos emissores e adquirentes que precisam de criptografia de pagamentos em conformidade."
+  },
+  {
+    "comando": "AWS Security Incident Response",
+    "descricao": "Serviço lançado em 2024 que fornece um ambiente estruturado para gerenciar e responder a incidentes de segurança na AWS. Cria casos de incidente, consolida evidências de GuardDuty, Detective e Security Hub e orquestra o processo de resposta. Integra-se com AWS Support e parceiros de segurança para aceleração na contenção e remediação. Projetado para times de resposta a incidentes (CSIRT) que precisam de um processo organizado e auditável."
+  },
+  {
+    "comando": "AWS Marketplace",
+    "descricao": "Catálogo digital com milhares de soluções de software de fornecedores independentes que rodam na AWS. Permite descobrir, testar, comprar e implantar software com faturamento consolidado na conta AWS. Inclui AMIs, containers, SaaS, dados e serviços profissionais. Oferece licenciamento flexível (BYOL, pay-as-you-go, contratos anuais) e simplifica procurement de software para empresas."
+  },
+  {
+    "comando": "AWS Billing Conductor",
+    "descricao": "Serviço para provedores de serviços gerenciados e revendedores AWS criarem modelos de cobrança customizados para clientes finais. Permite aplicar margens, descontos, taxas fixas e regras de faturamento personalizadas sobre os custos AWS. Gera relatórios de cobrança detalhados por cliente com branding customizado. Ideal para MSPs, SIs e empresas que revendem ou redistribuem serviços AWS."
+  },
+  {
+    "comando": "Gerenciamento de cobrança e custos",
+    "descricao": "Conjunto de ferramentas para visualizar, analisar e otimizar gastos na AWS. Inclui Cost Explorer para análise visual de custos, Budgets para alertas de orçamento, Cost Anomaly Detection para identificar gastos inesperados e Savings Plans para descontos em uso comprometido. Oferece relatórios detalhados de custo e uso (CUR) e recomendações de otimização. Essencial para FinOps e controle financeiro de ambientes cloud."
+  },
+  {
+    "comando": "AWS Amplify",
+    "descricao": "Plataforma de desenvolvimento fullstack para construir e hospedar aplicações web e mobile com backend AWS gerenciado. Fornece bibliotecas, componentes UI e um console para criar backends com autenticação, APIs GraphQL/REST, armazenamento e funções sem gerenciar infraestrutura. Integra-se com frameworks populares como Next.js, React, Vue, Angular, Flutter e Swift. Ideal para startups e desenvolvedores fullstack que querem velocidade de desenvolvimento sem expertise em infraestrutura cloud."
+  },
+  {
+    "comando": "AWS AppSync",
+    "descricao": "Serviço para criar APIs GraphQL e Pub/Sub gerenciadas que conectam aplicações a fontes de dados em tempo real. Permite que aplicações busquem exatamente os dados que precisam em uma única requisição, conectando-se a DynamoDB, Lambda, RDS, OpenSearch e APIs HTTP. Suporta atualizações em tempo real via subscriptions WebSocket. Ideal para aplicações mobile e web que precisam de APIs flexíveis, offline-first e dados em tempo real."
+  },
+  {
+    "comando": "Device Farm",
+    "descricao": "Serviço de teste de aplicações mobile e web em dispositivos físicos reais hospedados na AWS. Permite executar testes automatizados em centenas de combinações de dispositivos Android e iOS sem manter laboratório físico de dispositivos. Suporta frameworks de teste como Appium, Espresso, XCTest e Calabash. Identifica problemas de compatibilidade e performance específicos de dispositivos antes de lançar novas versões."
+  },
+  {
+    "comando": "Amazon Location Service",
+    "descricao": "Serviço para adicionar funcionalidades de localização como mapas, geocodificação, rastreamento e geofencing a aplicações. Mantém os dados dos usuários na AWS sem compartilhá-los com provedores de mapas externos. Integra-se com provedores de mapas como Esri e HERE para dados cartográficos. Ideal para rastreamento de frotas, entrega sob demanda, geofencing de ativos e qualquer aplicação que necessite de recursos de localização."
+  },
+  {
+    "comando": "Step Functions",
+    "descricao": "Serviço de orquestração serverless que coordena múltiplos serviços AWS em fluxos de trabalho visuais. Permite definir máquinas de estado com etapas, ramificações, paralelismo, retentativas e tratamento de erros. Integra-se com Lambda, ECS, DynamoDB, SQS, SNS, Bedrock e centenas de serviços AWS. Ideal para processos de negócio complexos, pipelines de ML, automação de operações e workflows de aprovação humana."
+  },
+  {
+    "comando": "Amazon AppFlow",
+    "descricao": "Serviço de integração totalmente gerenciado para transferir dados entre aplicações SaaS e serviços AWS sem código. Suporta conectores nativos para Salesforce, SAP, Zendesk, Slack, ServiceNow, Google Analytics, LinkedIn e dezenas de outras fontes. Transforma e enriquece dados durante a transferência com mapeamentos e filtros. Ideal para sincronizar dados de CRM para data lakes, alimentar analytics com dados operacionais de SaaS."
+  },
+  {
+    "comando": "Amazon MQ",
+    "descricao": "Serviço de broker de mensagens gerenciado compatível com Apache ActiveMQ e RabbitMQ. Facilita a migração de aplicações existentes que usam JMS, AMQP, STOMP, MQTT ou OpenWire sem reescrever o código de mensageria. Gerencia provisionamento, patches, failover e recuperação do broker automaticamente. Ideal para modernizar sistemas legados que dependem de brokers de mensagens tradicionais."
+  },
+  {
+    "comando": "Simple Notification Service",
+    "descricao": "Serviço de mensageria pub/sub totalmente gerenciado para envio de notificações e mensagens em fan-out para múltiplos subscribers. Suporta entrega para SQS, Lambda, HTTP/S endpoints, email, SMS e notificações push para mobile. Escala automaticamente para milhões de mensagens por segundo. Ideal para desacoplar microsserviços, enviar alertas operacionais e disparar pipelines de processamento de eventos."
+  },
+  {
+    "comando": "Simple Queue Service",
+    "descricao": "Serviço de filas de mensagens totalmente gerenciado para desacoplar componentes de sistemas distribuídos. Oferece filas Standard (alta throughput, entrega pelo menos uma vez) e FIFO (exatamente uma vez, em ordem). Armazena mensagens de forma durável até o consumidor estar disponível para processá-las. Base do padrão de arquitetura produtor-consumidor na AWS, essencial para resiliência e escalonamento independente de componentes."
+  },
+  {
+    "comando": "SWF",
+    "descricao": "Serviço que coordena tarefas e fluxos de trabalho distribuídos entre aplicações e componentes. Mantém o estado de execução de workflows de longa duração que podem levar dias, semanas ou meses. Garante que cada tarefa seja executada apenas uma vez e na ordem correta, mesmo com falhas. Ideal para processos de negócio complexos, pipelines de processamento de mídia e automação de operações. Nota: para novos projetos, AWS recomenda Step Functions."
+  },
+  {
+    "comando": "Apache Airflow gerenciado",
+    "descricao": "Serviço gerenciado de Apache Airflow para orquestrar pipelines de dados e workflows complexos. Elimina a necessidade de instalar, configurar e escalar clusters Airflow manualmente. Suporta DAGs (Directed Acyclic Graphs) em Python para definir e agendar workflows de dados. Ideal para pipelines de ETL, workflows de ML e qualquer sequência de tarefas que exija dependências, agendamento e monitoramento."
+  },
+  {
+    "comando": "AWS B2B Data Interchange",
+    "descricao": "Serviço para trocar documentos EDI (Electronic Data Interchange) entre empresas de forma gerenciada na AWS. Transforma automaticamente arquivos EDI (X12, EDIFACT) em formatos modernos como JSON e XML para integração com sistemas internos. Elimina a necessidade de gateways EDI físicos e tradutores on-premises. Ideal para cadeias de suprimentos, varejo e saúde que precisam trocar documentos padronizados com parceiros comerciais."
+  },
+  {
+    "comando": "Amazon EventBridge",
+    "descricao": "Barramento de eventos serverless para construir arquiteturas orientadas a eventos conectando aplicações AWS, SaaS e customizadas. Roteia eventos baseado em regras de filtragem com zero infraestrutura para gerenciar. Integra-se com mais de 200 fontes AWS e mais de 90 aplicações SaaS como Salesforce, Datadog e PagerDuty. Suporta Event Archives para replay de eventos e Schema Registry para descoberta de schemas."
+  },
+  {
+    "comando": "Amazon Connect",
+    "descricao": "Plataforma de contact center na nuvem omnichannel criada pela Amazon, usada internamente antes de ser disponibilizada ao mercado. Inclui telefonia, chat, tarefas e email em uma única plataforma com IA integrada. Amazon Q in Connect oferece sugestões em tempo real para agentes durante as interações. Cobra por minuto de uso sem contratos de longo prazo, substituindo sistemas legados de call center com muito mais flexibilidade."
+  },
+  {
+    "comando": "Amazon Chime",
+    "descricao": "Serviço de comunicação unificada para reuniões de vídeo, chamadas e chat empresarial. Permite reuniões com qualidade HD sem instalação de cliente para participantes externos via browser. Amazon Chime SDK oferece capacidades de voz e vídeo para incorporar em aplicações customizadas. Em 2026 é amplamente usado via Chime SDK para construir contact centers e aplicações de comunicação customizadas."
+  },
+  {
+    "comando": "Amazon Simple Email Service",
+    "descricao": "Serviço de envio e recebimento de emails em larga escala para aplicações, com alta taxa de entregabilidade. Utilizado para emails transacionais (confirmações, redefinição de senha), marketing e notificações. Oferece recursos de warm-up de IP, gerenciamento de reputação, rastreamento de abertura e cliques. Suporta SMTP e API REST. Muito mais econômico que serviços de email de terceiros para volumes altos."
+  },
+  {
+    "comando": "Amazon WorkDocs",
+    "descricao": "Serviço de colaboração e armazenamento de documentos empresariais totalmente gerenciado na AWS. Permite criar, editar e compartilhar documentos com controle de versão, comentários e fluxos de aprovação. Integra-se com Active Directory para autenticação corporativa. Oferece clientes para web, desktop e mobile para acesso a qualquer momento. Alternativa corporativa ao Dropbox e Google Drive com dados armazenados na AWS."
+  },
+  {
+    "comando": "Amazon WorkMail",
+    "descricao": "Serviço gerenciado de email e calendário corporativo compatível com Microsoft Outlook, dispositivos móveis e clientes de email padrão. Integra-se com Active Directory e Amazon WorkDocs para uma suite de produtividade corporativa completa. Oferece criptografia dos dados, controle sobre retenção e conformidade com regulamentações corporativas. Substitui servidores Exchange on-premises com uma solução totalmente gerenciada na AWS."
+  },
+  {
+    "comando": "Amazon Connect Health",
+    "descricao": "Serviço especializado em contact center para o setor de saúde, integrado ao Amazon Connect. Inclui recursos específicos para saúde como agendamento de consultas, verificação de elegibilidade de planos, autorização prévia e comunicação pós-atendimento. Compatível com requisitos HIPAA para proteção de dados de pacientes. Permite que provedores de saúde modernizem o atendimento ao paciente com IA e automação."
+  },
+  {
+    "comando": "AWS Supply Chain",
+    "descricao": "Solução de gestão de cadeia de suprimentos em nuvem que integra dados de múltiplos sistemas legados (ERP, WMS, TMS) em uma visão unificada. Usa ML para prever riscos de suprimento, recomendar ações e otimizar estoque. Oferece colaboração entre compradores e fornecedores em uma plataforma única. Ajuda empresas a mitigar disruções na cadeia de suprimentos com visibilidade em tempo real e recomendações preditivas."
+  },
+  {
+    "comando": "Amazon Pinpoint",
+    "descricao": "Plataforma de engajamento de clientes multicanal para enviar comunicações personalizadas via email, SMS, push notifications e voz. Permite segmentar audiências, criar jornadas de clientes automatizadas e analisar o engajamento. Integra-se com SES para email transacional e SNS para notificações. Ideal para campanhas de marketing, onboarding de usuários e programas de retenção de clientes em aplicações mobile e web."
+  },
+  {
+    "comando": "AWS Wickr",
+    "descricao": "Plataforma de comunicação empresarial segura com criptografia de ponta a ponta para mensagens, voz, vídeo e arquivos. Projetada para setores regulamentados como defesa, governo, saúde e finanças que precisam de comunicação soberana e auditável. Oferece controle completo sobre as chaves de criptografia e os dados da organização. Permite mensagens autodestrutivas e conformidade com políticas de retenção de mensagens corporativas."
+  },
+  {
+    "comando": "AWS AppFabric",
+    "descricao": "Serviço para normalizar e agregar logs de atividade de aplicações SaaS (como Microsoft 365, Okta, Salesforce, Slack) em um formato padronizado OCSF. Simplifica a integração de dados de auditoria de dezenas de aplicações SaaS em ferramentas SIEM e de segurança. Elimina o desenvolvimento customizado de conectores para cada aplicação SaaS. Ideal para equipes de segurança que precisam de visibilidade consolidada das atividades dos usuários em aplicações SaaS corporativas."
+  },
+  {
+    "comando": "AWS End User Messaging",
+    "descricao": "Serviço consolidado para envio de mensagens SMS, MMS e WhatsApp para usuários finais em escala global. Gerencia registros de números telefônicos, conformidade com regulamentações locais de SMS e opt-in/opt-out automaticamente. Substitui e consolida os recursos de SMS que antes estavam distribuídos entre SNS, Pinpoint e Connect. Ideal para OTPs, notificações transacionais e comunicações operacionais com clientes."
+  },
+  {
+    "comando": "Amazon Chime SDK",
+    "descricao": "SDK para adicionar capacidades de comunicação em tempo real (voz, vídeo, mensagens, PSTN) a aplicações web e mobile customizadas. Permite construir contact centers, telemedicina, educação ao vivo e qualquer aplicação que necessite de comunicação em tempo real. Integra-se com Amazon Connect para features de contact center avançadas. Usado por empresas como Slack, Zoom e plataformas de telemedicina para comunicação em tempo real na AWS."
+  },
+  {
+    "comando": "WorkSpaces",
+    "descricao": "Serviço de desktop virtual (VDI) totalmente gerenciado que provisiona desktops Windows ou Linux na nuvem. Os usuários acessam seus desktops de qualquer dispositivo com conexão à Internet, com dados armazenados na AWS. Cobra por usuário por mês ou por hora de uso, eliminando hardware de desktop corporativo. Ideal para trabalho remoto, terceiros que precisam de acesso seguro e ambientes de desenvolvimento isolados."
+  },
+  {
+    "comando": "WorkSpaces Applications",
+    "descricao": "Serviço para transmitir aplicações Windows específicas para usuários sem precisar de um desktop virtual completo. Os usuários acessam apenas as aplicações autorizadas que rodam na AWS, com interface nativa no dispositivo local. Reduz custos em relação ao WorkSpaces completo quando os usuários precisam apenas de algumas aplicações específicas. Ideal para disponibilizar aplicações legadas Windows para dispositivos Mac, tablets e thin clients."
+  },
+  {
+    "comando": "WorkSpaces Thin Client",
+    "descricao": "Dispositivo de hardware leve e de baixo custo otimizado para acessar WorkSpaces e AppStream 2.0. Substitui desktops tradicionais em ambientes corporativos com um dispositivo menor, mais seguro e de fácil gestão centralizada. O sistema operacional e as aplicações rodam na nuvem, reduzindo a superfície de ataque local. Ideal para call centers, trabalhadores de linha de frente e ambientes que precisam de segurança e padronização de hardware."
+  },
+  {
+    "comando": "WorkSpaces Secure Browser",
+    "descricao": "Serviço de browser isolado na nuvem que permite acesso seguro a aplicações web sem expor dispositivos locais a ameaças. O browser roda em um ambiente isolado na AWS; malware de sites não pode atingir o dispositivo do usuário. Ideal para acesso a Internet corporativa, aplicações SaaS e webmail sem risco de infecção no endpoint. Soluciona o desafio de segurança de navegação web em ambientes corporativos regulamentados."
+  },
+  {
+    "comando": "IoT Device Defender",
+    "descricao": "Serviço de segurança para frotas IoT que audita configurações de dispositivos e detecta comportamentos anômalos em tempo real. Verifica continuamente se dispositivos seguem melhores práticas de segurança como uso de certificados únicos por dispositivo e políticas mínimas. Detecta anomalias de comportamento como spikes de tráfego ou conexões a IPs suspeitos que podem indicar comprometimento. Emite alertas e pode acionar ações automáticas de mitigação."
+  },
+  {
+    "comando": "IoT Device Management",
+    "descricao": "Serviço para registrar, organizar, monitorar e gerenciar remotamente frotas de dispositivos IoT em escala. Permite atualizar firmware (OTA), enviar configurações, depurar remotamente e organizar dispositivos em grupos com permissões específicas. Monitora o status de conectividade e índices de device shadow para busca eficiente. Essencial para manter frotas de dispositivos IoT atualizadas e operacionais sem intervenção manual em cada unidade."
+  },
+  {
+    "comando": "IoT Greengrass",
+    "descricao": "Runtime de edge computing da AWS que estende capacidades cloud para dispositivos IoT locais. Permite executar funções Lambda, contêineres e modelos de ML diretamente no dispositivo, mesmo sem conectividade com a nuvem. Sincroniza dados com a nuvem quando a conexão é restabelecida. Ideal para processamento de dados locais com baixa latência, como controle de sistemas industriais e análise de imagens em câmeras de segurança."
+  },
+  {
+    "comando": "IoT SiteWise",
+    "descricao": "Serviço para coletar, organizar e analisar dados de equipamentos industriais em escala. Conecta-se a equipamentos via protocolos industriais como OPC-UA e Modbus, modelando dados em hierarquias de ativos (fábrica → linha → máquina → sensor). Calcula métricas como OEE (Overall Equipment Effectiveness) automaticamente. Oferece portal web para visualização de dados industriais sem código de desenvolvimento."
+  },
+  {
+    "comando": "IoT Core",
+    "descricao": "Plataforma gerenciada de conectividade IoT que permite conectar bilhões de dispositivos à nuvem AWS de forma segura. Suporta protocolos MQTT, HTTP e WebSockets com autenticação mútua via certificados X.509. Inclui Rules Engine para roteamento de mensagens para mais de 15 serviços AWS sem código adicional. Fundação de qualquer solução IoT na AWS, gerenciando a comunicação bidirecional entre dispositivos e a nuvem."
+  },
+  {
+    "comando": "IoT TwinMaker",
+    "descricao": "Serviço para criar gêmeos digitais de ambientes físicos como fábricas, edifícios e infraestrutura. Conecta dados de IoT SiteWise, S3, sistemas SCADA e outras fontes a modelos 3D e grafos de conhecimento. Permite visualizar o estado em tempo real do ambiente físico em uma representação digital interativa. Facilita troubleshooting remoto, treinamento de operadores e simulação de cenários sem interação com o ambiente físico."
+  },
+  {
+    "comando": "IoT Events",
+    "descricao": "Serviço para detectar e responder a eventos em dados de sensores e aplicações IoT usando máquinas de estado. Monitora continuamente dados de múltiplos sensores e identifica padrões que representam condições operacionais significativas. Define ações automáticas como notificações SNS, escrita em DynamoDB ou ativação de Step Functions quando eventos são detectados. Ideal para monitoramento de condições de processo industrial e alertas inteligentes baseados em lógica de estado."
+  },
+  {
+    "comando": "AWS IoT FleetWise",
+    "descricao": "Serviço para coletar e transferir dados de veículos conectados para a nuvem de forma eficiente. Permite definir quais sinais do veículo (velocidade, temperatura, vibração) coletar e com que frequência, otimizando o uso de banda. Inclui um modelo de dados padronizado para a indústria automotiva. Ideal para fabricantes de veículos e frotas que precisam de telemetria veicular para manutenção preditiva, análise de comportamento e desenvolvimento de ADAS."
+  },
+  {
+    "comando": "Amazon GameLift Servers",
+    "descricao": "Serviço gerenciado para hospedar servidores de jogos multiplayer dedicados com escalonamento automático e match-making integrado. Gerencia automaticamente o provisionamento, patches e escalonamento de servidores de jogo em múltiplas regiões. Inclui FlexMatch para criar lobbies e partidas balanceadas com regras customizáveis. Suporta servidores em EC2 e contêineres, reduzindo o custo operacional de infraestrutura de jogos multiplayer."
+  },
+  {
+    "comando": "Amazon GameLift Streams",
+    "descricao": "Serviço lançado em 2025 para streaming de jogos de alta fidelidade diretamente para dispositivos dos jogadores sem necessidade de hardware de gaming local. Processa e renderiza o jogo na nuvem AWS, transmitindo apenas o vídeo comprimido com latência ultra-baixa para o dispositivo do jogador. Elimina a barreira de hardware para jogar titles AAA em qualquer dispositivo. Habilita modelos de negócio como gaming-as-a-service para publishers e distribuidoras."
+  }
+]

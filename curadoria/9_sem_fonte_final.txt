@@ -1,0 +1,78 @@
+AINDA SEM FONTE OFICIAL (38)
+
+  AWS Backup para S3                         [Storage]
+       atual: Gerencie backup de forma centralizada e restaure dados de aplicações a
+  AWS Backup para VMware                     [Storage]
+       atual: Proteja centralmente ambientes híbridos de VMware.
+  AWS IoT FleetHub                           [Internet-of-Things]
+       atual: Gerenciamento centralizado de frotas de dispositivos IoT.
+  AWS Management Console                     [Management-Governance]
+       atual: Interface de usuário baseada na Web.
+  Amazon FSx for NetApp ONTAP                [Storage]
+       atual: FSx para NetApp ONTAP oferece performance de armazenamento até nove ve
+  Amazon S3 Vectors                          [Storage]
+       atual: Novo tipo de bucket com um conjunto dedicado de APIs para armazenar, a
+  Amazon SageMaker Lakehouse                 [Analytics]
+       atual: Plataforma para gerenciar data lakes e realizar análises avançadas com
+  Basic Support                              [Management-Governance]
+       atual: Suporte básico disponível a todos os clientes da AWS
+  Business Support                           [Management-Governance]
+       atual: Nível mínimo recomendado para quem tem workloads de produção na AWS.
+  Developer Support                          [Management-Governance]
+       atual: Recomendado se você estiver experimentando ou testando a AWS.
+  EFS Archive                                [Storage]
+       atual: Uma nova classe de armazenamento em que os clientes podem economizar a
+  Enterprise On-Ramp Support                 [Management-Governance]
+       atual: Recomendado para quem tem workloads essenciais à produção ou aos negóc
+  Enterprise Support                         [Management-Governance]
+       atual: Recomendado para quem tem negócios e/ou workloads essenciais na AWS
+  Glue Studio                                [Analytics]
+       atual: Você pode usar a interface visual simples no AWS Glue Studio para cria
+  Glue for Ray                               [Analytics]
+       atual: Escaley simplefique com código Python para ETL, com tecnologia sem ser
+  Instâncias C7g/Graviton3 do EC2            [Compute]
+       atual: A melhor performance de preço para workloads com uso intensivo de comp
+  Instâncias C7gn do EC2                     [Compute]
+       atual: Instâncias Graviton otimizadas para computação com até 200 Gbps de lar
+  Instâncias G5g do EC2                      [Compute]
+       atual: A melhor performance de preço para workloads de jogos Android transmit
+  Instâncias Hpc6id do EC2                   [Compute]
+       atual: As instâncias Hpc6id do   EC2 oferecem desempenho econômico para workl
+  Instâncias Hpc7g do EC2                    [Compute]
+       atual: Ofereça performance até 60% melhor em relação à instância anterior par
+  Instâncias Im4gn/Is4gen do EC2             [Compute]
+       atual: A melhor performance de preço e o menor custo para armazenamento basea
+  Instâncias Inf2 do EC2                     [Compute]
+       atual: Alta performance com custos baixos no   EC2 para as workloads de infer
+  Instâncias M6a do EC2                      [Compute]
+       atual: Instâncias de uso geral habilitadas pela 3ª geração de processadores A
+  Instâncias Mac M1 do EC2                   [Compute]
+       atual: Melhor performance de compilação de aplicações e testes mais rápidos p
+  Instâncias R8g do EC2                      [Compute]
+       atual: O melhor preço, desempenho e eficiência energética no EC2 para workloa
+  Instâncias Trn1 do EC2                     [Compute]
+       atual: A melhor performance de preço para o treinamento de modelos de aprendi
+  Instâncias X2idn/X2iedn do EC2             [Compute]
+       atual: Performance de preço de computação até 50% melhor em relação às instân
+  Instâncias X2iezn do EC2                   [Compute]
+       atual: Rapido processador Intel Xeon escalável na nuvem.
+  IoT Button                                 [Internet-of-Things]
+       atual: Dash Button programável na nuvem.
+  NAT instances                              [Networking-Content-Delivery]
+       atual: Fornece tradução de endereço de rede. Você pode usar uma instância NAT
+  Partner Device Catalog                     [Internet-of-Things]
+       atual: Catálogo selecionado de hardware de IoT compatível com a AWS.
+  RDS Custom for SQL                         [Database]
+       atual: Serviço de banco de dados gerenciado para aplicações que exijem sistem
+  Redshift para Apache Spark                 [Analytics]
+       atual: Crie aplicações Apache Spark para leitura e gravação de dados usando o
+  S3 Transfer Acceleration                   [Storage]
+       atual: Uploads e downloads de longa distância do S3 mais rápidos
+  Security Groups (SG)                       [Networking-Content-Delivery]
+       atual: Recursos de nuvem isolados.
+  Security Token Service                     [Security-Identity-Compliance]
+       atual: Serviço web que permite a criação e o fornecimento de credenciais de s
+  Snow Edge Computing                        [Storage]
+       atual: Dispositivos físicos para computação de borda e ambientes robustos ou 
+  Snowcone                                   [Storage]
+       atual: Dispositivos fisicos para migração de dados com origem ou destino na A

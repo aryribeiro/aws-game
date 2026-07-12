@@ -1,0 +1,2144 @@
+[
+ {
+  "name": "Amazon ElastiCache sem servidor",
+  "category": "Banco de dados",
+  "summary": "Crie um cache de alta disponibilidade em menos de um minuto e escale-o instantaneamente para atender à demanda das aplicações",
+  "url": "https://aws.amazon.com/elasticache/features/"
+ },
+ {
+  "name": "Amazon Lex Automated Chatbot Designer",
+  "category": "Machine Learning",
+  "summary": "Crie chatbots usando transcrições existentes de conversas",
+  "url": "https://aws.amazon.com/lex/chatbot-designer/"
+ },
+ {
+  "name": "Instâncias Inf2 do Amazon EC2",
+  "category": "Computação",
+  "summary": "Alta performance com custos baixos no Amazon EC2 para as workloads de inferência mais exigentes",
+  "url": "https://aws.amazon.com/ec2/instance-types/inf2/"
+ },
+ {
+  "name": "Instâncias Trn1 do Amazon EC2",
+  "category": "Computação",
+  "summary": "A melhor performance de preço para o treinamento de modelos de aprendizado profundo na nuvem",
+  "url": "https://aws.amazon.com/ec2/instance-types/trn1/"
+ },
+ {
+  "name": "A próxima geração do Amazon SageMaker",
+  "category": "Machine Learning",
+  "summary": "O Amazon SageMaker oferece uma experiência integrada para análise e inteligência artificial com acesso unificado a todos os seus dados",
+  "url": "https://aws.amazon.com/sagemaker/"
+ },
+ {
+  "name": "Acesso aos recursos da VPC por meio do AWS PrivateLink e do VPC Lattice",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Agora permite acesso privado a recursos em VPCs ou no local usando endpoints de VPC e redes de serviços",
+  "url": "https://aws.amazon.com/privatelink/features/"
+ },
+ {
+  "name": "Acesso Verificado pela AWS",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Forneça acesso seguro a aplicações empresariais sem uma VPN",
+  "url": "https://aws.amazon.com/verified-access/"
+ },
+ {
+  "name": "Alexa for Business",
+  "category": "Aplicações empresariais",
+  "summary": "Capacite sua organização com a Alexa",
+  "url": "https://aws.amazon.com/alexaforbusiness/"
+ },
+ {
+  "name": "Amazon API Gateway",
+  "category": "Front-end para plataformas móveis e Web",
+  "summary": "Crie, implante e gerencie APIs",
+  "url": "https://aws.amazon.com/api-gateway/"
+ },
+ {
+  "name": "Amazon AppFlow",
+  "category": "Integração de aplicações",
+  "summary": "Integração sem uso de código para aplicações SaaS e produtos da AWS",
+  "url": "https://aws.amazon.com/appflow/"
+ },
+ {
+  "name": "Amazon AppStream 2.0",
+  "category": "Computação de usuário final",
+  "summary": "Transmita por streaming aplicações de desktop para um navegador com segurança",
+  "url": "https://aws.amazon.com/appstream2/"
+ },
+ {
+  "name": "Amazon Athena",
+  "category": "Análise",
+  "summary": "Consulte dados no S3 usando SQL",
+  "url": "https://aws.amazon.com/athena/"
+ },
+ {
+  "name": "Amazon Augmented AI",
+  "category": "Machine Learning",
+  "summary": "Implemente facilmente análise humana para previsões de ML",
+  "url": "https://aws.amazon.com/augmented-ai/"
+ },
+ {
+  "name": "Amazon Aurora",
+  "category": "Bancos de dados",
+  "summary": "Banco de dados relacional gerenciado de alta performance",
+  "url": "https://aws.amazon.com/rds/aurora/"
+ },
+ {
+  "name": "Amazon Aurora DSQL",
+  "category": "Banco de dados",
+  "summary": "Banco de dados SQL distribuído com tecnologia sem servidor ativo-ativo mais rápido e com alta disponibilidade para aplicações sempre disponíveis",
+  "url": "https://aws.amazon.com/rds/aurora/dsql/"
+ },
+ {
+  "name": "Amazon Aurora Limitless Database",
+  "category": "Banco de dados",
+  "summary": "Alimenta aplicações em escala de petabytes com milhões de gravações por segundo",
+  "url": "https://pages.awscloud.com/Aurora-Limitless-Database-Preview.html"
+ },
+ {
+  "name": "Amazon Bedrock",
+  "category": "Machine Learning",
+  "summary": "Crie com modelos básicos",
+  "url": "https://aws.amazon.com/bedrock/"
+ },
+ {
+  "name": "Amazon Bedrock Agents",
+  "category": "IA generativa",
+  "summary": "Lide com tarefas complexas com a colaboração de vários agentes",
+  "url": "https://aws.amazon.com/bedrock/agents/"
+ },
+ {
+  "name": "Amazon Braket",
+  "category": "Tecnologias quânticas",
+  "summary": "Acelere a pesquisa de computação quântica",
+  "url": "https://aws.amazon.com/braket/"
+ },
+ {
+  "name": "Amazon Chime",
+  "category": "Aplicações empresariais",
+  "summary": "Reuniões, videochamadas e conversas livres de frustração",
+  "url": "https://aws.amazon.com/chime/"
+ },
+ {
+  "name": "Amazon CloudFront",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Rede global de entrega de conteúdo",
+  "url": "https://aws.amazon.com/cloudfront/"
+ },
+ {
+  "name": "Amazon CloudSearch",
+  "category": "Análise",
+  "summary": "Serviço gerenciado de pesquisa",
+  "url": "https://aws.amazon.com/cloudsearch/"
+ },
+ {
+  "name": "Amazon CloudWatch",
+  "category": "Gerenciamento e governança",
+  "summary": "Monitore recursos e aplicações",
+  "url": "https://aws.amazon.com/cloudwatch/"
+ },
+ {
+  "name": "Amazon CodeCatalyst (prévia)",
+  "category": "Ferramentas de desenvolvedor",
+  "summary": "Serviço de desenvolvimento de software unificado para desenvolvimento e entrega mais rápidos na AWS",
+  "url": "https://aws.amazon.com/codecatalyst/"
+ },
+ {
+  "name": "Amazon CodeGuru",
+  "category": "Machine learning",
+  "summary": "Localize suas linhas de código mais caras",
+  "url": "https://aws.amazon.com/codeguru/"
+ },
+ {
+  "name": "Amazon Cognito",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Gerenciamento de identidades para aplicações",
+  "url": "https://aws.amazon.com/cognito/"
+ },
+ {
+  "name": "Amazon Comprehend",
+  "category": "Machine learning",
+  "summary": "Descubra insights e relações em textos",
+  "url": "https://aws.amazon.com/comprehend/"
+ },
+ {
+  "name": "Amazon Connect",
+  "category": "Aplicações empresariais",
+  "summary": "Central de atendimento omnicanal na nuvem",
+  "url": "https://aws.amazon.com/connect/"
+ },
+ {
+  "name": "Amazon Corretto",
+  "category": "Ferramentas de desenvolvedor",
+  "summary": "Distribuição do OpenJDK pronta para produção",
+  "url": "https://aws.amazon.com/corretto/"
+ },
+ {
+  "name": "Amazon DataZone",
+  "category": "Análise",
+  "summary": "Desbloqueie dados entre limites organizacionais com governança integrada",
+  "url": "https://aws.amazon.com/datazone/"
+ },
+ {
+  "name": "Amazon Detective",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Investigue possíveis problemas de segurança",
+  "url": "https://aws.amazon.com/detective/"
+ },
+ {
+  "name": "Amazon DevOps Guru",
+  "category": "Machine Learning",
+  "summary": "Serviço de operações na nuvem com tecnologia de ML para melhorar a disponibilidade de aplicações",
+  "url": "https://aws.amazon.com/devops-guru/"
+ },
+ {
+  "name": "Amazon DevOps Guru for RDS",
+  "category": "Machine Learning",
+  "summary": "Detecte, faça diagnósticos e corrija problemas de performance no Amazon RDS",
+  "url": "https://aws.amazon.com/devops-guru/features/devops-guru-for-rds/"
+ },
+ {
+  "name": "Amazon DocumentDB",
+  "category": "Bancos de dados",
+  "summary": "Banco de dados de documentos totalmente gerenciado",
+  "url": "https://aws.amazon.com/documentdb/"
+ },
+ {
+  "name": "Amazon DynamoDB",
+  "category": "Bancos de dados",
+  "summary": "Banco de dados NoSQL gerenciado",
+  "url": "https://aws.amazon.com/dynamodb/"
+ },
+ {
+  "name": "Amazon EBS Snapshots Archive",
+  "category": "Armazenamento",
+  "summary": "Faça o arquivamento de snapshots do EBS e economize até 75% nos custos de armazenamento de snapshots",
+  "url": "https://aws.amazon.com/ebs/snapshots/"
+ },
+ {
+  "name": "Amazon EC2",
+  "category": "Computação",
+  "summary": "Servidores virtuais na nuvem",
+  "url": "https://aws.amazon.com/ec2/"
+ },
+ {
+  "name": "Amazon EC2 Auto Scaling",
+  "category": "Computação",
+  "summary": "Escale a capacidade computacional para atender à demanda",
+  "url": "https://aws.amazon.com/ec2/autoscaling/"
+ },
+ {
+  "name": "Amazon EFS Archive",
+  "category": "Armazenamento",
+  "summary": "Uma nova classe de armazenamento em que os clientes podem economizar até 50% nos custos de armazenamento em comparação com o Amazon EFS Infrequent Access",
+  "url": "https://aws.amazon.com/efs/storage-classes/archive/"
+ },
+ {
+  "name": "Amazon Elastic Block Store (EBS)",
+  "category": "Armazenamento",
+  "summary": "Volumes de armazenamento em bloco do EC2",
+  "url": "https://aws.amazon.com/ebs/"
+ },
+ {
+  "name": "Amazon Elastic Container Registry (ECR)",
+  "category": "Contêineres",
+  "summary": "Armazene, gerencie e implante facilmente imagens de contêineres",
+  "url": "https://aws.amazon.com/ecr/"
+ },
+ {
+  "name": "Amazon Elastic Container Service (ECS)",
+  "category": "Contêineres",
+  "summary": "Uma maneira altamente segura, confiável e escalável para executar contêineres",
+  "url": "https://aws.amazon.com/ecs/"
+ },
+ {
+  "name": "Amazon Elastic File System (EFS)",
+  "category": "Armazenamento",
+  "summary": "Sistema de arquivos totalmente gerenciado para o EC2",
+  "url": "https://aws.amazon.com/efs/"
+ },
+ {
+  "name": "Amazon Elastic Inference",
+  "category": "Machine learning",
+  "summary": "Aceleração de inferência para aprendizado profundo",
+  "url": "https://aws.amazon.com/machine-learning/elastic-inference/"
+ },
+ {
+  "name": "Amazon Elastic Kubernetes Service (EKS)",
+  "category": "Contêineres",
+  "summary": "A forma mais confiável de executar o Kubernetes",
+  "url": "https://aws.amazon.com/eks/"
+ },
+ {
+  "name": "Amazon Elastic Transcoder",
+  "category": "Serviços de mídia",
+  "summary": "Transcodificação de mídia escalável e fácil de usar",
+  "url": "https://aws.amazon.com/elastictranscoder/"
+ },
+ {
+  "name": "Amazon ElastiCache",
+  "category": "Bancos de dados",
+  "summary": "Serviço de armazenamento em cache na memória",
+  "url": "https://aws.amazon.com/elasticache/"
+ },
+ {
+  "name": "Amazon EMR",
+  "category": "Análise",
+  "summary": "Framework do Hadoop hospedado",
+  "url": "https://aws.amazon.com/emr/"
+ },
+ {
+  "name": "Amazon EMR Sem Servidor",
+  "category": "Análise",
+  "summary": "Execute aplicações de big data usando frameworks de código aberto sem gerenciar clusters e servidores",
+  "url": "https://aws.amazon.com/emr/serverless/"
+ },
+ {
+  "name": "Amazon EventBridge",
+  "category": "Integração de aplicações",
+  "summary": "Barramento de eventos sem servidor para aplicações SaaS e serviços da AWS",
+  "url": "https://aws.amazon.com/eventbridge/"
+ },
+ {
+  "name": "Amazon FinSpace",
+  "category": "Análise",
+  "summary": "Armazene, catalogue, prepare e analise dados do setor financeiro em poucos minutos",
+  "url": "https://aws.amazon.com/finspace/"
+ },
+ {
+  "name": "Amazon Forecast",
+  "category": "Machine Learning",
+  "summary": "Aumente a precisão das previsões usando machine learning",
+  "url": "https://aws.amazon.com/forecast/"
+ },
+ {
+  "name": "Amazon Fraud Detector",
+  "category": "Machine Learning",
+  "summary": "Detecte mais fraudes online em menos tempo",
+  "url": "https://aws.amazon.com/fraud-detector/"
+ },
+ {
+  "name": "Amazon FreeRTOS",
+  "category": "Internet das Coisas",
+  "summary": "Sistema operacional em tempo real para microcontroladores",
+  "url": "https://aws.amazon.com/freertos/"
+ },
+ {
+  "name": "Amazon FSx",
+  "category": "Armazenamento",
+  "summary": "Inicie, execute e escale sistemas de arquivos com muitos recursos e de alta performance com apenas alguns cliques",
+  "url": "https://aws.amazon.com/fsx/"
+ },
+ {
+  "name": "Amazon FSx for Lustre",
+  "category": "Armazenamento",
+  "summary": "Sistema de arquivos de alta performance integrado ao S3",
+  "url": "https://aws.amazon.com/fsx/lustre/"
+ },
+ {
+  "name": "Amazon FSx Intelligent-Tiering para FSx para OpenZFS",
+  "category": "Armazenamento",
+  "summary": "Custo até 85% menor do que a classe de armazenamento SSD do FSx e custo até 20% menor em comparação com o HDD on-premises tradicional",
+  "url": "https://aws.amazon.com/fsx/openzfs/features/"
+ },
+ {
+  "name": "Amazon FSx para OpenZFS",
+  "category": "Armazenamento",
+  "summary": "Armazenamento totalmente gerenciado baseado no popular sistema de arquivos OpenZFS",
+  "url": "https://aws.amazon.com/fsx/openzfs/"
+ },
+ {
+  "name": "Amazon FSx para Windows File Server",
+  "category": "Armazenamento",
+  "summary": "Sistema totalmente gerenciado de arquivos nativo do Windows",
+  "url": "https://aws.amazon.com/fsx/windows/"
+ },
+ {
+  "name": "Amazon GameLift",
+  "category": "Tecnologia para jogos",
+  "summary": "Hospedagem dedicada rápida, simples e econômica para servidores de jogos",
+  "url": "https://aws.amazon.com/gamelift/"
+ },
+ {
+  "name": "Amazon GuardDuty",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Serviço gerenciado de detecção de ameaças",
+  "url": "https://aws.amazon.com/guardduty/"
+ },
+ {
+  "name": "Amazon HealthLake",
+  "category": "Machine learning",
+  "summary": "Armazene, transforme, consulte e analise com segurança dados de saúde em poucos minutos",
+  "url": "https://aws.amazon.com/healthlake/"
+ },
+ {
+  "name": "Amazon Honeycode",
+  "category": "Aplicativos empresariais",
+  "summary": "Crie aplicações Web e aplicativos móveis sem usar programação",
+  "url": "https://aws.amazon.com/honeycode/"
+ },
+ {
+  "name": "Amazon Inspector",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Gerenciamento automatizado e contínuo de vulnerabilidades para o Amazon EC2 e Amazon ECR",
+  "url": "https://aws.amazon.com/inspector/"
+ },
+ {
+  "name": "Amazon Interactive Video Service",
+  "category": "Serviços de mídia",
+  "summary": "Crie experiências envolventes de transmissão ao vivo",
+  "url": "https://aws.amazon.com/ivs/"
+ },
+ {
+  "name": "Amazon Kendra",
+  "category": "Machine Learning",
+  "summary": "Reinvente a pesquisa empresarial com ML",
+  "url": "https://aws.amazon.com/kendra/"
+ },
+ {
+  "name": "Amazon Keyspaces (for Apache Cassandra)",
+  "category": "Bancos de dados",
+  "summary": "Banco de dados gerenciado compatível com Cassandra",
+  "url": "https://aws.amazon.com/keyspaces/"
+ },
+ {
+  "name": "Amazon Kinesis",
+  "category": "Análise",
+  "summary": "Analise fluxos de vídeo e dados em tempo real",
+  "url": "https://aws.amazon.com/kinesis/"
+ },
+ {
+  "name": "Amazon Kinesis Video Streams",
+  "category": "Serviços de mídia",
+  "summary": "Processe e analise fluxos de vídeo",
+  "url": "https://aws.amazon.com/kinesis/video-streams/"
+ },
+ {
+  "name": "Amazon Lex",
+  "category": "Machine learning",
+  "summary": "Crie chatbots de voz e texto",
+  "url": "https://aws.amazon.com/lex/"
+ },
+ {
+  "name": "Amazon Lightsail",
+  "category": "Computação",
+  "summary": "Inicie e gerencie servidores privados virtuais",
+  "url": "https://aws.amazon.com/lightsail/"
+ },
+ {
+  "name": "Amazon Location Service",
+  "category": "Front-end para plataformas móveis e Web",
+  "summary": "Adicione dados de localização a aplicações com segurança e facilidade",
+  "url": "https://aws.amazon.com/location/"
+ },
+ {
+  "name": "Amazon Lookout for Equipment",
+  "category": "Machine Learning",
+  "summary": "Detecte comportamento anormal dos equipamentos analisando dados de sensores",
+  "url": "https://aws.amazon.com/lookout-for-equipment/"
+ },
+ {
+  "name": "Amazon Lookout for Metrics",
+  "category": "Machine Learning",
+  "summary": "Detecte automaticamente anomalias em métricas e identifique as respectivas causas básicas",
+  "url": "https://aws.amazon.com/lookout-for-metrics/"
+ },
+ {
+  "name": "Amazon Lookout for Vision",
+  "category": "Machine Learning",
+  "summary": "Identifique defeitos em produtos usando visão computacional para automatizar a inspeção de qualidade",
+  "url": "https://aws.amazon.com/lookout-for-vision/"
+ },
+ {
+  "name": "Amazon Lumberyard",
+  "category": "Tecnologia de jogos",
+  "summary": "Um mecanismo de jogos 3D gratuito para várias plataformas, com código-fonte completo e integração à AWS e à Twitch",
+  "url": "https://aws.amazon.com/lumberyard/"
+ },
+ {
+  "name": "Amazon Macie",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Descubra e proteja seus dados sigilosos em escala",
+  "url": "https://aws.amazon.com/macie/"
+ },
+ {
+  "name": "Amazon Managed Blockchain",
+  "category": "Blockchain",
+  "summary": "Crie e gerencie redes blockchain escaláveis",
+  "url": "https://aws.amazon.com/managed-blockchain/"
+ },
+ {
+  "name": "Amazon Managed Grafana",
+  "category": "Gerenciamento e governança",
+  "summary": "Visualização de dados escalável, segura e altamente disponível para suas métricas, logs e rastreamentos operacionais",
+  "url": "https://aws.amazon.com/grafana/"
+ },
+ {
+  "name": "Amazon Managed Service for Prometheus",
+  "category": "Gerenciamento e governança",
+  "summary": "Monitoramento gerenciado, seguro e altamente disponível para seus contêineres",
+  "url": "https://aws.amazon.com/prometheus/"
+ },
+ {
+  "name": "Amazon Managed Streaming for Apache Kafka (Amazon MSK) sem Servidor",
+  "category": "Análise",
+  "summary": "Transmita facilmente dados com o Amazon MSK sem gerenciar a capacidade de cluster",
+  "url": "https://aws.amazon.com/msk/features/msk-serverless/"
+ },
+ {
+  "name": "Amazon Managed Streaming for Apache Kafka (MSK)",
+  "category": "Análise",
+  "summary": "Serviço do Apache Kafka totalmente gerenciado",
+  "url": "https://aws.amazon.com/msk/"
+ },
+ {
+  "name": "Amazon Managed Workflows for Apache Airflow (MWAA)",
+  "category": "Integração de aplicações",
+  "summary": "Orquestração de fluxo de trabalho gerenciada, segura e altamente disponível para Apache Airflow",
+  "url": "https://aws.amazon.com/managed-workflows-for-apache-airflow/"
+ },
+ {
+  "name": "Amazon MemoryDB for Redis",
+  "category": "Bancos de dados",
+  "summary": "Serviço de banco de dados na memória, durável e compatível com Redis para uma performance ultrarrápida",
+  "url": "https://aws.amazon.com/memorydb/"
+ },
+ {
+  "name": "Amazon MemoryDB multirregional",
+  "category": "Banco de dados",
+  "summary": "Crie aplicações altamente disponíveis e resilientes com o Amazon MemoryDB Multi-Region, um banco de dados ativo, ativo e multirregional",
+  "url": "https://aws.amazon.com/memorydb/"
+ },
+ {
+  "name": "Amazon Monitron",
+  "category": "Machine learning",
+  "summary": "Reduza o tempo de inatividade não planejado de equipamentos com manutenção preditiva e machine learning",
+  "url": "https://aws.amazon.com/monitron/"
+ },
+ {
+  "name": "Amazon MQ",
+  "category": "Integração de aplicações",
+  "summary": "Serviço gerenciado de agente de mensagens",
+  "url": "https://aws.amazon.com/amazon-mq/"
+ },
+ {
+  "name": "Amazon Neptune",
+  "category": "Bancos de dados",
+  "summary": "Serviço de banco de dados de grafos totalmente gerenciado",
+  "url": "https://aws.amazon.com/neptune/"
+ },
+ {
+  "name": "Amazon Neptune Analytics",
+  "category": "Banco de dados",
+  "summary": "Analise dados gráficos com dezenas de bilhões de conexões em segundos",
+  "url": "https://aws.amazon.com/neptune/"
+ },
+ {
+  "name": "Amazon Nimble Studio",
+  "category": "Serviços de mídia",
+  "summary": "Acelere a criação de conteúdo na nuvem",
+  "url": "https://aws.amazon.com/nimble-studio/"
+ },
+ {
+  "name": "Amazon Nova",
+  "category": "IA generativa",
+  "summary": "Modelos multimodal e de geração de conteúdo com um bom custo-benefício e inteligência de ponta",
+  "url": "https://aws.amazon.com/nova/"
+ },
+ {
+  "name": "Amazon One Enterprise",
+  "category": "Aplicação empresarial",
+  "summary": "Um serviço de identidade seguro por reconhecimento da palma da mão para controle de acesso à empresa",
+  "url": "https://aws.amazon.com/one-enterprise/"
+ },
+ {
+  "name": "Amazon OpenSearch Sem Servidor",
+  "category": "Análise",
+  "summary": "Ofereça análises de pesquisa e logs sem provisionamento nem ajuste de recursos",
+  "url": "https://aws.amazon.com/opensearch-service/features/serverless/"
+ },
+ {
+  "name": "Amazon OpenSearch Service",
+  "category": "Análise",
+  "summary": "Pesquise, visualize e analise até petabytes de texto e dados não estruturados",
+  "url": "https://aws.amazon.com/opensearch-service/"
+ },
+ {
+  "name": "Amazon Personalize",
+  "category": "Machine Learning",
+  "summary": "Crie recomendações em tempo real em suas aplicações",
+  "url": "https://aws.amazon.com/personalize/"
+ },
+ {
+  "name": "Amazon Pinpoint",
+  "category": "Front-end para plataformas móveis e Web",
+  "summary": "Comunicações de marketing multicanal",
+  "url": "https://aws.amazon.com/pinpoint/"
+ },
+ {
+  "name": "Amazon Polly",
+  "category": "Machine learning",
+  "summary": "Transforme texto em falas realistas",
+  "url": "https://aws.amazon.com/polly/"
+ },
+ {
+  "name": "Amazon Q",
+  "category": "IA generativa",
+  "summary": "Assistente baseado em IA generativa, com segurança e privacidade para atender às mais rigorosas necessidades corporativas",
+  "url": "https://aws.amazon.com/q/"
+ },
+ {
+  "name": "Amazon Q na Cadeia de Suprimentos AWS (em breve)",
+  "category": "Aplicação empresarial",
+  "summary": "​Faça perguntas e obtenha respostas inteligentes sobre o que está acontecendo em sua cadeia de suprimentos, por que e quais ações tomar",
+  "url": "https://aws.amazon.com/aws-supply-chain/features/"
+ },
+ {
+  "name": "Amazon Q no QuickSight",
+  "category": "Análise",
+  "summary": "Reinvente a inteligência de negócios e melhore a produtividade dos negócios com recursos generativos de BI no QuickSight",
+  "url": "https://aws.amazon.com/quicksight/q/"
+ },
+ {
+  "name": "Amazon Q no QuickSight",
+  "category": "Análise",
+  "summary": "Ajuda os usuários corporativos a realizar análises complexas de cenários até 10 vezes mais rápido do que planilhas",
+  "url": "https://aws.amazon.com/quicksight/q/scenarios/"
+ },
+ {
+  "name": "Amazon Quantum Ledger Database (QLDB)",
+  "category": "Blockchain",
+  "summary": "Banco de dados ledger totalmente gerenciado",
+  "url": "https://aws.amazon.com/qldb/"
+ },
+ {
+  "name": "Amazon QuickSight",
+  "category": "Análise",
+  "summary": "Serviço rápido de análise empresarial",
+  "url": "https://aws.amazon.com/quicksight/"
+ },
+ {
+  "name": "Amazon QuickSight Paginated Reports",
+  "category": "Análise",
+  "summary": "Crie, programe e compartilhe relatórios e exportações de dados",
+  "url": "https://aws.amazon.com/quicksight/paginated-reports/"
+ },
+ {
+  "name": "Amazon RDS",
+  "category": "Bancos de dados",
+  "summary": "Serviço gerenciado de banco de dados relacional para MySQL, PostgreSQL, Oracle, SQL Server e MariaDB",
+  "url": "https://aws.amazon.com/rds/"
+ },
+ {
+  "name": "Amazon RDS Custom for SQL Server",
+  "category": "Bancos de dados",
+  "summary": "Serviço de banco de dados gerenciado para aplicações que exigem personalização de sistema operacional e banco de dados",
+  "url": "https://aws.amazon.com/rds/custom/"
+ },
+ {
+  "name": "Amazon RDS para Db2",
+  "category": "Banco de dados",
+  "summary": "Facilita configurar, operar e escalar um banco de dados Db2 gerenciado na nuvem",
+  "url": "https://aws.amazon.com/rds/db2/"
+ },
+ {
+  "name": "Amazon Redshift",
+  "category": "Bancos de dados",
+  "summary": "Data warehousing rápido, simples e econômico",
+  "url": "https://aws.amazon.com/redshift/"
+ },
+ {
+  "name": "Amazon Redshift sem servidor (previsualização)",
+  "category": "Análise",
+  "summary": "Atinja suas metas de preço/performance com ajuste de escala automático inteligente para workloads dinâmicas",
+  "url": "https://aws.amazon.com/redshift/redshift-serverless/"
+ },
+ {
+  "name": "Amazon Rekognition",
+  "category": "Machine learning",
+  "summary": "Analise imagem e vídeo",
+  "url": "https://aws.amazon.com/rekognition/"
+ },
+ {
+  "name": "Amazon Route 53",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Sistema de Nomes de Domínio (DNS) escalável do 53",
+  "url": "https://aws.amazon.com/route53/"
+ },
+ {
+  "name": "Amazon S3 Express One Zone",
+  "category": "Armazenamento",
+  "summary": "Armazenamento mais rápido de objetos na nuvem para aplicações de desempenho crítico que exigem latência sistemática de um dígito em milissegundos",
+  "url": "https://aws.amazon.com/s3/storage-classes/express-one-zone/"
+ },
+ {
+  "name": "Amazon S3 Glacier",
+  "category": "Armazenamento",
+  "summary": "Armazenamento de baixo custo para arquivos na nuvem",
+  "url": "https://aws.amazon.com/glacier/"
+ },
+ {
+  "name": "Amazon S3 Glacier Instant Retrieval",
+  "category": "Armazenamento",
+  "summary": "Armazenamento com custo mais baixo com recuperação em milissegundos para dados raramente acessados",
+  "url": "https://aws.amazon.com/s3/storage-classes/glacier/instant-retrieval/"
+ },
+ {
+  "name": "Amazon SageMaker",
+  "category": "Machine Learning",
+  "summary": "A próxima geração do Amazon SageMaker centraliza todos os seus dados, analytics e IA",
+  "url": "https://aws.amazon.com/sagemaker/"
+ },
+ {
+  "name": "IA do Amazon SageMaker",
+  "category": "Machine Learning",
+  "summary": "Crie, treine e implante modelos de Machine Learning em grande escala",
+  "url": "https://aws.amazon.com/sagemaker/"
+ },
+ {
+  "name": "Amazon SageMaker Canvas",
+  "category": "Machine learning",
+  "summary": "Gere previsões precisas de machine learning sem usar código",
+  "url": "https://aws.amazon.com/sagemaker/canvas/"
+ },
+ {
+  "name": "Amazon SageMaker Ground Truth",
+  "category": "Machine Learning",
+  "summary": "Crie conjuntos de dados precisos para treinamento de ML",
+  "url": "https://aws.amazon.com/sagemaker/groundtruth/"
+ },
+ {
+  "name": "Amazon SageMaker Ground Truth Plus",
+  "category": "Machine learning",
+  "summary": "Crie conjuntos de dados de alta qualidade para treinar modelos de machine learning",
+  "url": "https://aws.amazon.com/sagemaker/data-labeling/"
+ },
+ {
+  "name": "Amazon SageMaker HyperPod",
+  "category": "Machine Learning",
+  "summary": "Reduza o tempo de treinamento de FMs em até 40% com uma infraestrutura desenvolvida especificamente para treinamento distribuído",
+  "url": "https://aws.amazon.com/sagemaker/hyperpod"
+ },
+ {
+  "name": "Amazon SageMaker Studio",
+  "category": "Machine Learning",
+  "summary": "Acelere o desenvolvimento de ML com seu IDE preferido, ferramentas de ML e assistência de codificação baseada em IA",
+  "url": "https://aws.amazon.com/sagemaker/studio/"
+ },
+ {
+  "name": "Amazon SageMaker Studio Lab",
+  "category": "Machine Learning",
+  "summary": "Aprenda e faça testes com ML usando Notebooks Jupyter na nuvem, gratuitos e que não exigem configuração",
+  "url": "https://aws.amazon.com/sagemaker/studio-lab/"
+ },
+ {
+  "name": "Amazon SageMaker Training Compiler",
+  "category": "Machine Learning",
+  "summary": "Treine modelos de ML com rapidez e economia usando o Amazon SageMaker",
+  "url": "https://aws.amazon.com/sagemaker/train/"
+ },
+ {
+  "name": "Amazon Security Lake (prévia)",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Centralize automaticamente seus dados de segurança com apenas alguns cliques",
+  "url": "https://aws.amazon.com/security-lake/"
+ },
+ {
+  "name": "Amazon Simple Email Service (SES)",
+  "category": "Front-end para plataformas móveis e Web",
+  "summary": "E-mail de entrada e saída em alta escala",
+  "url": "https://aws.amazon.com/ses/"
+ },
+ {
+  "name": "Amazon Simple Notification Service (SNS)",
+  "category": "Integração de aplicações",
+  "summary": "Publicação e assinatura, SMS, e-mail e notificações por push para dispositivos móveis",
+  "url": "https://aws.amazon.com/sns/"
+ },
+ {
+  "name": "Amazon Simple Queue Service (SQS)",
+  "category": "Integração de aplicações",
+  "summary": "Filas gerenciadas de mensagens",
+  "url": "https://aws.amazon.com/sqs/"
+ },
+ {
+  "name": "Amazon Simple Storage Service (S3)",
+  "category": "Armazenamento",
+  "summary": "Armazenamento de objetos criado para recuperar qualquer volume de dados de qualquer local",
+  "url": "https://aws.amazon.com/s3/"
+ },
+ {
+  "name": "Amazon Textract",
+  "category": "Machine Learning",
+  "summary": "Extraia texto e dados de documentos",
+  "url": "https://aws.amazon.com/textract/"
+ },
+ {
+  "name": "Amazon Timestream",
+  "category": "Bancos de dados",
+  "summary": "Banco de dados totalmente gerenciado de séries temporais",
+  "url": "https://aws.amazon.com/timestream/"
+ },
+ {
+  "name": "Amazon Transcribe",
+  "category": "Machine learning",
+  "summary": "Reconhecimento automático de fala",
+  "url": "https://aws.amazon.com/transcribe/"
+ },
+ {
+  "name": "Amazon Translate",
+  "category": "Machine learning",
+  "summary": "Tradução natural e fluente de idiomas",
+  "url": "https://aws.amazon.com/translate/"
+ },
+ {
+  "name": "Amazon Verified Permissions (versão de demonstração)",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Permissões e autorização detalhadas para suas aplicações",
+  "url": "https://aws.amazon.com/verified-permissions/"
+ },
+ {
+  "name": "Amazon VPC",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Recursos de nuvem isolados",
+  "url": "https://aws.amazon.com/vpc/"
+ },
+ {
+  "name": "Amazon VPC Lattice",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Simplifique a conectividade, a segurança e o monitoramento serviço a serviço",
+  "url": "https://aws.amazon.com/vpc/lattice/"
+ },
+ {
+  "name": "Amazon WorkDocs",
+  "category": "Aplicações empresariais",
+  "summary": "Armazenamento e compartilhamento seguros de documentos empresariais",
+  "url": "https://aws.amazon.com/workdocs/"
+ },
+ {
+  "name": "Amazon WorkMail",
+  "category": "Aplicações empresariais",
+  "summary": "E-mail e calendário seguros",
+  "url": "https://aws.amazon.com/workmail/"
+ },
+ {
+  "name": "Apache MXNet on AWS",
+  "category": "Machine Learning",
+  "summary": "Framework escalável e de código aberto para aprendizado profundo",
+  "url": "https://aws.amazon.com/mxnet/"
+ },
+ {
+  "name": "AWS Application Migration Service (MGN)",
+  "category": "Migração",
+  "summary": "Modernização e migração automatizadas de aplicações",
+  "url": "https://aws.amazon.com/application-migration-service/"
+ },
+ {
+  "name": "AWS Amplify",
+  "category": "Front-end para plataformas móveis e Web",
+  "summary": "Construa, implemente, hospede e gerencie aplicativos móveis e da Web",
+  "url": "https://aws.amazon.com/amplify/"
+ },
+ {
+  "name": "AWS Amplify Studio (Prévia)",
+  "category": "Front-end para plataformas móveis e Web",
+  "summary": "Estenda o AWS Amplify com um ambiente visual de desenvolvimento para criar aplicações com o mínimo de código",
+  "url": "https://aws.amazon.com/amplify/studio/"
+ },
+ {
+  "name": "AWS App Mesh",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Monitore e controle microsserviços",
+  "url": "https://aws.amazon.com/app-mesh/"
+ },
+ {
+  "name": "AWS App Runner",
+  "category": "Computação",
+  "summary": "Aplicações Web de produção em escala facilitadas para desenvolvedores",
+  "url": "https://aws.amazon.com/apprunner/"
+ },
+ {
+  "name": "AWS App Studio",
+  "category": "Machine Learning",
+  "summary": "A maneira mais rápida e fácil de criar aplicações de alto nível",
+  "url": "https://aws.amazon.com/appstudio/"
+ },
+ {
+  "name": "AWS App2Container",
+  "category": "Contêineres",
+  "summary": "Crie contêineres e migre aplicações existentes",
+  "url": "https://aws.amazon.com/app2container/"
+ },
+ {
+  "name": "AWS Application Composer",
+  "category": "Arquiteturas Sem servidor",
+  "summary": "Projete e crie aplicações sem servidor visualmente e com rapidez",
+  "url": "https://aws.amazon.com/application-composer/"
+ },
+ {
+  "name": "AWS Application Discovery Service",
+  "category": "Migração",
+  "summary": "Descubra aplicações on-premises para otimizar a migração",
+  "url": "https://aws.amazon.com/application-discovery/"
+ },
+ {
+  "name": "AWS AppSync",
+  "category": "Front-end para plataformas móveis e Web",
+  "summary": "Acelere o desenvolvimento de aplicações com APIs GraphQL escaláveis e totalmente gerenciadas",
+  "url": "https://aws.amazon.com/appsync/"
+ },
+ {
+  "name": "AWS Artifact",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Acesso sob demanda a relatórios de conformidade da AWS",
+  "url": "https://aws.amazon.com/artifact/"
+ },
+ {
+  "name": "AWS Audit Manager",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Audite continuamente seu uso da AWS para simplificar como você avalia o risco e a conformidade",
+  "url": "https://aws.amazon.com/audit-manager/"
+ },
+ {
+  "name": "AWS Auto Scaling",
+  "category": "Computação",
+  "summary": "Escale vários recursos para atender à demanda",
+  "url": "https://aws.amazon.com/autoscaling/"
+ },
+ {
+  "name": "AWS Backup",
+  "category": "Armazenamento",
+  "summary": "Backup centralizado entre os produtos da AWS",
+  "url": "https://aws.amazon.com/backup/"
+ },
+ {
+  "name": "AWS Batch",
+  "category": "Computação",
+  "summary": "Execute trabalhos em lote em qualquer escala",
+  "url": "https://aws.amazon.com/batch/"
+ },
+ {
+  "name": "AWS Budgets",
+  "category": "Gerenciamento financeiro na nuvem",
+  "summary": "Defina orçamentos personalizados de custo e uso",
+  "url": "https://aws.amazon.com/aws-cost-management/aws-budgets/"
+ },
+ {
+  "name": "AWS Certificate Manager",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Provisione, gerencie e implante certificados SSL/TLS",
+  "url": "https://aws.amazon.com/certificate-manager/"
+ },
+ {
+  "name": "AWS Chatbot",
+  "category": "Gerenciamento e governança",
+  "summary": "Operações de conversa para a AWS",
+  "url": "https://aws.amazon.com/chatbot/"
+ },
+ {
+  "name": "AWS Clean Rooms",
+  "category": "Análise",
+  "summary": "Faça a correspondência, analise e colabore em conjuntos de dados, sem compartilhar nem revelar dados subjacentes",
+  "url": "https://aws.amazon.com/clean-rooms/"
+ },
+ {
+  "name": "AWS Clean Rooms ML",
+  "category": "Análise",
+  "summary": "Aplique a machine learning com seus parceiros, sem compartilhar dados subjacentes",
+  "url": "https://aws.amazon.com/clean-rooms/ml"
+ },
+ {
+  "name": "AWS Cloud Control API",
+  "category": "Ferramentas do desenvolvedor",
+  "summary": "Gerencie infraestrutura de nuvem da AWS e de terceiros com APIs consistentes",
+  "url": "https://aws.amazon.com/cloudcontrolapi/"
+ },
+ {
+  "name": "AWS Cloud Development Kit (CDK)",
+  "category": "Ferramentas de desenvolvedor",
+  "summary": "Modele infraestrutura de nuvem usando código",
+  "url": "https://aws.amazon.com/cdk/"
+ },
+ {
+  "name": "AWS Cloud Map",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Descoberta de serviços para recursos da nuvem",
+  "url": "https://aws.amazon.com/cloud-map/"
+ },
+ {
+  "name": "AWS Cloud WAN",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Crie, gerencie e monitore facilmente redes globais de longa distância",
+  "url": "https://aws.amazon.com/cloud-wan/"
+ },
+ {
+  "name": "AWS Cloud9",
+  "category": "Ferramentas do desenvolvedor",
+  "summary": "Crie, execute e depure código em um IDE na nuvem",
+  "url": "https://aws.amazon.com/cloud9/"
+ },
+ {
+  "name": "AWS CloudFormation",
+  "category": "Gerenciamento e governança",
+  "summary": "Crie e gerencie recursos com modelos",
+  "url": "https://aws.amazon.com/cloudformation/"
+ },
+ {
+  "name": "AWS CloudHSM",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Armazenamento de chaves baseado em hardware para conformidade regulatória",
+  "url": "https://aws.amazon.com/cloudhsm/"
+ },
+ {
+  "name": "AWS CloudShell",
+  "category": "Ferramentas do desenvolvedor",
+  "summary": "Acesso de linha de comando a recursos e ferramentas da AWS diretamente de um navegador",
+  "url": "https://aws.amazon.com/cloudshell/"
+ },
+ {
+  "name": "AWS CloudTrail",
+  "category": "Gerenciamento e governança",
+  "summary": "Rastreie o uso de APIs e as atividades de usuários",
+  "url": "https://aws.amazon.com/cloudtrail/"
+ },
+ {
+  "name": "AWS CodeArtifact",
+  "category": "Ferramentas do desenvolvedor",
+  "summary": "Gerenciamento seguro, escalável e econômico de artefatos para o desenvolvimento de software",
+  "url": "https://aws.amazon.com/codeartifact/"
+ },
+ {
+  "name": "AWS CodeBuild",
+  "category": "Ferramentas do desenvolvedor",
+  "summary": "Crie e teste código",
+  "url": "https://aws.amazon.com/codebuild/"
+ },
+ {
+  "name": "AWS CodeCommit",
+  "category": "Ferramentas do desenvolvedor",
+  "summary": "Armazene código em repositórios Git privados",
+  "url": "https://aws.amazon.com/codecommit/"
+ },
+ {
+  "name": "AWS CodeDeploy",
+  "category": "Ferramentas do desenvolvedor",
+  "summary": "Automatize implantações de código",
+  "url": "https://aws.amazon.com/codedeploy/"
+ },
+ {
+  "name": "AWS CodePipeline",
+  "category": "Ferramentas do desenvolvedor",
+  "summary": "Faça o lançamento de software usando entrega contínua",
+  "url": "https://aws.amazon.com/codepipeline/"
+ },
+ {
+  "name": "AWS CodeStar",
+  "category": "Ferramentas do desenvolvedor",
+  "summary": "Desenvolva e implante aplicações na AWS",
+  "url": "https://aws.amazon.com/codestar/"
+ },
+ {
+  "name": "AWS Command Line Interface (CLI)",
+  "category": "Ferramentas de desenvolvedor",
+  "summary": "Ferramenta unificada de interface de linha de comando para gerenciar serviços da AWS",
+  "url": "https://aws.amazon.com/cli/"
+ },
+ {
+  "name": "AWS Compute Optimizer",
+  "category": "Computação",
+  "summary": "Identifique os recursos ideais de computação da AWS",
+  "url": "https://aws.amazon.com/compute-optimizer/"
+ },
+ {
+  "name": "AWS Config",
+  "category": "Gerenciamento e governança",
+  "summary": "Rastreie o inventário e as alterações de recursos",
+  "url": "https://aws.amazon.com/config/"
+ },
+ {
+  "name": "AWS Control Tower",
+  "category": "Gerenciamento e governança",
+  "summary": "Configure e controle um ambiente multicontas seguro e compatível",
+  "url": "https://aws.amazon.com/controltower/"
+ },
+ {
+  "name": "AWS Control Tower Data Residency Guardrails",
+  "category": "Gerenciamento e governança",
+  "summary": "Mantenha os dados dos seus clientes em regiões específicas da AWS",
+  "url": "https://aws.amazon.com/controltower/"
+ },
+ {
+  "name": "AWS Copilot",
+  "category": "Contêineres",
+  "summary": "O AWS Copilot é a maneira mais fácil de inicializar e gerenciar suas aplicações conteinerizadas na AWS",
+  "url": "https://aws.amazon.com/containers/copilot/"
+ },
+ {
+  "name": "AWS Cost and Usage Report",
+  "category": "Gerenciamento financeiro na nuvem",
+  "summary": "Acesse informações abrangentes de custos e uso",
+  "url": "https://aws.amazon.com/aws-cost-management/aws-cost-and-usage-reporting/"
+ },
+ {
+  "name": "AWS Cost Explorer",
+  "category": "Gerenciamento financeiro na nuvem",
+  "summary": "Analise seus custos e uso da AWS",
+  "url": "https://aws.amazon.com/aws-cost-management/aws-cost-explorer/"
+ },
+ {
+  "name": "AWS Data Exchange",
+  "category": "Análise",
+  "summary": "Encontre, assine e use dados de terceiros na nuvem",
+  "url": "https://aws.amazon.com/data-exchange/"
+ },
+ {
+  "name": "AWS Data Pipeline",
+  "category": "Análise",
+  "summary": "Serviço de orquestração para fluxos de trabalho periódicos e orientados por dados",
+  "url": "https://aws.amazon.com/datapipeline/"
+ },
+ {
+  "name": "AWS Data Transfer Terminal",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Conexões de alto throughput com a nuvem, mantendo o controle total dos seus dispositivos",
+  "url": "https://aws.amazon.com/data-transfer-terminal/"
+ },
+ {
+  "name": "AWS Database Migration Service (DMS)",
+  "category": "Migração",
+  "summary": "Migre bancos de dados com tempo mínimo de inatividade",
+  "url": "https://aws.amazon.com/dms/"
+ },
+ {
+  "name": "AWS DataSync",
+  "category": "Migração",
+  "summary": "Transferência de dados simples, rápida e online",
+  "url": "https://aws.amazon.com/datasync/"
+ },
+ {
+  "name": "AWS Deadline Cloud",
+  "category": "Serviços de mídia",
+  "summary": "Gerenciamento de renderização na nuvem",
+  "url": "https://aws.amazon.com/deadline-cloud/"
+ },
+ {
+  "name": "AMIs do AWS Deep Learning",
+  "category": "Machine Learning",
+  "summary": "Aprendizado profundo no Amazon EC2",
+  "url": "https://aws.amazon.com/machine-learning/amis/"
+ },
+ {
+  "name": "AWS Deep Learning Containers",
+  "category": "Machine Learning",
+  "summary": "Imagens do Docker para aprendizado profundo",
+  "url": "https://aws.amazon.com/machine-learning/containers/"
+ },
+ {
+  "name": "AWS DeepComposer",
+  "category": "Machine learning",
+  "summary": "Teclado musical habilitado por ML",
+  "url": "https://aws.amazon.com/deepcomposer/"
+ },
+ {
+  "name": "AWS DeepLens",
+  "category": "Machine Learning",
+  "summary": "Câmera de vídeo com aprendizado profundo",
+  "url": "https://aws.amazon.com/deeplens/"
+ },
+ {
+  "name": "AWS DeepRacer",
+  "category": "Machine Learning",
+  "summary": "Carro de corrida autônomo na escala 1:18 guiado por ML",
+  "url": "https://aws.amazon.com/deepracer/"
+ },
+ {
+  "name": "AWS Device Farm",
+  "category": "Front-end para plataformas móveis e Web",
+  "summary": "Teste aplicações Web e para Android e iOS em dispositivos reais na Nuvem AWS",
+  "url": "https://aws.amazon.com/device-farm/"
+ },
+ {
+  "name": "AWS Direct Connect",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Conexão de rede dedicada para a AWS",
+  "url": "https://aws.amazon.com/directconnect/"
+ },
+ {
+  "name": "AWS Directory Service",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Hospede e gerencie o diretório ativo",
+  "url": "https://aws.amazon.com/directoryservice/"
+ },
+ {
+  "name": "AWS Distro for OpenTelemetry",
+  "category": "Gerenciamento e governança",
+  "summary": "Distribuição de código aberto segura e pronta para produção com performance previsível",
+  "url": "https://aws.amazon.com/otel/"
+ },
+ {
+  "name": "AWS DMS Schema Conversion",
+  "category": "Banco de dados",
+  "summary": "Automatize tarefas demoradas de conversão de esquemas usando a IA generativa",
+  "url": "https://aws.amazon.com/dms/features/"
+ },
+ {
+  "name": "AWS Elastic Beanstalk",
+  "category": "Computação",
+  "summary": "Execute e gerencie aplicações Web",
+  "url": "https://aws.amazon.com/elasticbeanstalk/"
+ },
+ {
+  "name": "AWS Elemental MediaConnect",
+  "category": "Serviços de mídia",
+  "summary": "Transporte de vídeo ao vivo confiável e seguro",
+  "url": "https://aws.amazon.com/mediaconnect/"
+ },
+ {
+  "name": "AWS Elemental MediaConvert",
+  "category": "Serviços de mídia",
+  "summary": "Converta conteúdo de vídeo baseado em arquivos",
+  "url": "https://aws.amazon.com/mediaconvert/"
+ },
+ {
+  "name": "AWS Elemental MediaLive",
+  "category": "Serviços de mídia",
+  "summary": "Converta conteúdo de vídeo ao vivo",
+  "url": "https://aws.amazon.com/medialive/"
+ },
+ {
+  "name": "AWS Elemental MediaPackage",
+  "category": "Serviços de mídia",
+  "summary": "Concepção e empacotamento de vídeo",
+  "url": "https://aws.amazon.com/mediapackage/"
+ },
+ {
+  "name": "AWS Elemental MediaStore",
+  "category": "Serviços de mídia",
+  "summary": "Armazenamento de mídia e origem de HTTP simples",
+  "url": "https://aws.amazon.com/mediastore/"
+ },
+ {
+  "name": "AWS Elemental MediaTailor",
+  "category": "Serviços de mídia",
+  "summary": "Personalização e monetização de vídeos",
+  "url": "https://aws.amazon.com/mediatailor/"
+ },
+ {
+  "name": "AWS End User Messaging",
+  "category": "Aplicações de negócios",
+  "summary": "Sistema de mensagens confiável e econômico que não compromete a segurança, a proteção ou os resultados",
+  "url": "https://aws.amazon.com/end-user-messaging/pricing/"
+ },
+ {
+  "name": "AWS Fargate",
+  "category": "Contêineres",
+  "summary": "Computação com tecnologia sem servidor para contêineres",
+  "url": "https://aws.amazon.com/fargate/"
+ },
+ {
+  "name": "AWS Fault Injection Simulator",
+  "category": "Ferramentas do desenvolvedor",
+  "summary": "Melhore a resiliência e a performance com experimentos controlados",
+  "url": "https://aws.amazon.com/fis/"
+ },
+ {
+  "name": "AWS Firewall Manager",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Gerenciamento central de regras de firewall",
+  "url": "https://aws.amazon.com/firewall-manager/"
+ },
+ {
+  "name": "AWS Global Accelerator",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Melhore a disponibilidade e a performance de aplicações globais",
+  "url": "https://aws.amazon.com/global-accelerator/"
+ },
+ {
+  "name": "AWS Glue",
+  "category": "Análise",
+  "summary": "Integração de dados simples, escalável e com tecnologia sem servidor",
+  "url": "https://aws.amazon.com/glue/"
+ },
+ {
+  "name": "AWS Glue Data Quality",
+  "category": "Análise",
+  "summary": "Forneça dados de alta qualidade em seus data lakes e pipelines",
+  "url": "https://aws.amazon.com/glue/features/data-quality/"
+ },
+ {
+  "name": "AWS Glue para Ray",
+  "category": "Análise",
+  "summary": "Escale e simplifique com código Python para ETL, com tecnologia sem servidor",
+  "url": "https://aws.amazon.com/glue/features/engines/"
+ },
+ {
+  "name": "AWS Ground Station",
+  "category": "Satélite",
+  "summary": "Estação terrestre totalmente gerenciada como serviço",
+  "url": "https://aws.amazon.com/ground-station/"
+ },
+ {
+  "name": "AWS Health",
+  "category": "Gerenciamento e governança",
+  "summary": "Fonte de dados para eventos e mudanças que afetam seus recursos da Nuvem AWS",
+  "url": "https://aws.amazon.com/premiumsupport/technology/aws-health/"
+ },
+ {
+  "name": "AWS HealthOmics",
+  "category": "Machine Learning",
+  "summary": "Transforme dados ômicos em insights de dados",
+  "url": "https://aws.amazon.com/omics/"
+ },
+ {
+  "name": "AWS HealthScribe",
+  "category": "Machine Learning",
+  "summary": "Transforme anotações clínicas em insights usando a IA generativa",
+  "url": "https://aws.amazon.com/healthscribe/"
+ },
+ {
+  "name": "AWS Identity and Access Management",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Gerencie com segurança o acesso a serviços e recursos",
+  "url": "https://aws.amazon.com/iam/"
+ },
+ {
+  "name": "AWS Inferentia",
+  "category": "Machine Learning",
+  "summary": "Chip de inferência de machine learning",
+  "url": "https://aws.amazon.com/machine-learning/inferentia/"
+ },
+ {
+  "name": "AWS IoT 1-Click",
+  "category": "Internet das Coisas",
+  "summary": "Criação de um disparador do AWS Lambda com um clique",
+  "url": "https://aws.amazon.com/iot-1-click/"
+ },
+ {
+  "name": "AWS IoT Analytics",
+  "category": "Internet das Coisas",
+  "summary": "Análise para dispositivos IoT",
+  "url": "https://aws.amazon.com/iot-analytics/"
+ },
+ {
+  "name": "AWS IoT Button",
+  "category": "Internet das Coisas",
+  "summary": "Dash Button programável na nuvem",
+  "url": "https://aws.amazon.com/iotbutton/"
+ },
+ {
+  "name": "AWS IoT Core",
+  "category": "Internet das Coisas",
+  "summary": "Conecte dispositivos à nuvem",
+  "url": "https://aws.amazon.com/iot-core/"
+ },
+ {
+  "name": "AWS IoT Device Defender",
+  "category": "Internet das Coisas",
+  "summary": "Gerenciamento de segurança para dispositivos IoT",
+  "url": "https://aws.amazon.com/iot-device-defender/"
+ },
+ {
+  "name": "AWS IoT Device Management",
+  "category": "Internet das Coisas",
+  "summary": "Integre, organize e gerencie remotamente dispositivos IoT",
+  "url": "https://aws.amazon.com/iot-device-management/"
+ },
+ {
+  "name": "AWS IoT EduKit",
+  "category": "Internet das Coisas",
+  "summary": "Aprenda a criar aplicações simples para a IoT com hardware de referência e tutoriais detalhados",
+  "url": "https://aws.amazon.com/iot/edukit/"
+ },
+ {
+  "name": "AWS IoT Events",
+  "category": "Internet das Coisas",
+  "summary": "Detecção e resposta a eventos de IoT",
+  "url": "https://aws.amazon.com/iot-events/"
+ },
+ {
+  "name": "AWS IoT ExpressLink",
+  "category": "Internet das Coisas",
+  "summary": "Desenvolva dispositivos de IoT seguros com rapidez e facilidade",
+  "url": "https://aws.amazon.com/iot-expresslink/"
+ },
+ {
+  "name": "AWS IoT FleetWise (prévia)",
+  "category": "Internet das Coisas",
+  "summary": "Colete, transforme e transfira dados de veículos para a nuvem com facilidade e praticamente em tempo real",
+  "url": "https://aws.amazon.com/iot-fleetwise/"
+ },
+ {
+  "name": "AWS IoT Greengrass",
+  "category": "Internet das Coisas",
+  "summary": "Computação, sistema de mensagens e sincronização locais para dispositivos",
+  "url": "https://aws.amazon.com/greengrass/"
+ },
+ {
+  "name": "AWS IoT RoboRunner (Prévia)",
+  "category": "Internet das Coisas",
+  "summary": "Construa aplica&ccedil;&otilde;es que ajudam frotas de rob&ocirc;s a trabalhar juntas com perfei&ccedil;&atilde;o",
+  "url": "https://aws.amazon.com/roborunner"
+ },
+ {
+  "name": "AWS IoT SiteWise",
+  "category": "Internet das Coisas",
+  "summary": "Coletor e intérprete de dados de IoT",
+  "url": "https://aws.amazon.com/iot-sitewise/"
+ },
+ {
+  "name": "AWS IoT TwinMaker (prévia)",
+  "category": "Internet das Coisas",
+  "summary": "Otimize operações ao criar com facilidade gêmeos digitais de sistemas reais",
+  "url": "https://aws.amazon.com/iot-twinmaker/"
+ },
+ {
+  "name": "AWS Key Management Service (KMS)",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Criação e controle gerenciados de chaves de criptografia",
+  "url": "https://aws.amazon.com/kms/"
+ },
+ {
+  "name": "AWS Lake Formation",
+  "category": "Análise",
+  "summary": "Crie um data lake seguro em poucos dias",
+  "url": "https://aws.amazon.com/lake-formation/"
+ },
+ {
+  "name": "AWS Lambda",
+  "category": "Computação",
+  "summary": "Execute código sem preocupações com servidores",
+  "url": "https://aws.amazon.com/lambda/"
+ },
+ {
+  "name": "AWS Lambda SnapStart",
+  "category": "Computação",
+  "summary": "Obtenha tempos de inicialização de funções Java até dez vezes mais rápidos",
+  "url": "https://aws.amazon.com/blogs/aws/new-accelerate-your-lambda-functions-with-lambda-snapstart/"
+ },
+ {
+  "name": "AWS Launch Wizard",
+  "category": "Gerenciamento e governança",
+  "summary": "Dimensione, configure e implante facilmente aplicações de terceiros na AWS",
+  "url": "https://aws.amazon.com/launchwizard/"
+ },
+ {
+  "name": "AWS License Manager",
+  "category": "Gerenciamento e governança",
+  "summary": "Rastreie, gerencie e controle licenças",
+  "url": "https://aws.amazon.com/license-manager/"
+ },
+ {
+  "name": "AWS Mainframe Modernization (previsualização)",
+  "category": "Migração",
+  "summary": "Migre, modernize, opere e execute workloads de mainframe",
+  "url": "https://aws.amazon.com/mainframe-modernization/"
+ },
+ {
+  "name": "AWS Managed Services",
+  "category": "Gerenciamento e governança",
+  "summary": "Gerenciamento de operações de infraestrutura da AWS",
+  "url": "https://aws.amazon.com/managed-services/"
+ },
+ {
+  "name": "AWS Management Console Mobile Application",
+  "category": "Gerenciamento e governança",
+  "summary": "Acesse recursos em atividade",
+  "url": "https://aws.amazon.com/console/mobile/"
+ },
+ {
+  "name": "AWS Marketplace for Containers Anywhere",
+  "category": "Contêineres",
+  "summary": "Encontre, assine e implante aplicações de terceiros que podem ser executadas em qualquer ambiente Kubernetes",
+  "url": "https://aws.amazon.com/marketplace/features/containers/"
+ },
+ {
+  "name": "AWS Migration Hub",
+  "category": "Migração",
+  "summary": "Acompanhe as migrações em um único lugar",
+  "url": "https://aws.amazon.com/migration-hub/"
+ },
+ {
+  "name": "AWS Network Firewall",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Implante segurança de rede em suas Amazon VPCs com apenas alguns cliques",
+  "url": "https://aws.amazon.com/network-firewall/"
+ },
+ {
+  "name": "AWS OpsWorks",
+  "category": "Gerenciamento e governança",
+  "summary": "Automatize as operações com o Chef e o Puppet",
+  "url": "https://aws.amazon.com/opsworks/"
+ },
+ {
+  "name": "AWS Organizations",
+  "category": "Gerenciamento e governança",
+  "summary": "Governança e gerenciamento centralizados para contas da AWS",
+  "url": "https://aws.amazon.com/organizations/"
+ },
+ {
+  "name": "AWS Outposts",
+  "category": "Computação",
+  "summary": "Execute a infraestrutura da AWS on-premises",
+  "url": "https://aws.amazon.com/outposts/"
+ },
+ {
+  "name": "AWS Outposts 1U e 2U",
+  "category": "Computação",
+  "summary": "Execute o AWS Outposts em locais menores",
+  "url": "https://aws.amazon.com/outposts/servers/"
+ },
+ {
+  "name": "AWS Panorama",
+  "category": "Machine learning",
+  "summary": "Aprimore as suas operações com visão computacional na borda",
+  "url": "https://aws.amazon.com/panorama/"
+ },
+ {
+  "name": "AWS Partner Device Catalog",
+  "category": "Internet das Coisas",
+  "summary": "Catálogo selecionado de hardware de IoT compatível com a AWS",
+  "url": "https://devices.amazonaws.com/"
+ },
+ {
+  "name": "AWS Personal Health Dashboard",
+  "category": "Gerenciamento e governança",
+  "summary": "Visualização personalizada da integridade de serviços da AWS",
+  "url": "https://aws.amazon.com/premiumsupport/technology/personal-health-dashboard/"
+ },
+ {
+  "name": "AWS Private 5G",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Implante, gerencie e escale facilmente uma rede celular privada",
+  "url": "https://aws.amazon.com/private5g/"
+ },
+ {
+  "name": "AWS PrivateLink",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Acesse com segurança serviços hospedados na AWS",
+  "url": "https://aws.amazon.com/privatelink/"
+ },
+ {
+  "name": "AWS Proton",
+  "category": "Gerenciamento e governança",
+  "summary": "Automatize o gerenciamento de implantações de contêineres e de tecnologia sem servidor",
+  "url": "https://aws.amazon.com/proton/"
+ },
+ {
+  "name": "AWS Resilience Hub",
+  "category": "Gerenciamento e governança",
+  "summary": "Prepare e proteja suas aplicações contra interrupções",
+  "url": "https://aws.amazon.com/resilience-hub/"
+ },
+ {
+  "name": "AWS Resource Access Manager",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Serviço simples e seguro para compartilhar recursos da AWS",
+  "url": "https://aws.amazon.com/ram/"
+ },
+ {
+  "name": "AWS RoboMaker",
+  "category": "Robótica",
+  "summary": "Desenvolva, teste e implante aplicações de robótica",
+  "url": "https://aws.amazon.com/robomaker/"
+ },
+ {
+  "name": "AWS Secrets Manager",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Alterne, gerencie e recupere segredos",
+  "url": "https://aws.amazon.com/secrets-manager/"
+ },
+ {
+  "name": "AWS Security Hub",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Central unificada de conformidade e segurança",
+  "url": "https://aws.amazon.com/security-hub/"
+ },
+ {
+  "name": "AWS Security Incident Response",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Explore como se preparar, responder e se recuperar de eventos de segurança",
+  "url": "https://aws.amazon.com/security-incident-response/"
+ },
+ {
+  "name": "AWS Serverless Application Repository",
+  "category": "Computação",
+  "summary": "Descubra, implante e publique aplicações sem servidor",
+  "url": "https://aws.amazon.com/serverless/serverlessrepo/"
+ },
+ {
+  "name": "AWS Service Catalog",
+  "category": "Gerenciamento e governança",
+  "summary": "Crie e use produtos padronizados",
+  "url": "https://aws.amazon.com/servicecatalog/"
+ },
+ {
+  "name": "AWS Service Management Connector",
+  "category": "Gerenciamento e governança",
+  "summary": "Provisionar, gerenciar e operar recursos da AWS nas ferramentas de gerenciamento de serviços",
+  "url": "https://aws.amazon.com/service-management-connector/"
+ },
+ {
+  "name": "AWS Shield",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Proteção contra DDoS",
+  "url": "https://aws.amazon.com/shield/"
+ },
+ {
+  "name": "AWS SimSpace Weaver",
+  "category": "Computação",
+  "summary": "Crie simulações espaciais dinâmicas e em grande escala na infraestrutura gerenciada da AWS",
+  "url": "https://aws.amazon.com/simspaceweaver/"
+ },
+ {
+  "name": "AWS Step Functions",
+  "category": "Integração de aplicações",
+  "summary": "Coordenação para aplicações distribuídas",
+  "url": "https://aws.amazon.com/step-functions/"
+ },
+ {
+  "name": "AWS Storage Gateway",
+  "category": "Armazenamento",
+  "summary": "Integração de armazenamento híbrido",
+  "url": "https://aws.amazon.com/storagegateway/"
+ },
+ {
+  "name": "AWS Systems Manager",
+  "category": "Gerenciamento e governança",
+  "summary": "Obtenha insights operacionais e tome medidas",
+  "url": "https://aws.amazon.com/systems-manager/"
+ },
+ {
+  "name": "AWS Trainium2",
+  "category": "Computação",
+  "summary": "O AWS Trainium2 está disponível ao público e oferece uma relação preço/desempenho até 30% melhor para IA generativa",
+  "url": "https://aws.amazon.com/ec2/instance-types/trn2/"
+ },
+ {
+  "name": "AWS Transfer Family",
+  "category": "Migração",
+  "summary": "Serviços SFTP, FTPS e FTP totalmente gerenciados",
+  "url": "https://aws.amazon.com/aws-transfer-family/"
+ },
+ {
+  "name": "AWS Transit Gateway",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Escale facilmente VPCs e conexões de contas",
+  "url": "https://aws.amazon.com/transit-gateway/"
+ },
+ {
+  "name": "AWS Trusted Advisor",
+  "category": "Gerenciamento e governança",
+  "summary": "Otimize a performance e a segurança",
+  "url": "https://aws.amazon.com/premiumsupport/technology/trusted-advisor/"
+ },
+ {
+  "name": "AWS VPN",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Acesse recursos de rede com segurança",
+  "url": "https://aws.amazon.com/vpn/"
+ },
+ {
+  "name": "AWS WAF",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Filtre o tráfego da Web mal-intencionado",
+  "url": "https://aws.amazon.com/waf/"
+ },
+ {
+  "name": "AWS Wavelength",
+  "category": "Computação",
+  "summary": "Disponibilize aplicações com latência ultrabaixa para dispositivos 5G",
+  "url": "https://aws.amazon.com/wavelength/"
+ },
+ {
+  "name": "AWS Well-Architected Tool",
+  "category": "Estratégia de arquitetura",
+  "summary": "Analise e aprimore suas workloads",
+  "url": "https://aws.amazon.com/well-architected-tool/"
+ },
+ {
+  "name": "AWS Wickr",
+  "category": "Aplicações empresariais",
+  "summary": "Proteja as comunicações empresariais com criptografia de ponta a ponta",
+  "url": "https://aws.amazon.com/wickr/"
+ },
+ {
+  "name": "AWS X-Ray",
+  "category": "Ferramentas do desenvolvedor",
+  "summary": "Analise e depure suas aplicações",
+  "url": "https://aws.amazon.com/xray/"
+ },
+ {
+  "name": "Cadeia de Suprimentos AWS",
+  "category": "Aplicações de negócios",
+  "summary": "Minimize os riscos e os custos com uma aplicação de cadeia de fornecimento com tecnologia de ML",
+  "url": "https://aws.amazon.com/aws-supply-chain/"
+ },
+ {
+  "name": "Carrinho do Amazon Dash",
+  "category": "Aplicações de negócios",
+  "summary": "Permita que consumidores comprem com eficiência e facilidade",
+  "url": "https://aws.amazon.com/dash-cart/"
+ },
+ {
+  "name": "Centro de Identidade do AWS IAM",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Gerencie o acesso via logon único a aplicações e contas da AWS",
+  "url": "https://aws.amazon.com/iam/identity-center/"
+ },
+ {
+  "name": "Compre com a AWS",
+  "category": "Marketplace",
+  "summary": "Use sua conta da AWS para comprar produtos do AWS Marketplace em sites parceiros",
+  "url": "https://aws.amazon.com/marketplace/features/buy-with-aws/"
+ },
+ {
+  "name": "Compreensão de códigos do Amazon Q Developer",
+  "category": "IA generativa",
+  "summary": "Gere automaticamente documentação e testes de unidade com o Amazon Q Developer para um envio mais rápido de código",
+  "url": "https://aws.amazon.com/q/developer/"
+ },
+ {
+  "name": "Console de gerenciamento da AWS",
+  "category": "Gerenciamento e governança",
+  "summary": "Interface de usuário baseada na Web",
+  "url": "https://aws.amazon.com/console/"
+ },
+ {
+  "name": "CRESÇA com SAP na AWS",
+  "category": "ERP na nuvem",
+  "summary": "Simplifique seu trabalho, expanda os negócios e garanta sucesso com ERP em nuvem habilitado por IA",
+  "url": "https://aws.amazon.com/sap/grow/"
+ },
+ {
+  "name": "Criação de resumo de chamadas no Contact Lens for Amazon Connect",
+  "category": "Aplicações empresariais",
+  "summary": "Gere automaticamente resumos de chamadas de clientes usando machine learning",
+  "url": "https://aws.amazon.com/connect/contact-lens/"
+ },
+ {
+  "name": "Dispositivos e software do AWS Elemental",
+  "category": "Serviços de mídia",
+  "summary": "Soluções de mídia on-premises",
+  "url": "https://aws.amazon.com/elemental-appliances-software/"
+ },
+ {
+  "name": "AWS Elastic Disaster Recovery (DRS)",
+  "category": "Armazenamento",
+  "summary": "Recuperação de aplicações escalável e econômica para a AWS",
+  "url": "https://aws.amazon.com/disaster-recovery/"
+ },
+ {
+  "name": "Elastic Load Balancing (ELB)",
+  "category": "Redes e entrega de conteúdo",
+  "summary": "Distribua tráfego de entrada entre vários destinos",
+  "url": "https://aws.amazon.com/elasticloadbalancing/"
+ },
+ {
+  "name": "Integração ETL zero do Amazon DynamoDB com o Amazon OpenSearch Service",
+  "category": "Banco de dados",
+  "summary": "Capacite pesquisas poderosas quase em tempo real, como pesquisas de texto completo, pesquisas de vetores e muito mais, sem precisar criar ou gerenciar pipelines de ETL",
+  "url": "https://aws.amazon.com/dynamodb/integrations/"
+ },
+ {
+  "name": "Família Amazon WorkSpaces",
+  "category": "Computação de usuário final",
+  "summary": "Serviços de área de trabalho virtual para cada caso de uso",
+  "url": "https://aws.amazon.com/workspaces/"
+ },
+ {
+  "name": "Família AWS Snow",
+  "category": "Computação",
+  "summary": "Dispositivos físicos para agregar e processar dados em locais da borda com transferência subsequente para a AWS",
+  "url": "https://aws.amazon.com/snow/"
+ },
+ {
+  "name": "Família AWS Snow",
+  "category": "Migração",
+  "summary": "Dispositivos físicos para migração de dados com origem ou destino na AWS",
+  "url": "https://aws.amazon.com/snow/"
+ },
+ {
+  "name": "Família AWS Snow",
+  "category": "Armazenamento",
+  "summary": "Dispositivos físicos de computação e armazenamento de borda para ambientes robustos ou desconectados",
+  "url": "https://aws.amazon.com/snow/"
+ },
+ {
+  "name": "Ferramentas e SDKs da AWS",
+  "category": "Ferramentas de desenvolvedor",
+  "summary": "Ferramentas e SDKs para a AWS",
+  "url": "https://aws.amazon.com/getting-started/tools-sdks/"
+ },
+ {
+  "name": "Governança de ML com o Amazon SageMaker (prévia)",
+  "category": "Machine Learning",
+  "summary": "Simplifique o controle de acesso e aumente a transparência",
+  "url": "https://aws.amazon.com/sagemaker/ml-governance/"
+ },
+ {
+  "name": "Governança de tarefas do Amazon SageMaker HyperPod",
+  "category": "Machine Learning",
+  "summary": "Maximize a utilização de recursos de computação e reduza os custos de todas as tarefas de desenvolvimento de modelos, do treinamento de um modelo a uma inferência",
+  "url": "https://aws.amazon.com/sagemaker-ai/hyperpod/"
+ },
+ {
+  "name": "Guias detalhados para o espaço de trabalho de atendentes do Amazon Connect (prévia)",
+  "category": "Aplicativos empresariais",
+  "summary": "Resolva problemas de clientes em centrais de atendimento com mais rapidez e precisão",
+  "url": "https://aws.amazon.com/connect/agent-workspace/"
+ },
+ {
+  "name": "Instâncias C7g e Graviton3 do Amazon EC2",
+  "category": "Computação",
+  "summary": "A melhor performance de preço para workloads com uso intensivo de computação no Amazon EC2",
+  "url": "https://aws.amazon.com/ec2/instance-types/c7g/"
+ },
+ {
+  "name": "Instâncias C7gn do Amazon EC2",
+  "category": "Computação",
+  "summary": "Instâncias Graviton otimizadas para computação com até 200 Gbps de largura de banda de rede",
+  "url": "https://aws.amazon.com/ec2/instance-types/c7g/"
+ },
+ {
+  "name": "Instâncias G5g do Amazon EC2",
+  "category": "Computação",
+  "summary": "A melhor performance de preço no Amazon EC2 para transmissão de jogos na plataforma Android",
+  "url": "https://aws.amazon.com/ec2/instance-types/g5g/"
+ },
+ {
+  "name": "Instâncias Hpc6id do Amazon EC2",
+  "category": "Computação",
+  "summary": "As instâncias Hpc6id do Amazon EC2 oferecem desempenho econômico para workloads de HPC que fazem uso intenso de dados",
+  "url": "https://aws.amazon.com/ec2/instance-types/hpc6i/"
+ },
+ {
+  "name": "Instâncias Hpc7g do Amazon EC2 (em breve)",
+  "category": "Computação",
+  "summary": "Ofereça performance até 60% melhor em relação a instâncias comparáveis da geração anterior para workloads com alto uso de computação",
+  "url": "https://aws.amazon.com/blogs/aws/new-amazon-ec2-instance-types-in-the-works-c7gn-r7iz-and-hpc7g/"
+ },
+ {
+  "name": "Instâncias I4i do Amazon EC2 (em breve)",
+  "category": "Computação",
+  "summary": "A mais alta performance de armazenamento local no Amazon EC2",
+  "url": "https://aws.amazon.com/ec2/instance-types/i4i/"
+ },
+ {
+  "name": "Instâncias Im4gn/Is4gen do Amazon EC2",
+  "category": "Computação",
+  "summary": "A melhor performance de preço e o menor custo para armazenamento baseado em SSD no Amazon EC2",
+  "url": "https://aws.amazon.com/ec2/instance-types/i4g/"
+ },
+ {
+  "name": "Instâncias M6a do Amazon EC2",
+  "category": "Computação",
+  "summary": "Instâncias de uso geral habilitadas pela 3.ª geração dos processadores AMD EPYC",
+  "url": "https://aws.amazon.com/ec2/instance-types/m6a/"
+ },
+ {
+  "name": "Instâncias Mac M1 do Amazon EC2",
+  "category": "Computação",
+  "summary": "Melhor performance de compilação de aplicações e testes mais rápidos para macOS",
+  "url": "https://aws.amazon.com/ec2/instance-types/mac/"
+ },
+ {
+  "name": "Instâncias R8g do Amazon EC2 (prévia)",
+  "category": "Computação",
+  "summary": "O melhor preço, desempenho e eficiência energética no EC2 para workloads que consomem muita memória",
+  "url": "https://aws.amazon.com/ec2/instance-types/r8g/"
+ },
+ {
+  "name": "Instâncias spot do Amazon EC2",
+  "category": "Computação",
+  "summary": "Execute workloads com até 90% de desconto",
+  "url": "https://aws.amazon.com/ec2/spot/"
+ },
+ {
+  "name": "Instâncias X2idn/X2iedn do Amazon EC2 (em breve)",
+  "category": "Computação",
+  "summary": "Performance de preço de computação até 50% melhor em relação às instâncias da geração anterior",
+  "url": "https://aws.amazon.com/ec2/instance-types/x2i/"
+ },
+ {
+  "name": "Instâncias X2iezn do Amazon EC2 (em breve)",
+  "category": "Computação",
+  "summary": "O mais rápido processador Intel Xeon escalável na nuvem",
+  "url": "https://aws.amazon.com/ec2/instance-types/x2i/"
+ },
+ {
+  "name": "Integração ETL zero do Amazon Aurora MySQL com o Amazon Redshift",
+  "category": "Bancos de dados",
+  "summary": "Agora o Amazon Aurora permite integrações sem ETL com o Amazon Redshift",
+  "url": "https://aws.amazon.com/about-aws/whats-new/2022/11/amazon-aurora-zero-etl-integration-redshift/"
+ },
+ {
+  "name": "Integração do Amazon Redshift para Apache Spark",
+  "category": "Análises",
+  "summary": "Crie aplicativos Apache Spark para leitura e gravação de dados usando o Amazon Redshift",
+  "url": "https://aws.amazon.com/redshift/features/integration-for-apache-spark/"
+ },
+ {
+  "name": "Integração ETL zero do Amazon Aurora PostgreSQL com o Amazon Redshift (versão prévia)",
+  "category": "Banco de dados",
+  "summary": "Permita análises quase em tempo real em petabytes de dados transacionais",
+  "url": "https://aws.amazon.com/rds/aurora/zero-etl/"
+ },
+ {
+  "name": "Integração ETL zero do Amazon DynamoDB com o Amazon Redshift (versão prévia)",
+  "category": "Banco de dados",
+  "summary": "Capacite a análise dos seus dados operacionais sem precisar criar ou gerenciar pipelines de ETL",
+  "url": "https://pages.awscloud.com/DynamoDB-zeroETL-AmazonRedshift-Preview.html"
+ },
+ {
+  "name": "Integração ETL zero do Amazon RDS para MySQL com o Amazon Redshift (versão prévia)",
+  "category": "Banco de dados",
+  "summary": "Com as integrações ETL zero, elimine a necessidade de criar e gerenciar pipelines de dados complexos que realizam operações de ETL",
+  "url": "https://aws.amazon.com/rds/features/#product-features#rds-features#easy-to-manage"
+ },
+ {
+  "name": "Intercâmbio de dados B2B",
+  "category": "Integração de aplicativos",
+  "summary": "O AWS B2B Data Interchange automatiza a transformação de documentos de Electronic Interchange Data (EDI – Intercâmbio eletrônico de dados) em representações de dados comuns, como JSON e XML, em grande escala",
+  "url": "https://aws.amazon.com/b2b-data-interchange/"
+ },
+ {
+  "name": "Investigue problemas operacionais com o Amazon Q Developer",
+  "category": "Gerenciamento e governança",
+  "summary": "O Amazon Q Developer agora pode ajudar você a investigar e corrigir problemas operacionais",
+  "url": "https://aws.amazon.com/cloudwatch/features/intelligent-operations/"
+ },
+ {
+  "name": "Metadados do Amazon S3",
+  "category": "Armazenamento",
+  "summary": "Obtenha metadados de objetos que podem ser consultados praticamente em tempo real para organizar e descobrir seus dados do S3",
+  "url": "https://aws.amazon.com/s3/features/metadata/"
+ },
+ {
+  "name": "Migration Evaluator (anteriormente TSO Logic)",
+  "category": "Migração",
+  "summary": "Crie um caso de negócios de migração para a nuvem",
+  "url": "https://aws.amazon.com/migration-evaluator/"
+ },
+ {
+  "name": "Modo automático do Amazon EKS",
+  "category": "Computação",
+  "summary": "Simplifique o gerenciamento de clusters do Kubernetes para computação, armazenamento e rede em clusters novos ou existentes",
+  "url": "https://aws.amazon.com/eks/auto-mode/"
+ },
+ {
+  "name": "Monitor de Internet do Amazon CloudWatch",
+  "category": "Gerenciamento e governança",
+  "summary": "Visualize a integridade global da Internet da sua aplicação e diagnostique problemas em minutos, e não em dias",
+  "url": "https://aws.amazon.com/cloudwatch/features/"
+ },
+ {
+  "name": "Monitoramento de runtime do GuardDuty ECS",
+  "category": "Segurança, identidade e conformidade",
+  "summary": "Detecção centralizada e totalmente gerenciada de ameaças em contêineres do Amazon ECS, incluindo workloads sem servidor no AWS Fargate",
+  "url": "https://aws.amazon.com/guardduty/"
+ },
+ {
+  "name": "Notificações de Usuários da AWS",
+  "category": "Gerenciamento e governança",
+  "summary": "Configure e visualize notificações dos produtos da AWS",
+  "url": "https://aws.amazon.com/notifications/"
+ },
+ {
+  "name": "Novos recursos expandidos de API no Amazon QuickSight",
+  "category": "Análise",
+  "summary": "Crie e gerencie painéis de maneira programática no Amazon QuickSight e acelere a migração para a nuvem",
+  "url": "https://aws.amazon.com/blogs/aws/new-amazon-quicksight-api-capabilities-to-accelerate-your-bi-transformation/"
+ },
+ {
+  "name": "Nodes híbridos do Amazon EKS",
+  "category": "Computação",
+  "summary": "Unifique o gerenciamento do Kubernetes em ambientes de nuvem, on-premises e periféricos",
+  "url": "https://aws.amazon.com/eks/hybrid-nodes/"
+ },
+ {
+  "name": "O Amazon SageMaker agora oferece suporte a ML geoespacial (prévia)",
+  "category": "Machine Learning",
+  "summary": "Crie, treine e implante modelos de ML usando dados geoespaciais",
+  "url": "https://aws.amazon.com/sagemaker/geospatial/"
+ },
+ {
+  "name": "Open 3D Engine (O3DE)",
+  "category": "Tecnologia de jogos",
+  "summary": "Crie jogos e simulações 3D com o O3DE",
+  "url": "https://aws.amazon.com/lumberyard/"
+ },
+ {
+  "name": "SageMaker AI",
+  "category": "Machine Learning",
+  "summary": "Encontre, implante e use aplicações populares de desenvolvimento de IA de parceiros da AWS dentro do Amazon SageMaker AI",
+  "url": "https://aws.amazon.com/sagemaker/studio/"
+ },
+ {
+  "name": "Planejamento de suprimentos da Cadeia de Suprimentos AWS (em breve)",
+  "category": "Aplicação empresarial",
+  "summary": "Preveja e planeje compras de materiais, componentes e produtos acabados para aumentar os níveis de serviço e cortar custos",
+  "url": "https://aws.amazon.com/aws-supply-chain/features/"
+ },
+ {
+  "name": "Planos de treinamento flexíveis do Amazon SageMaker HyperPod",
+  "category": "Machine Learning",
+  "summary": "Economize semanas de treinamento de modelos de IA generativa e ajude a cumprir prazos e o orçamento",
+  "url": "https://aws.amazon.com/sagemaker-ai/hyperpod/"
+ },
+ {
+  "name": "Preparação automatizada de dados para o Amazon QuickSight Q",
+  "category": "Análise",
+  "summary": "Responda às suas perguntas de negócios, ao habilitar seus dados para pesquisa em linguagem natural de forma rápida e fácil",
+  "url": "https://aws.amazon.com/blogs/aws/new-announcing-automated-data-preparation-for-amazon-quicksight-q/"
+ },
+ {
+  "name": "Previsão, Planejamento de Capacidade e Agendamento do Amazon Connect",
+  "category": "Aplicativos empresariais",
+  "summary": "Responda com mais rapidez a alterações de capacidade e força de trabalho usando recursos de central de atendimento com tecnologia de ML",
+  "url": "https://aws.amazon.com/connect/optimization/"
+ },
+ {
+  "name": "PyTorch na AWS",
+  "category": "Machine Learning",
+  "summary": "Estrutura de machine learning de código aberto e flexível",
+  "url": "https://aws.amazon.com/pytorch/"
+ },
+ {
+  "name": "Receitas do Amazon SageMaker HyperPod",
+  "category": "Machine Learning",
+  "summary": "Comece a treinar e ajustar modelos de base disponíveis publicamente em minutos com um desempenho de última geração",
+  "url": "https://aws.amazon.com/sagemaker-ai/hyperpod/"
+ },
+ {
+  "name": "Red Hat OpenShift Service on AWS",
+  "category": "Contêineres",
+  "summary": "OpenShift gerenciado na nuvem",
+  "url": "https://aws.amazon.com/rosa/"
+ },
+ {
+  "name": "Relatórios de instâncias reservadas (IRs)",
+  "category": "Gerenciamento financeiro na nuvem",
+  "summary": "Obtenha detalhes das suas instâncias reservadas (IRs)",
+  "url": "https://aws.amazon.com/aws-cost-management/reserved-instance-reporting/"
+ },
+ {
+  "name": "Revisor de código do Amazon Q Developer",
+  "category": "IA generativa",
+  "summary": "Obtenha feedback imediato sobre seu código para que você possa iterar mais rapidamente",
+  "url": "https://aws.amazon.com/q/developer/"
+ },
+ {
+  "name": "Savings Plans",
+  "category": "Gerenciamento financeiro na nuvem",
+  "summary": "Economize até 72% no uso de computação com preços flexíveis",
+  "url": "https://aws.amazon.com/savingsplans/"
+ },
+ {
+  "name": "Amazon Chime SDK",
+  "category": "Aplicações de negócios",
+  "summary": "Mensagens, áudio, vídeo e compartilhamento de tela em tempo real&#160;",
+  "url": "https://aws.amazon.com/chime/chime-sdk/"
+ },
+ {
+  "name": "Sistemas de arquivos escaláveis Amazon FSx para NetApp ONTAP",
+  "category": "Armazenamento",
+  "summary": "Oferece performance de armazenamento até nove vezes maior do que antes para alimentar workloads com uso intensivo de computação",
+  "url": "https://aws.amazon.com/fsx/netapp-ontap/"
+ },
+ {
+  "name": "Storage Browser para Amazon S3",
+  "category": "Armazenamento",
+  "summary": "Forneça aos usuários autorizados uma interface simples para navegar, baixar e fazer upload de dados no S3 diretamente das suas próprias aplicações",
+  "url": "https://aws.amazon.com/s3/features/storage-browser/"
+ },
+ {
+  "name": "Suporte do AWS Backup para o Amazon S3",
+  "category": "Armazenamento",
+  "summary": "Gerencie backup de forma centralizada e restaure dados de aplicações armazenados no S3",
+  "url": "https://aws.amazon.com/backup/"
+ },
+ {
+  "name": "Suporte do AWS Backup para workloads da VMware",
+  "category": "Armazenamento",
+  "summary": "Proteja centralmente ambientes híbridos de VMware",
+  "url": "https://aws.amazon.com/backup/features/vmware/"
+ },
+ {
+  "name": "Suporte para Apache Spark no Amazon Athena",
+  "category": "Análise",
+  "summary": "Execute análises interativas no Apache Spark em menos de um segundo",
+  "url": "https://aws.amazon.com/athena/spark/"
+ },
+ {
+  "name": "Sustentabilidade da Cadeia de Suprimentos AWS (em breve)",
+  "category": "",
+  "summary": "Obtenha os documentos e conjuntos de dados de sustentabilidade de que você precisa da sua rede de fornecedores de forma mais segura e eficiente",
+  "url": "https://aws.amazon.com/aws-supply-chain/features/"
+ },
+ {
+  "name": "Tabelas do Amazon S3",
+  "category": "Armazenamento",
+  "summary": "Armazenamento otimizado para workloads de analytics",
+  "url": "https://aws.amazon.com/s3/features/tables/"
+ },
+ {
+  "name": "TensorFlow na AWS",
+  "category": "Machine Learning",
+  "summary": "Biblioteca de inteligência de máquina de código aberto",
+  "url": "https://aws.amazon.com/tensorflow/"
+ },
+ {
+  "name": "Amazon WorkSpaces Thin Client",
+  "category": "Computação de usuário final",
+  "summary": "O Amazon WorkSpaces Thin Client reduz custos, simplifica a logística, acelera a implantação e funciona com os serviços de área de trabalho virtual da AWS",
+  "url": "https://aws.amazon.com/workspaces/thin-client/"
+ },
+ {
+  "name": "Transformação de código do Amazon Q (prévia)",
+  "category": "IA generativa",
+  "summary": "Acelere a manutenção, os upgrades ou a migração de aplicações em minutos",
+  "url": "https://aws.amazon.com/q/aws/code-transformation/"
+ },
+ {
+  "name": "Visibilidade de nível N da Cadeia de Suprimentos AWS (em breve)",
+  "category": "Aplicação empresarial",
+  "summary": "Amplie a visibilidade e os insights para incluir seus parceiros comerciais. Melhore a precisão do seu processo de planejamento e execução",
+  "url": "https://aws.amazon.com/aws-supply-chain/features/"
+ },
+ {
+  "name": "VMware Cloud on AWS",
+  "category": "Computação",
+  "summary": "Crie uma nuvem híbrida sem hardware personalizado",
+  "url": "https://aws.amazon.com/vmware/"
+ },
+ {
+  "name": "Zonas locais agora disponíveis em Buenos Aires, Copenhagen, Helsinki e Muscat",
+  "category": "Computação",
+  "summary": "Trazer a Nuvem AWS para milhões de usuários em quatro novas regiões metropolitanas",
+  "url": "https://aws.amazon.com/about-aws/global-infrastructure/localzones/locations/"
+ },
+ {
+  "name": "AWS Local Zones",
+  "category": "Computação",
+  "summary": "Execute aplicações sensíveis à latência mais perto de usuários finais",
+  "url": "https://aws.amazon.com/about-aws/global-infrastructure/localzones/"
+ },
+ {
+  "name": "Índice do Amazon Q Business",
+  "category": "IA generativa",
+  "summary": "Os fornecedores de software podem se integrar ao índice Amazon Q Business para aprimorar seus próprios assistentes de IA generativa",
+  "url": "https://aws.amazon.com/q/software-provider/"
+ },
+ {
+  "name": "EC2 Image Builder",
+  "category": "Computação",
+  "summary": "Crie e mantenha imagens seguras do Linux ou Windows Server",
+  "url": "https://aws.amazon.com/image-builder/"
+ },
+ {
+  "name": "Amazon CodeWhisperer",
+  "category": "Machine Learning",
+  "summary": "Construa aplicações mais rápido com um guia de programação baseado em ML",
+  "url": "https://aws.amazon.com/codewhisperer/"
+ }
+]
