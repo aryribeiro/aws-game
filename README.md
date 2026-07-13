@@ -136,6 +136,13 @@ Edite `servicos.json`. Schema real (atenção à caixa das chaves):
 
 > O `@st.cache_data` guarda o dataset em memória. Ao trocar o `servicos.json` **localmente**, reinicie o Streamlit — um simples reload do navegador continua servindo o dataset antigo. No Streamlit Cloud isso não é problema: o push reinicia o app.
 
+### Barra de status (mobile) e barra de rolagem
+Ambas são azul-marinho (`NAVY`, no `app.py`) — o mesmo tom do degradê do jogo.
+
+O `<meta name="theme-color">` **não funciona via `st.markdown` sozinho**: o Streamlit renderiza o markdown dentro de um contêiner, e o navegador móvel só lê essa meta no `<head>` do documento de topo. Por isso um `components.html(..., height=0)` injeta a meta no `parent` e no `top` document, e é ele também que injeta o CSS da barra de rolagem no `<head>` da página. O CSS traz as duas sintaxes — `::-webkit-scrollbar` (Chrome, Edge, Safari, Android) e `scrollbar-color`/`scrollbar-width` (Firefox e padrão CSS) — cobrindo desktop e móvel.
+
+> Esse iframe de altura 0 **reserva espaço** se você não escondê-lo. O CSS já traz a regra (`iframe[height="0"] { display: none }`); removê-la abre um vão no topo da página.
+
 ### Cache
 Duas coisas ficam em memória por 8 horas (`CACHE_TTL`): o dataset parseado (`load_aws_services`) e o HTML do jogo já montado (`build_game_html`).
 

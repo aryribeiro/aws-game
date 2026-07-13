@@ -53,8 +53,81 @@ st.markdown("""
        ele é o colchão que impede o jogo de encostar no texto. */
     .stMarkdown h1 { padding-bottom: 0 !important; }
     .stMarkdown h4 { padding-top: 0 !important; }
+
+    /* O injetor de tema roda num components.html de altura 0. Sem isto, esse
+       iframe invisível ainda reserva espaço e abre um vão no topo da página. */
+    iframe[height="0"] { display: none !important; margin: 0 !important; padding: 0 !important; }
+    .element-container:has(iframe[height="0"]) {
+        margin: 0 !important;
+        padding: 0 !important;
+        min-height: 0 !important;
+    }
 </style>
 """, unsafe_allow_html=True)
+
+# --------------------------------------------------------------------------
+# Barra de status (mobile) e barra de rolagem — mesma técnica do AryRoot
+# --------------------------------------------------------------------------
+
+# O azul-marinho do próprio jogo: é o tom médio do degradê do canvas e do card.
+NAVY = "#003366"
+SCROLL_TRACK = "#E6EAF0"
+
+# O <meta theme-color> via st.markdown NÃO funciona sozinho: o Streamlit renderiza
+# o markdown dentro de um contêiner, e o navegador só lê essa meta no <head> do
+# documento de topo. Por isso o injetor abaixo roda num iframe e escreve no
+# parent/top document. O st.markdown aqui é só um reforço para o caso simples.
+st.markdown(f'<meta name="theme-color" content="{NAVY}">', unsafe_allow_html=True)
+
+components.html(f"""
+<script>
+(function() {{
+    const doc = window.parent.document;
+
+    // theme-color em TODOS os níveis: o iframe, o pai e o topo. Qual deles o
+    // navegador móvel lê depende de como a página está embutida.
+    function aplicarThemeColor(d) {{
+        try {{
+            d.querySelectorAll('meta[name="theme-color"]').forEach(el => el.remove());
+            const meta = d.createElement('meta');
+            meta.name = 'theme-color';
+            meta.content = '{NAVY}';
+            d.head.insertBefore(meta, d.head.firstChild);
+        }} catch (e) {{}}
+    }}
+    [document, doc].forEach(aplicarThemeColor);
+    try {{
+        const topDoc = window.top.document;
+        if (topDoc !== doc && topDoc !== document) aplicarThemeColor(topDoc);
+    }} catch (e) {{}}
+
+    // Barra de rolagem: as duas sintaxes cobrem todos os navegadores —
+    // ::-webkit-scrollbar (Chrome, Edge, Safari, Android) e scrollbar-color /
+    // scrollbar-width (Firefox, padrão CSS). Desktop e móvel.
+    if (!doc.getElementById('aws-game-scrollbar')) {{
+        const style = doc.createElement('style');
+        style.id = 'aws-game-scrollbar';
+        style.textContent = `
+            * {{
+                scrollbar-color: {NAVY} {SCROLL_TRACK} !important;
+                scrollbar-width: thin !important;
+            }}
+            *::-webkit-scrollbar {{ width: 9px !important; height: 9px !important; }}
+            *::-webkit-scrollbar-thumb {{
+                background-color: {NAVY} !important;
+                border-radius: 5px !important;
+            }}
+            *::-webkit-scrollbar-thumb:hover {{ background-color: #004488 !important; }}
+            *::-webkit-scrollbar-track {{
+                background: {SCROLL_TRACK} !important;
+                border-radius: 5px !important;
+            }}
+        `;
+        doc.head.appendChild(style);
+    }}
+}})();
+</script>
+""", height=0)
 
 st.markdown("""
 <div style="text-align: center;">
